@@ -9,10 +9,18 @@
 @blanc: #fff;
 @noir: #000;
 @grisIMA: #f3f3f3;
-@roseIMA: #ab0464;
-@violetIMA: #801a7a;
+@vertIMA: #c1c602;
+@vertIMA-dark: darken(@vertIMA, 10%);
 @bleuIMA: #0f589f;
 @bleuIMA-dark: darken(@bleuIMA, 10%);
+@roseIMA: #ab0464;
+@roseIMA-dark: darken(@roseIMA, 10%);
+@violetIMA: #801a7a;
+@violetIMA-dark: darken(@violetIMA, 10%);
+@bleucielIMA: #8eb4c7;
+@bleucielIMA-dark: darken(@bleucielIMA, 10%);
+@orangeIMA: #dd850c;
+@orangeIMA-dark: darken(@orangeIMA, 10%);
 
 /* @end */
 
@@ -204,6 +212,15 @@ textarea {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-twitter:before {
+	content: "\f099";
+}
+.icon-facebook:before {
+	content: "\f09a";
+}
+.icon-linkedin:before {
+	content: "\f0e1";
+}
 .icon-ornament:before {
 	content: "\e600";
 }
@@ -337,14 +354,7 @@ body{
 	height: auto;
 	float: left;
 	padding: 0;
-	margin: 40px 0 80px 0;
-}
-
-#bloc-visu{
-	display: block;
-	width: 43%;
-	height: auto;
-	float: right;
+	margin: 0 0 80px 0;
 }
 
 .bloc-full{
@@ -402,7 +412,131 @@ p{
 header{
 	display: block;
 	width: 100%;
-	height: 150px;
+	height: 500px;
+	nav{
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+	.circle {
+		position: relative;
+		margin: -110px auto 0 auto;
+		padding: 0;
+		width: 430px;
+		height: 430px;
+		.transition(all 0.5s ease);
+		#circle-imatech{
+			display: block;
+			width: 148px;
+			height: 148px;
+			position: absolute;
+			top: 50%;
+			margin-top: -74px;
+			left: 50%;
+			margin-left: -74px;
+			.border-radius(50%);
+			background: @blanc url('../layoutImg/logo-imatech.png') no-repeat center center;
+			.box-shadow(~"0 5px 21px rgba(0,0,0,.1)");
+		}
+		#circle-dashed{
+			display: block;
+			width: 312px;
+			height: 312px;
+			position: absolute;
+			top: 50%;
+			margin-top: -156px;
+			left: 50%;
+			margin-left: -156px;
+			.border-radius(50%);
+			border: 1px dotted #333;
+			.box-sizing(border-box);
+		}
+		ul{
+			display: block;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			li{
+				position: absolute;
+				width: 98px;
+				height: 98px;
+				list-style: none;
+				text-align: center;
+				margin: 0;
+				padding: 0;
+				&.circle-vehicules{
+					top: 85px;
+					left: 295px;
+					a{
+						background-color: @vertIMA;
+						border-color: @vertIMA-dark;
+					}
+				}
+				&.circle-formation{
+					top: 216px;
+					left: 326px;
+					a{
+						background-color: @bleuIMA;
+						border-color: @bleuIMA-dark;
+					}
+				}
+				&.circle-offre-conseil{
+					top: 321px;
+					left: 238px;
+					a{
+						background-color: @roseIMA;
+						border-color: @roseIMA-dark;
+					}
+				}
+				&.circle-informatique{
+					top: 321px;
+					left: 90px;
+					a{
+						background-color: @violetIMA;
+						border-color: @violetIMA-dark;
+					}
+				}
+				&.circle-service-client{
+					top: 216px;
+					left: 6px;
+					a{
+						background-color: @bleucielIMA;
+						border-color: @bleucielIMA-dark;
+					}
+				}
+				&.circle-juridique{
+					top: 85px;
+					left: 37px;
+					a{
+						background-color: @orangeIMA;
+						border-color: @orangeIMA-dark;
+					}
+				}
+				a{
+					.border-radius(50%);
+					display: block;
+					width: 100%;
+					height: 100%;
+					margin: 0;
+					padding: 0;
+					.opensans(0.65em);
+					color: @blanc;
+					text-transform: uppercase;
+					text-decoration: none;
+					.box-sizing(border-box);
+					border-style: solid;
+					border-width: 10px;
+					line-height: 78px;
+					.txt-circle{
+						display: inline-block;
+						vertical-align: middle;
+						line-height: 1.1em;
+					}
+				}
+			}
+		}
+	}
 }
 
 /* @end */
@@ -410,7 +544,25 @@ header{
 /* @group Footer */
 
 footer{
+	display: block;
+	width: 100%;
+	height: auto;
+	position: fixed;
+	bottom: 0;
+	left: 0;
 	.opensans(0.688em);
+	padding: 15px 0;
+	background-color: @blanc;
+	.opacity(0.8);
+	.bandeau-footer{
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: url('../layoutImg/footer/bandeau-couleurs.png') repeat-x left top;
+		position: absolute;
+		top: -2px;
+		left: 0;
+	}
 	ul#footer-elements{
 		display: block;
 		width: auto;
@@ -428,7 +580,7 @@ footer{
 				.IMA-amiral(11px);
 				content: "\e600";
 				position: absolute;
-				top: 0;
+				top: 5px;
 				right: 0;
 			}
 			&.last{
@@ -436,6 +588,9 @@ footer{
 				&:after{
 					display: none;
 				}
+			}
+			&.padding-top-footer{
+				padding-top: 2px;
 			}
 		}
 	}
@@ -461,6 +616,92 @@ footer{
 		color: @roseIMA;
 		.opensans-semibold(1.364em);
 		text-decoration: none;
+	}
+	
+	ul.social-footer{
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 0 0 5px;
+		padding: 0;
+		list-style: none;
+		li{
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 1px;
+			padding: 0;
+			a{
+				text-decoration: none;
+				color: @blanc;
+				display: block;
+				width: 18px;
+				height: 18px;
+				position: relative;
+				margin: 0;
+				padding: 0;
+				.fond-social{
+					display: block;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					.border-radius(3px);
+				}
+				.logo-footer{
+					position: relative;
+					display: block;
+					width: 100%;
+					height: 100%;
+					line-height: 18px;
+					text-align: center;
+				}
+			}
+			&.facebook{
+				a{
+					.fond-social{
+						background-color: #293eab;
+						.transform(perspective(50px) rotateY(20deg));
+					}
+					.icon-facebook{
+						.transform(translateY(1px));
+					}
+				}
+			}
+			&.twitter{
+				a{
+					.transform(translateY(1px));
+					.fond-social{
+						background-color: #54a8d4;
+						.transform(rotate(-2deg));
+					}
+					.icon-twitter{
+						.transform(translateY(1px));
+					}
+				}
+			}
+			&.linkedin{
+				a{
+					.fond-social{
+						background-color: #266ba6;
+						.transform(perspective(30px) rotateX(-10deg) rotateY(5deg));
+					}
+					.icon-linkedin{
+						.transform(translateX(1px));
+						font-size: 0.9em;
+					}
+				}
+			}
+			&.viadeo{
+				a{
+					.fond-social{
+						background-color: #1e2124;
+					}
+					.icon-viadeo{
+						background: url('../layoutImg/footer/logo-viadeo.png') no-repeat center 40%;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -541,6 +782,30 @@ ul.breadcrumb{
 			display: inline;
 		}
 	}
+}
+
+/* @end */
+
+/* @group Bloc visu */
+
+#bloc-visu{
+	display: block;
+	width: 43%;
+	height: auto;
+	float: right;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+}
+
+#fond-bloc-visu{
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: url('../layoutImg/visuels/visuel-1.png') no-repeat left top;
+	background-size: auto 100%;
+	position: fixed;
 }
 
 /* @end */
