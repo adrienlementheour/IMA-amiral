@@ -89,3 +89,63 @@ $(document).ready(function(){
 $( window ).resize(function() {
 
 });
+
+//[x, y, dx, dy]
+//x and yare coordinates in the interval [0,1] specifying the position of the anchor
+//dx and dy,which specify the orientation of the curve incident to the anchor
+var anchors = [ [[1, 0.6, 0.5, 0.8], [0.1, 0.8, 0, 0.5]],      [[1, 0.3, 0, -0.8], [0, 0.9, 0.2, -0.7]],      [[0.51, 1, 0, 1], [0.7, 0, 0, 1]],     [[0, 0.2, 0, 0.5], [0.5, 0, 0, -1.5]],     [[1, 0.6, 0, 1], [0, 0.9, 0, 1]]];
+
+jsPlumb.ready(function() {
+	/*var instance1 = jsPlumb.getInstance();
+	var instance2 = jsPlumb.getInstance();*/
+	var instances = [];
+	var nbBlocSmall = $(".bloc-small").length;
+	$(".bloc-small").each(function(index){
+		if (index<(nbBlocSmall-1)) {
+			var instance= jsPlumb.getInstance();
+			instance.connect({
+				source: $(".bloc-"+(index+1)),
+				target: $(".bloc-"+(index+2)),
+	
+				anchors: anchors[index],
+				endpoint:"Blank",
+				paintStyle:{
+				lineWidth:2,
+				strokeStyle:'#cacaca',
+				dashstyle:" 0 1"
+				},
+				connector:[ "Bezier", { curviness: 50 }]
+			});
+		}
+	});
+});
+
+/*var instance1 = jsPlumb.getInstance();
+  var instance2 = jsPlumb.getInstance();
+  instance1.connect({
+    source: $(".bloc-1"),
+    target: $(".bloc-2"),
+    //[x, y, dx, dy]
+    //x and yare coordinates in the interval [0,1] specifying the position of the anchor
+    //dx and dy,which specify the orientation of the curve incident to the anchor
+    anchors:[[1, 0.6, 0, 1], [0, 0.9, 0, 1]],
+    endpoint:"Blank",
+    paintStyle:{
+      lineWidth:2,
+      strokeStyle:'#cacaca',
+      dashstyle:" 0 1"
+    },
+    connector:[ "Bezier", { curviness: 50 }]
+  });
+  instance2.connect({
+    source: $(".bloc-2"),
+    target: $(".bloc-3"),
+    anchors:[[1, 0.2, 0, -1], [0, 0.4, 0, -1]],
+    endpoint:"Blank",
+    paintStyle:{
+      lineWidth:2,
+      strokeStyle:'#cacaca',
+      dashstyle:" 0 1"
+    },
+    connector:[ "Bezier", { curviness: 50 }]
+  });*/
