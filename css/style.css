@@ -983,6 +983,10 @@ a.bloc-small .detail-bloc .txt-detail-bloc {
   color: #ffffff;
   position: relative;
   line-height: 1.2em;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  -moz-transition: -moz-transform 0.4s ease-in-out;
+  -o-transition: -o-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
 }
 a.bloc-small .categ-bloc {
   display: block;
@@ -1004,10 +1008,10 @@ a.bloc-small .categ-bloc .fond-categ-bloc {
   border-radius: 3px;
   background-clip: padding-box;
   outline: 1px solid transparent;
-  -webkit-transition: padding-right 0.15s ease-in-out;
-  -moz-transition: padding-right 0.15s ease-in-out;
-  -o-transition: padding-right 0.15s ease-in-out;
-  transition: padding-right 0.15s ease-in-out;
+  -webkit-transition: padding-right 0.2s ease-in-out;
+  -moz-transition: padding-right 0.2s ease-in-out;
+  -o-transition: padding-right 0.2s ease-in-out;
+  transition: padding-right 0.2s ease-in-out;
 }
 a.bloc-small .categ-bloc .txt-categ-bloc {
   font-family: 'open_sansbold', sans-serif;
@@ -1049,10 +1053,10 @@ a.bloc-small .fond-bloc-deform {
   -moz-box-shadow: 3px 4px 21px rgba(0,0,0,.03);
   box-shadow: 3px 4px 21px rgba(0,0,0,.03);
   z-index: 2;
-  -webkit-transition: -webkit-transform 0.1s ease-in-out;
-  -moz-transition: -moz-transform 0.1s ease-in-out;
-  -o-transition: -o-transform 0.1s ease-in-out;
-  transition: -webkit-transform 0.1s ease-in-out,-moz-transform 0.1s ease-in-out,-o-transform 0.1s ease-in-out,transform 0.1s ease-in-out;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  -moz-transition: -moz-transform 0.4s ease-in-out;
+  -o-transition: -o-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
 }
 a.bloc-small .txt-bloc-deform {
   font-family: 'open_sansregular', sans-serif;
@@ -1064,16 +1068,23 @@ a.bloc-small .txt-bloc-deform {
   position: relative;
   color: #373737;
   z-index: 3;
-  -webkit-transition: opacity 0.15s ease-in-out;
-  -moz-transition: opacity 0.15s ease-in-out;
-  -o-transition: opacity 0.15s ease-in-out;
-  transition: opacity 0.15s ease-in-out;
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+  -moz-transition: -moz-transform 0.15s ease-in-out;
+  -o-transition: -o-transform 0.15s ease-in-out;
+  transition: -webkit-transform 0.15s ease-in-out,-moz-transform 0.15s ease-in-out,-o-transform 0.15s ease-in-out,transform 0.15s ease-in-out;
 }
 a.bloc-small:hover .categ-bloc .fond-categ-bloc {
   padding-right: 15px;
 }
 a.bloc-small:hover .detail-bloc .fond-detail-bloc {
   padding-left: 10px;
+}
+a.bloc-small:hover .txt-detail-bloc {
+  -webkit-transform: translateX(-10px);
+  -moz-transform: translateX(-10px);
+  -o-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
 }
 a.bloc-small.bloc-1 {
   top: 0;

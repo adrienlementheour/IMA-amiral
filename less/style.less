@@ -1019,6 +1019,7 @@ a.bloc-small{
 			color: @blanc;
 			position: relative;
 			line-height: 1.2em;
+			.transition(transform 0.4s ease-in-out);
 		}
 	}
 	.categ-bloc{
@@ -1035,12 +1036,13 @@ a.bloc-small{
 			left: 0;
 			.border-radius(3px);
 			outline: 1px solid transparent;
-			.transition(padding-right 0.15s ease-in-out);
+			.transition(padding-right 0.2s ease-in-out);
 		}
 		.txt-categ-bloc{
 			.opensans-bold(1em);
 			color: @blanc;
 			position: relative;
+			
 		}
 	}
 	.raccord-categ{
@@ -1062,14 +1064,14 @@ a.bloc-small{
 		background-color: @blanc;
 		.box-shadow(~"3px 4px 21px rgba(0,0,0,.03)");
 		z-index: 2;
-		.transition(transform 0.1s ease-in-out);
+		.transition(transform 0.4s ease-in-out);
 	}
 	.txt-bloc-deform{
 		.opensans(0.813em);
 		position: relative;
 		color: #373737;
 		z-index: 3;
-		.transition(opacity 0.15s ease-in-out);
+		.transition(transform 0.15s ease-in-out);
 	}
 	
 	&:hover{
@@ -1085,6 +1087,9 @@ a.bloc-small{
 			.fond-detail-bloc{
 				padding-left: 10px;
 			}
+		}
+		.txt-detail-bloc{
+			.transform(translateX(-10px));
 		}
 	}
 	
