@@ -245,6 +245,7 @@ textarea {
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 }
 
 .IMA-amiral(@size){
@@ -463,7 +464,7 @@ header{
 	display: block;
 	width: 100%;
 	height: auto;
-	margin: 0 0 70px 0;
+	margin: 0 0 50px 0;
 	nav{
 		width: 100%;
 		height: auto;
@@ -551,6 +552,8 @@ header{
 			.border-radius(50%);
 			background: @blanc url('../layoutImg/logo-imatech.png') no-repeat center center;
 			.box-shadow(~"0 5px 21px rgba(0,0,0,.1)");
+			.backface-visibility(hidden);
+			.transform-style(preserve-3d);
 		}
 		#circle-dashed{
 			display: block;
@@ -865,7 +868,7 @@ footer{
 	width: 40px;
 	height: 40px;
 	position: absolute;
-	top: 5px;
+	top: 0px;
 	left: -18px;
 	.rotate(25deg);
 	&.ribbon-bleu{
@@ -978,14 +981,14 @@ ul.actus{
 	display: block;
 	width: 100%;
 	height: auto;
-	margin: 90px 0 0 0;
+	margin: 70px 0 0 0;
 	position: relative;
 	&#zone-blocs-accueil{
 		height: 400px;
 	}
 }
 
-.bloc-small{
+a.bloc-small{
 	display: block;
 	width: auto;
 	height: auto;
@@ -993,6 +996,8 @@ ul.actus{
 	padding: 30px 25px;
 	z-index: 3;
 	position: absolute;
+	.box-shadow(none);
+	.transition(all 0.1s ease-in-out);
 	.detail-bloc{
 		display: block;
 		position: absolute;
@@ -1006,6 +1011,8 @@ ul.actus{
 			bottom: 0;
 			right: 0;
 			.border-radius(3px);
+			outline: 1px solid transparent;
+			.transition(padding-left 0.1s ease-in-out);
 		}
 		.txt-detail-bloc{
 			.dearJoe(1.4em);
@@ -1027,6 +1034,8 @@ ul.actus{
 			top: 0;
 			left: 0;
 			.border-radius(3px);
+			outline: 1px solid transparent;
+			.transition(padding-right 0.15s ease-in-out);
 		}
 		.txt-categ-bloc{
 			.opensans-bold(1em);
@@ -1053,12 +1062,30 @@ ul.actus{
 		background-color: @blanc;
 		.box-shadow(~"3px 4px 21px rgba(0,0,0,.03)");
 		z-index: 2;
+		.transition(transform 0.1s ease-in-out);
 	}
 	.txt-bloc-deform{
 		.opensans(0.813em);
 		position: relative;
 		color: #373737;
 		z-index: 3;
+		.transition(opacity 0.15s ease-in-out);
+	}
+	
+	&:hover{
+		.txt-bloc-deform{
+			//.opacity(0.9);
+		}
+		.categ-bloc{
+			.fond-categ-bloc{
+				padding-right: 15px;
+			}
+		}
+		.detail-bloc{
+			.fond-detail-bloc{
+				padding-left: 10px;
+			}
+		}
 	}
 	
 	&.bloc-1{
@@ -1101,6 +1128,12 @@ ul.actus{
 			.transform(rotate(4deg));
 			padding: 0 0 0 10px;
 		}
+		&:hover{
+			//.scale(1.05);
+			.fond-bloc-deform{
+				.transform(perspective(300px) rotateY(-20deg) rotate(5deg) skewX(-5deg) scale(1.05));
+			}
+		}
 	}
 	
 	&.bloc-2{
@@ -1135,6 +1168,11 @@ ul.actus{
 		}
 		.txt-bloc-deform{
 			.transform(rotate(-6deg));
+		}
+		&:hover{
+			.fond-bloc-deform{
+				.transform(perspective(250px) rotateX(-20deg) rotate(-10deg) skewX(0deg) scale(1.05));
+			}
 		}
 	}
 	
@@ -1172,6 +1210,11 @@ ul.actus{
 		.txt-bloc-deform{
 			.transform(rotate(0deg));
 		}
+		&:hover{
+			.fond-bloc-deform{
+				.transform(perspective(250px) rotateY(5deg) rotate(6deg) skewX(0deg) scale(1.05));
+			}
+		}
 	}
 	
 	&.bloc-4{
@@ -1208,6 +1251,11 @@ ul.actus{
 		.txt-bloc-deform{
 			.transform(rotate(-1deg));
 		}
+		&:hover{
+			.fond-bloc-deform{
+				.transform(perspective(250px) rotateX(-13deg) rotateY(-5deg) rotate(0deg) skewX(0deg) scale(1.05));
+			}
+		}
 	}
 	
 	&.bloc-5{
@@ -1242,6 +1290,9 @@ ul.actus{
 		}
 		.txt-bloc-deform{
 			.transform(rotate(5deg));
+		}
+		.fond-bloc-deform{
+			.transform(perspective(300px) rotateX(-20deg) rotateY(0deg) rotate(5deg) skewX(-5deg) scale(1.05));
 		}
 	}
 }
