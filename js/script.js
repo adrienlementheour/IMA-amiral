@@ -22,7 +22,7 @@ function animer(){
 function initMenu(){
 	TweenMax.from($("#menu-wrapper ul"), 0.3, {scale: 0.8, rotation: -30, delay: 0.5, ease:Cubic.easeInOut});
 	TweenMax.from($("#menu-wrapper #circle-dashed"), 0.3, {scale: 0.8, rotation: -30, delay: 0.5, ease:Cubic.easeInOut});
-	TweenMax.from($("#bloc-actus"), 0.3, {"margin-top": "-30px", delay: 0.5, ease:Cubic.easeInOut});
+	TweenMax.from($("#zone-actus"), 0.3, {"margin-top": "-30px", delay: 0.5, ease:Cubic.easeInOut});
 }
 
 $(document).ready(function(){
@@ -138,8 +138,7 @@ jsPlumb.ready(function() {
 	
 	if($("body").hasClass("accueil")){
 		// Relier le bloc actu avec le premier bloc small (RSE)
-		/*var instanceAccueil1 = jsPlumb.getInstance();
-		instanceAccueil1.connect({
+		/*jsPlumb.connect({
 			source: $("#bloc-actus"),
 			target: $(".bloc-1"),
 			anchors: [[0.2, 1, 0.5, 0.8], [0.3, 0, 0, 0.5]],
@@ -150,7 +149,7 @@ jsPlumb.ready(function() {
 			dashstyle:" 0 1"
 			},
 			connector:[ "Bezier", { curviness: 50 }]
-		});*/
-		
+		});
+		*/
 	}
 });

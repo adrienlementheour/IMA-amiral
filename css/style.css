@@ -289,6 +289,22 @@ a.btn-plus .icon-plus {
   top: -1px;
   right: 0;
 }
+a.btn-icon-plus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+a.btn-icon-plus .icon-plus {
+  font-size: 1.6em;
+}
+.btn-icon-plus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.btn-icon-plus .icon-plus {
+  font-size: 1.6em;
+}
 /* @group Header */
 header {
   display: block;
@@ -1073,18 +1089,36 @@ a.bloc-small .txt-bloc-deform {
   -o-transition: -o-transform 0.15s ease-in-out;
   transition: -webkit-transform 0.15s ease-in-out,-moz-transform 0.15s ease-in-out,-o-transform 0.15s ease-in-out,transform 0.15s ease-in-out;
 }
+a.bloc-small .btn-icon-plus {
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out;
+  -o-transition: -o-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out,-moz-transform 0.2s ease-in-out,-o-transform 0.2s ease-in-out,transform 0.2s ease-in-out;
+  display: block;
+  width: 20px;
+  height: 26px;
+  line-height: 26px;
+}
 a.bloc-small:hover .categ-bloc .fond-categ-bloc {
   padding-right: 15px;
 }
 a.bloc-small:hover .detail-bloc .fond-detail-bloc {
   padding-left: 10px;
 }
-a.bloc-small:hover .txt-detail-bloc {
-  -webkit-transform: translateX(-10px);
-  -moz-transform: translateX(-10px);
-  -o-transform: translateX(-10px);
-  -ms-transform: translateX(-10px);
-  transform: translateX(-10px);
+a.bloc-small:hover .detail-bloc .txt-detail-bloc {
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -o-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+}
+a.bloc-small:hover .btn-icon-plus {
+  -webkit-transform: rotate(90deg) scale(1.2);
+  -moz-transform: rotate(90deg) scale(1.2);
+  -o-transform: rotate(90deg) scale(1.2);
+  -ms-transform: rotate(90deg) scale(1.2);
+  transform: rotate(90deg) scale(1.2);
 }
 a.bloc-small.bloc-1 {
   top: 0;
@@ -1151,6 +1185,23 @@ a.bloc-small.bloc-1 .txt-bloc-deform {
   transform: rotate(4deg);
   padding: 0 0 0 10px;
 }
+a.bloc-small.bloc-1 .btn-icon-plus {
+  color: #c1c602;
+  bottom: -50px;
+  right: 20px;
+}
+a.bloc-small.bloc-1 .smiley-bloc {
+  display: block;
+  width: 46px;
+  height: 45px;
+  background: url('../layoutImg/accueil/smiley.png') no-repeat center center;
+  position: absolute;
+  bottom: -28px;
+  left: 25px;
+  z-index: 2;
+  pointer-events: none;
+  cursor: default;
+}
 a.bloc-small.bloc-1:hover .fond-bloc-deform {
   -webkit-transform: perspective(300px) rotateY(-20deg) rotate(5deg) skewX(-5deg) scale(1.05);
   -moz-transform: perspective(300px) rotateY(-20deg) rotate(5deg) skewX(-5deg) scale(1.05);
@@ -1211,6 +1262,11 @@ a.bloc-small.bloc-2 .txt-bloc-deform {
   -o-transform: rotate(-6deg);
   -ms-transform: rotate(-6deg);
   transform: rotate(-6deg);
+}
+a.bloc-small.bloc-2 .btn-icon-plus {
+  color: #801a7a;
+  bottom: -35px;
+  right: -5px;
 }
 a.bloc-small.bloc-2:hover .fond-bloc-deform {
   -webkit-transform: perspective(250px) rotateX(-20deg) rotate(-10deg) skewX(0deg) scale(1.05);
@@ -1274,6 +1330,11 @@ a.bloc-small.bloc-3 .txt-bloc-deform {
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
 }
+a.bloc-small.bloc-3 .btn-icon-plus {
+  color: #dd850c;
+  bottom: -60px;
+  right: 10px;
+}
 a.bloc-small.bloc-3:hover .fond-bloc-deform {
   -webkit-transform: perspective(250px) rotateY(5deg) rotate(6deg) skewX(0deg) scale(1.05);
   -moz-transform: perspective(250px) rotateY(5deg) rotate(6deg) skewX(0deg) scale(1.05);
@@ -1336,6 +1397,11 @@ a.bloc-small.bloc-4 .txt-bloc-deform {
   -ms-transform: rotate(-1deg);
   transform: rotate(-1deg);
 }
+a.bloc-small.bloc-4 .btn-icon-plus {
+  color: #ab0464;
+  bottom: -48px;
+  right: 25px;
+}
 a.bloc-small.bloc-4:hover .fond-bloc-deform {
   -webkit-transform: perspective(250px) rotateX(-13deg) rotateY(-5deg) rotate(0deg) skewX(0deg) scale(1.05);
   -moz-transform: perspective(250px) rotateX(-13deg) rotateY(-5deg) rotate(0deg) skewX(0deg) scale(1.05);
@@ -1397,12 +1463,100 @@ a.bloc-small.bloc-5 .txt-bloc-deform {
   -ms-transform: rotate(5deg);
   transform: rotate(5deg);
 }
-a.bloc-small.bloc-5 .fond-bloc-deform {
+a.bloc-small.bloc-5 .btn-icon-plus {
+  color: #0f589f;
+  bottom: -50px;
+  right: 15px;
+}
+a.bloc-small.bloc-5:hover .fond-bloc-deform {
   -webkit-transform: perspective(300px) rotateX(-20deg) rotateY(0deg) rotate(5deg) skewX(-5deg) scale(1.05);
   -moz-transform: perspective(300px) rotateX(-20deg) rotateY(0deg) rotate(5deg) skewX(-5deg) scale(1.05);
   -o-transform: perspective(300px) rotateX(-20deg) rotateY(0deg) rotate(5deg) skewX(-5deg) scale(1.05);
   -ms-transform: perspective(300px) rotateX(-20deg) rotateY(0deg) rotate(5deg) skewX(-5deg) scale(1.05);
   transform: perspective(300px) rotateX(-20deg) rotateY(0deg) rotate(5deg) skewX(-5deg) scale(1.05);
+}
+/* @end */
+/* @group SVG */
+#container-smiley {
+  display: block;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  bottom: -28px;
+  right: 115px;
+  z-index: 2;
+}
+#smiley .elem-smiley {
+  fill: #c1c602;
+}
+#container-pop {
+  display: block;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: -60px;
+  right: 40px;
+  z-index: 2;
+}
+#pop .branche {
+  fill: #dd850c;
+}
+#container-pop2 {
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: -65px;
+  right: 20px;
+  z-index: 2;
+}
+#pop2 .branche {
+  fill: #dd850c;
+}
+#container-pop3 {
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: -45px;
+  right: -5px;
+  z-index: 2;
+}
+#pop3 .branche {
+  fill: #dd850c;
+}
+#container-pop4 {
+  display: block;
+  width: 11px;
+  height: 11px;
+  position: absolute;
+  top: -15px;
+  right: 30px;
+  z-index: 2;
+}
+#container-twitter {
+  display: block;
+  width: 46px;
+  height: 37px;
+  position: absolute;
+  top: 10px;
+  left: -65px;
+  z-index: 2;
+}
+#twitter .elem-twitter {
+  fill: #0f589f;
+}
+#container-facebook {
+  display: block;
+  width: 15px;
+  height: 30px;
+  position: absolute;
+  bottom: -8px;
+  left: 10px;
+  z-index: 2;
+}
+#facebook .elem-facebook {
+  fill: #0f589f;
 }
 /* @end */
 /* @group Non semantic Boilerplate */
