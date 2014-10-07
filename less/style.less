@@ -510,12 +510,12 @@ header{
 			width: 430px;
 			height: 430px;
 			margin: -110px auto 0 auto;
-			#circle-dashed{
+			/*#circle-dashed{
 				width: 312px;
 				height: 312px;
 				margin-top: -156px;
 				margin-left: -156px;
-			}
+			}*/
 			ul{
 				li{
 					width: 98px;
@@ -568,7 +568,7 @@ header{
 			.backface-visibility(hidden);
 			.transform-style(preserve-3d);
 		}
-		#circle-dashed{
+		/*#circle-dashed{
 			display: block;
 			width: 224px;
 			height: 224px;
@@ -579,6 +579,19 @@ header{
 			margin-left: -112px;
 			.border-radius(50%);
 			border: 1px dotted #333;
+			.box-sizing(border-box);
+		}*/
+		#circle-dashed-container{
+			display: block;
+			width: 224px;
+			height: 224px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -112px;
+			margin-left: -112px;
+			//.border-radius(50%);
+			//border: 1px dotted #333;
 			.box-sizing(border-box);
 		}
 		ul{
@@ -1033,6 +1046,7 @@ a.bloc-small{
 			position: relative;
 			line-height: 1.2em;
 			.transition(transform 0.4s ease-in-out);
+			display: inline-block;
 		}
 	}
 	.categ-bloc{
@@ -1106,7 +1120,7 @@ a.bloc-small{
 				padding-left: 10px;
 			}
 			.txt-detail-bloc{
-				.transform(translateX(10px));
+				.transform(translateX(-10px));
 			}
 		}
 		.btn-icon-plus{
@@ -1172,7 +1186,6 @@ a.bloc-small{
 			cursor: default;
 		}
 		&:hover{
-			//.scale(1.05);
 			.fond-bloc-deform{
 				.transform(perspective(300px) rotateY(-20deg) rotate(5deg) skewX(-5deg) scale(1.05));
 			}
@@ -1366,6 +1379,14 @@ a.bloc-small{
 
 /* @group SVG */
 
+#circle-dashed-svg{
+	pointer-events: visiblestroke;
+	fill: none;
+	stroke: rgb(202, 202, 202);
+	stroke-width: 1px;
+	stroke-dasharray: 0px, 0px, 1px;
+}
+
 #container-smiley{
 	display: block;
 	width: 45px;
@@ -1374,6 +1395,7 @@ a.bloc-small{
 	bottom: -28px;
 	right: 115px;
 	z-index: 2;
+	.transform(rotate(5deg));
 }
 
 #smiley{

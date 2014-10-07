@@ -337,6 +337,19 @@ header #menu-wrapper {
   -o-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  /*#circle-dashed{
+			display: block;
+			width: 224px;
+			height: 224px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -112px;
+			margin-left: -112px;
+			.border-radius(50%);
+			border: 1px dotted #333;
+			.box-sizing(border-box);
+		}*/
 }
 header #menu-wrapper.active ul li a {
   -webkit-transition: -webkit-transform 0.1s ease-in-out, borderWidth 0.1s ease-in-out;
@@ -357,12 +370,12 @@ header #menu-wrapper.open {
   width: 430px;
   height: 430px;
   margin: -110px auto 0 auto;
-}
-header #menu-wrapper.open #circle-dashed {
-  width: 312px;
-  height: 312px;
-  margin-top: -156px;
-  margin-left: -156px;
+  /*#circle-dashed{
+				width: 312px;
+				height: 312px;
+				margin-top: -156px;
+				margin-left: -156px;
+			}*/
 }
 header #menu-wrapper.open ul li {
   width: 98px;
@@ -428,7 +441,7 @@ header #menu-wrapper #circle-imatech {
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-header #menu-wrapper #circle-dashed {
+header #menu-wrapper #circle-dashed-container {
   display: block;
   width: 224px;
   height: 224px;
@@ -437,13 +450,6 @@ header #menu-wrapper #circle-dashed {
   left: 50%;
   margin-top: -112px;
   margin-left: -112px;
-  -webkit-border-radius: 50%;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 50%;
-  -moz-background-clip: padding;
-  border-radius: 50%;
-  background-clip: padding-box;
-  border: 1px dotted #333;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1003,6 +1009,7 @@ a.bloc-small .detail-bloc .txt-detail-bloc {
   -moz-transition: -moz-transform 0.4s ease-in-out;
   -o-transition: -o-transform 0.4s ease-in-out;
   transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
+  display: inline-block;
 }
 a.bloc-small .categ-bloc {
   display: block;
@@ -1107,11 +1114,11 @@ a.bloc-small:hover .detail-bloc .fond-detail-bloc {
   padding-left: 10px;
 }
 a.bloc-small:hover .detail-bloc .txt-detail-bloc {
-  -webkit-transform: translateX(10px);
-  -moz-transform: translateX(10px);
-  -o-transform: translateX(10px);
-  -ms-transform: translateX(10px);
-  transform: translateX(10px);
+  -webkit-transform: translateX(-10px);
+  -moz-transform: translateX(-10px);
+  -o-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
 }
 a.bloc-small:hover .btn-icon-plus {
   -webkit-transform: rotate(90deg) scale(1.2);
@@ -1477,6 +1484,13 @@ a.bloc-small.bloc-5:hover .fond-bloc-deform {
 }
 /* @end */
 /* @group SVG */
+#circle-dashed-svg {
+  pointer-events: visiblestroke;
+  fill: none;
+  stroke: #cacaca;
+  stroke-width: 1px;
+  stroke-dasharray: 0px, 0px, 1px;
+}
 #container-smiley {
   display: block;
   width: 45px;
@@ -1485,6 +1499,11 @@ a.bloc-small.bloc-5:hover .fond-bloc-deform {
   bottom: -28px;
   right: 115px;
   z-index: 2;
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
 }
 #smiley .elem-smiley {
   fill: #c1c602;
