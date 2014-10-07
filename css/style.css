@@ -142,6 +142,9 @@ textarea {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-play:before {
+  content: "\e602";
+}
 .icon-plus:before {
   content: "\e601";
 }
@@ -1568,6 +1571,95 @@ a.bloc-small.bloc-5:hover .fond-bloc-deform {
   -o-transform: perspective(300px) rotateX(-20deg) rotateY(0deg) rotate(5deg) skewX(-5deg) scale(1.05);
   -ms-transform: perspective(300px) rotateX(-20deg) rotateY(0deg) rotate(5deg) skewX(-5deg) scale(1.05);
   transform: perspective(300px) rotateX(-20deg) rotateY(0deg) rotate(5deg) skewX(-5deg) scale(1.05);
+}
+/* @end */
+/* @group Bloc Video */
+#bloc-visu-content {
+  height: 100%;
+}
+.bloc-btn-video {
+  width: 112px;
+  height: 112px;
+  display: block;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  margin-top: -56px;
+  left: 50%;
+  margin-left: -56px;
+}
+.bloc-btn-video #circle-dashed-video-svg {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+}
+.bloc-btn-video #circle-dashed-video-svg .circle-dashed-video {
+  pointer-events: visiblestroke;
+  fill: none;
+  stroke: #cacaca;
+  stroke-width: 2px;
+  stroke-dasharray: 0px, 0px, 2px;
+}
+.bloc-btn-video .content-bloc-btn-video {
+  display: block;
+  width: 82px;
+  height: 82px;
+  margin: 0 auto;
+  padding: 15px 0 0 0;
+}
+.bloc-btn-video .content-bloc-btn-video a.btn-video {
+  display: block;
+  width: 82px;
+  height: 82px;
+  -webkit-box-shadow: 0 0 34.4px 5.6px rgba(0, 0, 0, 0.16), 0 0 7px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0 0 34.4px 5.6px rgba(0, 0, 0, 0.16), 0 0 7px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 34.4px 5.6px rgba(0, 0, 0, 0.16), 0 0 7px rgba(0, 0, 0, 0.08);
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.83);
+  text-align: center;
+  line-height: 82px;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  -moz-transition: -moz-transform 0.2s ease-out;
+  -o-transition: -o-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out,-moz-transform 0.2s ease-out,-o-transform 0.2s ease-out,transform 0.2s ease-out;
+}
+.bloc-btn-video .content-bloc-btn-video a.btn-video .icon-play {
+  color: #0f589f;
+  font-size: 4em;
+  line-height: 1em;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 82px;
+  padding-left: 3px;
+  -webkit-transition: color 0.05s ease-out;
+  -moz-transition: color 0.05s ease-out;
+  -o-transition: color 0.05s ease-out;
+  transition: color 0.05s ease-out;
+}
+.bloc-btn-video .content-bloc-btn-video a.btn-video .icon-play:before {
+  width: 100%;
+  height: 100%;
+}
+.bloc-btn-video .content-bloc-btn-video a.btn-video:hover {
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  -o-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  transform: scale(1.08);
+}
+.bloc-btn-video .content-bloc-btn-video a.btn-video:hover .icon-play {
+  color: #801a7a;
 }
 /* @end */
 /* @group SVG */
