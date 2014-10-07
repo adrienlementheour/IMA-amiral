@@ -638,6 +638,17 @@ header #menu-wrapper ul li a {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  outline: 1px solid transparent;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  transform: translateZ(0px);
 }
 header #menu-wrapper ul li a .txt-circle {
   display: none;
@@ -1306,6 +1317,13 @@ a.bloc-small.bloc-1:hover .fond-bloc-deform {
   -ms-transform: perspective(300px) rotateY(-20deg) rotate(5deg) skewX(-5deg) scale(1.05);
   transform: perspective(300px) rotateY(-20deg) rotate(5deg) skewX(-5deg) scale(1.05);
 }
+a.bloc-small.bloc-1:hover #container-smiley {
+  -webkit-transform: translateX(-10px) rotate(0deg);
+  -moz-transform: translateX(-10px) rotate(0deg);
+  -o-transform: translateX(-10px) rotate(0deg);
+  -ms-transform: translateX(-10px) rotate(0deg);
+  transform: translateX(-10px) rotate(0deg);
+}
 a.bloc-small.bloc-2 {
   top: 0;
   left: 260px;
@@ -1683,6 +1701,10 @@ a.bloc-small.bloc-5:hover .fond-bloc-deform {
   -o-transform: rotate(5deg);
   -ms-transform: rotate(5deg);
   transform: rotate(5deg);
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
+  -moz-transition: -moz-transform 0.1s ease-in-out;
+  -o-transition: -o-transform 0.1s ease-in-out;
+  transition: -webkit-transform 0.1s ease-in-out,-moz-transform 0.1s ease-in-out,-o-transform 0.1s ease-in-out,transform 0.1s ease-in-out;
 }
 #smiley .elem-smiley {
   fill: #c1c602;
