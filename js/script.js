@@ -14,6 +14,7 @@ window.requestAnimFrame = (function(){
 
 function animer(){
 	requestAnimFrame(function(){
+		//jsPlumb.setSuspendDrawing(false, true);
 		jsPlumb.repaintEverything();
 		animer();
 	});
@@ -121,6 +122,7 @@ var anchors = [ [[1, 0.6, 0.5, 0.8], [0.1, 0.8, 0, 0.5]],      [[1, 0.3, 0, -0.8
 jsPlumb.ready(function() {
 	jsPlumb.setContainer($("body"));
 	var nbBlocSmall = $(".bloc-small").length;
+	
 	$(".bloc-small").each(function(index){
 		if (index<(nbBlocSmall-1)) {
 			var instance= jsPlumb.getInstance();

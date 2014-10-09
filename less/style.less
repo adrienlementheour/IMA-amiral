@@ -474,18 +474,27 @@ a{
 		padding: 12px 8px 5px 10px;
 		.box-shadow(none);
 		.transform(rotate(-4deg));
-		.fond-btn-bloc{
+		.container-fond-btn-bloc{
 			display: block;
 			width: 100%;
 			height: 100%;
 			position: absolute;
 			top: 0;
 			right: 0;
-			background-color: @violetIMA;
-			.border-radius(3px);
-			.transform(perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg));
-			outline: 1px solid transparent;
-			.transition(padding-left 0.1s ease-in-out);
+			.transform(translateY(0));
+			.fond-btn-bloc{
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				right: 0;
+				background-color: @violetIMA;
+				.border-radius(3px);
+				.transform(perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg));
+				outline: 1px solid transparent;
+				.transition(padding-left 0.1s ease-in-out);
+			}
 		}
 		.txt-btn-bloc{
 			display: inline-block;
@@ -664,48 +673,48 @@ header{
 					top: 135px;
 					left: 225px;
 					a{
-						background-color: @vertIMA;
-						border-color: @vertIMA-dark;
+						background-color: @bleucielIMA;
+						border-color: @bleucielIMA-dark;
 					}
 				}
 				&.circle-formation{
 					top: 186px;
 					left: 201px;
 					a{
-						background-color: @bleuIMA;
-						border-color: @bleuIMA-dark;
+						background-color: @roseIMA;
+						border-color: @roseIMA-dark;
 					}
 				}
 				&.circle-offre-conseil{
 					top: 219px;
 					left: 153px;
 					a{
-						background-color: @roseIMA;
-						border-color: @roseIMA-dark;
+						background-color: @orangeIMA;
+						border-color: @orangeIMA-dark;
 					}
 				}
 				&.circle-informatique{
 					top: 219px;
 					left: 76px;
 					a{
-						background-color: @violetIMA;
-						border-color: @violetIMA-dark;
+						background-color: @bleuIMA;
+						border-color: @bleuIMA-dark;
 					}
 				}
 				&.circle-service-client{
 					top: 186px;
 					left: 28px;
 					a{
-						background-color: @bleucielIMA;
-						border-color: @bleucielIMA-dark;
+						background-color: @vertIMA;
+						border-color: @vertIMA-dark;
 					}
 				}
 				&.circle-juridique{
 					top: 135px;
 					left: 5px;
 					a{
-						background-color: @orangeIMA;
-						border-color: @orangeIMA-dark;
+						background-color: @violetIMA;
+						border-color: @violetIMA-dark;
 					}
 				}
 				a{
@@ -840,14 +849,23 @@ footer{
 				margin: 0;
 				padding: 0;
 				.box-shadow(none);
-				.fond-social{
+				.container-fond-social{
 					display: block;
 					width: 100%;
 					height: 100%;
 					position: absolute;
 					top: 0;
 					left: 0;
-					.border-radius(3px);
+					.transform(translateZ(0));
+					.fond-social{
+						display: block;
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						.border-radius(3px);
+					}
 				}
 				.logo-footer{
 					position: relative;
@@ -1079,21 +1097,32 @@ a.bloc-small{
 	position: absolute;
 	.box-shadow(none);
 	.transition(all 0.1s ease-in-out);
+	.backface-visibility(hidden);
 	.detail-bloc{
 		display: block;
 		position: absolute;
 		padding: 12px 20px 5px 20px;
 		z-index: 4;
-		.fond-detail-bloc{
+		.container-fond-detail-bloc{
 			display: block;
 			position: absolute;
 			width: 100%;
 			height: 100%;
 			bottom: 0;
 			right: 0;
-			.border-radius(3px);
-			outline: 1px solid transparent;
-			.transition(padding-left 0.1s ease-in-out);
+			.transform(translateZ(0px));
+			.fond-detail-bloc{
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				bottom: 0;
+				right: 0;
+				.border-radius(3px);
+				outline: 1px solid transparent;
+				.transition(padding-left 0.1s ease-in-out);
+				.backface-visibility(hidden);
+			}
 		}
 		.txt-detail-bloc{
 			.dearJoe(1.4em);
@@ -1109,22 +1138,30 @@ a.bloc-small{
 		position: absolute;
 		padding: 10px 20px;
 		z-index: 4;
-		.fond-categ-bloc{
+		.container-fond-categ-bloc{
 			display: block;
 			position: absolute;
 			width: 100%;
 			height: 100%;
 			top: 0;
 			left: 0;
-			.border-radius(3px);
-			outline: 1px solid transparent;
-			.transition(padding-right 0.2s ease-in-out);
+			.transform(translateZ(0px));
+			.fond-categ-bloc{
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				.border-radius(3px);
+				outline: 1px solid transparent;
+				.transition(padding-right 0.2s ease-in-out);
+			}
 		}
 		.txt-categ-bloc{
 			.opensans-bold(1em);
 			color: @blanc;
 			position: relative;
-			
 		}
 	}
 	.raccord-categ{
@@ -1135,18 +1172,27 @@ a.bloc-small{
 		position: absolute;
 		z-index:1;
 	}
-	.fond-bloc-deform{
+	.container-fond-bloc-deform{
 		display: block;
+		position: absolute;
 		width: 100%;
 		height: 100%;
-		position: absolute;
 		top: 0;
 		left: 0;
-		.border-radius(6px);
-		background-color: @blanc;
-		.box-shadow(~"3px 4px 21px rgba(0,0,0,.03)");
-		z-index: 2;
-		.transition(transform 0.4s ease-in-out);
+		.transform(translateZ(0px));
+		.fond-bloc-deform{
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			.border-radius(6px);
+			background-color: @blanc;
+			.box-shadow(~"3px 4px 21px rgba(0,0,0,.03)");
+			z-index: 2;
+			.transition(transform 0.4s ease-in-out);
+		}
 	}
 	.txt-bloc-deform{
 		.opensans(0.813em);
@@ -1187,7 +1233,7 @@ a.bloc-small{
 		top: 0;
 		left: 0;
 		padding: 30px 10px 30px 25px;
-		width: 189px;
+		width: 195px;
 		.detail-bloc{
 			right: -15px;
 			bottom: -20px;
@@ -1245,7 +1291,7 @@ a.bloc-small{
 				.transform(perspective(300px) rotateY(-20deg) rotate(5deg) skewX(-5deg) scale(1.05));
 			}
 			#container-smiley{
-				.transform(translateX(-10px) rotate(0deg));
+				.transform(translateX(-20px) rotate(0deg));
 			}
 		}
 	}
@@ -1254,7 +1300,7 @@ a.bloc-small{
 		top: 0;
 		left: 260px;
 		padding: 30px 25px 40px 25px;
-		width: 172px;
+		width: 178px;
 		.detail-bloc{
 			right: -15px;
 			bottom: -8px;
@@ -1299,7 +1345,7 @@ a.bloc-small{
 		top: 0;
 		left: 500px;
 		padding: 20px 25px 20px 25px;
-		width: 210px;
+		width: 216px;
 		.detail-bloc{
 			right: -15px;
 			bottom: -30px;
@@ -1345,7 +1391,7 @@ a.bloc-small{
 		top: 170px;
 		left: 400px;
 		padding: 30px 35px 40px 35px;
-		width: 200px;
+		width: 206px;
 		.detail-bloc{
 			right: -15px;
 			bottom: -15px;
@@ -1390,7 +1436,7 @@ a.bloc-small{
 	&.bloc-5{
 		top: 190px;
 		left: 120px;
-		width: 200px;
+		width: 206px;
 		.detail-bloc{
 			right: -15px;
 			bottom: -20px;
