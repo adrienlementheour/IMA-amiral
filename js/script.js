@@ -26,7 +26,7 @@ function animer(){
 	
 	requestAnimFrame(function(){
 		//jsPlumb.setSuspendDrawing(false, true);
-		//jsPlumb.repaintEverything();
+		jsPlumb.repaintEverything();
 		animer();
 	});
 }
