@@ -13,9 +13,20 @@ window.requestAnimFrame = (function(){
 })();
 
 function animer(){
+	myScroll = $(document).scrollTop();
+	var heightContent = $("#content").height();
+	//if ($(window).height()>=$("#content").height()+$("#visu-content").position().top){
+		//TweenMax.set($("#visu-content"), {"top": myScroll+"px"});
+	//}
+	console.log("myScroll = "+myScroll);
+	console.log((($("#content").height()+$("#visu-content").position().top)-$(window).height()));
+	if (myScroll<=(($("#content").height()+$("#visu-content").position().top)-$(window).height())){
+		TweenMax.set($("#visu-content"), {"top": myScroll+"px"});
+	}
+	
 	requestAnimFrame(function(){
 		//jsPlumb.setSuspendDrawing(false, true);
-		jsPlumb.repaintEverything();
+		//jsPlumb.repaintEverything();
 		animer();
 	});
 }
@@ -104,10 +115,33 @@ function hoverMenu(){
 	});
 }
 
+// Clic sur le bouton video
+function btnVideoClick(){
+	$("a.btn-video").click(function(){
+		// décaler le wrapper content
+		TweenMax.to($("#wrapper-content"), 0.5, {"x":"-100%", ease:Cubic.easeInOut});
+		// centrer la div fond visu
+		tlBlocVisuContent = new TimelineMax();
+		tlBlocVisuContent.to($("#bloc-fond-visu .bloc-visu-content"), 0.5, {"right":"50%", "margin-right": "-21.5%", ease:Cubic.easeInOut});
+		tlBlocVisuContent.to($("#bloc-fond-visu .bloc-visu-content"), 0.2, {opacity: 0, ease:Cubic.easeInOut});
+		tlBlocVisuContent.to($("#fond-couleur-bloc-visu"), 0.2, {opacity: 0, display: "none", ease:Cubic.easeInOut, onComplete: completeFondCouleur});
+		return false;
+	});
+}
+
+function completeFondCouleur(){
+	TweenMax.set($("#bloc-visu"), {display: "none"});
+	TweenMax.set($("#container-bloc-visu-content"), {display: "none"});
+}
+
 $(document).ready(function(){
 	animer();
 	initMenu();
 	hoverMenu();
+});
+
+$(document).scroll(function() {
+	
 });
 
 $( window ).resize(function() {
@@ -120,7 +154,7 @@ $( window ).resize(function() {
 var anchors = [ [[1, 0.6, 0.5, 0.8], [0.1, 0.8, 0, 0.5]],      [[1, 0.3, 0, -0.8], [0, 0.9, 0.2, -0.7]],      [[0.51, 1, 0, 1], [0.7, 0, 0, 1]],     [[0, 0.2, 0, 0.5], [0.5, 0, 0, -1.5]],     [[1, 0.6, 0, 1], [0, 0.9, 0, 1]]];
 
 jsPlumb.ready(function() {
-	jsPlumb.setContainer($("body"));
+	jsPlumb.setContainer($("#wrapper-content"));
 	var nbBlocSmall = $(".bloc-small").length;
 	
 	$(".bloc-small").each(function(index){
@@ -144,6 +178,7 @@ jsPlumb.ready(function() {
 	});
 	
 	if($("body").hasClass("accueil")){
+		btnVideoClick();
 		// Relier le bloc actu avec le premier bloc small (RSE)
 		jsPlumb.connect({
 			source: $("#bloc-actus"),
