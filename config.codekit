@@ -205,6 +205,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/videos\/album-photo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 79609,
+		"inputAbbreviatedPath": "\/img\/videos\/album-photo.png",
+		"outputAbbreviatedPath": "\/img\/videos\/album-photo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/videos\/entreprise.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 62161,
+		"inputAbbreviatedPath": "\/img\/videos\/entreprise.png",
+		"outputAbbreviatedPath": "\/img\/videos\/entreprise.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/videos\/locaux.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 53044,
+		"inputAbbreviatedPath": "\/img\/videos\/locaux.png",
+		"outputAbbreviatedPath": "\/img\/videos\/locaux.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -870,6 +903,28 @@
 		"initialSize": 6012,
 		"inputAbbreviatedPath": "\/layoutImg\/logo-imatech@2x.png",
 		"outputAbbreviatedPath": "\/layoutImg\/logo-imatech@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/logo-small.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5032,
+		"inputAbbreviatedPath": "\/layoutImg\/logo-small.png",
+		"outputAbbreviatedPath": "\/layoutImg\/logo-small.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/logo-small@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6024,
+		"inputAbbreviatedPath": "\/layoutImg\/logo-small@2x.png",
+		"outputAbbreviatedPath": "\/layoutImg\/logo-small@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

@@ -18,8 +18,8 @@ function animer(){
 	//if ($(window).height()>=$("#content").height()+$("#visu-content").position().top){
 		//TweenMax.set($("#visu-content"), {"top": myScroll+"px"});
 	//}
-	console.log("myScroll = "+myScroll);
-	console.log((($("#content").height()+$("#visu-content").position().top)-$(window).height()));
+	//console.log("myScroll = "+myScroll);
+	//console.log((($("#content").height()+$("#visu-content").position().top)-$(window).height()));
 	if (myScroll<=(($("#content").height()+$("#visu-content").position().top)-$(window).height())){
 		TweenMax.set($("#visu-content"), {"top": myScroll+"px"});
 	}
@@ -118,6 +118,7 @@ function hoverMenu(){
 // Clic sur le bouton video
 function btnVideoClick(){
 	$("a.btn-video").click(function(){
+		$("body").addClass("video-ouverte");
 		// décaler le wrapper content
 		TweenMax.to($("#wrapper-content"), 0.5, {"x":"-100%", ease:Cubic.easeInOut});
 		// centrer la div fond visu
@@ -132,12 +133,70 @@ function btnVideoClick(){
 function completeFondCouleur(){
 	TweenMax.set($("#bloc-visu"), {display: "none"});
 	TweenMax.set($("#container-bloc-visu-content"), {display: "none"});
+	
+	var tlBlocAutresVides = new TimelineMax();
+	tlBlocAutresVides.to($("#bloc-autres-videos"), 0.4, {marginRight: "0", ease:Cubic.easeInOut});
+	tlBlocAutresVides.to($("#bloc-autres-videos"), 0.4, {marginRight: "-196px", delay: 0.5, ease:Cubic.easeInOut});
+	
+	tlBlocAutresVides.to($("#bloc-retour-video"), 0.2, {marginLeft: "0px", ease:Cubic.easeInOut});
+}
+
+// Clic sur le retour imatech
+function btnRetourVideoClick(){
+	$("a#retour-video").click(function(){
+		$("body").removeClass("video-ouverte");
+		TweenMax.set($("#bloc-visu"), {display: "block"});
+		TweenMax.set($("#container-bloc-visu-content"), {display: "block"});
+		TweenMax.to($("#bloc-retour-video"), 0.2, {marginLeft:"-200px", ease:Cubic.easeInOut});
+		TweenMax.to($("#bloc-autres-videos"), 0.2, {marginRight: "-250px", "x": "0px", ease:Cubic.easeInOut});
+		tlBlocVisuContentRetour = new TimelineMax();
+		tlBlocVisuContentRetour.to($("#fond-couleur-bloc-visu"), 0.2, {opacity: 1, display: "block", ease:Cubic.easeInOut});
+		tlBlocVisuContentRetour.to($("#bloc-fond-visu .bloc-visu-content"), 0.2, {opacity: 1, ease:Cubic.easeInOut, onComplete: completeFondCouleurRetour});
+		return false;
+	});
+}
+
+function completeFondCouleurRetour(){
+	TweenMax.to($("#bloc-fond-visu .bloc-visu-content"), 0.5, {"right":"0", "margin-right": "0%", ease:Cubic.easeInOut});
+	TweenMax.to($("#wrapper-content"), 0.5, {"x":"0%", ease:Cubic.easeInOut});
+}
+
+function btnPlusVideos(){
+	$("a#plus-autres-videos").hover(function(){
+		// au mouse enter
+		if(!$("#bloc-autres-videos").hasClass("open")){
+			TweenMax.to($("#bloc-autres-videos"), 0.2, {x: "-20px", ease:Cubic.easeInOut});
+		}
+		TweenMax.to($("a#plus-autres-videos .icon-plus"), 0.2, {scale: "1.1", ease:Cubic.easeInOut});
+	}, function(){
+		// au mouse leave
+		TweenMax.to($("#bloc-autres-videos"), 0.2, {x: "0px", ease:Cubic.easeInOut});
+		TweenMax.to($("a#plus-autres-videos .icon-plus"), 0.2, {scale: "1", ease:Cubic.easeInOut});
+	});
+	$("a#plus-autres-videos").click(function(){
+		if(!$("#bloc-autres-videos").hasClass("open")){
+			TweenMax.set($("#bloc-autres-videos"), {x: "0"});
+			TweenMax.to($("#bloc-autres-videos"), 0.2, {marginRight: "0px", ease:Cubic.easeInOut});
+			TweenMax.to($("a#plus-autres-videos .icon-plus"), 0.2, {rotation: 45, ease:Cubic.easeInOut});
+		}else{
+			TweenMax.to($("#bloc-autres-videos"), 0.2, {marginRight: "-196px", ease:Cubic.easeInOut});
+			TweenMax.to($("a#plus-autres-videos .icon-plus"), 0.2, {rotation: 0, ease:Cubic.easeInOut});
+		}
+		$("#bloc-autres-videos").toggleClass("open");
+		
+		return false;
+	});
 }
 
 $(document).ready(function(){
 	animer();
 	initMenu();
 	hoverMenu();
+	if($("body").hasClass("accueil")){
+		btnVideoClick();
+		btnRetourVideoClick();
+		btnPlusVideos();
+	}
 });
 
 $(document).scroll(function() {
@@ -178,7 +237,6 @@ jsPlumb.ready(function() {
 	});
 	
 	if($("body").hasClass("accueil")){
-		btnVideoClick();
 		// Relier le bloc actu avec le premier bloc small (RSE)
 		jsPlumb.connect({
 			source: $("#bloc-actus"),
