@@ -145,6 +145,7 @@ function completeFondCouleur(){
 function btnRetourVideoClick(){
 	$("a#retour-video").click(function(){
 		$("body").removeClass("video-ouverte");
+		stopVideos();
 		TweenMax.set($("#bloc-visu"), {display: "block"});
 		TweenMax.set($("#container-bloc-visu-content"), {display: "block"});
 		TweenMax.to($("#bloc-retour-video"), 0.2, {marginLeft:"-200px", ease:Cubic.easeInOut});
@@ -185,6 +186,15 @@ function btnPlusVideos(){
 		$("#bloc-autres-videos").toggleClass("open");
 		
 		return false;
+	});
+}
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////// Fonction pour stopper les videos ////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+function stopVideos(){
+	$(".video-accueil iframe").each(function(index) {
+	  $(this).attr('src', $(this).attr('src'));
 	});
 }
 

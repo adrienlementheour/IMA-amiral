@@ -562,7 +562,7 @@ header{
 	display: block;
 	width: 100%;
 	height: auto;
-	margin: 0 0 50px 0;
+	margin: 0 0 40px 0;
 	nav{
 		width: 100%;
 		height: auto;
@@ -2196,6 +2196,24 @@ a.bloc-small{
 /* @end */
 
 /* @group Responsive vertical */
+
+@media (max-height: 800px) {
+	ul.actus{
+		li.actu{
+			.content-actu{
+				display: none;
+			}
+		}
+	}
+	.bloc-full{
+		.bloc-content{
+			&.small-padding-top{
+				padding: 25px 40px 25px 40px;
+			}
+		}
+	} 
+}
+
 
 /* @end */
 
