@@ -26,7 +26,8 @@ function animer(){
 	
 	requestAnimFrame(function(){
 		//jsPlumb.setSuspendDrawing(false, true);
-		jsPlumb.repaintEverything();
+		//jsPlumb.repaintEverything();
+		//jsPlumb.repaint($(".has-js-plumb"));
 		animer();
 	});
 }
@@ -198,16 +199,43 @@ function stopVideos(){
 	});
 }
 
+////////////////////// Fonction gérer la taille des raccords ribbons ////////////////////////
+function categBlocCopies(){
+	setTimeout(function() {
+		$(".categ-bloc-copie").each(function(index){
+			var blocParent = $(this).parent();
+			var widthCategBloc = $(".categ-bloc .txt-categ-bloc", blocParent).width();
+			var heightCategBloc = $(".categ-bloc .txt-categ-bloc", blocParent).height();
+			TweenMax.set($(".txt-categ-bloc-copie",this), {width: widthCategBloc+"px", height: heightCategBloc+"px"});
+			TweenMax.set($(this), {display: "block"});
+		});
+		
+		$(".detail-bloc-copie").each(function(index){
+			var blocParent = $(this).parent();
+			var widthCategBloc = $(".detail-bloc .txt-detail-bloc", blocParent).width();
+			var heightCategBloc = $(".detail-bloc .txt-detail-bloc", blocParent).height();
+			TweenMax.set($(".txt-detail-bloc-copie",this), {width: widthCategBloc+"px", height: heightCategBloc+"px"});
+			TweenMax.set($(this), {display: "block"});
+		});
+	}, 500);
+}
+
+
 $(document).ready(function(){
 	animer();
 	initMenu();
 	hoverMenu();
+	categBlocCopies();
 	if($("body").hasClass("accueil")){
 		btnVideoClick();
 		btnRetourVideoClick();
 		btnPlusVideos();
 	}
 });
+
+//$(window).load(function(){
+	//categBlocCopies();
+//});
 
 $(document).scroll(function() {
 	
@@ -225,7 +253,6 @@ var anchors = [ [[1, 0.6, 0.5, 0.8], [0.1, 0.8, 0, 0.5]],      [[1, 0.3, 0, -0.8
 jsPlumb.ready(function() {
 	jsPlumb.setContainer($("#wrapper-content"));
 	var nbBlocSmall = $(".bloc-small").length;
-	
 	$(".bloc-small").each(function(index){
 		if (index<(nbBlocSmall-1)) {
 			var instance= jsPlumb.getInstance();
@@ -275,4 +302,11 @@ jsPlumb.ready(function() {
 			connector:[ "Flowchart", {stub:400, cornerRadius: 40, gap: 40}]
 		});
 	}
+	
+	repeindre();
 });
+
+function repeindre(){
+	jsPlumb.repaint($(".has-js-plumb"));
+	window.setTimeout(function() { repeindre() }, 10)
+}
