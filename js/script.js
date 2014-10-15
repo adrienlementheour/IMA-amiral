@@ -212,9 +212,17 @@ function categBlocCopies(){
 		
 		$(".detail-bloc-copie").each(function(index){
 			var blocParent = $(this).parent();
-			var widthCategBloc = $(".detail-bloc .txt-detail-bloc", blocParent).width();
-			var heightCategBloc = $(".detail-bloc .txt-detail-bloc", blocParent).height();
-			TweenMax.set($(".txt-detail-bloc-copie",this), {width: widthCategBloc+"px", height: heightCategBloc+"px"});
+			var widthDetailBloc = $(".detail-bloc .txt-detail-bloc", blocParent).width();
+			var heightDetailBloc = $(".detail-bloc .txt-detail-bloc", blocParent).height();
+			TweenMax.set($(".txt-detail-bloc-copie",this), {width: widthDetailBloc+"px", height: heightDetailBloc+"px"});
+			TweenMax.set($(this), {display: "block"});
+		});
+		
+		$(".ribbon-copie").each(function(index){
+			var blocParent = $(this).parent();
+			var widthRibbon = $(".ribbon .ribbon-content", blocParent).width();
+			var heightRibbon = $(".ribbon .ribbon-content", blocParent).height();
+			TweenMax.set($(".ribbon-content",this), {width: widthRibbon+"px", height: heightRibbon+"px"});
 			TweenMax.set($(this), {display: "block"});
 		});
 	}, 500);

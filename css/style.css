@@ -226,6 +226,7 @@ body {
   -webkit-box-shadow: 3px 4px 21px rgba(0,0,0,.03);
   -moz-box-shadow: 3px 4px 21px rgba(0,0,0,.03);
   box-shadow: 3px 4px 21px rgba(0,0,0,.03);
+  z-index: 2;
 }
 .bloc-content {
   display: block;
@@ -233,6 +234,7 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  z-index: 2;
 }
 h1 {
   font-family: 'open_sansbold', sans-serif;
@@ -902,7 +904,8 @@ footer ul.social-footer li.viadeo a .icon-viadeo {
 }
 /* @end */
 /* @group Ribbon */
-.ribbon {
+.ribbon,
+.ribbon-copie {
   display: block;
   width: auto;
   height: auto;
@@ -914,9 +917,10 @@ footer ul.social-footer li.viadeo a .icon-viadeo {
   -o-transform: rotate(-4deg);
   -ms-transform: rotate(-4deg);
   transform: rotate(-4deg);
-  z-index: 2;
+  z-index: 3;
 }
-.ribbon .fond-ribbon {
+.ribbon .fond-ribbon,
+.ribbon-copie .fond-ribbon {
   display: block;
   width: 100%;
   height: 100%;
@@ -935,7 +939,8 @@ footer ul.social-footer li.viadeo a .icon-viadeo {
   -ms-transform: skew(-8deg, 0deg) rotate(0deg);
   transform: skew(-8deg, 0deg) rotate(0deg);
 }
-.ribbon .ribbon-content {
+.ribbon .ribbon-content,
+.ribbon-copie .ribbon-content {
   position: relative;
   display: block;
   -webkit-box-sizing: border-box;
@@ -944,16 +949,21 @@ footer ul.social-footer li.viadeo a .icon-viadeo {
   padding: 5px 30px 5px 13px;
   color: #ffffff;
 }
-.ribbon.ribbon-bleu .fond-ribbon {
+.ribbon.ribbon-bleu .fond-ribbon,
+.ribbon-copie.ribbon-bleu .fond-ribbon {
   background-color: #0f589f;
+}
+.ribbon-copie {
+  display: none;
+  z-index: 1;
 }
 .ribbon-join {
   display: block;
   width: 40px;
   height: 40px;
   position: absolute;
-  top: 0px;
-  left: -18px;
+  bottom: -22px;
+  left: 8px;
   -webkit-transform: rotate(25deg);
   -moz-transform: rotate(25deg);
   -o-transform: rotate(25deg);
@@ -1239,6 +1249,10 @@ a.bloc-small .raccord-categ {
   transform: rotate(45deg);
   position: absolute;
   z-index: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 a.bloc-small .raccord-detail {
   display: block;
@@ -1251,6 +1265,10 @@ a.bloc-small .raccord-detail {
   transform: rotate(45deg);
   position: absolute;
   z-index: 1;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 a.bloc-small .container-fond-bloc-deform {
   display: block;
@@ -1361,7 +1379,7 @@ a.bloc-small.bloc-1 .detail-bloc-copie .fond-detail-bloc {
 }
 a.bloc-small.bloc-1 .raccord-detail {
   background-color: #909401;
-  top: -3px;
+  top: -2px;
   right: 4px;
   -webkit-transform: rotate(25deg);
   -moz-transform: rotate(25deg);
@@ -1541,7 +1559,7 @@ a.bloc-small.bloc-3 .detail-bloc-copie .fond-detail-bloc {
 }
 a.bloc-small.bloc-3 .raccord-detail {
   background-color: #ad6809;
-  top: -2px;
+  top: -1px;
   right: 5px;
   -webkit-transform: rotate(25deg);
   -moz-transform: rotate(25deg);
@@ -1633,7 +1651,7 @@ a.bloc-small.bloc-4 .detail-bloc-copie .fond-detail-bloc {
 }
 a.bloc-small.bloc-4 .raccord-detail {
   background-color: #790347;
-  top: -2px;
+  top: -1px;
   right: 5px;
   -webkit-transform: rotate(25deg);
   -moz-transform: rotate(25deg);
@@ -1713,7 +1731,7 @@ a.bloc-small.bloc-5 .detail-bloc-copie .fond-detail-bloc {
 }
 a.bloc-small.bloc-5 .raccord-detail {
   background-color: #0b3e70;
-  top: -2px;
+  top: -1px;
   right: 5px;
   -webkit-transform: rotate(25deg);
   -moz-transform: rotate(25deg);
@@ -1775,6 +1793,9 @@ a.bloc-small.bloc-5:hover .fond-bloc-deform {
   -o-transform: perspective(300px) rotateX(-20deg) rotateY(0deg) rotate(5deg) skewX(-5deg) scale(1.05);
   -ms-transform: perspective(300px) rotateX(-20deg) rotateY(0deg) rotate(5deg) skewX(-5deg) scale(1.05);
   transform: perspective(300px) rotateX(-20deg) rotateY(0deg) rotate(5deg) skewX(-5deg) scale(1.05);
+}
+a.bloc-small.bloc-5:hover .raccord-categ {
+  margin-left: 2px;
 }
 /* @end */
 /* @group Bloc Video */

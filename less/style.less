@@ -420,12 +420,14 @@ body{
 	left: 0;
 	.border-radius(17px);
 	.box-shadow(~"3px 4px 21px rgba(0,0,0,.03)");
+	z-index: 2;
 }
 
 .bloc-content{
 	display: block;
 	position: relative;
 	.box-sizing(border-box);
+	z-index: 2;
 }
 
 h1{
@@ -932,7 +934,7 @@ footer{
 
 /* @group Ribbon */
 
-.ribbon{
+.ribbon, .ribbon-copie{
 	display: block;
 	width: auto;
 	height: auto;
@@ -940,7 +942,7 @@ footer{
 	top: -17px;
 	left: -25px;
 	.transform(rotate(-4deg));
-	z-index: 2;
+	z-index: 3;
 	.fond-ribbon{
 		display: block;
 		width: 100%;
@@ -965,13 +967,18 @@ footer{
 	}
 }
 
+.ribbon-copie{
+	display: none;
+	z-index: 1;
+}
+
 .ribbon-join{
 	display: block;
 	width: 40px;
 	height: 40px;
 	position: absolute;
-	top: 0px;
-	left: -18px;
+	bottom: -22px;
+	left: 8px;
 	.rotate(25deg);
 	&.ribbon-bleu{
 		background-color: @bleuIMA-dark;
@@ -1175,6 +1182,7 @@ a.bloc-small{
 		.rotate(45deg);
 		position: absolute;
 		z-index:1;
+		.transition(all 0.2s ease-in-out);
 	}
 	.raccord-detail{
 		display: block;
@@ -1183,6 +1191,7 @@ a.bloc-small{
 		.rotate(45deg);
 		position: absolute;
 		z-index:1;
+		.transition(all 0.1s ease-in-out);
 	}
 	.container-fond-bloc-deform{
 		display: block;
@@ -1259,7 +1268,7 @@ a.bloc-small{
 		}
 		.raccord-detail{
 			background-color: @vertIMA-dark;
-			top: -3px;
+			top: -2px;
 			right: 4px;
 			.rotate(25deg);
 		}
@@ -1373,7 +1382,7 @@ a.bloc-small{
 		}
 		.raccord-detail{
 			background-color: @orangeIMA-dark;
-			top: -2px;
+			top: -1px;
 			right: 5px;
 			.rotate(25deg);
 		}
@@ -1430,7 +1439,7 @@ a.bloc-small{
 		}
 		.raccord-detail{
 			background-color: @roseIMA-dark;
-			top: -2px;
+			top: -1px;
 			right: 5px;
 			.rotate(25deg);
 		}
@@ -1479,7 +1488,7 @@ a.bloc-small{
 		}
 		.raccord-detail{
 			background-color: @bleuIMA-dark;
-			top: -2px;
+			top: -1px;
 			right: 5px;
 			.rotate(25deg);
 		}
@@ -1512,6 +1521,9 @@ a.bloc-small{
 		&:hover{
 			.fond-bloc-deform{
 				.transform(perspective(300px) rotateX(-20deg) rotateY(0deg) rotate(5deg) skewX(-5deg) scale(1.05));
+			}
+			.raccord-categ{
+				margin-left: 2px;
 			}
 		}
 	}
