@@ -2023,7 +2023,7 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   margin-right: -250px;
   overflow: auto;
 }
-#bloc-autres-videos a.btn-icon-plus {
+#bloc-autres-videos #container-btn-plus {
   display: block;
   text-align: center;
   position: absolute;
@@ -2033,7 +2033,17 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   width: 55px;
   height: auto;
 }
-#bloc-autres-videos a.btn-icon-plus .icon-plus {
+#bloc-autres-videos #container-btn-plus a.btn-icon-plus {
+  display: block;
+  width: 55px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#bloc-autres-videos #container-btn-plus a.btn-icon-plus .icon-plus {
   font-size: 30px;
   top: 50%;
   margin-top: -15px;
@@ -2042,7 +2052,7 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   width: 30px;
   height: 30px;
   line-height: 30px;
-  position: fixed;
+  position: absolute;
 }
 #bloc-autres-videos #container-autres-videos {
   display: table;
