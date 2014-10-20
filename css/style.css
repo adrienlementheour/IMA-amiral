@@ -2021,6 +2021,7 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 2;
   margin-right: -250px;
+  overflow: auto;
 }
 #bloc-autres-videos a.btn-icon-plus {
   display: block;
@@ -2036,13 +2037,12 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   font-size: 30px;
   top: 50%;
   margin-top: -15px;
-  left: 50%;
-  margin-left: -15px;
+  left: 12px;
   display: block;
   width: 30px;
   height: 30px;
   line-height: 30px;
-  position: absolute;
+  position: fixed;
 }
 #bloc-autres-videos #container-autres-videos {
   display: table;
