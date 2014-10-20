@@ -107,7 +107,7 @@ function fermetureMenu(){
 	
 	tlCircleDashed.to($("#menu-wrapper #circle-dashed-container"), 0.3, {scale: 0.3, ease:Cubic.easeInOut});
 	
-	tlMenuWrapper.to($("#menu-wrapper"), 0.5, {width:"250px", height:"250px", "margin-top":"-90px", ease:Cubic.easeInOut});
+	tlMenuWrapper.to($("#menu-wrapper"), 0.5, {width:"250px", height:"250px", "margin-top":"-100px", ease:Cubic.easeInOut});
 	
 	tlMenuWrapper.set($("#menu-wrapper ul li"), {width:"20px", height:"20px", ease:Cubic.easeInOut});
 	tlMenuWrapper.set($("#menu-wrapper ul li a"), {"border-width":"0px", ease:Cubic.easeInOut});
@@ -225,7 +225,7 @@ function stopVideos(){
 	});
 }
 
-////////////////////// Fonction gérer la taille des raccords ribbons ////////////////////////
+////////////////////// Fonction pour gérer la taille des raccords ribbons ////////////////////////
 function categBlocCopies(){
 	setTimeout(function() {
 		$(".categ-bloc-copie").each(function(index){
@@ -254,12 +254,28 @@ function categBlocCopies(){
 	}, 500);
 }
 
+////////////////////// Fonction pour pencher les bloc content en fonction de leur hauteur ////////////////////////
+function blocPenche(){
+	$(".bloc-penche").each(function(index){
+		var heightBlocPenche = $(this).height();
+		if(heightBlocPenche>300){
+			TweenMax.set($(this), {rotation: 0});
+		}else if (heightBlocPenche>200){
+			TweenMax.set($(this), {rotation: -3});
+		}else{
+			TweenMax.set($(this), {rotation: -4});
+		}
+	});
+}
+
+
 
 $(document).ready(function(){
 	animer();
 	initMenu();
 	hoverMenu();
 	categBlocCopies();
+	blocPenche();
 	if($("body").hasClass("accueil")){
 		btnVideoClick();
 		btnRetourVideoClick();
@@ -276,7 +292,24 @@ $(document).scroll(function() {
 });
 
 $( window ).resize(function() {
-
+	if ($(window).width()>=1250) {
+		jsPlumb.detachAllConnections($(".bloc-btn-video"));
+		// Relier le menu avec le lien video
+		jsPlumb.connect({
+			source: $("#menu-wrapper"),
+			target: $(".bloc-btn-video"),
+			anchors: [[1.2, 0.5, 1, 0], [0, 0.5, -1, 0]],
+			endpoint:"Blank",
+			paintStyle:{
+			lineWidth:2,
+			strokeStyle:'#cacaca',
+			dashstyle:" 0 1"
+			},
+			connector:[ "Flowchart", {stub:400, cornerRadius: 40, gap: 40}]
+		});
+	}else {
+		jsPlumb.detachAllConnections($(".bloc-btn-video"));
+	}
 });
 
 //[x, y, dx, dy]
@@ -321,20 +354,21 @@ jsPlumb.ready(function() {
 			},
 			connector:[ "Bezier", { curviness: 50 }]
 		});
-		
-		// Relier le menu avec le lien video
-		jsPlumb.connect({
-			source: $("#menu-wrapper"),
-			target: $(".bloc-btn-video"),
-			anchors: [[1.2, 0.5, 1, 0], [0, 0.5, -1, 0]],
-			endpoint:"Blank",
-			paintStyle:{
-			lineWidth:2,
-			strokeStyle:'#cacaca',
-			dashstyle:" 0 1"
-			},
-			connector:[ "Flowchart", {stub:400, cornerRadius: 40, gap: 40}]
-		});
+		if ($(window).width()>=1250) {
+			// Relier le menu avec le lien video
+			jsPlumb.connect({
+				source: $("#menu-wrapper"),
+				target: $(".bloc-btn-video"),
+				anchors: [[1.2, 0.5, 1, 0], [0, 0.5, -1, 0]],
+				endpoint:"Blank",
+				paintStyle:{
+				lineWidth:2,
+				strokeStyle:'#cacaca',
+				dashstyle:" 0 1"
+				},
+				connector:[ "Flowchart", {stub:400, cornerRadius: 40, gap: 40}]
+			});
+		}
 	}
 	
 	repeindre();

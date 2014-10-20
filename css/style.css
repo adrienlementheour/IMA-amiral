@@ -452,7 +452,7 @@ header nav {
 }
 header #menu-wrapper {
   position: relative;
-  margin: -90px auto 0 auto;
+  margin: -100px auto 0 auto;
   padding: 0;
   width: 250px;
   height: 250px;
@@ -694,7 +694,7 @@ footer {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 15px 0;
+  padding: 10px 0;
   background-color: #ffffff;
   -webkit-opacity: 0.8;
   -moz-opacity: 0.8;
@@ -1099,6 +1099,7 @@ a.bloc-small {
   -o-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
+  line-height: 1.1em;
 }
 a.bloc-small .detail-bloc,
 a.bloc-small .detail-bloc-copie {
@@ -2589,9 +2590,37 @@ a.bloc-small.bloc-5:hover .raccord-categ {
 /* ==|== media queries ======================================================
    ========================================================================== */
 /* @group Responsive horizontal */
+@media (max-width: 1250px) {
+  .container {
+    width: 90%;
+  }
+  #visu-content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 150px;
+  }
+  .bloc-btn-video {
+    width: 80px;
+    height: 80px;
+    display: block;
+    position: relative;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    left: 50%;
+    margin-left: -40px;
+  }
+  .bloc-btn-video #circle-dashed-video-svg {
+    display: none;
+  }
+}
 /* @end */
 /* @group Responsive vertical */
 @media (max-height: 800px) {
+  header {
+    margin: 0 0 20px 0;
+  }
   ul.actus li.actu .content-actu {
     display: none;
   }
