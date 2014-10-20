@@ -202,6 +202,7 @@ body {
   height: auto;
   margin: 0 auto;
   padding: 0;
+  z-index: 1;
 }
 .bloc-full .bloc-content {
   padding: 40px 40px 40px 40px;
@@ -449,6 +450,33 @@ header nav {
   width: 100%;
   height: auto;
   position: relative;
+}
+header #label-menu {
+  font-family: 'dearJoe6', sans-serif;
+  font-weight: normal;
+  font-size: 1.4em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #0f589f;
+  position: absolute;
+  top: 170px;
+  left: 60px;
+  z-index: 1;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+}
+header #label-menu:after {
+  content: "";
+  display: block;
+  width: 31px;
+  height: 15px;
+  background: url('../layoutImg/fleche-droite.png') no-repeat center center;
+  position: absolute;
+  top: 8px;
+  right: -45px;
 }
 header #menu-wrapper {
   position: relative;
@@ -1409,7 +1437,7 @@ a.bloc-small.bloc-1 .categ-bloc-copie .fond-categ-bloc {
 }
 a.bloc-small.bloc-1 .raccord-categ {
   background-color: #6c9db6;
-  bottom: -10px;
+  bottom: -4px;
   left: 6px;
   -webkit-transform: rotate(35deg);
   -moz-transform: rotate(35deg);
@@ -1560,7 +1588,7 @@ a.bloc-small.bloc-3 .detail-bloc-copie .fond-detail-bloc {
 }
 a.bloc-small.bloc-3 .raccord-detail {
   background-color: #ad6809;
-  top: -1px;
+  top: -3px;
   right: 5px;
   -webkit-transform: rotate(25deg);
   -moz-transform: rotate(25deg);
@@ -1590,7 +1618,7 @@ a.bloc-small.bloc-3 .categ-bloc-copie .fond-categ-bloc {
 }
 a.bloc-small.bloc-3 .raccord-categ {
   background-color: #0b3e70;
-  bottom: -11px;
+  bottom: -6px;
   left: 7px;
   -webkit-transform: rotate(40deg);
   -moz-transform: rotate(40deg);
@@ -1652,7 +1680,7 @@ a.bloc-small.bloc-4 .detail-bloc-copie .fond-detail-bloc {
 }
 a.bloc-small.bloc-4 .raccord-detail {
   background-color: #790347;
-  top: -1px;
+  top: -3px;
   right: 5px;
   -webkit-transform: rotate(25deg);
   -moz-transform: rotate(25deg);
@@ -1732,7 +1760,7 @@ a.bloc-small.bloc-5 .detail-bloc-copie .fond-detail-bloc {
 }
 a.bloc-small.bloc-5 .raccord-detail {
   background-color: #0b3e70;
-  top: -1px;
+  top: -2px;
   right: 5px;
   -webkit-transform: rotate(25deg);
   -moz-transform: rotate(25deg);
@@ -1761,7 +1789,7 @@ a.bloc-small.bloc-5 .categ-bloc-copie .fond-categ-bloc {
 }
 a.bloc-small.bloc-5 .raccord-categ {
   background-color: #ad6809;
-  bottom: -9px;
+  bottom: -4px;
   left: 5px;
   -webkit-transform: rotate(35deg);
   -moz-transform: rotate(35deg);

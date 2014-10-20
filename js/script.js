@@ -67,6 +67,9 @@ function ouvertureMenu(){
 	tlCircleDashed = new TimelineMax();
 	tlCircles = new TimelineMax();
 	
+	
+	TweenMax.to($("#label-menu"), 0.05, {opacity: 0, ease:Cubic.easeInOut});
+	
 	tlMenuWrapper.to($("#menu-wrapper ul"), 0.05, {scale:1.2, ease:Cubic.easeInOut});
 	tlMenuWrapper.to($("#menu-wrapper ul"), 0.05, {scale:1 , ease:Cubic.easeInOut});
 	tlMenuWrapper.to($("#menu-wrapper ul li"), 0.1, {left: "35%", top: "35%", ease:Cubic.easeInOut});
@@ -123,6 +126,7 @@ function fermetureMenu(){
 		tlCircles.to($("#menu-wrapper ul li.circle-informatique"), 0.4, {top: "219px", left: "76px", delay:0.15, ease:Cubic.easeInOut},0);
 		tlCircles.to($("#menu-wrapper ul li.circle-service-client"), 0.4, {top: "186px", left: "28px", delay:0.2, ease:Cubic.easeInOut},0);
 		tlCircles.to($("#menu-wrapper ul li.circle-juridique"), 0.4, {top: "135px", left: "5px", delay:0.25, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#label-menu"), 0.15, {opacity: 1, ease:Cubic.easeInOut});
 	}
 }
 

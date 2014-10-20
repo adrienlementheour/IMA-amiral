@@ -402,6 +402,7 @@ body{
 	height: auto;
 	margin: 0 auto;
 	padding: 0;
+	z-index: 1;
 	.bloc-content{
 		padding: 40px 40px 40px 40px;
 		&.small-padding-top{
@@ -569,6 +570,25 @@ header{
 		width: 100%;
 		height: auto;
 		position: relative;
+	}
+	#label-menu{
+		.dearJoe(1.4em);
+		color: @bleuIMA;
+		position: absolute;
+		top: 170px;
+		left: 60px;
+		z-index: 1;
+		.opacity(0);
+		&:after{
+			content: "";
+			display: block;
+			width: 31px;
+			height: 15px;
+			background: url('../layoutImg/fleche-droite.png') no-repeat center center;
+			position: absolute;
+			top: 8px;
+			right: -45px;
+		}
 	}
 	#menu-wrapper {
 		position: relative;
@@ -1284,7 +1304,7 @@ a.bloc-small{
 		}
 		.raccord-categ{
 			background-color: @bleucielIMA-dark;
-			bottom: -10px;
+			bottom: -4px;
 			left: 6px;
 			.rotate(35deg);
 		}
@@ -1383,7 +1403,7 @@ a.bloc-small{
 		}
 		.raccord-detail{
 			background-color: @orangeIMA-dark;
-			top: -1px;
+			top: -3px;
 			right: 5px;
 			.rotate(25deg);
 		}
@@ -1399,7 +1419,7 @@ a.bloc-small{
 		}
 		.raccord-categ{
 			background-color: @bleuIMA-dark;
-			bottom: -11px;
+			bottom: -6px;
 			left: 7px;
 			.rotate(40deg);
 		}
@@ -1440,7 +1460,7 @@ a.bloc-small{
 		}
 		.raccord-detail{
 			background-color: @roseIMA-dark;
-			top: -1px;
+			top: -3px;
 			right: 5px;
 			.rotate(25deg);
 		}
@@ -1489,7 +1509,7 @@ a.bloc-small{
 		}
 		.raccord-detail{
 			background-color: @bleuIMA-dark;
-			top: -1px;
+			top: -2px;
 			right: 5px;
 			.rotate(25deg);
 		}
@@ -1504,7 +1524,7 @@ a.bloc-small{
 		}
 		.raccord-categ{
 			background-color: @orangeIMA-dark;
-			bottom: -9px;
+			bottom: -4px;
 			left: 5px;
 			.rotate(35deg);
 		}
