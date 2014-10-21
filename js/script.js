@@ -68,7 +68,7 @@ function ouvertureMenu(){
 	tlCircles = new TimelineMax();
 	
 	
-	TweenMax.to($("#label-menu"), 0.05, {opacity: 0, ease:Cubic.easeInOut});
+	TweenMax.to($("#label-menu"), 0.05, {opacity: 0, display: "none", ease:Cubic.easeInOut});
 	
 	tlMenuWrapper.to($("#menu-wrapper ul"), 0.05, {scale:1.2, ease:Cubic.easeInOut});
 	tlMenuWrapper.to($("#menu-wrapper ul"), 0.05, {scale:1 , ease:Cubic.easeInOut});
@@ -80,7 +80,7 @@ function ouvertureMenu(){
 	tlMenuWrapper.to($("#menu-wrapper"), 0.2, {width:"430px", height:"430px", "margin-top":"-110px", ease:Cubic.easeInOut});
 	
 	tlMenuWrapper.set($("#menu-wrapper ul li"), {width:"98px", height:"98px", ease:Cubic.easeInOut});
-	tlMenuWrapper.set($("#menu-wrapper ul li a"), {"border-width":"10px", ease:Cubic.easeInOut});
+	//tlMenuWrapper.set($("#menu-wrapper ul li a"), {"border-width":"10px", ease:Cubic.easeInOut});
 	tlMenuWrapper.set($("#menu-wrapper ul li a .txt-circle"), {display:"inline-block", ease:Cubic.easeInOut, onComplete: cerclesAnim});
 	tlCircleDashed.set($("#menu-wrapper #circle-dashed-container"), {width:"312px", height:"312px", "margin-top": "-156px", "margin-left": "-156px", ease:Cubic.easeInOut});
 	
@@ -126,7 +126,7 @@ function fermetureMenu(){
 		tlCircles.to($("#menu-wrapper ul li.circle-informatique"), 0.4, {top: "219px", left: "76px", delay:0.15, ease:Cubic.easeInOut},0);
 		tlCircles.to($("#menu-wrapper ul li.circle-service-client"), 0.4, {top: "186px", left: "28px", delay:0.2, ease:Cubic.easeInOut},0);
 		tlCircles.to($("#menu-wrapper ul li.circle-juridique"), 0.4, {top: "135px", left: "5px", delay:0.25, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#label-menu"), 0.15, {opacity: 1, ease:Cubic.easeInOut});
+		tlCircles.to($("#label-menu"), 0.15, {opacity: 1, display: "block", ease:Cubic.easeInOut});
 	}
 }
 
@@ -272,7 +272,18 @@ function blocPenche(){
 	});
 }
 
-
+////////////////////// Fonction pour animer les svg du bloc Innovation ////////////////////////
+function hoverBlocInnovation(){
+	$(".bloc-small.bloc-3").hover(function(){
+		// au mouse enter
+		TweenMax.fromTo($("#container-pop"), 0.5, {scale: "0"}, {scale: "1", ease:Cubic.easeInOut});
+		TweenMax.fromTo($("#container-pop2"), 0.4, {scale: "0"}, {scale: "1", ease:Cubic.easeInOut, delay: 0.1});
+		TweenMax.fromTo($("#container-pop3"), 0.7, {scale: "0"}, {scale: "1", ease:Cubic.easeInOut, delay: 0.2});
+		TweenMax.fromTo($("#container-pop4"), 0.5, {scale: "0"}, {scale: "1", ease:Cubic.easeInOut, delay: 0.1});
+	}, function(){
+		// au mouse leave
+	});
+}
 
 $(document).ready(function(){
 	animer();
@@ -284,6 +295,7 @@ $(document).ready(function(){
 		btnVideoClick();
 		btnRetourVideoClick();
 		btnPlusVideos();
+		hoverBlocInnovation();
 	}
 });
 

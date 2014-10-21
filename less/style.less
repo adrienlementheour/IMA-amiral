@@ -222,6 +222,9 @@ textarea {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-scoopit:before {
+	content: "\e605";
+}
 .icon-arrow-left:before {
 	content: "\e604";
 }
@@ -579,6 +582,7 @@ header{
 		left: 60px;
 		z-index: 1;
 		.opacity(0);
+		display: none;
 		&:after{
 			content: "";
 			display: block;
@@ -603,11 +607,57 @@ header{
 			ul{
 				li{
 					a{
-						.transition(transform 0.1s ease-in-out, borderWidth 0.1s ease-in-out);
+						.transition(all 0.1s ease-in-out);
 						&:hover{
 							.transform(scale(1.1));
-							border-width: 7px!important;
-							line-height: 84px;
+						}
+					}
+					&.circle-vehicules{
+						a{
+							.box-shadow(inset 0 0 0 10px @bleucielIMA-dark);
+							&:hover{
+								.box-shadow(inset 0 0 0 5px @bleucielIMA-dark);
+							}
+						}
+					}
+					&.circle-formation{
+						a{
+							.box-shadow(inset 0 0 0 10px @roseIMA-dark);
+							&:hover{
+								.box-shadow(inset 0 0 0 5px @roseIMA-dark);
+							}
+						}
+					}
+					&.circle-offre-conseil{
+						a{
+							.box-shadow(inset 0 0 0 10px @orangeIMA-dark);
+							&:hover{
+								.box-shadow(inset 0 0 0 5px @orangeIMA-dark);
+							}
+						}
+					}
+					&.circle-informatique{
+						a{
+							.box-shadow(inset 0 0 0 10px @bleuIMA-dark);
+							&:hover{
+								.box-shadow(inset 0 0 0 5px @bleuIMA-dark);
+							}
+						}
+					}
+					&.circle-service-client{
+						a{
+							.box-shadow(inset 0 0 0 10px @vertIMA-dark);
+							&:hover{
+								.box-shadow(inset 0 0 0 5px @vertIMA-dark);
+							}
+						}
+					}
+					&.circle-juridique{
+						a{
+							.box-shadow(inset 0 0 0 10px @violetIMA-dark);
+							&:hover{
+								.box-shadow(inset 0 0 0 5px @violetIMA-dark);
+							}
 						}
 					}
 				}
@@ -699,7 +749,7 @@ header{
 					left: 225px;
 					a{
 						background-color: @bleucielIMA;
-						border-color: @bleucielIMA-dark;
+						.box-shadow(none);
 					}
 				}
 				&.circle-formation{
@@ -707,7 +757,7 @@ header{
 					left: 201px;
 					a{
 						background-color: @roseIMA;
-						border-color: @roseIMA-dark;
+						.box-shadow(none);
 					}
 				}
 				&.circle-offre-conseil{
@@ -715,7 +765,7 @@ header{
 					left: 153px;
 					a{
 						background-color: @orangeIMA;
-						border-color: @orangeIMA-dark;
+						.box-shadow(none);
 					}
 				}
 				&.circle-informatique{
@@ -723,7 +773,7 @@ header{
 					left: 76px;
 					a{
 						background-color: @bleuIMA;
-						border-color: @bleuIMA-dark;
+						.box-shadow(none);
 					}
 				}
 				&.circle-service-client{
@@ -731,7 +781,7 @@ header{
 					left: 28px;
 					a{
 						background-color: @vertIMA;
-						border-color: @vertIMA-dark;
+						.box-shadow(none);
 					}
 				}
 				&.circle-juridique{
@@ -739,7 +789,7 @@ header{
 					left: 5px;
 					a{
 						background-color: @violetIMA;
-						border-color: @violetIMA-dark;
+						.box-shadow(none);
 					}
 				}
 				a{
@@ -756,11 +806,13 @@ header{
 					.box-sizing(border-box);
 					border-style: solid;
 					border-width: 0;
-					line-height: 78px;
+					line-height: 98px;
 					.box-shadow(none);
 					outline: 1px solid transparent;
 					.backface-visibility(hidden);
 					.transform(translateZ(0));
+					/*border: none;
+					.box-shadow(0 0 0 3px #002525);*/
 					.txt-circle{
 						display: none;
 						vertical-align: middle;
@@ -874,6 +926,10 @@ footer{
 				margin: 0;
 				padding: 0;
 				.box-shadow(none);
+				.transition(transform 0.1s ease-in-out);
+				&:hover{
+					.transform(scale(1.1));
+				}
 				.container-fond-social{
 					display: block;
 					width: 100%;
@@ -901,20 +957,8 @@ footer{
 					text-align: center;
 				}
 			}
-			&.facebook{
-				a{
-					.fond-social{
-						background-color: #293eab;
-						.transform(perspective(50px) rotateY(20deg));
-					}
-					.icon-facebook{
-						.transform(translateY(1px));
-					}
-				}
-			}
 			&.twitter{
 				a{
-					.transform(translateY(1px));
 					.fond-social{
 						background-color: #54a8d4;
 						.transform(rotate(-2deg));
@@ -943,6 +987,17 @@ footer{
 					}
 					.icon-viadeo{
 						background: url('../layoutImg/footer/logo-viadeo.png') no-repeat center 40%;
+					}
+				}
+			}
+			&.scoopit{
+				a{
+					.fond-social{
+						background-color: #6bac36;
+						.transform(perspective(50px) rotateY(20deg));
+					}
+					.icon-scoopit{
+						.transform(translateY(1px));
 					}
 				}
 			}

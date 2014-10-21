@@ -142,6 +142,9 @@ textarea {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-scoopit:before {
+  content: "\e605";
+}
 .icon-arrow-left:before {
   content: "\e604";
 }
@@ -467,6 +470,7 @@ header #label-menu {
   -webkit-opacity: 0;
   -moz-opacity: 0;
   opacity: 0;
+  display: none;
 }
 header #label-menu:after {
   content: "";
@@ -500,10 +504,10 @@ header #menu-wrapper {
   transform-style: preserve-3d;
 }
 header #menu-wrapper.active ul li a {
-  -webkit-transition: -webkit-transform 0.1s ease-in-out, borderWidth 0.1s ease-in-out;
-  -moz-transition: -moz-transform 0.1s ease-in-out, borderWidth 0.1s ease-in-out;
-  -o-transition: -o-transform 0.1s ease-in-out, borderWidth 0.1s ease-in-out;
-  transition: -webkit-transform 0.1s ease-in-out,-moz-transform 0.1s ease-in-out,-o-transform 0.1s ease-in-out,transform 0.1s ease-in-out, borderWidth 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 header #menu-wrapper.active ul li a:hover {
   -webkit-transform: scale(1.1);
@@ -511,8 +515,66 @@ header #menu-wrapper.active ul li a:hover {
   -o-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
-  border-width: 7px!important;
-  line-height: 84px;
+}
+header #menu-wrapper.active ul li.circle-vehicules a {
+  -webkit-box-shadow: inset 0 0 0 10px #6c9db6;
+  -moz-box-shadow: inset 0 0 0 10px #6c9db6;
+  box-shadow: inset 0 0 0 10px #6c9db6;
+}
+header #menu-wrapper.active ul li.circle-vehicules a:hover {
+  -webkit-box-shadow: inset 0 0 0 5px #6c9db6;
+  -moz-box-shadow: inset 0 0 0 5px #6c9db6;
+  box-shadow: inset 0 0 0 5px #6c9db6;
+}
+header #menu-wrapper.active ul li.circle-formation a {
+  -webkit-box-shadow: inset 0 0 0 10px #790347;
+  -moz-box-shadow: inset 0 0 0 10px #790347;
+  box-shadow: inset 0 0 0 10px #790347;
+}
+header #menu-wrapper.active ul li.circle-formation a:hover {
+  -webkit-box-shadow: inset 0 0 0 5px #790347;
+  -moz-box-shadow: inset 0 0 0 5px #790347;
+  box-shadow: inset 0 0 0 5px #790347;
+}
+header #menu-wrapper.active ul li.circle-offre-conseil a {
+  -webkit-box-shadow: inset 0 0 0 10px #ad6809;
+  -moz-box-shadow: inset 0 0 0 10px #ad6809;
+  box-shadow: inset 0 0 0 10px #ad6809;
+}
+header #menu-wrapper.active ul li.circle-offre-conseil a:hover {
+  -webkit-box-shadow: inset 0 0 0 5px #ad6809;
+  -moz-box-shadow: inset 0 0 0 5px #ad6809;
+  box-shadow: inset 0 0 0 5px #ad6809;
+}
+header #menu-wrapper.active ul li.circle-informatique a {
+  -webkit-box-shadow: inset 0 0 0 10px #0b3e70;
+  -moz-box-shadow: inset 0 0 0 10px #0b3e70;
+  box-shadow: inset 0 0 0 10px #0b3e70;
+}
+header #menu-wrapper.active ul li.circle-informatique a:hover {
+  -webkit-box-shadow: inset 0 0 0 5px #0b3e70;
+  -moz-box-shadow: inset 0 0 0 5px #0b3e70;
+  box-shadow: inset 0 0 0 5px #0b3e70;
+}
+header #menu-wrapper.active ul li.circle-service-client a {
+  -webkit-box-shadow: inset 0 0 0 10px #909401;
+  -moz-box-shadow: inset 0 0 0 10px #909401;
+  box-shadow: inset 0 0 0 10px #909401;
+}
+header #menu-wrapper.active ul li.circle-service-client a:hover {
+  -webkit-box-shadow: inset 0 0 0 5px #909401;
+  -moz-box-shadow: inset 0 0 0 5px #909401;
+  box-shadow: inset 0 0 0 5px #909401;
+}
+header #menu-wrapper.active ul li.circle-juridique a {
+  -webkit-box-shadow: inset 0 0 0 10px #561152;
+  -moz-box-shadow: inset 0 0 0 10px #561152;
+  box-shadow: inset 0 0 0 10px #561152;
+}
+header #menu-wrapper.active ul li.circle-juridique a:hover {
+  -webkit-box-shadow: inset 0 0 0 5px #561152;
+  -moz-box-shadow: inset 0 0 0 5px #561152;
+  box-shadow: inset 0 0 0 5px #561152;
 }
 header #menu-wrapper.open {
   width: 430px;
@@ -618,7 +680,9 @@ header #menu-wrapper ul li.circle-vehicules {
 }
 header #menu-wrapper ul li.circle-vehicules a {
   background-color: #8eb4c7;
-  border-color: #6c9db6;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 header #menu-wrapper ul li.circle-formation {
   top: 186px;
@@ -626,7 +690,9 @@ header #menu-wrapper ul li.circle-formation {
 }
 header #menu-wrapper ul li.circle-formation a {
   background-color: #ab0464;
-  border-color: #790347;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 header #menu-wrapper ul li.circle-offre-conseil {
   top: 219px;
@@ -634,7 +700,9 @@ header #menu-wrapper ul li.circle-offre-conseil {
 }
 header #menu-wrapper ul li.circle-offre-conseil a {
   background-color: #dd850c;
-  border-color: #ad6809;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 header #menu-wrapper ul li.circle-informatique {
   top: 219px;
@@ -642,7 +710,9 @@ header #menu-wrapper ul li.circle-informatique {
 }
 header #menu-wrapper ul li.circle-informatique a {
   background-color: #0f589f;
-  border-color: #0b3e70;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 header #menu-wrapper ul li.circle-service-client {
   top: 186px;
@@ -650,7 +720,9 @@ header #menu-wrapper ul li.circle-service-client {
 }
 header #menu-wrapper ul li.circle-service-client a {
   background-color: #c1c602;
-  border-color: #909401;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 header #menu-wrapper ul li.circle-juridique {
   top: 135px;
@@ -658,7 +730,9 @@ header #menu-wrapper ul li.circle-juridique {
 }
 header #menu-wrapper ul li.circle-juridique a {
   background-color: #801a7a;
-  border-color: #561152;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 header #menu-wrapper ul li a {
   -webkit-border-radius: 50%;
@@ -686,7 +760,7 @@ header #menu-wrapper ul li a {
   box-sizing: border-box;
   border-style: solid;
   border-width: 0;
-  line-height: 78px;
+  line-height: 98px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -701,6 +775,8 @@ header #menu-wrapper ul li a {
   -o-transform: translateZ(0px);
   -ms-transform: translateZ(0px);
   transform: translateZ(0px);
+  /*border: none;
+					.box-shadow(0 0 0 3px #002525);*/
 }
 header #menu-wrapper ul li a .txt-circle {
   display: none;
@@ -835,6 +911,17 @@ footer ul.social-footer li a {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+  -webkit-transition: -webkit-transform 0.1s ease-in-out;
+  -moz-transition: -moz-transform 0.1s ease-in-out;
+  -o-transition: -o-transform 0.1s ease-in-out;
+  transition: -webkit-transform 0.1s ease-in-out,-moz-transform 0.1s ease-in-out,-o-transform 0.1s ease-in-out,transform 0.1s ease-in-out;
+}
+footer ul.social-footer li a:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 footer ul.social-footer li a .container-fond-social {
   display: block;
@@ -870,28 +957,6 @@ footer ul.social-footer li a .logo-footer {
   height: 100%;
   line-height: 18px;
   text-align: center;
-}
-footer ul.social-footer li.facebook a .fond-social {
-  background-color: #293eab;
-  -webkit-transform: perspective(50px) rotateY(20deg);
-  -moz-transform: perspective(50px) rotateY(20deg);
-  -o-transform: perspective(50px) rotateY(20deg);
-  -ms-transform: perspective(50px) rotateY(20deg);
-  transform: perspective(50px) rotateY(20deg);
-}
-footer ul.social-footer li.facebook a .icon-facebook {
-  -webkit-transform: translateY(1px);
-  -moz-transform: translateY(1px);
-  -o-transform: translateY(1px);
-  -ms-transform: translateY(1px);
-  transform: translateY(1px);
-}
-footer ul.social-footer li.twitter a {
-  -webkit-transform: translateY(1px);
-  -moz-transform: translateY(1px);
-  -o-transform: translateY(1px);
-  -ms-transform: translateY(1px);
-  transform: translateY(1px);
 }
 footer ul.social-footer li.twitter a .fond-social {
   background-color: #54a8d4;
@@ -929,6 +994,21 @@ footer ul.social-footer li.viadeo a .fond-social {
 }
 footer ul.social-footer li.viadeo a .icon-viadeo {
   background: url('../layoutImg/footer/logo-viadeo.png') no-repeat center 40%;
+}
+footer ul.social-footer li.scoopit a .fond-social {
+  background-color: #6bac36;
+  -webkit-transform: perspective(50px) rotateY(20deg);
+  -moz-transform: perspective(50px) rotateY(20deg);
+  -o-transform: perspective(50px) rotateY(20deg);
+  -ms-transform: perspective(50px) rotateY(20deg);
+  transform: perspective(50px) rotateY(20deg);
+}
+footer ul.social-footer li.scoopit a .icon-scoopit {
+  -webkit-transform: translateY(1px);
+  -moz-transform: translateY(1px);
+  -o-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
 }
 /* @end */
 /* @group Ribbon */
