@@ -517,9 +517,9 @@ header #menu-wrapper.active ul li a:hover {
   transform: scale(1.1);
 }
 header #menu-wrapper.active ul li.circle-vehicules a {
-  -webkit-box-shadow: inset 0 0 0 10px #6c9db6;
-  -moz-box-shadow: inset 0 0 0 10px #6c9db6;
-  box-shadow: inset 0 0 0 10px #6c9db6;
+  -webkit-box-shadow: inset 0 0 0 8px #6c9db6;
+  -moz-box-shadow: inset 0 0 0 8px #6c9db6;
+  box-shadow: inset 0 0 0 8px #6c9db6;
 }
 header #menu-wrapper.active ul li.circle-vehicules a:hover {
   -webkit-box-shadow: inset 0 0 0 5px #6c9db6;
@@ -527,9 +527,9 @@ header #menu-wrapper.active ul li.circle-vehicules a:hover {
   box-shadow: inset 0 0 0 5px #6c9db6;
 }
 header #menu-wrapper.active ul li.circle-formation a {
-  -webkit-box-shadow: inset 0 0 0 10px #790347;
-  -moz-box-shadow: inset 0 0 0 10px #790347;
-  box-shadow: inset 0 0 0 10px #790347;
+  -webkit-box-shadow: inset 0 0 0 8px #790347;
+  -moz-box-shadow: inset 0 0 0 8px #790347;
+  box-shadow: inset 0 0 0 8px #790347;
 }
 header #menu-wrapper.active ul li.circle-formation a:hover {
   -webkit-box-shadow: inset 0 0 0 5px #790347;
@@ -537,9 +537,9 @@ header #menu-wrapper.active ul li.circle-formation a:hover {
   box-shadow: inset 0 0 0 5px #790347;
 }
 header #menu-wrapper.active ul li.circle-offre-conseil a {
-  -webkit-box-shadow: inset 0 0 0 10px #ad6809;
-  -moz-box-shadow: inset 0 0 0 10px #ad6809;
-  box-shadow: inset 0 0 0 10px #ad6809;
+  -webkit-box-shadow: inset 0 0 0 8px #ad6809;
+  -moz-box-shadow: inset 0 0 0 8px #ad6809;
+  box-shadow: inset 0 0 0 8px #ad6809;
 }
 header #menu-wrapper.active ul li.circle-offre-conseil a:hover {
   -webkit-box-shadow: inset 0 0 0 5px #ad6809;
@@ -547,9 +547,9 @@ header #menu-wrapper.active ul li.circle-offre-conseil a:hover {
   box-shadow: inset 0 0 0 5px #ad6809;
 }
 header #menu-wrapper.active ul li.circle-informatique a {
-  -webkit-box-shadow: inset 0 0 0 10px #0b3e70;
-  -moz-box-shadow: inset 0 0 0 10px #0b3e70;
-  box-shadow: inset 0 0 0 10px #0b3e70;
+  -webkit-box-shadow: inset 0 0 0 8px #0b3e70;
+  -moz-box-shadow: inset 0 0 0 8px #0b3e70;
+  box-shadow: inset 0 0 0 8px #0b3e70;
 }
 header #menu-wrapper.active ul li.circle-informatique a:hover {
   -webkit-box-shadow: inset 0 0 0 5px #0b3e70;
@@ -557,9 +557,9 @@ header #menu-wrapper.active ul li.circle-informatique a:hover {
   box-shadow: inset 0 0 0 5px #0b3e70;
 }
 header #menu-wrapper.active ul li.circle-service-client a {
-  -webkit-box-shadow: inset 0 0 0 10px #909401;
-  -moz-box-shadow: inset 0 0 0 10px #909401;
-  box-shadow: inset 0 0 0 10px #909401;
+  -webkit-box-shadow: inset 0 0 0 8px #909401;
+  -moz-box-shadow: inset 0 0 0 8px #909401;
+  box-shadow: inset 0 0 0 8px #909401;
 }
 header #menu-wrapper.active ul li.circle-service-client a:hover {
   -webkit-box-shadow: inset 0 0 0 5px #909401;
@@ -567,9 +567,9 @@ header #menu-wrapper.active ul li.circle-service-client a:hover {
   box-shadow: inset 0 0 0 5px #909401;
 }
 header #menu-wrapper.active ul li.circle-juridique a {
-  -webkit-box-shadow: inset 0 0 0 10px #561152;
-  -moz-box-shadow: inset 0 0 0 10px #561152;
-  box-shadow: inset 0 0 0 10px #561152;
+  -webkit-box-shadow: inset 0 0 0 8px #561152;
+  -moz-box-shadow: inset 0 0 0 8px #561152;
+  box-shadow: inset 0 0 0 8px #561152;
 }
 header #menu-wrapper.active ul li.circle-juridique a:hover {
   -webkit-box-shadow: inset 0 0 0 5px #561152;
@@ -647,16 +647,29 @@ header #menu-wrapper #circle-imatech {
 }
 header #menu-wrapper #circle-dashed-container {
   display: block;
-  width: 224px;
-  height: 224px;
+  width: 228px;
+  height: 228px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -112px;
-  margin-left: -112px;
+  margin-top: -114px;
+  margin-left: -114px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+header #menu-wrapper #circle-dashed-container #circle-dashed-svg {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2px;
+  pointer-events: visiblestroke;
+  fill: none;
+  stroke: #cacaca;
+  stroke-width: 0.7px;
+  stroke-dasharray: 0.7px, 0.8px;
 }
 header #menu-wrapper ul {
   display: block;
@@ -2004,15 +2017,15 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   top: 0;
 }
 .bloc-btn-video {
-  width: 112px;
-  height: 112px;
+  width: 116px;
+  height: 116px;
   display: block;
   position: relative;
   position: absolute;
   top: 50%;
-  margin-top: -56px;
+  margin-top: -58px;
   left: 50%;
-  margin-left: -56px;
+  margin-left: -58px;
 }
 .bloc-btn-video #circle-dashed-video-svg {
   display: block;
@@ -2022,20 +2035,26 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   width: 100%;
   height: 100%;
   fill: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2px;
 }
 .bloc-btn-video #circle-dashed-video-svg .circle-dashed-video {
+  width: 100%;
+  height: 100%;
   pointer-events: visiblestroke;
   fill: none;
   stroke: #cacaca;
-  stroke-width: 2px;
-  stroke-dasharray: 0px, 0px, 2px;
+  stroke-width: 1.5px;
+  stroke-dasharray: 1.5px, 1.5px;
 }
 .bloc-btn-video .content-bloc-btn-video {
   display: block;
   width: 82px;
   height: 82px;
   margin: 0 auto;
-  padding: 15px 0 0 0;
+  padding: 16px 0 0 0;
 }
 .bloc-btn-video .content-bloc-btn-video a.btn-video {
   display: block;
@@ -2101,7 +2120,6 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 2;
   margin-right: -250px;
-  overflow: auto;
 }
 #bloc-autres-videos #container-btn-plus {
   display: block;
@@ -2119,9 +2137,12 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   height: 100%;
   margin: 0;
   padding: 0;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
+}
+#bloc-autres-videos #container-btn-plus a.btn-icon-plus:focus {
+  outline: none;
 }
 #bloc-autres-videos #container-btn-plus a.btn-icon-plus .icon-plus {
   font-size: 30px;
@@ -2134,6 +2155,16 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   line-height: 30px;
   position: absolute;
 }
+#bloc-autres-videos #scroll-container-autres-videos {
+  display: block;
+  width: 195px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+}
 #bloc-autres-videos #container-autres-videos {
   display: table;
   vertical-align: middle;
@@ -2144,7 +2175,7 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   margin: 0;
   list-style: none;
   top: 0;
-  left: 63px;
+  left: 12px;
   right: 0;
 }
 #bloc-autres-videos #container-autres-videos #wrapper-autres-videos {
@@ -2558,13 +2589,6 @@ a.bloc-small.bloc-5:hover .raccord-categ {
 }
 /* @end */
 /* @group SVG */
-#circle-dashed-svg {
-  pointer-events: visiblestroke;
-  fill: none;
-  stroke: #cacaca;
-  stroke-width: 1px;
-  stroke-dasharray: 0px, 0px, 1px;
-}
 #container-smiley {
   display: block;
   width: 45px;

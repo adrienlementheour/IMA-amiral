@@ -614,7 +614,7 @@ header{
 					}
 					&.circle-vehicules{
 						a{
-							.box-shadow(inset 0 0 0 10px @bleucielIMA-dark);
+							.box-shadow(inset 0 0 0 8px @bleucielIMA-dark);
 							&:hover{
 								.box-shadow(inset 0 0 0 5px @bleucielIMA-dark);
 							}
@@ -622,7 +622,7 @@ header{
 					}
 					&.circle-formation{
 						a{
-							.box-shadow(inset 0 0 0 10px @roseIMA-dark);
+							.box-shadow(inset 0 0 0 8px @roseIMA-dark);
 							&:hover{
 								.box-shadow(inset 0 0 0 5px @roseIMA-dark);
 							}
@@ -630,7 +630,7 @@ header{
 					}
 					&.circle-offre-conseil{
 						a{
-							.box-shadow(inset 0 0 0 10px @orangeIMA-dark);
+							.box-shadow(inset 0 0 0 8px @orangeIMA-dark);
 							&:hover{
 								.box-shadow(inset 0 0 0 5px @orangeIMA-dark);
 							}
@@ -638,7 +638,7 @@ header{
 					}
 					&.circle-informatique{
 						a{
-							.box-shadow(inset 0 0 0 10px @bleuIMA-dark);
+							.box-shadow(inset 0 0 0 8px @bleuIMA-dark);
 							&:hover{
 								.box-shadow(inset 0 0 0 5px @bleuIMA-dark);
 							}
@@ -646,7 +646,7 @@ header{
 					}
 					&.circle-service-client{
 						a{
-							.box-shadow(inset 0 0 0 10px @vertIMA-dark);
+							.box-shadow(inset 0 0 0 8px @vertIMA-dark);
 							&:hover{
 								.box-shadow(inset 0 0 0 5px @vertIMA-dark);
 							}
@@ -654,7 +654,7 @@ header{
 					}
 					&.circle-juridique{
 						a{
-							.box-shadow(inset 0 0 0 10px @violetIMA-dark);
+							.box-shadow(inset 0 0 0 8px @violetIMA-dark);
 							&:hover{
 								.box-shadow(inset 0 0 0 5px @violetIMA-dark);
 							}
@@ -721,14 +721,25 @@ header{
 		}
 		#circle-dashed-container{
 			display: block;
-			width: 224px;
-			height: 224px;
+			width: 228px;
+			height: 228px;
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			margin-top: -112px;
-			margin-left: -112px;
+			margin-top: -114px;
+			margin-left: -114px;
 			.box-sizing(border-box);
+			#circle-dashed-svg{
+				width: 100%;
+				height: 100%;
+				.box-sizing(border-box);
+				padding: 2px;
+				pointer-events: visiblestroke;
+				fill: none;
+				stroke: #cacaca;
+				stroke-width: 0.7px;
+				stroke-dasharray: 0.7px, 0.8px;
+			}
 		}
 		ul{
 			display: block;
@@ -1698,14 +1709,14 @@ a.bloc-small{
 }
 
 .bloc-btn-video{
-	.size(112px);
+	.size(116px);
 	display: block;
 	position: relative;
 	position: absolute;
 	top: 50%;
-	margin-top: -56px;
+	margin-top: -58px;
 	left: 50%;
-	margin-left: -56px;
+	margin-left: -58px;
 	#circle-dashed-video-svg{
 		display: block;
 		position: absolute;
@@ -1714,19 +1725,23 @@ a.bloc-small{
 		width: 100%;
 		height: 100%;
 		fill: none;
+		.box-sizing(border-box);
+		padding: 2px;
 		.circle-dashed-video{
+			width: 100%;
+			height: 100%;
 			pointer-events: visiblestroke;
 			fill: none;
-			stroke: rgb(202, 202, 202);
-			stroke-width: 2px;
-			stroke-dasharray: 0px, 0px, 2px;
+			stroke: #cacaca;
+			stroke-width: 1.5px;
+			stroke-dasharray: 1.5px, 1.5px;
 		}
 	}
 	.content-bloc-btn-video{
 		display: block;
 		.size(82px);
 		margin: 0 auto;
-		padding: 15px 0 0 0;
+		padding: 16px 0 0 0;
 		a.btn-video{
 			display: block;
 			.size(82px);
@@ -1778,7 +1793,6 @@ a.bloc-small{
 	background-color: rgba(255, 255, 255, 0.8);
 	z-index: 2;
 	margin-right: -250px;
-	overflow: auto;
 	#container-btn-plus{
 		display: block;
 		text-align: center;
@@ -1794,9 +1808,12 @@ a.bloc-small{
 			height: 100%;
 			margin: 0;
 			padding: 0;
-			position: fixed;
+			position: absolute;
 			top: 0;
 			left: 0;
+			&:focus{
+				outline: none;
+			}
 			.icon-plus{
 				font-size: 30px;
 				top: 50%;
@@ -1810,6 +1827,16 @@ a.bloc-small{
 			}
 		}
 	}
+	#scroll-container-autres-videos{
+		display: block;
+		width: 195px;
+		height: auto;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		overflow: auto;
+	}
 	#container-autres-videos{
 		display: table;
 		vertical-align: middle;
@@ -1820,7 +1847,7 @@ a.bloc-small{
 		margin: 0;
 		list-style: none;
 		top: 0;
-		left: 63px;
+		left: 12px;
 		right: 0;
 		#wrapper-autres-videos{
 			display: table-cell;
@@ -2153,14 +2180,6 @@ a.bloc-small{
 /* @end */
 
 /* @group SVG */
-
-#circle-dashed-svg{
-	pointer-events: visiblestroke;
-	fill: none;
-	stroke: rgb(202, 202, 202);
-	stroke-width: 1px;
-	stroke-dasharray: 0px, 0px, 1px;
-}
 
 #container-smiley{
 	display: block;
