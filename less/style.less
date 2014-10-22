@@ -406,6 +406,10 @@ body{
 	margin: 0 auto;
 	padding: 0;
 	z-index: 1;
+	&.bloc-penche{
+		.backface-visibility(hidden);
+		-webkit-font-smoothing: antialiased;
+	}
 	.bloc-content{
 		padding: 40px 40px 40px 40px;
 		&.small-padding-top{
@@ -636,14 +640,6 @@ header{
 							}
 						}
 					}
-					&.circle-informatique{
-						a{
-							.box-shadow(inset 0 0 0 8px @bleuIMA-dark);
-							&:hover{
-								.box-shadow(inset 0 0 0 5px @bleuIMA-dark);
-							}
-						}
-					}
 					&.circle-service-client{
 						a{
 							.box-shadow(inset 0 0 0 8px @vertIMA-dark);
@@ -672,28 +668,24 @@ header{
 					width: 98px;
 					height: 98px;
 					&.circle-vehicules{
-						top: 85px;
-						left: 295px;
+						top: 94px;
+						left: 300px;
 					}
 					&.circle-formation{
-						top: 216px;
-						left: 326px;
+						top: 235px;
+						left: 310px;
 					}
 					&.circle-offre-conseil{
 						top: 321px;
-						left: 238px;
-					}
-					&.circle-informatique{
-						top: 321px;
-						left: 90px;
+						left: 166px;
 					}
 					&.circle-service-client{
-						top: 216px;
-						left: 6px;
+						top: 235px;
+						left: 20px;
 					}
 					&.circle-juridique{
-						top: 85px;
-						left: 37px;
+						top: 94px;
+						left: 32px;
 					}
 					a{
 						border-width: 10px;
@@ -757,39 +749,31 @@ header{
 				padding: 0;
 				&.circle-vehicules{
 					top: 135px;
-					left: 225px;
+					left: 222px;
 					a{
 						background-color: @bleucielIMA;
 						.box-shadow(none);
 					}
 				}
 				&.circle-formation{
-					top: 186px;
-					left: 201px;
+					top: 195px;
+					left: 187px;
 					a{
 						background-color: @roseIMA;
 						.box-shadow(none);
 					}
 				}
 				&.circle-offre-conseil{
-					top: 219px;
-					left: 153px;
+					top: 222px;
+					left: 115px;
 					a{
 						background-color: @orangeIMA;
 						.box-shadow(none);
 					}
 				}
-				&.circle-informatique{
-					top: 219px;
-					left: 76px;
-					a{
-						background-color: @bleuIMA;
-						.box-shadow(none);
-					}
-				}
 				&.circle-service-client{
-					top: 186px;
-					left: 28px;
+					top: 195px;
+					left: 40px;
 					a{
 						background-color: @vertIMA;
 						.box-shadow(none);

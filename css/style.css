@@ -207,6 +207,14 @@ body {
   padding: 0;
   z-index: 1;
 }
+.bloc-full.bloc-penche {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
 .bloc-full .bloc-content {
   padding: 40px 40px 40px 40px;
 }
@@ -546,16 +554,6 @@ header #menu-wrapper.active ul li.circle-offre-conseil a:hover {
   -moz-box-shadow: inset 0 0 0 5px #ad6809;
   box-shadow: inset 0 0 0 5px #ad6809;
 }
-header #menu-wrapper.active ul li.circle-informatique a {
-  -webkit-box-shadow: inset 0 0 0 8px #0b3e70;
-  -moz-box-shadow: inset 0 0 0 8px #0b3e70;
-  box-shadow: inset 0 0 0 8px #0b3e70;
-}
-header #menu-wrapper.active ul li.circle-informatique a:hover {
-  -webkit-box-shadow: inset 0 0 0 5px #0b3e70;
-  -moz-box-shadow: inset 0 0 0 5px #0b3e70;
-  box-shadow: inset 0 0 0 5px #0b3e70;
-}
 header #menu-wrapper.active ul li.circle-service-client a {
   -webkit-box-shadow: inset 0 0 0 8px #909401;
   -moz-box-shadow: inset 0 0 0 8px #909401;
@@ -586,28 +584,24 @@ header #menu-wrapper.open ul li {
   height: 98px;
 }
 header #menu-wrapper.open ul li.circle-vehicules {
-  top: 85px;
-  left: 295px;
+  top: 94px;
+  left: 300px;
 }
 header #menu-wrapper.open ul li.circle-formation {
-  top: 216px;
-  left: 326px;
+  top: 235px;
+  left: 310px;
 }
 header #menu-wrapper.open ul li.circle-offre-conseil {
   top: 321px;
-  left: 238px;
-}
-header #menu-wrapper.open ul li.circle-informatique {
-  top: 321px;
-  left: 90px;
+  left: 166px;
 }
 header #menu-wrapper.open ul li.circle-service-client {
-  top: 216px;
-  left: 6px;
+  top: 235px;
+  left: 20px;
 }
 header #menu-wrapper.open ul li.circle-juridique {
-  top: 85px;
-  left: 37px;
+  top: 94px;
+  left: 32px;
 }
 header #menu-wrapper.open ul li a {
   border-width: 10px;
@@ -689,7 +683,7 @@ header #menu-wrapper ul li {
 }
 header #menu-wrapper ul li.circle-vehicules {
   top: 135px;
-  left: 225px;
+  left: 222px;
 }
 header #menu-wrapper ul li.circle-vehicules a {
   background-color: #8eb4c7;
@@ -698,8 +692,8 @@ header #menu-wrapper ul li.circle-vehicules a {
   box-shadow: none;
 }
 header #menu-wrapper ul li.circle-formation {
-  top: 186px;
-  left: 201px;
+  top: 195px;
+  left: 187px;
 }
 header #menu-wrapper ul li.circle-formation a {
   background-color: #ab0464;
@@ -708,8 +702,8 @@ header #menu-wrapper ul li.circle-formation a {
   box-shadow: none;
 }
 header #menu-wrapper ul li.circle-offre-conseil {
-  top: 219px;
-  left: 153px;
+  top: 222px;
+  left: 115px;
 }
 header #menu-wrapper ul li.circle-offre-conseil a {
   background-color: #dd850c;
@@ -717,19 +711,9 @@ header #menu-wrapper ul li.circle-offre-conseil a {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-header #menu-wrapper ul li.circle-informatique {
-  top: 219px;
-  left: 76px;
-}
-header #menu-wrapper ul li.circle-informatique a {
-  background-color: #0f589f;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
 header #menu-wrapper ul li.circle-service-client {
-  top: 186px;
-  left: 28px;
+  top: 195px;
+  left: 40px;
 }
 header #menu-wrapper ul li.circle-service-client a {
   background-color: #c1c602;

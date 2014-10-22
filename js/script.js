@@ -87,12 +87,12 @@ function ouvertureMenu(){
 	tlCircleDashed.to($("#menu-wrapper #circle-dashed-container"), 0.2, {scale: 1, delay: 0.3, ease:Cubic.easeInOut});
 	
 	function cerclesAnim(){
-		tlCircles.to($("#menu-wrapper ul li.circle-vehicules"), 0.3, {top: "85px", left: "295px", ease:Cubic.easeInOut});
-		tlCircles.to($("#menu-wrapper ul li.circle-formation"), 0.3, {top: "216px", left: "326px", delay:0.05, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#menu-wrapper ul li.circle-offre-conseil"), 0.3, {top: "321px", left: "238px", delay:0.1, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li.circle-vehicules"), 0.3, {top: "94px", left: "300px", ease:Cubic.easeInOut});
+		tlCircles.to($("#menu-wrapper ul li.circle-formation"), 0.3, {top: "235px", left: "310px", delay:0.05, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li.circle-offre-conseil"), 0.3, {top: "321px", left: "166px", delay:0.1, ease:Cubic.easeInOut},0);
 		tlCircles.to($("#menu-wrapper ul li.circle-informatique"), 0.3, {top: "321px", left: "90px", delay:0.15, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#menu-wrapper ul li.circle-service-client"), 0.3, {top: "216px", left: "6px", delay:0.2, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#menu-wrapper ul li.circle-juridique"), 0.3, {top: "85px", left: "37px", delay:0.25, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li.circle-service-client"), 0.3, {top: "235px", left: "20px", delay:0.2, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li.circle-juridique"), 0.3, {top: "94px", left: "32px", delay:0.25, ease:Cubic.easeInOut},0);
 	}
 }
 
@@ -120,12 +120,12 @@ function fermetureMenu(){
 	tlCircleDashed.to($("#menu-wrapper #circle-dashed-container"), 0.3, {scale: 1, delay: 0.7, ease:Cubic.easeInOut});
 	
 	function cerclesAnimRetour(){
-		tlCircles.to($("#menu-wrapper ul li.circle-vehicules"), 0.4, {top: "135px", left: "225px", ease:Cubic.easeInOut});
-		tlCircles.to($("#menu-wrapper ul li.circle-formation"), 0.4, {top: "186px", left: "201px", delay:0.05, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#menu-wrapper ul li.circle-offre-conseil"), 0.4, {top: "219px", left: "153px", delay:0.1, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li.circle-vehicules"), 0.4, {top: "135px", left: "222px", ease:Cubic.easeInOut});
+		tlCircles.to($("#menu-wrapper ul li.circle-formation"), 0.4, {top: "195px", left: "187px", delay:0.05, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li.circle-offre-conseil"), 0.4, {top: "222px", left: "115px", delay:0.1, ease:Cubic.easeInOut},0);
 		tlCircles.to($("#menu-wrapper ul li.circle-informatique"), 0.4, {top: "219px", left: "76px", delay:0.15, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#menu-wrapper ul li.circle-service-client"), 0.4, {top: "186px", left: "28px", delay:0.2, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#menu-wrapper ul li.circle-juridique"), 0.4, {top: "135px", left: "5px", delay:0.25, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li.circle-service-client"), 0.4, {top: "195px", left: "40px", delay:0.2, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li.circle-juridique"), 0.4, {top: "135px", left: "8px", delay:0.25, ease:Cubic.easeInOut},0);
 		tlCircles.to($("#label-menu"), 0.15, {opacity: 1, display: "block", ease:Cubic.easeInOut});
 	}
 }
@@ -265,9 +265,9 @@ function blocPenche(){
 		if(heightBlocPenche>300){
 			TweenMax.set($(this), {rotation: 0});
 		}else if (heightBlocPenche>200){
-			TweenMax.set($(this), {rotation: -3});
+			TweenMax.set($(this), {rotation: -3, x:0, y:0, z:0});
 		}else{
-			TweenMax.set($(this), {rotation: -4});
+			TweenMax.set($(this), {rotation: -4, x:0, y:0, z:0});
 		}
 	});
 }
