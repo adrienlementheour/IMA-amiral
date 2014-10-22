@@ -2161,10 +2161,29 @@ a.bloc-small{
 
 /* @end */
 
+/* @group Overlay */
+
+#overlay{
+	display: none;
+	.opacity(0);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 11;
+	background: #000;
+	background-color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+}
+
+/* @end */
+
 /* @group Site map modal */
 
 #sitemap-modal{
-	display: block;
+	.opacity(0);
+	display: none;
 	width: 1024px;
 	height: 440px;
 	margin: auto;
@@ -2173,7 +2192,7 @@ a.bloc-small{
 	bottom: 0;
 	left: 0;
 	right: 0;
-	z-index: 10;
+	z-index: 12;
 	.container-fond-modal{
 		display: block;
 		position: absolute;
@@ -2239,6 +2258,48 @@ a.bloc-small{
 			line-height: 1em;
 			color: @blanc;
 			position: relative;
+		}
+	}
+	.close-modal{
+		display: block;
+		position: absolute;
+		padding: 15px 15px 10px 15px;
+		z-index: 4;
+		.transform(rotate(2deg));
+		top: -25px;
+		right: -20px;
+		.container-fond-close-modal{
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			.transform(translateZ(0px));
+			.fond-close-modal{
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				outline: 1px solid transparent;
+				.transition(padding-right 0.2s ease-in-out);
+				background-color: @vertIMA;
+				.transform(perspective(300px) rotateX(-8deg) rotateY(0deg) rotate(0deg) skewX(3deg) scale(1));
+			}
+		}
+		a#lien-close-modal{
+			line-height: 1em;
+			color: @blanc;
+			position: relative;
+			.box-shadow(none);
+			width: 23px;
+			height: 23px;
+			line-height: 23px;
+			.icon-close{
+				font-size: 23px;
+			}
 		}
 	}
 	#content-sitemap{

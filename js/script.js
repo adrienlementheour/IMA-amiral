@@ -285,12 +285,38 @@ function hoverBlocInnovation(){
 	});
 }
 
+////////////////////// Fonction pour gérer l'apparition du plan du site ////////////////////////
+function lienSitemap(){
+	TweenMax.set($("#sitemap-modal"), {y: 50});
+	$("a#lien-sitemap").click(function(){
+		TweenMax.to($("#overlay"), 0.4, {display: "block", opacity: 1, ease:Cubic.easeInOut});
+		TweenMax.to($("#sitemap-modal"), 0.4, {display: "block", opacity: 1, y: 0, ease:Cubic.easeInOut});
+		return false;	
+	});
+	
+	$("#overlay").click(function(){
+		closeModal();
+		return false;	
+	});
+	
+	$("#lien-close-modal").click(function(){
+		closeModal();
+		return false;	
+	});
+}
+
+function closeModal(){
+	TweenMax.to($("#overlay"), 0.4, {display: "none", opacity: 0, ease:Cubic.easeInOut});
+	TweenMax.to($("#sitemap-modal"), 0.4, {display: "none", opacity: 0, y: 50, ease:Cubic.easeInOut});
+}
+
 $(document).ready(function(){
 	animer();
 	initMenu();
 	hoverMenu();
 	categBlocCopies();
 	blocPenche();
+	lienSitemap();
 	if($("body").hasClass("accueil")){
 		btnVideoClick();
 		btnRetourVideoClick();
