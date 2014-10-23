@@ -2589,20 +2589,23 @@ a.bloc-small.bloc-5:hover .raccord-categ {
 }
 /* @end */
 /* @group Site map modal */
-#sitemap-modal {
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  opacity: 0;
-  display: none;
-  width: 1024px;
-  height: 440px;
-  margin: auto;
+#wrapper-sitemap-modal {
+  display: block;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 12;
+  text-align: center;
+  vertical-align: 1000%;
+}
+#sitemap-modal {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1024px;
+  height: 440px;
+  margin: auto;
 }
 #sitemap-modal .container-fond-modal {
   display: block;
@@ -2712,7 +2715,7 @@ a.bloc-small.bloc-5:hover .raccord-categ {
 #sitemap-modal .close-modal {
   display: block;
   position: absolute;
-  padding: 15px 15px 10px 15px;
+  padding: 15px;
   z-index: 4;
   -webkit-transform: rotate(2deg);
   -moz-transform: rotate(2deg);
@@ -2764,8 +2767,25 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   width: 23px;
   height: 23px;
   line-height: 23px;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out;
+  -o-transition: -o-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out,-moz-transform 0.2s ease-in-out,-o-transform 0.2s ease-in-out,transform 0.2s ease-in-out;
+}
+#sitemap-modal .close-modal a#lien-close-modal:hover .icon-close {
+  -webkit-transform: rotate(90deg) scale(1.1);
+  -moz-transform: rotate(90deg) scale(1.1);
+  -o-transform: rotate(90deg) scale(1.1);
+  -ms-transform: rotate(90deg) scale(1.1);
+  transform: rotate(90deg) scale(1.1);
 }
 #sitemap-modal .close-modal a#lien-close-modal .icon-close {
+  display: block;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out;
+  -o-transition: -o-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out,-moz-transform 0.2s ease-in-out,-o-transform 0.2s ease-in-out,transform 0.2s ease-in-out;
   font-size: 23px;
 }
 #sitemap-modal #content-sitemap {

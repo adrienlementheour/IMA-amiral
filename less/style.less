@@ -2181,18 +2181,27 @@ a.bloc-small{
 
 /* @group Site map modal */
 
-#sitemap-modal{
-	.opacity(0);
-	display: none;
-	width: 1024px;
-	height: 440px;
-	margin: auto;
+#wrapper-sitemap-modal{
+	display: block;
 	position: fixed;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	z-index: 12;
+	
+	text-align: center;
+	vertical-align: 100%;
+}
+#sitemap-modal{
+	display: inline-block;
+	vertical-align: middle;
+	//.opacity(0);
+	//display: none;
+	width: 1024px;
+	height: 440px;
+	margin: auto;
+	
 	.container-fond-modal{
 		display: block;
 		position: absolute;
@@ -2263,7 +2272,7 @@ a.bloc-small{
 	.close-modal{
 		display: block;
 		position: absolute;
-		padding: 15px 15px 10px 15px;
+		padding: 15px;
 		z-index: 4;
 		.transform(rotate(2deg));
 		top: -25px;
@@ -2297,7 +2306,17 @@ a.bloc-small{
 			width: 23px;
 			height: 23px;
 			line-height: 23px;
+			.transition(transform 0.2s ease-in-out);
+			&:hover{
+				
+				.icon-close{
+					.transform(rotate(90deg) scale(1.1));
+				}
+			}
 			.icon-close{
+				display: block;
+				position: relative;
+				.transition(transform 0.2s ease-in-out);
 				font-size: 23px;
 			}
 		}
