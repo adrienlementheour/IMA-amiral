@@ -48,6 +48,7 @@
 							</div>
 						</nav>
 					</header>
+					<div class="wrapper-blocs">
 					<div class="bloc-full bloc-penche" id="zone-actus">
 						<div class="ribbon ribbon-bleu">
 							<div class="fond-ribbon"></div>
@@ -78,7 +79,7 @@
 						</div>
 					</div>
 					<div class="zone-blocs" id="zone-blocs-accueil">
-						<a href="#" class="bloc-small bloc-1 has-js-plumb">
+						<a href="#" class="bloc-small bloc-1">
 							<span class="categ-bloc">
 								<span class="container-fond-categ-bloc">
 									<span class="fond-categ-bloc"></span>
@@ -110,7 +111,7 @@
 							<span class="btn-icon-plus"><span class="icon-plus"></span></span>
 							<object id="container-smiley" type="image/svg+xml" data="svg/smiley.svg" data-fallback="layoutImg/svg-fallback/"></object>
 						</a>
-						<a href="#" class="bloc-small bloc-2 has-js-plumb">
+						<a href="#" class="bloc-small bloc-2">
 							<span class="categ-bloc">
 								<span class="container-fond-categ-bloc">
 									<span class="fond-categ-bloc"></span>
@@ -129,7 +130,7 @@
 							</span>
 							<span class="btn-icon-plus"><span class="icon-plus"></span></span>
 						</a>
-						<a href="#" class="bloc-small bloc-3 has-js-plumb">
+						<a href="#" class="bloc-small bloc-3">
 							<span class="categ-bloc">
 								<span class="container-fond-categ-bloc">
 									<span class="fond-categ-bloc"></span>
@@ -164,7 +165,7 @@
 							<object id="container-pop3" type="image/svg+xml" data="svg/pop3.svg" data-fallback="layoutImg/svg-fallback/"></object>
 							<object id="container-pop4" type="image/svg+xml" data="svg/pop2.svg" data-fallback="layoutImg/svg-fallback/"></object>
 						</a>
-						<a href="#" class="bloc-small bloc-4 has-js-plumb">
+						<a href="#" class="bloc-small bloc-4">
 							<span class="categ-bloc">
 								<span class="container-fond-categ-bloc">
 									<span class="fond-categ-bloc"></span>
@@ -189,7 +190,7 @@
 							</span>
 							<span class="btn-icon-plus"><span class="icon-plus"></span></span>
 						</a>
-						<a href="#" class="bloc-small bloc-5 has-js-plumb">
+						<a href="#" class="bloc-small bloc-5">
 							<span class="categ-bloc">
 								<span class="container-fond-categ-bloc">
 									<span class="fond-categ-bloc"></span>
@@ -222,6 +223,7 @@
 							<object id="container-twitter" type="image/svg+xml" data="svg/twitter.svg" data-fallback="layoutImg/svg-fallback/"></object>
 							<object id="container-facebook" type="image/svg+xml" data="svg/facebook.svg" data-fallback="layoutImg/svg-fallback/"></object>
 						</a>
+					</div>
 					</div>
 				</section>
 				<div class="bloc-content bloc-visu-content" id="visu-content">
@@ -417,75 +419,77 @@
 			</div>
 		</aside>
 		<div id="wrapper-sitemap-modal">
-		<nav id="sitemap-modal">
-			<div class="container-fond-modal">
-				<div class="fond-modal"><div class="cercle-sitemap"></div></div>
+			<div id="wrapper-relative-sitemap-modal">
+				<div id="overlay"></div>
+				<nav id="sitemap-modal">
+					<div class="container-fond-modal">
+						<div class="fond-modal"><div class="cercle-sitemap"></div></div>
+					</div>
+					<div id="content-sitemap">
+						<ul id="menu-sitemap">
+							<li>
+								<a href="#" class="circle-sitemap" id="sitemap-juridique"><span class="txt-circle-sitemap">Juridique</span></a>
+								<ul class="liste-liens-sitemap">
+									<li><a href="#">Advocat</a></li>
+									<li><a href="#">Information juridique multicanale</a></li>
+								</ul>
+							</li><li>
+								<a href="#" class="circle-sitemap" id="sitemap-vehicules"><span class="txt-circle-sitemap">Véhicules</span></a>
+								<ul class="liste-liens-sitemap">
+									<li><a href="#">Support technique</a></li>
+									<li><a href="#">Formation</a></li>
+								</ul>
+							</li><li>
+								<a href="#" class="circle-sitemap" id="sitemap-formation"><span class="txt-circle-sitemap">Formation</span></a>
+								<ul class="liste-liens-sitemap">
+									<li><a href="#">Formations personnalisées</a></li>
+									<li><a href="#">Prochaines dates programmées</a></li>
+								</ul>
+							</li><li>
+								<a href="#" class="circle-sitemap" id="sitemap-service-client"><span class="txt-circle-sitemap">Service<br /> client</span></a>
+								<ul class="liste-liens-sitemap">
+									<li><a href="#">Yootel</a></li>
+								</ul>
+							</li><li>
+								<a href="#" class="circle-sitemap" id="sitemap-conseil"><span class="txt-circle-sitemap">conseil</span></a>
+								<ul class="liste-liens-sitemap">
+									<li><a href="#">Conseil</a></li>
+									<li><a href="#">Ingéniérie</a></li>
+									<li><a href="#">Helpdesk informatique</a></li>
+								</ul>
+							</li>
+						</ul><div class="autres-menus-sitemap">
+							<ul id="autre-menu-big-sitemap">
+								<li><a href="#">Actualité</a></li>
+								<li><a href="#">Rse</a></li>
+								<li><a href="#">Certifications</a></li>
+								<li><a href="#">Richesse Humaine</a></li>
+								<li><a href="#">Innovation</a></li>
+								<li><a href="#">À propos</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+							<ul id="autre-menu-small-sitemap">
+								<li><a href="#">Mentions légales</a></li>
+								<li><a href="#">Plan d’accès</a></li>
+								<li><a href="#">Presse</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="titre-modal">
+						<div class="container-fond-titre-modal">
+							<div class="fond-titre-modal"></div>
+						</div>
+						<div class="txt-titre-modal">Plan du site</div>
+					</div>
+					<div class="close-modal">
+						<div class="container-fond-close-modal">
+							<div class="fond-close-modal"></div>
+						</div>
+						<a href="#" id="lien-close-modal"><span class="icon-close"></span></a>
+					</div>
+				</nav>
 			</div>
-			<div id="content-sitemap">
-				<ul id="menu-sitemap">
-					<li>
-						<a href="#" class="circle-sitemap" id="sitemap-juridique"><span class="txt-circle-sitemap">Juridique</span></a>
-						<ul class="liste-liens-sitemap">
-							<li><a href="#">Advocat</a></li>
-							<li><a href="#">Information juridique multicanale</a></li>
-						</ul>
-					</li><li>
-						<a href="#" class="circle-sitemap" id="sitemap-vehicules"><span class="txt-circle-sitemap">Véhicules</span></a>
-						<ul class="liste-liens-sitemap">
-							<li><a href="#">Support technique</a></li>
-							<li><a href="#">Formation</a></li>
-						</ul>
-					</li><li>
-						<a href="#" class="circle-sitemap" id="sitemap-formation"><span class="txt-circle-sitemap">Formation</span></a>
-						<ul class="liste-liens-sitemap">
-							<li><a href="#">Formations personnalisées</a></li>
-							<li><a href="#">Prochaines dates programmées</a></li>
-						</ul>
-					</li><li>
-						<a href="#" class="circle-sitemap" id="sitemap-service-client"><span class="txt-circle-sitemap">Service<br /> client</span></a>
-						<ul class="liste-liens-sitemap">
-							<li><a href="#">Yootel</a></li>
-						</ul>
-					</li><li>
-						<a href="#" class="circle-sitemap" id="sitemap-conseil"><span class="txt-circle-sitemap">conseil</span></a>
-						<ul class="liste-liens-sitemap">
-							<li><a href="#">Conseil</a></li>
-							<li><a href="#">Ingéniérie</a></li>
-							<li><a href="#">Helpdesk informatique</a></li>
-						</ul>
-					</li>
-				</ul><div class="autres-menus-sitemap">
-					<ul id="autre-menu-big-sitemap">
-						<li><a href="#">Actualité</a></li>
-						<li><a href="#">Rse</a></li>
-						<li><a href="#">Certifications</a></li>
-						<li><a href="#">Richesse Humaine</a></li>
-						<li><a href="#">Innovation</a></li>
-						<li><a href="#">À propos</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
-					<ul id="autre-menu-small-sitemap">
-						<li><a href="#">Mentions légales</a></li>
-						<li><a href="#">Plan d’accès</a></li>
-						<li><a href="#">Presse</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="titre-modal">
-				<div class="container-fond-titre-modal">
-					<div class="fond-titre-modal"></div>
-				</div>
-				<div class="txt-titre-modal">Plan du site</div>
-			</div>
-			<div class="close-modal">
-				<div class="container-fond-close-modal">
-					<div class="fond-close-modal"></div>
-				</div>
-				<a href="#" id="lien-close-modal"><span class="icon-close"></span></a>
-			</div>
-		</nav>
 		</div>
-		<div id="overlay"></div>
 		<div id="bloc-menu-responsive">
 			<a href="#" id="menu-responsive">
 				<svg class="svg-hamburger" xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14">

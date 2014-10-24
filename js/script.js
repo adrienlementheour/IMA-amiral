@@ -289,8 +289,7 @@ function hoverBlocInnovation(){
 function lienSitemap(){
 	TweenMax.set($("#sitemap-modal"), {y: 50});
 	$("a#lien-sitemap").click(function(){
-		TweenMax.to($("#overlay"), 0.4, {display: "block", opacity: 1, ease:Cubic.easeInOut});
-		TweenMax.to($("#sitemap-modal"), 0.4, {display: "block", opacity: 1, y: 0, ease:Cubic.easeInOut});
+		openModal();
 		return false;	
 	});
 	
@@ -303,11 +302,23 @@ function lienSitemap(){
 		closeModal();
 		return false;	
 	});
+	
+	$("a#menu-responsive").click(function(){
+		openModal();
+		return false;	
+	});
+}
+
+function openModal(){
+	TweenMax.to($("#overlay"), 0.4, {display: "block", opacity: 1, ease:Cubic.easeInOut});
+	TweenMax.to($("#sitemap-modal"), 0.4, {y: 0, ease:Cubic.easeInOut});
+	TweenMax.to($("#wrapper-sitemap-modal"), 0.4, {display: "block", opacity: 1, ease:Cubic.easeInOut});
 }
 
 function closeModal(){
 	TweenMax.to($("#overlay"), 0.4, {display: "none", opacity: 0, ease:Cubic.easeInOut});
-	TweenMax.to($("#sitemap-modal"), 0.4, {display: "none", opacity: 0, y: 50, ease:Cubic.easeInOut});
+	TweenMax.to($("#wrapper-sitemap-modal"), 0.4, {display: "none", opacity: 0, ease:Cubic.easeInOut});
+	TweenMax.to($("#sitemap-modal"), 0.4, {y: 50, ease:Cubic.easeInOut});
 }
 
 $(document).ready(function(){
@@ -360,11 +371,12 @@ $( window ).resize(function() {
 var anchors = [ [[1, 0.6, 0.5, 0.8], [0.1, 0.8, 0, 0.5]],      [[1, 0.3, 0, -0.8], [0, 0.9, 0.2, -0.7]],      [[0.51, 1, 0, 1], [0.7, 0, 0, 1]],     [[0, 0.2, 0, 0.5], [0.5, 0, 0, -1.5]],     [[1, 0.6, 0, 1], [0, 0.9, 0, 1]]];
 
 jsPlumb.ready(function() {
-	jsPlumb.setContainer($("#wrapper-content"));
+	
 	var nbBlocSmall = $(".bloc-small").length;
 	$(".bloc-small").each(function(index){
 		if (index<(nbBlocSmall-1)) {
 			var instance= jsPlumb.getInstance();
+			instance.setContainer($("#zone-blocs-accueil"));
 			//instance.connect({
 			jsPlumb.connect({
 				source: $(".bloc-"+(index+1)),
@@ -384,7 +396,10 @@ jsPlumb.ready(function() {
 	
 	if($("body").hasClass("accueil")){
 		// Relier le bloc actu avec le premier bloc small (RSE)
-		jsPlumb.connect({
+		
+		var jsPlumbFirstBloc = jsPlumb.getInstance();
+		jsPlumbFirstBloc.setContainer($("#wrapper-content"));
+		jsPlumbFirstBloc.connect({
 			source: $("#bloc-actus"),
 			target: $(".bloc-1"),
 			anchors: [[0.2, 1, -1, 0], [0.4, 0, 0, 0]],
@@ -398,7 +413,9 @@ jsPlumb.ready(function() {
 		});
 		if ($(window).width()>=1250) {
 			// Relier le menu avec le lien video
-			jsPlumb.connect({
+			var jsPlumbVisu = jsPlumb.getInstance();
+			jsPlumbVisu.setContainer($("#wrapper-content"));
+			jsPlumbVisu.connect({
 				source: $("#menu-wrapper"),
 				target: $(".bloc-btn-video"),
 				anchors: [[1.2, 0.5, 1, 0], [0, 0.5, -1, 0]],
