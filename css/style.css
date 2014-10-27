@@ -3203,6 +3203,19 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   .container {
     width: 90%;
   }
+}
+@media (max-width: 1150px) {
+  #content {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 150px 0 0;
+  }
+  .bloc-full {
+    width: 100%;
+    max-width: 620px;
+  }
   #visu-content {
     position: fixed;
     top: 0;
@@ -3223,6 +3236,14 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   .bloc-btn-video #circle-dashed-video-svg {
     display: none;
   }
+  /* @group Sitemap modal */
+  #sitemap-modal {
+    width: 85%;
+  }
+  #sitemap-modal .container-fond-modal .fond-modal .cercle-sitemap {
+    right: -470px;
+  }
+  /* @end */
 }
 @media (max-width: 979px) {
   header {
@@ -3234,6 +3255,75 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   #bloc-menu-responsive {
     margin-left: 0;
   }
+  .zone-blocs#zone-blocs-accueil {
+    height: 520px;
+  }
+  a.bloc-small.bloc-1 {
+    top: 0;
+    bottom: inherit;
+    left: 25%;
+    margin-left: -100px;
+    right: inherit;
+  }
+  a.bloc-small.bloc-2 {
+    top: 0;
+    bottom: inherit;
+    left: 75%;
+    margin-left: -100px;
+    right: inherit;
+  }
+  a.bloc-small.bloc-3 {
+    top: 190px;
+    bottom: inherit;
+    left: 75%;
+    margin-left: -100px;
+    right: inherit;
+  }
+  a.bloc-small.bloc-4 {
+    top: 190px;
+    bottom: inherit;
+    left: 25%;
+    margin-left: -100px;
+    right: inherit;
+  }
+  a.bloc-small.bloc-5 {
+    top: 380px;
+    bottom: inherit;
+    left: 25%;
+    margin-left: -100px;
+    right: inherit;
+  }
+  /* @group Sitemap modal */
+  #sitemap-modal {
+    max-height: 85%;
+  }
+  #sitemap-modal .container-fond-modal .fond-modal .cercle-sitemap {
+    right: auto;
+    left: 50%;
+    margin-left: -376px;
+    top: auto;
+    bottom: -400px;
+  }
+  #sitemap-modal #content-sitemap ul#menu-sitemap {
+    width: 100%;
+    max-height: 70%;
+    overflow: auto;
+  }
+  #sitemap-modal #content-sitemap .autres-menus-sitemap {
+    padding: 50px 0 0 0;
+    width: 100%;
+    max-height: 30%;
+    overflow: auto;
+  }
+  #sitemap-modal #content-sitemap .autres-menus-sitemap ul#autre-menu-big-sitemap {
+    width: 60%;
+    margin: 0 auto 40px auto;
+  }
+  #sitemap-modal #content-sitemap .autres-menus-sitemap ul#autre-menu-small-sitemap {
+    width: 60%;
+    margin: 0 auto 40px auto;
+  }
+  /* @end */
 }
 /* @end */
 /* @group Responsive vertical */

@@ -852,13 +852,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/layoutImg\/cercle-sitemap@2x.png": {
+	"\/layoutImg\/cercle-sitemap.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 81260,
-		"inputAbbreviatedPath": "\/layoutImg\/cercle-sitemap@2x.png",
-		"outputAbbreviatedPath": "\/layoutImg\/cercle-sitemap@2x.png",
+		"initialSize": 36672,
+		"inputAbbreviatedPath": "\/layoutImg\/cercle-sitemap.png",
+		"outputAbbreviatedPath": "\/layoutImg\/cercle-sitemap.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1103,13 +1103,13 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Adrien",
+"lastSavedByUser": "Adrien Le Menthéour",
 "manualImportLinks": {
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
-	"displayValue": "IMA-amiral",
-	"displayValueWasSetByUser": 0,
+	"displayValue": "IMA Amiral",
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "\/apple-touch-icon.png"
 	},
 "projectSettings": {
