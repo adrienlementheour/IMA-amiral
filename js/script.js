@@ -321,6 +321,27 @@ function closeModal(){
 	TweenMax.to($("#sitemap-modal"), 0.4, {y: 50, ease:Cubic.easeInOut});
 }
 
+////////////////////// Fonction pour déplier / replier les titres du menu / sitemap ////////////////////////
+function liensSitemapMobile(){
+	$("a.circle-sitemap").click(function(){
+		if ($(window).width()<=767){
+			$(this).toggleClass("open");
+			var parentCircleSitemap = $(this).parent();
+			$("ul.liste-liens-sitemap", parentCircleSitemap).slideToggle();
+			return false;
+		}
+	});
+}
+
+function initSitemapMobile(){
+	$("a.circle-sitemap.open").removeClass("open");
+	if ($(window).width()<=767){
+		TweenMax.set($("ul.liste-liens-sitemap"), {display: "none"});
+	}else{
+		TweenMax.set($("ul.liste-liens-sitemap"), {display: "block"});
+	}
+}
+
 $(document).ready(function(){
 	animer();
 	initMenu();
@@ -328,6 +349,8 @@ $(document).ready(function(){
 	categBlocCopies();
 	blocPenche();
 	lienSitemap();
+	initSitemapMobile();
+	liensSitemapMobile();
 	if($("body").hasClass("accueil")){
 		btnVideoClick();
 		btnRetourVideoClick();
@@ -345,6 +368,7 @@ $(document).scroll(function() {
 });
 
 $( window ).resize(function() {
+	initSitemapMobile();
 	if ($(window).width()>=1250) {
 		jsPlumb.detachAllConnections($(".bloc-btn-video"));
 		// Relier le menu avec le lien video
