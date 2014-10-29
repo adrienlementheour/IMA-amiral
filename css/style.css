@@ -2569,9 +2569,12 @@ a.bloc-small.bloc-5:hover .raccord-categ {
 #bloc-menu-responsive a#menu-responsive .svg-hamburger #hamburger {
   fill: #0f589f;
 }
-#bloc-menu-responsive a#menu-responsive img {
+#bloc-menu-responsive a#menu-responsive .svg-logo-ima {
   display: inline-block;
   vertical-align: top;
+  width: 97px;
+  height: 16px;
+  fill: #0f589f;
 }
 /* @end */
 /* @group Overlay */
@@ -3430,6 +3433,24 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   /* @end */
 }
 @media (max-width: 767px) {
+  #content {
+    padding: 0;
+  }
+  #visu-content {
+    display: none;
+  }
+  footer {
+    position: relative;
+    bottom: inherit;
+    left: inherit;
+  }
+  .bloc-full .bloc-content.small-padding-top {
+    padding: 25px 25px 40px 25px;
+  }
+  .ribbon,
+  .ribbon-copie {
+    left: 15px;
+  }
   /* @group Sitemap modal */
   #sitemap-modal {
     top: 35px;
@@ -3627,6 +3648,28 @@ a.bloc-small.bloc-5:hover .raccord-categ {
     margin: 0 0 30px 0;
   }
   /* @end */
+}
+@media (max-width: 570px) {
+  .zone-blocs {
+    margin: 50px 0 0 0;
+  }
+  .zone-blocs#zone-blocs-accueil {
+    height: auto;
+  }
+  a.bloc-small {
+    position: relative;
+  }
+  a.bloc-small.bloc-1,
+  a.bloc-small.bloc-2,
+  a.bloc-small.bloc-3,
+  a.bloc-small.bloc-4,
+  a.bloc-small.bloc-5 {
+    top: inherit;
+    right: inherit;
+    bottom: inherit;
+    left: inherit;
+    margin: 70px auto 70px auto;
+  }
 }
 /* @end */
 /* @group Responsive vertical */

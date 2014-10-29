@@ -249,11 +249,13 @@ function categBlocCopies(){
 		});
 		
 		$(".ribbon-copie").each(function(index){
-			var blocParent = $(this).parent();
-			var widthRibbon = $(".ribbon .ribbon-content", blocParent).width();
-			var heightRibbon = $(".ribbon .ribbon-content", blocParent).height();
-			TweenMax.set($(".ribbon-content",this), {width: widthRibbon+"px", height: heightRibbon+"px"});
-			TweenMax.set($(this), {display: "block"});
+			if ($(window).width()>767) {
+				var blocParent = $(this).parent();
+				var widthRibbon = $(".ribbon .ribbon-content", blocParent).width();
+				var heightRibbon = $(".ribbon .ribbon-content", blocParent).height();
+				TweenMax.set($(".ribbon-content",this), {width: widthRibbon+"px", height: heightRibbon+"px"});
+				TweenMax.set($(this), {display: "block"});
+			}
 		});
 	}, 500);
 }
