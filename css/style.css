@@ -3489,6 +3489,19 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   }
   #sitemap-modal #content-sitemap ul#menu-sitemap {
     padding: 25px 55px 0 55px;
+    position: relative;
+    /*&:before{
+					content: "";
+					display: block;
+					.size(3000px);
+					position: absolute;
+					bottom: -3000px;
+					left: 50%;
+					margin-left: -1500px;
+					background-color: #fbf9f7;
+					.border-radius(50%);
+					border: 1px dashed #c4c4c4;
+				}*/
   }
   #sitemap-modal #content-sitemap ul#menu-sitemap li {
     display: block;
@@ -3604,27 +3617,12 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   #sitemap-modal #content-sitemap .autres-menus-sitemap {
     padding: 30px 55px 0 55px;
     position: relative;
-    overflow: hidden;
-    /*&:before{
-					content: "";
-					display: block;
-					.size(3000px);
-					position: absolute;
-					top: -10px;
-					left: 50%;
-					margin-left: -1500px;
-					background-color: #fbf9f7;
-					.border-radius(50%);
-					border: 1px dashed #c4c4c4;
-				}*/
   }
   #sitemap-modal #content-sitemap .autres-menus-sitemap ul#autre-menu-big-sitemap,
   #sitemap-modal #content-sitemap .autres-menus-sitemap ul#autre-menu-small-sitemap {
     width: 100%;
     display: block;
     padding: 0;
-  }
-  #sitemap-modal #content-sitemap .autres-menus-sitemap ul#autre-menu-big-sitemap {
     margin: 0 0 30px 0;
   }
   /* @end */
