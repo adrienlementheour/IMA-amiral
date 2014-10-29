@@ -2687,14 +2687,14 @@ a.bloc-small.bloc-5:hover .raccord-categ {
 #sitemap-modal .titre-modal {
   display: block;
   position: absolute;
-  padding: 20px 30px 8px 20px;
+  padding: 20px 30px 5px 20px;
   z-index: 4;
   -webkit-transform: rotate(-4deg);
   -moz-transform: rotate(-4deg);
   -o-transform: rotate(-4deg);
   -ms-transform: rotate(-4deg);
   transform: rotate(-4deg);
-  top: -20px;
+  top: -30px;
   left: 40px;
 }
 #sitemap-modal .titre-modal .container-fond-titre-modal {
@@ -2737,7 +2737,7 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  line-height: 1em;
+  line-height: 1.4em;
   color: #ffffff;
   position: relative;
 }
@@ -3445,7 +3445,7 @@ a.bloc-small.bloc-5:hover .raccord-categ {
     transform: rotate(0deg);
     top: 0;
     left: 0;
-    padding: 20px 30px 8px 55px;
+    padding: 13px 30px 8px 55px;
   }
   #sitemap-modal .titre-modal .container-fond-titre-modal {
     display: none;
@@ -3458,16 +3458,17 @@ a.bloc-small.bloc-5:hover .raccord-categ {
     transform: rotate(0deg);
     top: 0;
     right: 0;
+    padding: 13px 15px 15px 15px;
   }
   #sitemap-modal .close-modal .container-fond-close-modal {
     display: none;
   }
   #sitemap-modal .container-fond-modal .fond-modal {
-    -webkit-transform: perspective(500px) rotateX(1deg) rotateY(0deg) rotate(0deg) skewX(0deg) skewY(-0.5deg) scale(1);
-    -moz-transform: perspective(500px) rotateX(1deg) rotateY(0deg) rotate(0deg) skewX(0deg) skewY(-0.5deg) scale(1);
-    -o-transform: perspective(500px) rotateX(1deg) rotateY(0deg) rotate(0deg) skewX(0deg) skewY(-0.5deg) scale(1);
-    -ms-transform: perspective(500px) rotateX(1deg) rotateY(0deg) rotate(0deg) skewX(0deg) skewY(-0.5deg) scale(1);
-    transform: perspective(500px) rotateX(1deg) rotateY(0deg) rotate(0deg) skewX(0deg) skewY(-0.5deg) scale(1);
+    -webkit-transform: perspective(500px) rotateX(0deg) rotateY(0deg) rotate(0deg) skewX(0deg) skewY(-1deg) scale(1);
+    -moz-transform: perspective(500px) rotateX(0deg) rotateY(0deg) rotate(0deg) skewX(0deg) skewY(-1deg) scale(1);
+    -o-transform: perspective(500px) rotateX(0deg) rotateY(0deg) rotate(0deg) skewX(0deg) skewY(-1deg) scale(1);
+    -ms-transform: perspective(500px) rotateX(0deg) rotateY(0deg) rotate(0deg) skewX(0deg) skewY(-1deg) scale(1);
+    transform: perspective(500px) rotateX(0deg) rotateY(0deg) rotate(0deg) skewX(0deg) skewY(-1deg) scale(1);
   }
   #sitemap-modal .container-fond-modal .fond-modal:before {
     content: "";
