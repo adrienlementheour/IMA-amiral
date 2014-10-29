@@ -2173,7 +2173,7 @@ a.bloc-small{
 	display: none;
 	.opacity(0);
 	width: 100%;
-	height: 100%;
+	height: 120%;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -2911,7 +2911,38 @@ a.bloc-small{
 	}
 	
 	#visu-content{
-		display: none;
+		display: block;
+		height: auto;
+		width: 48px;
+		height: 48px;
+		top: 15px;
+		right: 27px;
+	}
+	
+	#bloc-menu-responsive{
+		padding: 32px 0 0 27px;
+	}
+	
+	.bloc-btn-video{
+		width: 48px;
+		height: 48px;
+		margin-top: -24px;
+		margin-left: -24px;
+		.content-bloc-btn-video{
+			width: 48px;
+			height: 48px;
+			padding: 0;
+			a.btn-video{
+				width: 48px;
+				height: 48px;
+				line-height: 48px;
+				.icon-play{
+					line-height: 48px;
+					font-size: 20px;
+					padding-left: 2px;
+				}
+			}
+		}
 	}
 	
 	footer{
@@ -3102,8 +3133,12 @@ a.bloc-small{
 			right: inherit;
 			bottom: inherit;
 			left: inherit;
-			margin: 70px auto 70px auto;
+			margin: 80px auto 80px auto;
 		}
+	}
+	#container-twitter{
+		left: -42px;
+		width: 35px;
 	}
 }
 
@@ -3130,6 +3165,15 @@ a.bloc-small{
 		.bloc-content{
 			&.small-padding-top{
 				padding: 25px 40px 25px 40px;
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		.bloc-full{
+			.bloc-content{
+				&.small-padding-top{
+					padding: 25px 25px 25px 25px;
+				}	
 			}
 		}
 	}
