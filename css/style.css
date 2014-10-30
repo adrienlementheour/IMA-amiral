@@ -2042,11 +2042,33 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   margin: 0 auto;
   padding: 16px 0 0 0;
   position: relative;
+  text-align: center;
 }
 .bloc-btn-video .content-bloc-btn-video a.btn-video {
   display: block;
   width: 82px;
   height: 82px;
+  text-align: center;
+  line-height: 82px;
+  position: relative;
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  transform: translateZ(0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.bloc-btn-video .content-bloc-btn-video a.btn-video .fond-btn-video {
+  display: block;
+  width: 100%;
+  height: 100%;
   -webkit-box-shadow: 0 0 34.4px 5.6px rgba(0, 0, 0, 0.16), 0 0 7px rgba(0, 0, 0, 0.08);
   -moz-box-shadow: 0 0 34.4px 5.6px rgba(0, 0, 0, 0.16), 0 0 7px rgba(0, 0, 0, 0.08);
   box-shadow: 0 0 34.4px 5.6px rgba(0, 0, 0, 0.16), 0 0 7px rgba(0, 0, 0, 0.08);
@@ -2058,8 +2080,9 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   background-clip: padding-box;
   background-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.83);
-  text-align: center;
-  line-height: 82px;
+  position: absolute;
+  top: 0;
+  left: 0;
   -webkit-transition: -webkit-transform 0.2s ease-out;
   -moz-transition: -moz-transform 0.2s ease-out;
   -o-transition: -o-transform 0.2s ease-out;
@@ -2078,27 +2101,43 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   -moz-transition: color 0.05s ease-out;
   -o-transition: color 0.05s ease-out;
   transition: color 0.05s ease-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  -moz-transition: -moz-transform 0.2s ease-out;
+  -o-transition: -o-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out,-moz-transform 0.2s ease-out,-o-transform 0.2s ease-out,transform 0.2s ease-out;
 }
 .bloc-btn-video .content-bloc-btn-video a.btn-video .icon-play:before {
   width: 100%;
   height: 100%;
 }
-.bloc-btn-video .content-bloc-btn-video a.btn-video:hover {
-  -webkit-transform: scale(1.08);
-  -moz-transform: scale(1.08);
-  -o-transform: scale(1.08);
-  -ms-transform: scale(1.08);
-  transform: scale(1.08);
+.bloc-btn-video .content-bloc-btn-video a.btn-video .bloc-txt-btn-video {
+  display: none;
+  position: absolute;
+  padding: 10px 15px 6px 15px;
+  line-height: 1em;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  bottom: -26px;
+  left: 50%;
+  margin-left: -39px;
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  transform: translateZ(0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
-.bloc-btn-video .content-bloc-btn-video a.btn-video:hover .icon-play {
-  color: #801a7a;
-}
-.bloc-btn-video .content-bloc-btn-video .bloc-txt-btn-video {
-  display: block;
-  position: relative;
-  margin: 10px 0 0 0;
-}
-.bloc-btn-video .content-bloc-btn-video .bloc-txt-btn-video .container-fond-txt-btn-video {
+.bloc-btn-video .content-bloc-btn-video a.btn-video .bloc-txt-btn-video .container-fond-txt-btn-video {
   display: block;
   width: 100%;
   height: 100%;
@@ -2112,7 +2151,7 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   transform: translateY(0px);
   z-index: 1;
 }
-.bloc-btn-video .content-bloc-btn-video .bloc-txt-btn-video .container-fond-txt-btn-video .fond-txt-btn-video {
+.bloc-btn-video .content-bloc-btn-video a.btn-video .bloc-txt-btn-video .container-fond-txt-btn-video .fond-txt-btn-video {
   display: block;
   width: 100%;
   height: 100%;
@@ -2126,18 +2165,18 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   -moz-background-clip: padding;
   border-radius: 3px;
   background-clip: padding-box;
-  -webkit-transform: perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg);
-  -moz-transform: perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg);
-  -o-transform: perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg);
-  -ms-transform: perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg);
-  transform: perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg);
+  -webkit-transform: perspective(200px) rotateY(-10deg) rotate(0deg) skewX(-5deg);
+  -moz-transform: perspective(200px) rotateY(-10deg) rotate(0deg) skewX(-5deg);
+  -o-transform: perspective(200px) rotateY(-10deg) rotate(0deg) skewX(-5deg);
+  -ms-transform: perspective(200px) rotateY(-10deg) rotate(0deg) skewX(-5deg);
+  transform: perspective(200px) rotateY(-10deg) rotate(0deg) skewX(-5deg);
   outline: 1px solid transparent;
   -webkit-transition: padding-left 0.1s ease-in-out;
   -moz-transition: padding-left 0.1s ease-in-out;
   -o-transition: padding-left 0.1s ease-in-out;
   transition: padding-left 0.1s ease-in-out;
 }
-.bloc-btn-video .content-bloc-btn-video .bloc-txt-btn-video .txt-btn-video {
+.bloc-btn-video .content-bloc-btn-video a.btn-video .bloc-txt-btn-video .txt-btn-video {
   display: inline-block;
   font-family: 'dearJoe6', sans-serif;
   font-weight: normal;
@@ -2153,6 +2192,41 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   -o-transition: -o-transform 0.4s ease-in-out;
   transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
   z-index: 2;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  transform: translateZ(0px);
+}
+.bloc-btn-video .content-bloc-btn-video a.btn-video:hover .fond-btn-video {
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  -o-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  transform: scale(1.08);
+}
+.bloc-btn-video .content-bloc-btn-video a.btn-video:hover .icon-play {
+  color: #801a7a;
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  -o-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  transform: scale(1.08);
+}
+.bloc-btn-video .content-bloc-btn-video a.btn-video:hover .fond-txt-btn-video {
+  padding-left: 10px;
+}
+.bloc-btn-video .content-bloc-btn-video a.btn-video:hover .txt-btn-video {
+  -webkit-transform: translateX(-10px);
+  -moz-transform: translateX(-10px);
+  -o-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
 }
 /* @end */
 /* @group Bloc autres videos */
@@ -3388,6 +3462,9 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   .bloc-btn-video #circle-dashed-video-svg {
     display: none;
   }
+  .bloc-btn-video .content-bloc-btn-video a.btn-video .bloc-txt-btn-video {
+    display: inline-block;
+  }
   /* @group Sitemap modal */
   #sitemap-modal {
     width: 85%;
@@ -3504,7 +3581,8 @@ a.bloc-small.bloc-5:hover .raccord-categ {
     width: 48px;
     height: 48px;
     top: 15px;
-    right: 27px;
+    right: 20px;
+    position: absolute;
   }
   #bloc-menu-responsive {
     padding: 32px 0 0 27px;
@@ -3529,6 +3607,19 @@ a.bloc-small.bloc-5:hover .raccord-categ {
     line-height: 48px;
     font-size: 20px;
     padding-left: 2px;
+  }
+  .bloc-btn-video .content-bloc-btn-video a.btn-video .bloc-txt-btn-video {
+    margin-left: -35px;
+    bottom: -25px;
+  }
+  .bloc-btn-video .content-bloc-btn-video a.btn-video .bloc-txt-btn-video .txt-btn-video {
+    font-family: 'dearJoe6', sans-serif;
+    font-weight: normal;
+    font-size: 1.1em;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   footer {
     position: relative;
