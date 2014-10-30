@@ -1728,6 +1728,7 @@ a.bloc-small{
 		.size(82px);
 		margin: 0 auto;
 		padding: 16px 0 0 0;
+		position: relative;
 		a.btn-video{
 			display: block;
 			.size(82px);
@@ -1758,6 +1759,42 @@ a.bloc-small{
 				.icon-play{
 					color: @violetIMA;
 				}
+			}
+		}
+		.bloc-txt-btn-video{
+			display: block;
+			position: relative;
+			margin: 10px 0 0 0;
+			.container-fond-txt-btn-video{
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				right: 0;
+				.transform(translateY(0));
+				z-index: 1;
+				.fond-txt-btn-video{
+					display: block;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					right: 0;
+					background-color: @bleuIMA;
+					.border-radius(3px);
+					.transform(perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg));
+					outline: 1px solid transparent;
+					.transition(padding-left 0.1s ease-in-out);
+				}
+			}
+			.txt-btn-video{
+				display: inline-block;
+				.dearJoe(1.3em);
+				color: @blanc;
+				position: relative;
+				.transition(transform 0.4s ease-in-out);
+				z-index: 2;
 			}
 		}
 	}

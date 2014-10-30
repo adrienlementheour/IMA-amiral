@@ -2041,6 +2041,7 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   height: 82px;
   margin: 0 auto;
   padding: 16px 0 0 0;
+  position: relative;
 }
 .bloc-btn-video .content-bloc-btn-video a.btn-video {
   display: block;
@@ -2091,6 +2092,67 @@ a.bloc-small.bloc-5:hover .raccord-categ {
 }
 .bloc-btn-video .content-bloc-btn-video a.btn-video:hover .icon-play {
   color: #801a7a;
+}
+.bloc-btn-video .content-bloc-btn-video .bloc-txt-btn-video {
+  display: block;
+  position: relative;
+  margin: 10px 0 0 0;
+}
+.bloc-btn-video .content-bloc-btn-video .bloc-txt-btn-video .container-fond-txt-btn-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  z-index: 1;
+}
+.bloc-btn-video .content-bloc-btn-video .bloc-txt-btn-video .container-fond-txt-btn-video .fond-txt-btn-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #0f589f;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  -webkit-transform: perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg);
+  -moz-transform: perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg);
+  -o-transform: perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg);
+  -ms-transform: perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg);
+  transform: perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg);
+  outline: 1px solid transparent;
+  -webkit-transition: padding-left 0.1s ease-in-out;
+  -moz-transition: padding-left 0.1s ease-in-out;
+  -o-transition: padding-left 0.1s ease-in-out;
+  transition: padding-left 0.1s ease-in-out;
+}
+.bloc-btn-video .content-bloc-btn-video .bloc-txt-btn-video .txt-btn-video {
+  display: inline-block;
+  font-family: 'dearJoe6', sans-serif;
+  font-weight: normal;
+  font-size: 1.3em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  -moz-transition: -moz-transform 0.4s ease-in-out;
+  -o-transition: -o-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
+  z-index: 2;
 }
 /* @end */
 /* @group Bloc autres videos */
