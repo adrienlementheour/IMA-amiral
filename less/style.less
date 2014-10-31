@@ -478,17 +478,25 @@ a{
 		.txt-btn{
 			.box-shadow(inset 0 -1px 0 @violetIMA);
 		}
-		.icon-plus{
-			font-size: 12px;
-			position: absolute;
-			top: 50%;
-			margin-top: -5px;
-			right: 0;
-			.transition(transform 0.1s ease-in-out);
+		.container-icon-plus{
+			margin: 0 0 0 3px;
+			padding: 0;
+			width: 12px;
+			height: 12px;
+			position: relative;
+			.icon-plus{
+				font-size: 12px;
+				position: absolute;
+				top: 4px;
+				left: 0;
+				.transition(transform 0.1s ease-in-out);
+			}
 		}
 		&:hover{
-			.icon-plus{
-				.transform(rotate(90deg));
+			.container-icon-plus{
+				.icon-plus{
+					.transform(rotate(90deg));
+				}
 			}
 		}
 	}
@@ -568,6 +576,16 @@ a{
 	.icon-plus{
 		font-size: 16px;
 	}
+}
+
+#container-raph{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
 }
 
 /* @group Header */
@@ -2230,7 +2248,7 @@ a.bloc-small{
 			display: inline-block;
 			vertical-align: top;
 			width: 97px;
-			height: 16px;
+			height: 15px;
 			fill: @bleuIMA;
 		}
 	}
@@ -2925,6 +2943,10 @@ a.bloc-small{
 			margin-left: -100px;
 			right: inherit;
 		}
+	}
+	
+	#container-pop2{
+		display: none;
 	}
 	
 	/* @group Sitemap modal */

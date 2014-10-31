@@ -32,9 +32,14 @@ function animer(){
 	}
 	
 	requestAnimFrame(function(){
+		jsPlumb.setSuspendDrawing(false);
 		//jsPlumb.setSuspendDrawing(false, true);
 		//jsPlumb.repaintEverything();
-		//jsPlumb.repaint($(".has-js-plumb"));
+		//jsPlumb.repaint($("#wrapper-content"));
+		//jsPlumb.recalculateOffsets($("#wrapper-content"));
+		if((TweenMax.isTweening($("#menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper ul")))||(TweenMax.isTweening($("#menu-wrapper ul li")))||(TweenMax.isTweening($("#menu-wrapper ul li a .txt-circle")))||(TweenMax.isTweening($("#menu-wrapper #circle-dashed-container")))){
+			jsPlumb.setSuspendDrawing(false, true);
+		}
 		animer();
 	});
 }
@@ -344,6 +349,45 @@ function initSitemapMobile(){
 	}
 }
 
+function raphael(){
+	// Model
+	var boxes = [
+	    {x:100,y:100,title:'Box A'},
+	    {x:300,y:200,title:'Box B\n(Drag me!)'}
+	];
+	var connections = [
+	    {from:boxes[0], to:boxes[1]}
+	];
+	
+	// Render
+	var paper = new Raphael("container-raph", "100%", "100%");
+	
+	var w = h = 60;
+	function redraw(){
+	    
+	    connections.forEach(function(connection){
+	        if (typeof connection.view != 'undefined') {
+	            connection.view.remove();
+	        }
+	        connection.view = paper.path(
+	            'M'+($("#menu-wrapper").offset().left+($("#menu-wrapper").height()+50))+','+($("#menu-wrapper").offset().top+($("#menu-wrapper").height()/2))+' '+
+	            'L'+$(".bloc-btn-video").offset().left+','+$(".bloc-btn-video").offset().top
+	            /*"M 40 0 L 97.80000000000001 0 M97.80000000000001 0 A 40 40 0 0,1 137.8 40 M 137.8 39 L 137.8 247.75 M 137.8 246.75 L 137.8 453.5 M137.8 453.5 A 40 40 0 0,0 177.8 493.5 M 177.8 493.5 L 235.60000000000002 493.5"*/
+	        ).attr({"stroke": "#cacaca", "stroke-dasharray": ". ", "stroke-width": 2});
+	        connection.view.toBack();      
+	    });
+
+	}
+
+	function slide(){
+
+	    redraw();
+	    setTimeout(slide,0.1);
+	}
+	slide();
+	
+}
+
 $(document).ready(function(){
 	animer();
 	initMenu();
@@ -353,6 +397,7 @@ $(document).ready(function(){
 	lienSitemap();
 	initSitemapMobile();
 	liensSitemapMobile();
+	//raphael();
 	if($("body").hasClass("accueil")){
 		btnVideoClick();
 		btnRetourVideoClick();
@@ -370,6 +415,7 @@ $(document).scroll(function() {
 });
 
 $( window ).resize(function() {
+	jsPlumb.setSuspendDrawing(false, true);
 	initSitemapMobile();
 	if ($(window).width()>=1250) {
 		jsPlumb.detachAllConnections($(".bloc-btn-video"));
@@ -404,7 +450,7 @@ jsPlumb.ready(function() {
 			var instance= jsPlumb.getInstance();
 			instance.setContainer($("#zone-blocs-accueil"));
 			//instance.connect({
-			jsPlumb.connect({
+			instance.connect({
 				source: $(".bloc-"+(index+1)),
 				target: $(".bloc-"+(index+2)),
 	
@@ -424,8 +470,10 @@ jsPlumb.ready(function() {
 		// Relier le bloc actu avec le premier bloc small (RSE)
 		
 		var jsPlumbFirstBloc = jsPlumb.getInstance();
-		jsPlumbFirstBloc.setContainer($("#wrapper-content"));
-		jsPlumbFirstBloc.connect({
+		/*jsPlumbFirstBloc.setContainer($("#wrapper-content"));
+		jsPlumbFirstBloc.connect({*/
+		jsPlumb.setContainer($("#wrapper-content"));
+		jsPlumb.connect({
 			source: $("#bloc-actus"),
 			target: $(".bloc-1"),
 			anchors: [[0.2, 1, -1, 0], [0.4, 0, 0, 0]],
@@ -440,8 +488,8 @@ jsPlumb.ready(function() {
 		if ($(window).width()>=1250) {
 			// Relier le menu avec le lien video
 			var jsPlumbVisu = jsPlumb.getInstance();
-			jsPlumbVisu.setContainer($("#wrapper-content"));
-			jsPlumbVisu.connect({
+			jsPlumb.setContainer($("#wrapper-content"));
+			jsPlumb.connect({
 				source: $("#menu-wrapper"),
 				target: $(".bloc-btn-video"),
 				anchors: [[1.2, 0.5, 1, 0], [0, 0.5, -1, 0]],
