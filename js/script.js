@@ -37,7 +37,7 @@ function animer(){
 		//jsPlumb.repaintEverything();
 		//jsPlumb.repaint($("#wrapper-content"));
 		//jsPlumb.recalculateOffsets($("#wrapper-content"));
-		if((TweenMax.isTweening($("#menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper ul")))||(TweenMax.isTweening($("#menu-wrapper ul li")))||(TweenMax.isTweening($("#menu-wrapper ul li a .txt-circle")))||(TweenMax.isTweening($("#menu-wrapper #circle-dashed-container")))){
+		if((TweenMax.isTweening($("#container-menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper ul")))||(TweenMax.isTweening($("#menu-wrapper ul li")))||(TweenMax.isTweening($("#menu-wrapper ul li a .txt-circle")))||(TweenMax.isTweening($("#circle-dashed-container")))){
 			jsPlumb.setSuspendDrawing(false, true);
 		}
 		animer();
@@ -77,12 +77,12 @@ function ouvertureMenu(){
 	
 	tlMenuWrapper.to($("#menu-wrapper ul"), 0.05, {scale:1.2, ease:Cubic.easeInOut});
 	tlMenuWrapper.to($("#menu-wrapper ul"), 0.05, {scale:1 , ease:Cubic.easeInOut});
-	tlMenuWrapper.to($("#menu-wrapper ul li"), 0.1, {left: "35%", top: "35%", ease:Cubic.easeInOut});
+	tlMenuWrapper.to($("#menu-wrapper ul li"), 0.1, {left: "40%", top: "40%", ease:Cubic.easeInOut});
 	
 	tlCircleDashed.to($("#menu-wrapper #circle-dashed-container"), 0.05, {scale: 1.2, ease:Cubic.easeInOut});
 	tlCircleDashed.to($("#menu-wrapper #circle-dashed-container"), 0.3, {scale: 0.3, ease:Cubic.easeInOut});
 	
-	tlMenuWrapper.to($("#menu-wrapper"), 0.2, {width:"430px", height:"430px", "margin-top":"-110px", ease:Cubic.easeInOut});
+	tlMenuWrapper.to($("#container-menu-wrapper"), 0.2, {marginTop:"-110px", ease:Cubic.easeInOut});
 	
 	tlMenuWrapper.set($("#menu-wrapper ul li"), {width:"98px", height:"98px", ease:Cubic.easeInOut});
 	//tlMenuWrapper.set($("#menu-wrapper ul li a"), {"border-width":"10px", ease:Cubic.easeInOut});
@@ -95,7 +95,6 @@ function ouvertureMenu(){
 		tlCircles.to($("#menu-wrapper ul li.circle-vehicules"), 0.3, {top: "94px", left: "300px", ease:Cubic.easeInOut});
 		tlCircles.to($("#menu-wrapper ul li.circle-formation"), 0.3, {top: "235px", left: "310px", delay:0.05, ease:Cubic.easeInOut},0);
 		tlCircles.to($("#menu-wrapper ul li.circle-offre-conseil"), 0.3, {top: "321px", left: "166px", delay:0.1, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#menu-wrapper ul li.circle-informatique"), 0.3, {top: "321px", left: "90px", delay:0.15, ease:Cubic.easeInOut},0);
 		tlCircles.to($("#menu-wrapper ul li.circle-service-client"), 0.3, {top: "235px", left: "20px", delay:0.2, ease:Cubic.easeInOut},0);
 		tlCircles.to($("#menu-wrapper ul li.circle-juridique"), 0.3, {top: "94px", left: "32px", delay:0.25, ease:Cubic.easeInOut},0);
 	}
@@ -115,7 +114,7 @@ function fermetureMenu(){
 	
 	tlCircleDashed.to($("#menu-wrapper #circle-dashed-container"), 0.3, {scale: 0.3, ease:Cubic.easeInOut});
 	
-	tlMenuWrapper.to($("#menu-wrapper"), 0.5, {width:"250px", height:"250px", "margin-top":"-100px", ease:Cubic.easeInOut});
+	tlMenuWrapper.to($("#container-menu-wrapper"), 0.5, {marginTop:"-180px", ease:Cubic.easeInOut});
 	
 	tlMenuWrapper.set($("#menu-wrapper ul li"), {width:"20px", height:"20px", ease:Cubic.easeInOut});
 	tlMenuWrapper.set($("#menu-wrapper ul li a"), {"border-width":"0px", ease:Cubic.easeInOut});
@@ -125,12 +124,11 @@ function fermetureMenu(){
 	tlCircleDashed.to($("#menu-wrapper #circle-dashed-container"), 0.3, {scale: 1, delay: 0.7, ease:Cubic.easeInOut});
 	
 	function cerclesAnimRetour(){
-		tlCircles.to($("#menu-wrapper ul li.circle-vehicules"), 0.4, {top: "135px", left: "222px", ease:Cubic.easeInOut});
-		tlCircles.to($("#menu-wrapper ul li.circle-formation"), 0.4, {top: "195px", left: "187px", delay:0.05, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#menu-wrapper ul li.circle-offre-conseil"), 0.4, {top: "222px", left: "115px", delay:0.1, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#menu-wrapper ul li.circle-informatique"), 0.4, {top: "219px", left: "76px", delay:0.15, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#menu-wrapper ul li.circle-service-client"), 0.4, {top: "195px", left: "40px", delay:0.2, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#menu-wrapper ul li.circle-juridique"), 0.4, {top: "135px", left: "8px", delay:0.25, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li.circle-vehicules"), 0.4, {top: "221px", left: "312px", ease:Cubic.easeInOut});
+		tlCircles.to($("#menu-wrapper ul li.circle-formation"), 0.4, {top: "281px", left: "277px", delay:0.05, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li.circle-offre-conseil"), 0.4, {top: "312px", left: "205px", delay:0.1, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li.circle-service-client"), 0.4, {top: "281px", left: "130px", delay:0.2, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li.circle-juridique"), 0.4, {top: "221px", left: "98px", delay:0.25, ease:Cubic.easeInOut},0);
 		tlCircles.to($("#label-menu"), 0.15, {opacity: 1, display: "block", ease:Cubic.easeInOut});
 	}
 }
@@ -492,7 +490,7 @@ jsPlumb.ready(function() {
 			jsPlumb.connect({
 				source: $("#menu-wrapper"),
 				target: $(".bloc-btn-video"),
-				anchors: [[1.2, 0.5, 1, 0], [0, 0.5, -1, 0]],
+				anchors: [[0.97, 0.5, 1, 0], [0, 0.5, -1, 0]],
 				endpoint:"Blank",
 				paintStyle:{
 				lineWidth:2,
