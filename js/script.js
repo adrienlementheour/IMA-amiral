@@ -33,10 +33,6 @@ function animer(){
 	
 	requestAnimFrame(function(){
 		jsPlumb.setSuspendDrawing(false);
-		//jsPlumb.setSuspendDrawing(false, true);
-		//jsPlumb.repaintEverything();
-		//jsPlumb.repaint($("#wrapper-content"));
-		//jsPlumb.recalculateOffsets($("#wrapper-content"));
 		if((TweenMax.isTweening($("#container-menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper ul")))||(TweenMax.isTweening($("#menu-wrapper ul li")))||(TweenMax.isTweening($("#menu-wrapper ul li a .txt-circle")))||(TweenMax.isTweening($("#circle-dashed-container")))){
 			jsPlumb.setSuspendDrawing(false, true);
 		}
@@ -227,9 +223,9 @@ function btnPlusVideos(){
 ////////////////////// Fonction pour stopper les videos ////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 function stopVideos(){
-	$(".video-accueil iframe").each(function(index) {
+	/*$(".video-accueil iframe").each(function(index) {
 	  $(this).attr('src', $(this).attr('src'));
-	});
+	});*/
 }
 
 ////////////////////// Fonction pour gérer la taille des raccords ribbons ////////////////////////
@@ -347,42 +343,7 @@ function initSitemapMobile(){
 	}
 }
 
-function raphael(){
-	// Model
-	var boxes = [
-	    {x:100,y:100,title:'Box A'},
-	    {x:300,y:200,title:'Box B\n(Drag me!)'}
-	];
-	var connections = [
-	    {from:boxes[0], to:boxes[1]}
-	];
-	
-	// Render
-	var paper = new Raphael("container-raph", "100%", "100%");
-	
-	var w = h = 60;
-	function redraw(){
-	    
-	    connections.forEach(function(connection){
-	        if (typeof connection.view != 'undefined') {
-	            connection.view.remove();
-	        }
-	        connection.view = paper.path(
-	            'M'+($("#menu-wrapper").offset().left+($("#menu-wrapper").height()+50))+','+($("#menu-wrapper").offset().top+($("#menu-wrapper").height()/2))+' '+
-	            'L'+$(".bloc-btn-video").offset().left+','+$(".bloc-btn-video").offset().top
-	            /*"M 40 0 L 97.80000000000001 0 M97.80000000000001 0 A 40 40 0 0,1 137.8 40 M 137.8 39 L 137.8 247.75 M 137.8 246.75 L 137.8 453.5 M137.8 453.5 A 40 40 0 0,0 177.8 493.5 M 177.8 493.5 L 235.60000000000002 493.5"*/
-	        ).attr({"stroke": "#cacaca", "stroke-dasharray": ". ", "stroke-width": 2});
-	        connection.view.toBack();      
-	    });
-
-	}
-
-	function slide(){
-
-	    redraw();
-	    setTimeout(slide,0.1);
-	}
-	slide();
+function initVideo(){
 	
 }
 
@@ -395,7 +356,7 @@ $(document).ready(function(){
 	lienSitemap();
 	initSitemapMobile();
 	liensSitemapMobile();
-	//raphael();
+	initVideo();
 	if($("body").hasClass("accueil")){
 		btnVideoClick();
 		btnRetourVideoClick();

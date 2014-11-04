@@ -1961,6 +1961,7 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   max-width: 100%;
   height: auto;
 }
+#bloc-fond-visu #wrapper-embed .embed-container video,
 #bloc-fond-visu #wrapper-embed .embed-container iframe,
 #bloc-fond-visu #wrapper-embed .embed-container object,
 #bloc-fond-visu #wrapper-embed .embed-container embed {
