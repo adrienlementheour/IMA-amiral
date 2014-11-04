@@ -370,7 +370,8 @@ $(document).ready(function(){
 //});
 
 $(document).scroll(function() {
-	
+	//bloc-btn-video
+	jsPlumb.repaint($(".bloc-btn-video"), { left:$(".bloc-btn-video").offset().left, top:($(".bloc-btn-video").offset().top)});
 });
 
 $( window ).resize(function() {

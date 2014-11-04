@@ -2099,6 +2099,7 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   left: 0;
   bottom: 0;
   right: 0;
+  z-index: 2;
 }
 #fond-bloc-visu {
   display: block;
@@ -2124,7 +2125,7 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   display: block;
   width: 43%;
   height: auto;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
