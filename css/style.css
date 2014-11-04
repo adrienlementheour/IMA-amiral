@@ -1942,6 +1942,73 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   top: 0;
   left: 0;
   z-index: 1;
+  /* @group videojs */
+  /* @end */
+}
+#bloc-fond-visu .vjs-default-skin .vjs-play-control {
+  width: 23px;
+  color: #0f589f;
+}
+#bloc-fond-visu .vjs-default-skin .vjs-play-control:before {
+  text-shadow: none;
+}
+#bloc-fond-visu .vjs-default-skin .vjs-control-bar {
+  right: inherit;
+  width: 70%;
+  left: 50%;
+  margin-left: -35%;
+  bottom: 50px;
+  background-color: #fbfbfb;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+}
+#bloc-fond-visu .vjs-default-skin .vjs-progress-control {
+  height: 10px;
+  top: 50%;
+  margin-top: -5px;
+  left: 23px;
+  right: 10px;
+}
+#bloc-fond-visu .vjs-default-skin .vjs-progress-control .vjs-play-progress {
+  background: #0f589f;
+}
+#bloc-fond-visu .vjs-default-skin .vjs-slider-handle {
+  height: 10px;
+  width: 10px;
+}
+#bloc-fond-visu .vjs-default-skin .vjs-slider-handle:before {
+  text-shadow: none;
+  font-size: 10px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+#bloc-fond-visu .vjs-default-skin .vjs-current-time {
+  display: none;
+}
+#bloc-fond-visu .vjs-default-skin .vjs-time-divider {
+  display: none;
+}
+#bloc-fond-visu .vjs-default-skin .vjs-duration {
+  display: none;
+}
+#bloc-fond-visu .vjs-default-skin .vjs-fullscreen-control {
+  display: none;
+}
+#bloc-fond-visu .vjs-default-skin .vjs-volume-control {
+  display: none;
+}
+#bloc-fond-visu .vjs-default-skin .vjs-mute-control {
+  display: none;
+}
+#bloc-fond-visu .vjs-default-skin .vjs-quality-button {
+  display: none;
 }
 #bloc-fond-visu .container {
   height: 100%;
@@ -1950,7 +2017,7 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   display: block;
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 43px;
   left: 0;
   right: 0;
 }
