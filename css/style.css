@@ -1945,6 +1945,58 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   /* @group videojs */
   /* @end */
 }
+#bloc-fond-visu .vjs-default-skin:hover .vjs-big-play-button {
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  -o-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  transform: scale(1.08);
+}
+#bloc-fond-visu .vjs-default-skin:hover .vjs-big-play-button:before {
+  color: #801a7a;
+}
+#bloc-fond-visu .vjs-default-skin .vjs-big-play-button {
+  width: 82px;
+  height: 82px;
+  top: 50%;
+  margin-top: -41px;
+  left: 50%;
+  margin-left: -41px;
+  border: none;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.83);
+  -webkit-box-shadow: 0 0 34.4px 5.6px rgba(0, 0, 0, 0.16), 0 0 7px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0 0 34.4px 5.6px rgba(0, 0, 0, 0.16), 0 0 7px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 34.4px 5.6px rgba(0, 0, 0, 0.16), 0 0 7px rgba(0, 0, 0, 0.08);
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  -moz-transition: -moz-transform 0.2s ease-out;
+  -o-transition: -o-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out,-moz-transform 0.2s ease-out,-o-transform 0.2s ease-out,transform 0.2s ease-out;
+}
+#bloc-fond-visu .vjs-default-skin .vjs-big-play-button:before {
+  font-family: 'IMA-amiral';
+  font-size: 37px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e602";
+  color: #0f589f;
+  text-shadow: none;
+  line-height: 82px;
+  padding-left: 3px;
+}
 #bloc-fond-visu .vjs-default-skin .vjs-play-control {
   width: 23px;
   color: #0f589f;

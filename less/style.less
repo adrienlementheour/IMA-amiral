@@ -1648,7 +1648,34 @@ a.bloc-small{
 	/* @group videojs */
 	
 	.vjs-default-skin{
+		&:hover{
+			.vjs-big-play-button{
+				.transform(scale(1.08));
+				&:before{
+					color: @violetIMA;
+				}
+			}
+		}
 		.vjs-big-play-button{
+			.size(82px);
+			top: 50%;
+			margin-top: -41px;
+			left: 50%;
+			margin-left: -41px;
+			border: none;
+			.border-radius(50%);
+			background-color: @blanc;
+			background-color: rgba(255, 255, 255, 0.83);
+			.box-shadow(0 0 34.4px 5.6px rgba(0, 0, 0, 0.16), 0 0 7px rgba(0, 0, 0, 0.08));
+			.transition(transform 0.2s ease-out);
+			&:before{
+				.IMA-amiral(37px);
+				content: "\e602";
+				color: @bleuIMA;
+				text-shadow: none;
+				line-height: 82px;
+				padding-left: 3px;
+			}
 			
 		}
 		.vjs-play-control{
