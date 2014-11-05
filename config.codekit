@@ -238,6 +238,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/videos\/posters\/poster-video-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 302649,
+		"inputAbbreviatedPath": "\/img\/videos\/posters\/poster-video-1.jpg",
+		"outputAbbreviatedPath": "\/img\/videos\/posters\/poster-video-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -808,12 +819,32 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/libs\/raphael-min.js": {
+	"\/js\/libs\/videojs\/video-js.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/libs\/videojs\/video-js.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/js\/libs\/videojs\/video.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/libs\/raphael-min.js",
-		"outputAbbreviatedPath": "\/js\/libs\/min\/raphael-min-min.js",
+		"inputAbbreviatedPath": "\/js\/libs\/videojs\/video.js",
+		"outputAbbreviatedPath": "\/js\/libs\/videojs\/min\/video-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/libs\/videojs\/youtube.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/libs\/videojs\/youtube.js",
+		"outputAbbreviatedPath": "\/js\/libs\/videojs\/min\/youtube-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
