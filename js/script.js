@@ -34,7 +34,11 @@ function animer(){
 	requestAnimFrame(function(){
 		jsPlumb.setSuspendDrawing(false);
 		if((TweenMax.isTweening($("#wrapper-content")))||(TweenMax.isTweening($("#container-menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper ul")))||(TweenMax.isTweening($("#menu-wrapper ul li")))||(TweenMax.isTweening($("#menu-wrapper ul li a .txt-circle")))||(TweenMax.isTweening($("#circle-dashed-container")))){
-			jsPlumb.setSuspendDrawing(false, true);
+			//jsPlumb.repaint($(".bloc-small"));
+			jsPlumb.repaint($(".bloc-1"));
+			jsPlumb.repaint($("#bloc-actus"));
+			jsPlumb.repaint($("#menu-wrapper"));
+			jsPlumb.repaint($(".bloc-btn-video"), { left:$(".bloc-btn-video").offset().left, top:($(".bloc-btn-video").offset().top)});
 		}
 		animer();
 	});
