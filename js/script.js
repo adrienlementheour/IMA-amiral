@@ -154,7 +154,8 @@ function btnVideoClick(){
 	$("a.btn-video").click(function(){
 		$("body").addClass("video-ouverte");
 		// décaler le wrapper content
-		TweenMax.to($("#wrapper-content"), 0.5, {"x":"-100%", ease:Cubic.easeInOut});
+		TweenMax.set($("footer"), {display: "none"});
+		TweenMax.to($("#wrapper-content"), 0.5, {"x":"-100%", ease:Cubic.easeInOut, onComplete: completeWrapperContent});
 		TweenMax.to($("#bloc-menu-responsive"), 0.5, {"x":"-100%", ease:Cubic.easeInOut});
 		// centrer la div fond visu
 		tlBlocVisuContent = new TimelineMax();
@@ -163,6 +164,10 @@ function btnVideoClick(){
 		tlBlocVisuContent.to($("#fond-couleur-bloc-visu"), 0.2, {opacity: 0, display: "none", ease:Cubic.easeInOut, onComplete: completeFondCouleur});
 		return false;
 	});
+}
+
+function completeWrapperContent(){
+	TweenMax.set($("#wrapper-content"), {display: "none"});
 }
 
 function completeFondCouleur(){
@@ -181,10 +186,11 @@ function btnRetourVideoClick(){
 	$("a#retour-video").click(function(){
 		$("body").removeClass("video-ouverte");
 		stopVideos();
+		TweenMax.set($("#wrapper-content"), {display: "block"});
 		TweenMax.set($("#bloc-visu"), {display: "block"});
 		TweenMax.set($("#container-bloc-visu-content"), {display: "block"});
 		
-		TweenMax.to($("#bloc-menu-responsive"), 0.2, {"x":"0%", delay:1, ease:Cubic.easeInOut});
+		TweenMax.to($("#bloc-menu-responsive"), 0.2, {"x":"0%", delay:1, ease:Cubic.easeInOut, onComplete: blocMenuResponsiveRetour});
 		
 		TweenMax.to($("#bloc-retour-video"), 0.2, {marginLeft:"-200px", ease:Cubic.easeInOut});
 		TweenMax.to($("#bloc-autres-videos"), 0.2, {marginRight: "-250px", "x": "0px", ease:Cubic.easeInOut});
@@ -194,7 +200,9 @@ function btnRetourVideoClick(){
 		return false;
 	});
 }
-
+function blocMenuResponsiveRetour(){
+	TweenMax.set($("footer"), {display: "block"});
+}
 function completeFondCouleurRetour(){
 	TweenMax.to($("#bloc-fond-visu .bloc-visu-content"), 0.5, {"right":"0", "margin-right": "0%", ease:Cubic.easeInOut});
 	TweenMax.to($("#wrapper-content"), 0.5, {"x":"0%", ease:Cubic.easeInOut});
@@ -203,7 +211,7 @@ function completeFondCouleurRetour(){
 function btnPlusVideos(){
 	$("a#plus-autres-videos").hover(function(){
 		// au mouse enter
-		if(!$("#bloc-autres-videos").hasClass("open")){
+		if((!isMobile) && (!$("#bloc-autres-videos").hasClass("open"))){
 			TweenMax.to($("#bloc-autres-videos"), 0.2, {x: "-20px", ease:Cubic.easeInOut});
 		}
 		TweenMax.to($("a#plus-autres-videos .icon-plus"), 0.2, {scale: "1.1", ease:Cubic.easeInOut});
