@@ -2356,11 +2356,11 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   -o-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transform: translateZ(0px);
-  -moz-transform: translateZ(0px);
-  -o-transform: translateZ(0px);
-  -ms-transform: translateZ(0px);
-  transform: translateZ(0px);
+  -webkit-transform: translateZ(1px);
+  -moz-transform: translateZ(1px);
+  -o-transform: translateZ(1px);
+  -ms-transform: translateZ(1px);
+  transform: translateZ(1px);
 }
 .bloc-btn-video .content-bloc-btn-video a.btn-video:hover .fond-btn-video {
   -webkit-transform: scale(1.08);
