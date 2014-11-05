@@ -33,7 +33,7 @@ function animer(){
 	
 	requestAnimFrame(function(){
 		jsPlumb.setSuspendDrawing(false);
-		if((TweenMax.isTweening($("#container-menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper ul")))||(TweenMax.isTweening($("#menu-wrapper ul li")))||(TweenMax.isTweening($("#menu-wrapper ul li a .txt-circle")))||(TweenMax.isTweening($("#circle-dashed-container")))){
+		if((TweenMax.isTweening($("#wrapper-content")))||(TweenMax.isTweening($("#container-menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper ul")))||(TweenMax.isTweening($("#menu-wrapper ul li")))||(TweenMax.isTweening($("#menu-wrapper ul li a .txt-circle")))||(TweenMax.isTweening($("#circle-dashed-container")))){
 			jsPlumb.setSuspendDrawing(false, true);
 		}
 		animer();
@@ -151,6 +151,7 @@ function btnVideoClick(){
 		$("body").addClass("video-ouverte");
 		// décaler le wrapper content
 		TweenMax.to($("#wrapper-content"), 0.5, {"x":"-100%", ease:Cubic.easeInOut});
+		TweenMax.to($("#bloc-menu-responsive"), 0.5, {"x":"-100%", ease:Cubic.easeInOut});
 		// centrer la div fond visu
 		tlBlocVisuContent = new TimelineMax();
 		tlBlocVisuContent.to($("#bloc-fond-visu .bloc-visu-content"), 0.5, {"right":"50%", "margin-right": "-21.5%", ease:Cubic.easeInOut});
@@ -178,6 +179,9 @@ function btnRetourVideoClick(){
 		stopVideos();
 		TweenMax.set($("#bloc-visu"), {display: "block"});
 		TweenMax.set($("#container-bloc-visu-content"), {display: "block"});
+		
+		TweenMax.to($("#bloc-menu-responsive"), 0.2, {"x":"0%", delay:1, ease:Cubic.easeInOut});
+		
 		TweenMax.to($("#bloc-retour-video"), 0.2, {marginLeft:"-200px", ease:Cubic.easeInOut});
 		TweenMax.to($("#bloc-autres-videos"), 0.2, {marginRight: "-250px", "x": "0px", ease:Cubic.easeInOut});
 		tlBlocVisuContentRetour = new TimelineMax();

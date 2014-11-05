@@ -859,7 +859,7 @@
   var style = document.createElement('style');
   var def = ' ' +
     /*'.vjs-youtube .vjs-poster { background-size: 100%!important; }' +*/
-    '.vjs-youtube .vjs-poster { background-size: auto 100%!important; }' +
+    '.vjs-youtube .vjs-poster { background-size: auto 100%; background-size: cover; }' +
     '.vjs-youtube .vjs-poster, ' +
     '.vjs-youtube .vjs-loading-spinner, ' +
     '.vjs-youtube .vjs-big-play-button, .vjs-youtube .vjs-text-track-display{ pointer-events: none !important; }' +

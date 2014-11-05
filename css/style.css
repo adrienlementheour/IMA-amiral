@@ -3894,6 +3894,12 @@ a.bloc-small.bloc-5:hover .raccord-categ {
   #container-pop2 {
     display: none;
   }
+  /* @group videojs */
+  .vjs-youtube .vjs-poster {
+    background-color: #f3f3f3;
+    background-size: 100% auto!important;
+  }
+  /* @end */
   /* @group Sitemap modal */
   #sitemap-modal {
     position: absolute;
