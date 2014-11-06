@@ -522,6 +522,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/libs\/isMobile.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/libs\/isMobile.min.js",
+		"outputAbbreviatedPath": "\/js\/libs\/min\/isMobile.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/libs\/jquery-1.11.1.min.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -819,11 +830,33 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/libs\/videojs\/video-js.min.css": {
+	"\/js\/libs\/videojs\/bigvideo.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/libs\/videojs\/bigvideo.js",
+		"outputAbbreviatedPath": "\/js\/libs\/videojs\/min\/bigvideo-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/libs\/videojs\/min\/youtube-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/libs\/videojs\/min\/youtube-min.js",
+		"outputAbbreviatedPath": "\/js\/libs\/videojs\/min\/min\/youtube-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/libs\/videojs\/video-js.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/libs\/videojs\/video-js.min.css",
+		"inputAbbreviatedPath": "\/js\/libs\/videojs\/video-js.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

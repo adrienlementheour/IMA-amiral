@@ -355,6 +355,17 @@ function initVideo(){
 	
 }
 
+function svgFallback(){
+	if (!Modernizr.svg) {
+		$("object").each(function( index ) {
+			var fallback = $(this).attr('data-fallback');
+			var idObject = $(this).attr('id');
+			$(this).after("<img src='"+fallback+"' alt='' id='"+idObject+"' />");
+			$(this).remove();
+		});
+	}
+}
+
 $(document).ready(function(){
 	animer();
 	initMenu();
@@ -365,6 +376,7 @@ $(document).ready(function(){
 	initSitemapMobile();
 	liensSitemapMobile();
 	initVideo();
+	svgFallback();
 	if($("body").hasClass("accueil")){
 		btnVideoClick();
 		btnRetourVideoClick();
