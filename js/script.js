@@ -20,17 +20,6 @@ window.requestAnimFrame = (function(){
 })();
 
 function animer(){
-	myScroll = $(document).scrollTop();
-	var heightContent = $("#content").height();
-	//if ($(window).height()>=$("#content").height()+$("#visu-content").position().top){
-		//TweenMax.set($("#visu-content"), {"top": myScroll+"px"});
-	//}
-	//console.log("myScroll = "+myScroll);
-	//console.log((($("#content").height()+$("#visu-content").position().top)-$(window).height()));
-	if (myScroll<=(($("#content").height()+$("#visu-content").position().top)-$(window).height())){
-		//TweenMax.set($("#visu-content"), {"top": myScroll+"px"});
-	}
-	
 	requestAnimFrame(function(){
 		jsPlumb.setSuspendDrawing(false);
 		if((TweenMax.isTweening($("#wrapper-content")))||(TweenMax.isTweening($("#container-menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper ul")))||(TweenMax.isTweening($("#menu-wrapper ul li")))||(TweenMax.isTweening($("#menu-wrapper ul li a .txt-circle")))||(TweenMax.isTweening($("#circle-dashed-container")))){
@@ -48,7 +37,7 @@ function animer(){
 //////////// Fonction pour ouvrir le menu à l'ouvreture de la page /////////////
 ////////////////////////////////////////////////////////////////////////////////
 function menuOuvertDefault(){
-	if($(window).width()>767){
+	if($(window).width()>979){
 		ouvertureMenu();
 		setTimeout(function(){
 			fermetureMenu();
@@ -83,6 +72,7 @@ function ouvertureMenu(){
 	tlCircleDashed.to($("#menu-wrapper #circle-dashed-container"), 0.3, {scale: 0.3, ease:Cubic.easeInOut});
 	
 	tlMenuWrapper.to($("#container-menu-wrapper"), 0.2, {marginTop:"-110px", ease:Cubic.easeInOut});
+	TweenMax.to($(".wrapper-blocs"), 0.2, {marginTop:"-20px", ease:Cubic.easeInOut, delay: 0.2});
 	
 	tlMenuWrapper.set($("#menu-wrapper ul li"), {width:"98px", height:"98px", ease:Cubic.easeInOut});
 	//tlMenuWrapper.set($("#menu-wrapper ul li a"), {"border-width":"10px", ease:Cubic.easeInOut});
@@ -115,6 +105,7 @@ function fermetureMenu(){
 	tlCircleDashed.to($("#menu-wrapper #circle-dashed-container"), 0.3, {scale: 0.3, ease:Cubic.easeInOut});
 	
 	tlMenuWrapper.to($("#container-menu-wrapper"), 0.5, {marginTop:"-180px", ease:Cubic.easeInOut});
+	TweenMax.to($(".wrapper-blocs"), 0.2, {marginTop:"-100px", ease:Cubic.easeInOut, delay: 0.3});
 	
 	tlMenuWrapper.set($("#menu-wrapper ul li"), {width:"20px", height:"20px", ease:Cubic.easeInOut});
 	tlMenuWrapper.set($("#menu-wrapper ul li a"), {"border-width":"0px", ease:Cubic.easeInOut});
@@ -184,6 +175,7 @@ function completeFondCouleur(){
 // Clic sur le retour imatech
 function btnRetourVideoClick(){
 	$("a#retour-video").click(function(){
+		$(".video-js")[0].player.pause();
 		$("body").removeClass("video-ouverte");
 		stopVideos();
 		TweenMax.set($("#wrapper-content"), {display: "block"});
@@ -211,7 +203,7 @@ function completeFondCouleurRetour(){
 function btnPlusVideos(){
 	$("a#plus-autres-videos").hover(function(){
 		// au mouse enter
-		if((!isMobile) && (!$("#bloc-autres-videos").hasClass("open"))){
+		if((!TweenMax.isTweening($("#bloc-autres-videos"))) && (!isMobile.any) && (!$("#bloc-autres-videos").hasClass("open"))){
 			TweenMax.to($("#bloc-autres-videos"), 0.2, {x: "-20px", ease:Cubic.easeInOut});
 		}
 		TweenMax.to($("a#plus-autres-videos .icon-plus"), 0.2, {scale: "1.1", ease:Cubic.easeInOut});
@@ -410,6 +402,11 @@ $( window ).resize(function() {
 		});
 	}else {
 		jsPlumb.detachAllConnections($(".bloc-btn-video"));
+	}
+	if($(window).width()>979){
+		TweenMax.set($(".wrapper-blocs"), {marginTop:"-100px"});
+	}else{
+		TweenMax.set($(".wrapper-blocs"), {marginTop:"0px"});
 	}
 });
 

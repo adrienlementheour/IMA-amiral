@@ -1122,6 +1122,11 @@ ul.breadcrumb{
 /* @end */
 
 /* @group Actualités */
+	
+.wrapper-blocs{
+	display: block;
+	margin-top: -100px;
+}
 
 ul.actus{
 	display: block;
@@ -1475,7 +1480,7 @@ a.bloc-small{
 		top: 0;
 		left: 500px;
 		padding: 20px 25px 20px 25px;
-		width: 216px;
+		width: 224px;
 		.detail-bloc, .detail-bloc-copie{
 			right: -15px;
 			bottom: -30px;
@@ -1531,7 +1536,7 @@ a.bloc-small{
 		top: 170px;
 		left: 400px;
 		padding: 30px 35px 40px 35px;
-		width: 206px;
+		width: 202px;
 		.detail-bloc, .detail-bloc-copie{
 			right: -15px;
 			bottom: -15px;
@@ -1821,7 +1826,6 @@ a.bloc-small{
 	.transform-style(preserve-3d);
 	.translateZ(0);
 	top: 0;
-	//.transition(top 0.5s ease-in-out);
 }
 
 .bloc-btn-video{
@@ -2495,14 +2499,6 @@ a.bloc-small{
 				margin-left: -6px;
 				.transition(color 0.05s ease-out);
 			}
-		}
-		.svg-logo-imatech{
-			display: inline-block;
-			vertical-align: top;
-			width: 110px;
-			height: auto;
-			fill: @blanc;
-			margin: 15px 0 0 0;
 		}
 		&:hover{
 			.picto-retour-video{
@@ -3243,6 +3239,10 @@ a.bloc-small{
 	
 	#container-pop2{
 		display: none;
+	}
+	
+	.wrapper-blocs{
+		margin-top: 0;
 	}
 	
 	/* @group videojs */
