@@ -607,7 +607,7 @@ header{
 		.dearJoe(1.4em);
 		color: @bleuIMA;
 		position: absolute;
-		top: 95px;
+		top: 260px;
 		left: 60px;
 		z-index: 1;
 		.opacity(0);
@@ -1126,6 +1126,9 @@ ul.breadcrumb{
 .wrapper-blocs{
 	display: block;
 	margin-top: -100px;
+	.lt-ie9 &{
+		margin-top: -50px;
+	}
 }
 
 ul.actus{
@@ -3184,7 +3187,7 @@ a.bloc-small{
 	/* @end */
 }
 
-@media (max-width: 979px) {
+@media (max-width: 1024px) {
 	header{
 		display: none;
 	}
@@ -3194,6 +3197,12 @@ a.bloc-small{
 	#bloc-menu-responsive{
 		margin-left: 0;
 	}
+	.wrapper-blocs{
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 979px) {
 	.zone-blocs{
 		&#zone-blocs-accueil{
 			height: 520px;
