@@ -586,10 +586,10 @@
 				    this.bgCanvas.parentNode.removeChild(this.bgCanvas);
 				    newParent.appendChild(this.bgCanvas);
 				}
-				
-				this.canvas.parentNode.removeChild(this.canvas);
-				newParent.appendChild(this.canvas);
-
+				if (this.canvas) {
+					this.canvas.parentNode.removeChild(this.canvas);
+					newParent.appendChild(this.canvas);
+				}
 				for (var i = 0; i < this._jsPlumb.overlays.length; i++) {
 				    if (this._jsPlumb.overlays[i].isAppendedAtTopLevel) {
 				        this._jsPlumb.overlays[i].canvas.parentNode.removeChild(this._jsPlumb.overlays[i].canvas);

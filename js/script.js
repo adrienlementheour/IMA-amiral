@@ -238,60 +238,66 @@ function stopVideos(){
 
 ////////////////////// Fonction pour gérer la taille des raccords ribbons ////////////////////////
 function categBlocCopies(){
-	setTimeout(function() {
-		$(".categ-bloc-copie").each(function(index){
-			var blocParent = $(this).parent();
-			var widthCategBloc = $(".categ-bloc .txt-categ-bloc", blocParent).width();
-			var heightCategBloc = $(".categ-bloc .txt-categ-bloc", blocParent).height();
-			TweenMax.set($(".txt-categ-bloc-copie",this), {width: widthCategBloc+"px", height: heightCategBloc+"px"});
-			TweenMax.set($(this), {display: "block"});
-		});
-		
-		$(".detail-bloc-copie").each(function(index){
-			var blocParent = $(this).parent();
-			var widthDetailBloc = $(".detail-bloc .txt-detail-bloc", blocParent).width();
-			var heightDetailBloc = $(".detail-bloc .txt-detail-bloc", blocParent).height();
-			TweenMax.set($(".txt-detail-bloc-copie",this), {width: widthDetailBloc+"px", height: heightDetailBloc+"px"});
-			TweenMax.set($(this), {display: "block"});
-		});
-		
-		$(".ribbon-copie").each(function(index){
-			if ($(window).width()>767) {
+	if (!$("html").hasClass("lt-ie9")) {
+		setTimeout(function() {
+			$(".categ-bloc-copie").each(function(index){
 				var blocParent = $(this).parent();
-				var widthRibbon = $(".ribbon .ribbon-content", blocParent).width();
-				var heightRibbon = $(".ribbon .ribbon-content", blocParent).height();
-				TweenMax.set($(".ribbon-content",this), {width: widthRibbon+"px", height: heightRibbon+"px"});
+				var widthCategBloc = $(".categ-bloc .txt-categ-bloc", blocParent).width();
+				var heightCategBloc = $(".categ-bloc .txt-categ-bloc", blocParent).height();
+				TweenMax.set($(".txt-categ-bloc-copie",this), {width: widthCategBloc+"px", height: heightCategBloc+"px"});
 				TweenMax.set($(this), {display: "block"});
-			}
-		});
-	}, 500);
+			});
+			
+			$(".detail-bloc-copie").each(function(index){
+				var blocParent = $(this).parent();
+				var widthDetailBloc = $(".detail-bloc .txt-detail-bloc", blocParent).width();
+				var heightDetailBloc = $(".detail-bloc .txt-detail-bloc", blocParent).height();
+				TweenMax.set($(".txt-detail-bloc-copie",this), {width: widthDetailBloc+"px", height: heightDetailBloc+"px"});
+				TweenMax.set($(this), {display: "block"});
+			});
+			
+			$(".ribbon-copie").each(function(index){
+				if ($(window).width()>767) {
+					var blocParent = $(this).parent();
+					var widthRibbon = $(".ribbon .ribbon-content", blocParent).width();
+					var heightRibbon = $(".ribbon .ribbon-content", blocParent).height();
+					TweenMax.set($(".ribbon-content",this), {width: widthRibbon+"px", height: heightRibbon+"px"});
+					TweenMax.set($(this), {display: "block"});
+				}
+			});
+		}, 500);
+	}
 }
 
 ////////////////////// Fonction pour pencher les bloc content en fonction de leur hauteur ////////////////////////
 function blocPenche(){
-	$(".bloc-penche").each(function(index){
-		var heightBlocPenche = $(this).height();
-		if(heightBlocPenche>300){
-			TweenMax.set($(this), {rotation: 0});
-		}else if (heightBlocPenche>200){
-			TweenMax.set($(this), {rotation: -3, x:0, y:0, z:0});
-		}else{
-			TweenMax.set($(this), {rotation: -4, x:0, y:0, z:0});
-		}
-	});
+	if (!$("html").hasClass("lt-ie9")) {
+		$(".bloc-penche").each(function(index){
+			var heightBlocPenche = $(this).height();
+			if(heightBlocPenche>300){
+				TweenMax.set($(this), {rotation: 0});
+			}else if (heightBlocPenche>200){
+				TweenMax.set($(this), {rotation: -3, x:0, y:0, z:0});
+			}else{
+				TweenMax.set($(this), {rotation: -4, x:0, y:0, z:0});
+			}
+		});
+	}
 }
 
 ////////////////////// Fonction pour animer les svg du bloc Innovation ////////////////////////
 function hoverBlocInnovation(){
-	$(".bloc-small.bloc-3").hover(function(){
-		// au mouse enter
-		TweenMax.fromTo($("#container-pop"), 0.5, {scale: "0"}, {scale: "1", ease:Cubic.easeInOut});
-		TweenMax.fromTo($("#container-pop2"), 0.4, {scale: "0"}, {scale: "1", ease:Cubic.easeInOut, delay: 0.1});
-		TweenMax.fromTo($("#container-pop3"), 0.7, {scale: "0"}, {scale: "1", ease:Cubic.easeInOut, delay: 0.2});
-		TweenMax.fromTo($("#container-pop4"), 0.5, {scale: "0"}, {scale: "1", ease:Cubic.easeInOut, delay: 0.1});
-	}, function(){
-		// au mouse leave
-	});
+	if (!$("html").hasClass("lt-ie9")) {
+		$(".bloc-small.bloc-3").hover(function(){
+			// au mouse enter
+			TweenMax.fromTo($("#container-pop"), 0.5, {scale: "0"}, {scale: "1", ease:Cubic.easeInOut});
+			TweenMax.fromTo($("#container-pop2"), 0.4, {scale: "0"}, {scale: "1", ease:Cubic.easeInOut, delay: 0.1});
+			TweenMax.fromTo($("#container-pop3"), 0.7, {scale: "0"}, {scale: "1", ease:Cubic.easeInOut, delay: 0.2});
+			TweenMax.fromTo($("#container-pop4"), 0.5, {scale: "0"}, {scale: "1", ease:Cubic.easeInOut, delay: 0.1});
+		}, function(){
+			// au mouse leave
+		});
+	}
 }
 
 ////////////////////// Fonction pour gérer l'apparition du plan du site ////////////////////////
@@ -357,7 +363,7 @@ function initVideo(){
 
 function svgFallback(){
 	if (!Modernizr.svg) {
-		$("object").each(function( index ) {
+		$("object").each(function(index) {
 			var fallback = $(this).attr('data-fallback');
 			var idObject = $(this).attr('id');
 			$(this).after("<img src='"+fallback+"' alt='' id='"+idObject+"' />");
