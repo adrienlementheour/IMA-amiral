@@ -76,16 +76,18 @@ textarea {
 /* @end */
 
 /* @group fonts */
- 
- @font-face {
-     font-family: 'dearJoe6';
-     src: url('../fonts/2C2B38_0_0.eot');
-     src: url('../fonts/2C2B38_0_0.eot?#iefix') format('embedded-opentype'),
-          url('../fonts/2C2B38_0_0.woff') format('woff'),
-          url('../fonts/2C2B38_0_0.ttf') format('truetype');
-     font-weight: normal;
-     font-style: normal;
- }
+
+@font-face {
+  font-family: 'dearJoe6';
+  src: url('../fonts/dearJoe6.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/dearJoe6.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/dearJoe6.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/dearJoe6.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/dearJoe6.svg#bdc1ff37c89e5db95cec32d3835a075b') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  normal;
+}
 
 @font-face {
     font-family: 'open_sansbold';
@@ -1203,7 +1205,7 @@ a.bloc-small{
 	.detail-bloc, .detail-bloc-copie{
 		display: block;
 		position: absolute;
-		padding: 12px 20px 5px 20px;
+		padding: 10px 20px 8px 20px;
 		z-index: 4;
 		.container-fond-detail-bloc{
 			display: block;
@@ -1212,7 +1214,7 @@ a.bloc-small{
 			height: 100%;
 			bottom: 0;
 			right: 0;
-			.transform(translateZ(0px));
+			.transform(translateZ(1px));
 			.fond-detail-bloc{
 				display: block;
 				position: absolute;
@@ -1230,9 +1232,9 @@ a.bloc-small{
 			.dearJoe(1.4em);
 			color: @blanc;
 			position: relative;
-			line-height: 1.2em;
 			.transition(transform 0.4s ease-in-out);
 			display: inline-block;
+			.transform(translateZ(1px));
 		}
 	}
 	.detail-bloc-copie{
@@ -1545,7 +1547,7 @@ a.bloc-small{
 			right: -15px;
 			bottom: -15px;
 			.transform(rotate(0deg));
-			padding: 12px 20px 5px 10px;
+			padding: 10px 20px 8px 10px;
 			.fond-detail-bloc{
 				background-color: @roseIMA;
 				.transform(perspective(250px) rotateY(10deg) rotate(0deg) skewX(0deg));
@@ -1594,7 +1596,7 @@ a.bloc-small{
 			right: -15px;
 			bottom: -20px;
 			.transform(rotate(-4.5deg));
-			padding: 12px 20px 5px 10px;
+			padding: 10px 20px 8px 10px;
 			.fond-detail-bloc{
 				background-color: @bleuIMA;
 				.transform(perspective(250px) rotateY(10deg) rotate(0deg) skewX(0deg));

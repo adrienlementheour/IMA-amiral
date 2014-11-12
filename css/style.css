@@ -47,10 +47,13 @@ textarea {
 /* @group fonts */
 @font-face {
   font-family: 'dearJoe6';
-  src: url('../fonts/2C2B38_0_0.eot');
-  src: url('../fonts/2C2B38_0_0.eot?#iefix') format('embedded-opentype'), url('../fonts/2C2B38_0_0.woff') format('woff'), url('../fonts/2C2B38_0_0.ttf') format('truetype');
-  font-weight: normal;
+  src: url('../fonts/dearJoe6.eot');
+  src: url('../fonts/dearJoe6.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/dearJoe6.woff') format('woff'), /* Modern Browsers */ url('../fonts/dearJoe6.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/dearJoe6.svg#bdc1ff37c89e5db95cec32d3835a075b') format('svg');
   font-style: normal;
+  font-weight: normal;
+  
+  /* IE9 Compat Modes */
+  /* Legacy iOS */
 }
 @font-face {
   font-family: 'open_sansbold';
@@ -1256,7 +1259,7 @@ a.bloc-small .detail-bloc,
 a.bloc-small .detail-bloc-copie {
   display: block;
   position: absolute;
-  padding: 12px 20px 5px 20px;
+  padding: 10px 20px 8px 20px;
   z-index: 4;
 }
 a.bloc-small .detail-bloc .container-fond-detail-bloc,
@@ -1267,11 +1270,11 @@ a.bloc-small .detail-bloc-copie .container-fond-detail-bloc {
   height: 100%;
   bottom: 0;
   right: 0;
-  -webkit-transform: translateZ(0px);
-  -moz-transform: translateZ(0px);
-  -o-transform: translateZ(0px);
-  -ms-transform: translateZ(0px);
-  transform: translateZ(0px);
+  -webkit-transform: translateZ(1px);
+  -moz-transform: translateZ(1px);
+  -o-transform: translateZ(1px);
+  -ms-transform: translateZ(1px);
+  transform: translateZ(1px);
 }
 a.bloc-small .detail-bloc .container-fond-detail-bloc .fond-detail-bloc,
 a.bloc-small .detail-bloc-copie .container-fond-detail-bloc .fond-detail-bloc {
@@ -1311,12 +1314,16 @@ a.bloc-small .detail-bloc-copie .txt-detail-bloc-copie {
   text-rendering: optimizeLegibility;
   color: #ffffff;
   position: relative;
-  line-height: 1.2em;
   -webkit-transition: -webkit-transform 0.4s ease-in-out;
   -moz-transition: -moz-transform 0.4s ease-in-out;
   -o-transition: -o-transform 0.4s ease-in-out;
   transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
   display: inline-block;
+  -webkit-transform: translateZ(1px);
+  -moz-transform: translateZ(1px);
+  -o-transform: translateZ(1px);
+  -ms-transform: translateZ(1px);
+  transform: translateZ(1px);
 }
 a.bloc-small .detail-bloc-copie .container-fond-detail-bloc .fond-detail-bloc {
   background: none!important;
@@ -1790,7 +1797,7 @@ a.bloc-small.bloc-4 .detail-bloc-copie {
   -o-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  padding: 12px 20px 5px 10px;
+  padding: 10px 20px 8px 10px;
 }
 a.bloc-small.bloc-4 .detail-bloc .fond-detail-bloc,
 a.bloc-small.bloc-4 .detail-bloc-copie .fond-detail-bloc {
@@ -1870,7 +1877,7 @@ a.bloc-small.bloc-5 .detail-bloc-copie {
   -o-transform: rotate(-4.5deg);
   -ms-transform: rotate(-4.5deg);
   transform: rotate(-4.5deg);
-  padding: 12px 20px 5px 10px;
+  padding: 10px 20px 8px 10px;
 }
 a.bloc-small.bloc-5 .detail-bloc .fond-detail-bloc,
 a.bloc-small.bloc-5 .detail-bloc-copie .fond-detail-bloc {
