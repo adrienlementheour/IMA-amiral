@@ -73,7 +73,7 @@ function ouvertureMenu(){
 	
 	tlMenuWrapper.to($("#container-menu-wrapper"), 0.2, {marginTop:"-110px", ease:Cubic.easeInOut});
 	if (!$("html").hasClass("lt-ie9")) {
-		TweenMax.to($(".wrapper-blocs"), 0.2, {marginTop:"-20px", ease:Cubic.easeInOut, delay: 0.2});
+		TweenMax.to($(".wrapper-blocs"), 0.2, {marginTop:"-10px", ease:Cubic.easeInOut, delay: 0.2});
 	}else{
 		TweenMax.to($(".wrapper-blocs"), 0.2, {marginTop:"20px", ease:Cubic.easeInOut, delay: 0.2});
 	}
@@ -110,7 +110,7 @@ function fermetureMenu(){
 	
 	tlMenuWrapper.to($("#container-menu-wrapper"), 0.5, {marginTop:"-180px", ease:Cubic.easeInOut});
 	if (!$("html").hasClass("lt-ie9")) {
-		TweenMax.to($(".wrapper-blocs"), 0.2, {marginTop:"-100px", ease:Cubic.easeInOut, delay: 0.3});
+		TweenMax.to($(".wrapper-blocs"), 0.2, {marginTop:"-90px", ease:Cubic.easeInOut, delay: 0.3});
 	}else{
 		TweenMax.to($(".wrapper-blocs"), 0.2, {marginTop:"-50px", ease:Cubic.easeInOut, delay: 0.3});
 	}
@@ -430,7 +430,7 @@ $( window ).resize(function() {
 	}
 	if($(window).width()>1024){
 		if (!$("html").hasClass("lt-ie9")) {
-			TweenMax.set($(".wrapper-blocs"), {marginTop:"-100px"});
+			TweenMax.set($(".wrapper-blocs"), {marginTop:"-90px"});
 		}else{
 			TweenMax.set($(".wrapper-blocs"), {marginTop:"-50px"});
 		}

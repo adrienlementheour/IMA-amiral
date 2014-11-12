@@ -1142,6 +1142,9 @@ ul.breadcrumb li a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #ffffff;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 ul.breadcrumb li h1 {
   display: inline;
@@ -1150,7 +1153,7 @@ ul.breadcrumb li h1 {
 /* @group Actualités */
 .wrapper-blocs {
   display: block;
-  margin-top: -100px;
+  margin-top: -90px;
 }
 .lt-ie9 .wrapper-blocs {
   margin-top: -50px;
