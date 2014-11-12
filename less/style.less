@@ -520,7 +520,7 @@ a{
 		bottom: -13px;
 		right: 32px;
 		line-height: 1em;
-		padding: 12px 8px 5px 10px;
+		padding: 10px 8px 8px 10px;
 		.box-shadow(none);
 		.transform(rotate(-4deg));
 		.container-fond-btn-bloc{
@@ -1114,7 +1114,9 @@ ul.breadcrumb{
 		a{
 			.opensans(0.875em);
 			color: @blanc;
-			.box-shadow(none);
+			.box-shadow(inset 0 -1px 0 @blanc);
+			.transform(translateZ(1px));
+			.backface-visibility(hidden);
 		}
 		h1{
 			display: inline;
@@ -1800,6 +1802,9 @@ a.bloc-small{
 	background: url('../layoutImg/visuels/visuel-1.png') no-repeat left top;
 	background-size: auto 100%;
 	position: fixed;
+	.juridique &{
+		background: url('../layoutImg/visuels/visuel-activite-juridique.png') no-repeat left top;
+	}
 }
 
 #bloc-visu{

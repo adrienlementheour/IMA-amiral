@@ -379,7 +379,7 @@ function svgFallback(){
 
 $(document).ready(function(){
 	animer();
-	if ($(window).width()<1024){
+	if ($(window).width()>1024){
 		initMenu();
 	}
 	hoverMenu();
@@ -398,13 +398,11 @@ $(document).ready(function(){
 	}
 });
 
-//$(window).load(function(){
-	//categBlocCopies();
-//});
-
 $(document).scroll(function() {
-	//bloc-btn-video
-	jsPlumb.repaint($(".bloc-btn-video"), { left:$(".bloc-btn-video").offset().left, top:($(".bloc-btn-video").offset().top)});
+	if($("body").hasClass("accueil")){
+		//bloc-btn-video
+		jsPlumb.repaint($(".bloc-btn-video"), { left:$(".bloc-btn-video").offset().left, top:($(".bloc-btn-video").offset().top)});
+	}
 });
 
 $( window ).resize(function() {
