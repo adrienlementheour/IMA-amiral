@@ -362,6 +362,150 @@ a.btn-icon-close {
   -moz-box-shadow: none;
   box-shadow: none;
 }
+a.btn-interlocuteur {
+  display: inline-block;
+  position: absolute;
+  bottom: -13px;
+  right: 200px;
+  line-height: 1em;
+  padding: 10px 20px 8px 60px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+a.btn-interlocuteur .container-fond-btn-interlocuteur {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+}
+a.btn-interlocuteur .container-fond-btn-interlocuteur .fond-btn-interlocuteur {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #c1c602;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  -webkit-transform: perspective(300px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
+  -moz-transform: perspective(300px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
+  -o-transform: perspective(300px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
+  -ms-transform: perspective(300px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
+  transform: perspective(300px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
+  outline: 1px solid transparent;
+  -webkit-transition: padding-left 0.1s ease-in-out;
+  -moz-transition: padding-left 0.1s ease-in-out;
+  -o-transition: padding-left 0.1s ease-in-out;
+  transition: padding-left 0.1s ease-in-out;
+}
+a.btn-interlocuteur .container-photo-btn-interlocuteur {
+  display: block;
+  width: 50px;
+  height: 53px;
+  position: absolute;
+  top: -7px;
+  left: 3px;
+  background-color: #ffffff;
+  z-index: 2;
+  -webkit-border-radius: 6px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 6px;
+  -moz-background-clip: padding;
+  border-radius: 6px;
+  background-clip: padding-box;
+  overflow: hidden;
+  -webkit-box-shadow: 1.5px 2.6px 0 rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 1.5px 2.6px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: 1.5px 2.6px 0 rgba(0, 0, 0, 0.07);
+  -webkit-transform: perspective(200px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
+  -moz-transform: perspective(200px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
+  -o-transform: perspective(200px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
+  -ms-transform: perspective(200px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
+  transform: perspective(200px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -moz-transition: -moz-transform 0.3s ease-in-out;
+  -o-transition: -o-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out,-moz-transform 0.3s ease-in-out,-o-transform 0.3s ease-in-out,transform 0.3s ease-in-out;
+}
+a.btn-interlocuteur .container-photo-btn-interlocuteur img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+a.btn-interlocuteur .txt-btn-interlocuteur {
+  display: inline-block;
+  font-family: 'dearJoe6', sans-serif;
+  font-weight: normal;
+  font-size: 1.3em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  -moz-transition: -moz-transform 0.4s ease-in-out;
+  -o-transition: -o-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
+}
+a.btn-interlocuteur .btn-icon-plus {
+  display: block;
+  position: absolute;
+  bottom: -27px;
+  right: 5px;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out;
+  -o-transition: -o-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out,-moz-transform 0.2s ease-in-out,-o-transform 0.2s ease-in-out,transform 0.2s ease-in-out;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  color: #c1c602;
+}
+a.btn-interlocuteur:hover .fond-btn-interlocuteur {
+  padding-left: 10px;
+}
+a.btn-interlocuteur:hover .txt-btn-interlocuteur {
+  -webkit-transform: translateX(-10px);
+  -moz-transform: translateX(-10px);
+  -o-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+}
+a.btn-interlocuteur:hover .container-photo-btn-interlocuteur {
+  -webkit-transform: translateX(-10px);
+  -moz-transform: translateX(-10px);
+  -o-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+}
+a.btn-interlocuteur:hover .btn-icon-plus {
+  -webkit-transform: rotate(90deg) scale(1.2);
+  -moz-transform: rotate(90deg) scale(1.2);
+  -o-transform: rotate(90deg) scale(1.2);
+  -ms-transform: rotate(90deg) scale(1.2);
+  transform: rotate(90deg) scale(1.2);
+}
 a.btn-bloc {
   display: inline-block;
   position: absolute;
@@ -1082,6 +1226,27 @@ footer ul.social-footer li.scoopit a .icon-scoopit {
   -o-transform: skew(-8deg, 0deg) rotate(0deg);
   -ms-transform: skew(-8deg, 0deg) rotate(0deg);
   transform: skew(-8deg, 0deg) rotate(0deg);
+  background-color: #0f589f;
+}
+.vehicules .ribbon .fond-ribbon,
+.vehicules .ribbon-copie .fond-ribbon {
+  background-color: #8eb4c7;
+}
+.formation .ribbon .fond-ribbon,
+.formation .ribbon-copie .fond-ribbon {
+  background-color: #ab0464;
+}
+.conseil .ribbon .fond-ribbon,
+.conseil .ribbon-copie .fond-ribbon {
+  background-color: #dd850c;
+}
+.service-client .ribbon .fond-ribbon,
+.service-client .ribbon-copie .fond-ribbon {
+  background-color: #c1c602;
+}
+.juridique .ribbon .fond-ribbon,
+.juridique .ribbon-copie .fond-ribbon {
+  background-color: #801a7a;
 }
 .ribbon .ribbon-content,
 .ribbon-copie .ribbon-content {
@@ -1093,13 +1258,12 @@ footer ul.social-footer li.scoopit a .icon-scoopit {
   padding: 5px 30px 5px 13px;
   color: #ffffff;
 }
-.ribbon.ribbon-bleu .fond-ribbon,
-.ribbon-copie.ribbon-bleu .fond-ribbon {
-  background-color: #0f589f;
-}
 .ribbon-copie {
   display: none;
   z-index: 1;
+}
+.ribbon-copie .fond-ribbon {
+  background: none!important;
 }
 .ribbon-join {
   display: block;
@@ -1116,6 +1280,21 @@ footer ul.social-footer li.scoopit a .icon-scoopit {
 }
 .ribbon-join.ribbon-bleu {
   background-color: #0b3e70;
+}
+.vehicules .ribbon-join {
+  background-color: #6c9db6;
+}
+.formation .ribbon-join {
+  background-color: #790347;
+}
+.conseil .ribbon-join {
+  background-color: #ad6809;
+}
+.service-client .ribbon-join {
+  background-color: #909401;
+}
+.juridique .ribbon-join {
+  background-color: #561152;
 }
 /* @end */
 /* @group Breadcrumb */
@@ -1224,6 +1403,9 @@ ul.actus li.actu .date-categ-actu .categ-actu.succes {
 ul.actus li.actu h2 {
   margin-top: 3px;
   line-height: 1.1em;
+}
+ul.actus li.actu .content-actu {
+  min-height: 70px;
 }
 ul.actus li.actu .content-actu img {
   float: left;
@@ -2149,6 +2331,7 @@ a.bloc-small.bloc-5:hover .raccord-categ {
 }
 .juridique #fond-bloc-visu {
   background: url('../layoutImg/visuels/visuel-activite-juridique.png') no-repeat left top;
+  background-size: auto 100%;
 }
 #bloc-visu {
   display: block;

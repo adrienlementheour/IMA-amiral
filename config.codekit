@@ -1013,6 +1013,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/layoutImg\/interlocuteurs\/interlocuteur-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3219,
+		"inputAbbreviatedPath": "\/layoutImg\/interlocuteurs\/interlocuteur-1.jpg",
+		"outputAbbreviatedPath": "\/layoutImg\/interlocuteurs\/interlocuteur-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/juridique\/logo-alex.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2223,
+		"inputAbbreviatedPath": "\/layoutImg\/juridique\/logo-alex.png",
+		"outputAbbreviatedPath": "\/layoutImg\/juridique\/logo-alex.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/layoutImg\/logo-imatech.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1141,17 +1163,6 @@
 		"initialSize": 677279,
 		"inputAbbreviatedPath": "\/layoutImg\/visuels\/visuel-1.png",
 		"outputAbbreviatedPath": "\/layoutImg\/visuels\/visuel-1.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/layoutImg\/visuels\/visuel-1@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 902505,
-		"inputAbbreviatedPath": "\/layoutImg\/visuels\/visuel-1@2x.png",
-		"outputAbbreviatedPath": "\/layoutImg\/visuels\/visuel-1@2x.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

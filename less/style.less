@@ -514,6 +514,92 @@ a{
 	&.btn-icon-close{
 		.box-shadow(none);
 	}
+	&.btn-interlocuteur{
+		display: inline-block;
+		position: absolute;
+		bottom: -13px;
+		right: 200px;
+		line-height: 1em;
+		padding: 10px 20px 8px 60px;
+		.box-shadow(none);
+		.transform(rotate(-2deg));
+		.container-fond-btn-interlocuteur{
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			.transform(translateY(0));
+			.fond-btn-interlocuteur{
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				right: 0;
+				background-color: @vertIMA;
+				.border-radius(3px);
+				.transform(perspective(300px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg));
+				outline: 1px solid transparent;
+				.transition(padding-left 0.1s ease-in-out);
+			}
+		}
+		.container-photo-btn-interlocuteur{
+			display: block;
+			width: 50px;
+			height: 53px;
+			position: absolute;
+			top: -7px;
+			left: 3px;
+			background-color: @blanc;
+			z-index: 2;
+			.border-radius(6px);
+			overflow: hidden;
+			.box-shadow(1.5px 2.6px 0 rgba(0, 0, 0, 0.07));
+			.transform(perspective(200px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg));
+			.transition(transform 0.3s ease-in-out);
+			img{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: auto;
+			}
+		}
+		.txt-btn-interlocuteur{
+			display: inline-block;
+			.dearJoe(1.3em);
+			color: @blanc;
+			position: relative;
+			.transition(transform 0.4s ease-in-out);
+		}
+		.btn-icon-plus{
+			display: block;
+			position: absolute;
+			bottom: -27px;
+			right: 5px;
+			.transition(transform 0.2s ease-in-out);
+			width: 16px;
+			height: 16px;
+			line-height: 16px;
+			color: @vertIMA;
+		}
+		&:hover{
+			.fond-btn-interlocuteur{
+				padding-left: 10px;
+			}
+			.txt-btn-interlocuteur{
+				.transform(translateX(-10px));
+			}
+			.container-photo-btn-interlocuteur{
+				.transform(translateX(-10px));
+			}
+			.btn-icon-plus{
+				.transform(rotate(90deg) scale(1.2));
+			}
+		}
+	}
 	&.btn-bloc{
 		display: inline-block;
 		position: absolute;
@@ -1060,6 +1146,22 @@ footer{
 		left: 0;
 		.border-radius(3px);
 		.transform(skew(-8deg,0deg) rotate(0deg));
+		background-color: @bleuIMA;
+		.vehicules &{
+			background-color: @bleucielIMA;
+		}
+		.formation &{
+			background-color: @roseIMA;
+		}
+		.conseil &{
+			background-color: @orangeIMA;
+		}
+		.service-client &{
+			background-color: @vertIMA;
+		}
+		.juridique &{
+			background-color: @violetIMA;
+		}
 	}
 	.ribbon-content{
 		position: relative;
@@ -1068,16 +1170,14 @@ footer{
 		padding: 5px 30px 5px 13px;
 		color: @blanc;
 	}
-	&.ribbon-bleu{
-		.fond-ribbon{
-			background-color: @bleuIMA;
-		}
-	}
 }
 
 .ribbon-copie{
 	display: none;
 	z-index: 1;
+	.fond-ribbon{
+		background: none!important;
+	}
 }
 
 .ribbon-join{
@@ -1090,6 +1190,21 @@ footer{
 	.rotate(25deg);
 	&.ribbon-bleu{
 		background-color: @bleuIMA-dark;
+	}
+	.vehicules &{
+		background-color: @bleucielIMA-dark;
+	}
+	.formation &{
+		background-color: @roseIMA-dark;
+	}
+	.conseil &{
+		background-color: @orangeIMA-dark;
+	}
+	.service-client &{
+		background-color: @vertIMA-dark;
+	}
+	.juridique &{
+		background-color: @violetIMA-dark;
 	}
 }
 
@@ -1169,6 +1284,7 @@ ul.actus{
 			line-height: 1.1em;
 		}
 		.content-actu{
+			min-height: 70px;
 			img{
 				float: left;
 				padding: 0 20px 10px 0;
@@ -1804,6 +1920,7 @@ a.bloc-small{
 	position: fixed;
 	.juridique &{
 		background: url('../layoutImg/visuels/visuel-activite-juridique.png') no-repeat left top;
+		background-size: auto 100%;
 	}
 }
 
