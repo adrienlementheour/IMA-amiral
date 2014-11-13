@@ -385,11 +385,11 @@ a.btn-interlocuteur .container-fond-btn-interlocuteur {
   position: absolute;
   top: 0;
   right: 0;
-  -webkit-transform: translateY(0px);
-  -moz-transform: translateY(0px);
-  -o-transform: translateY(0px);
-  -ms-transform: translateY(0px);
-  transform: translateY(0px);
+  -webkit-transform: translateZ(1px);
+  -moz-transform: translateZ(1px);
+  -o-transform: translateZ(1px);
+  -ms-transform: translateZ(1px);
+  transform: translateZ(1px);
 }
 a.btn-interlocuteur .container-fond-btn-interlocuteur .fond-btn-interlocuteur {
   display: block;
@@ -423,8 +423,30 @@ a.btn-interlocuteur .container-photo-btn-interlocuteur {
   position: absolute;
   top: -7px;
   left: 3px;
-  background-color: #ffffff;
   z-index: 2;
+  -webkit-transform: translateZ(1px);
+  -moz-transform: translateZ(1px);
+  -o-transform: translateZ(1px);
+  -ms-transform: translateZ(1px);
+  transform: translateZ(1px);
+}
+a.btn-interlocuteur .container-photo-btn-interlocuteur .fond-photo-btn-interlocuteur {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transform: perspective(200px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
+  -moz-transform: perspective(200px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
+  -o-transform: perspective(200px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
+  -ms-transform: perspective(200px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
+  transform: perspective(200px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
+  -webkit-box-shadow: 1.5px 2.6px 0 rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 1.5px 2.6px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: 1.5px 2.6px 0 rgba(0, 0, 0, 0.07);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -moz-transition: -moz-transform 0.3s ease-in-out;
+  -o-transition: -o-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out,-moz-transform 0.3s ease-in-out,-o-transform 0.3s ease-in-out,transform 0.3s ease-in-out;
   -webkit-border-radius: 6px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 6px;
@@ -432,20 +454,9 @@ a.btn-interlocuteur .container-photo-btn-interlocuteur {
   border-radius: 6px;
   background-clip: padding-box;
   overflow: hidden;
-  -webkit-box-shadow: 1.5px 2.6px 0 rgba(0, 0, 0, 0.07);
-  -moz-box-shadow: 1.5px 2.6px 0 rgba(0, 0, 0, 0.07);
-  box-shadow: 1.5px 2.6px 0 rgba(0, 0, 0, 0.07);
-  -webkit-transform: perspective(200px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
-  -moz-transform: perspective(200px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
-  -o-transform: perspective(200px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
-  -ms-transform: perspective(200px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
-  transform: perspective(200px) rotateY(8deg) rotateX(-10deg) rotate(0deg) skewX(0deg);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  -moz-transition: -moz-transform 0.3s ease-in-out;
-  -o-transition: -o-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out,-moz-transform 0.3s ease-in-out,-o-transform 0.3s ease-in-out,transform 0.3s ease-in-out;
+  background-color: #ffffff;
 }
-a.btn-interlocuteur .container-photo-btn-interlocuteur img {
+a.btn-interlocuteur .container-photo-btn-interlocuteur .fond-photo-btn-interlocuteur img {
   position: absolute;
   top: 0;
   left: 0;
@@ -467,6 +478,11 @@ a.btn-interlocuteur .txt-btn-interlocuteur {
   -moz-transition: -moz-transform 0.4s ease-in-out;
   -o-transition: -o-transform 0.4s ease-in-out;
   transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
+  -webkit-transform: translateZ(1px);
+  -moz-transform: translateZ(1px);
+  -o-transform: translateZ(1px);
+  -ms-transform: translateZ(1px);
+  transform: translateZ(1px);
 }
 a.btn-interlocuteur .btn-icon-plus {
   display: block;
@@ -492,7 +508,7 @@ a.btn-interlocuteur:hover .txt-btn-interlocuteur {
   -ms-transform: translateX(-10px);
   transform: translateX(-10px);
 }
-a.btn-interlocuteur:hover .container-photo-btn-interlocuteur {
+a.btn-interlocuteur:hover .container-photo-btn-interlocuteur .fond-photo-btn-interlocuteur {
   -webkit-transform: translateX(-10px);
   -moz-transform: translateX(-10px);
   -o-transform: translateX(-10px);
@@ -1707,7 +1723,6 @@ a.bloc-small.bloc-1 {
   top: 0;
   left: 0;
   padding: 30px 10px 30px 25px;
-  width: 195px;
 }
 a.bloc-small.bloc-1 .detail-bloc,
 a.bloc-small.bloc-1 .detail-bloc-copie {
@@ -1817,7 +1832,6 @@ a.bloc-small.bloc-2 {
   top: 0;
   left: 260px;
   padding: 30px 25px 40px 25px;
-  width: 178px;
 }
 a.bloc-small.bloc-2 .detail-bloc,
 a.bloc-small.bloc-2 .detail-bloc-copie {
@@ -1887,7 +1901,6 @@ a.bloc-small.bloc-3 {
   top: 0;
   left: 500px;
   padding: 20px 25px 20px 25px;
-  width: 224px;
 }
 a.bloc-small.bloc-3 .detail-bloc,
 a.bloc-small.bloc-3 .detail-bloc-copie {
@@ -1978,7 +1991,6 @@ a.bloc-small.bloc-4 {
   top: 170px;
   left: 400px;
   padding: 30px 35px 40px 35px;
-  width: 202px;
 }
 a.bloc-small.bloc-4 .detail-bloc,
 a.bloc-small.bloc-4 .detail-bloc-copie {
@@ -2058,7 +2070,6 @@ a.bloc-small.bloc-4:hover .fond-bloc-deform {
 a.bloc-small.bloc-5 {
   top: 190px;
   left: 120px;
-  width: 206px;
 }
 a.bloc-small.bloc-5 .detail-bloc,
 a.bloc-small.bloc-5 .detail-bloc-copie {
@@ -4432,12 +4443,15 @@ a.bloc-small.bloc-5:hover .raccord-categ {
 @media (max-width: 570px) {
   .zone-blocs {
     margin: 50px 0 0 0;
+    text-align: center;
   }
   .zone-blocs#zone-blocs-accueil {
     height: auto;
   }
   a.bloc-small {
+    text-align: left;
     position: relative;
+    display: inline-block;
   }
   a.bloc-small.bloc-1,
   a.bloc-small.bloc-2,

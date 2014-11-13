@@ -4,6 +4,8 @@ var tlCircleDashed;
 tlCircleDashed = new TimelineMax();
 var tlCircles;
 tlCircles = new TimelineMax();
+var tlWrapperBlocs;
+tlWrapperBlocs = new TimelineMax();
 
 //////////////////////////////////////////////////
 //////////////// REQUESTANIMFRAME ////////////////
@@ -23,7 +25,6 @@ function animer(){
 	requestAnimFrame(function(){
 		jsPlumb.setSuspendDrawing(false);
 		if((TweenMax.isTweening($("#wrapper-content")))||(TweenMax.isTweening($("#container-menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper ul")))||(TweenMax.isTweening($("#menu-wrapper ul li")))||(TweenMax.isTweening($("#menu-wrapper ul li a .txt-circle")))||(TweenMax.isTweening($("#circle-dashed-container")))){
-			//jsPlumb.repaint($(".bloc-small"));
 			jsPlumb.repaint($(".bloc-1"));
 			jsPlumb.repaint($("#bloc-actus"));
 			jsPlumb.repaint($("#menu-wrapper"));
@@ -57,9 +58,11 @@ function ouvertureMenu(){
 	tlMenuWrapper.remove();
 	tlCircleDashed.remove();
 	tlCircles.remove();
+	tlWrapperBlocs.remove();
 	tlMenuWrapper = new TimelineMax();
 	tlCircleDashed = new TimelineMax();
 	tlCircles = new TimelineMax();
+	tlWrapperBlocs = new TimelineMax();
 	
 	
 	TweenMax.to($("#label-menu"), 0.05, {opacity: 0, display: "none", ease:Cubic.easeInOut});
@@ -73,9 +76,9 @@ function ouvertureMenu(){
 	
 	tlMenuWrapper.to($("#container-menu-wrapper"), 0.2, {marginTop:"-110px", ease:Cubic.easeInOut});
 	if (!$("html").hasClass("lt-ie9")) {
-		TweenMax.to($(".wrapper-blocs"), 0.2, {marginTop:"-10px", ease:Cubic.easeInOut, delay: 0.2});
+		tlWrapperBlocs.to($(".wrapper-blocs"), 0.2, {marginTop:"-10px", ease:Cubic.easeInOut, delay: 0.2});
 	}else{
-		TweenMax.to($(".wrapper-blocs"), 0.2, {marginTop:"20px", ease:Cubic.easeInOut, delay: 0.2});
+		tlWrapperBlocs.to($(".wrapper-blocs"), 0.2, {marginTop:"20px", ease:Cubic.easeInOut, delay: 0.2});
 	}
 	
 	tlMenuWrapper.set($("#menu-wrapper ul li"), {width:"98px", height:"98px", ease:Cubic.easeInOut});
@@ -100,9 +103,11 @@ function fermetureMenu(){
 	tlMenuWrapper.remove();
 	tlCircleDashed.remove();
 	tlCircles.remove();
+	tlWrapperBlocs.remove();
 	tlMenuWrapper = new TimelineMax();
 	tlCircleDashed = new TimelineMax();
 	tlCircles = new TimelineMax();
+	tlWrapperBlocs = new TimelineMax();
 	tlMenuWrapper.set($("#menu-wrapper ul"), {scale:1 , ease:Cubic.easeInOut});
 	tlMenuWrapper.to($("#menu-wrapper ul li"), 0.3, {left: "40%", top: "40%", ease:Cubic.easeInOut});
 	
@@ -110,9 +115,9 @@ function fermetureMenu(){
 	
 	tlMenuWrapper.to($("#container-menu-wrapper"), 0.5, {marginTop:"-180px", ease:Cubic.easeInOut});
 	if (!$("html").hasClass("lt-ie9")) {
-		TweenMax.to($(".wrapper-blocs"), 0.2, {marginTop:"-90px", ease:Cubic.easeInOut, delay: 0.3});
+		tlWrapperBlocs.to($(".wrapper-blocs"), 0.2, {marginTop:"-90px", ease:Cubic.easeInOut, delay: 0.3});
 	}else{
-		TweenMax.to($(".wrapper-blocs"), 0.2, {marginTop:"-50px", ease:Cubic.easeInOut, delay: 0.3});
+		tlWrapperBlocs.to($(".wrapper-blocs"), 0.2, {marginTop:"-50px", ease:Cubic.easeInOut, delay: 0.3});
 	}
 	
 	tlMenuWrapper.set($("#menu-wrapper ul li"), {width:"20px", height:"20px", ease:Cubic.easeInOut});
@@ -399,7 +404,7 @@ $(document).ready(function(){
 });
 
 $(document).scroll(function() {
-	if($("body").hasClass("accueil")){
+	if($("body").hasClass("has-video")){
 		//bloc-btn-video
 		jsPlumb.repaint($(".bloc-btn-video"), { left:$(".bloc-btn-video").offset().left, top:($(".bloc-btn-video").offset().top)});
 	}
@@ -465,26 +470,23 @@ jsPlumb.ready(function() {
 			});
 		}
 	});
+	// Relier le bloc actu avec le premier bloc small (RSE)
+	var jsPlumbFirstBloc = jsPlumb.getInstance();
+	jsPlumb.setContainer($("#wrapper-content"));
+	jsPlumb.connect({
+		source: $("#bloc-actus"),
+		target: $(".bloc-1"),
+		anchors: [[0.2, 1, -1, 0], [0.4, 0, 0, 0]],
+		endpoint:"Blank",
+		paintStyle:{
+		lineWidth:2,
+		strokeStyle:'#cacaca',
+		dashstyle:" 0 1"
+		},
+		connector:[ "Bezier", { curviness: 50 }]
+	});
 	
-	if($("body").hasClass("accueil")){
-		// Relier le bloc actu avec le premier bloc small (RSE)
-		
-		var jsPlumbFirstBloc = jsPlumb.getInstance();
-		/*jsPlumbFirstBloc.setContainer($("#wrapper-content"));
-		jsPlumbFirstBloc.connect({*/
-		jsPlumb.setContainer($("#wrapper-content"));
-		jsPlumb.connect({
-			source: $("#bloc-actus"),
-			target: $(".bloc-1"),
-			anchors: [[0.2, 1, -1, 0], [0.4, 0, 0, 0]],
-			endpoint:"Blank",
-			paintStyle:{
-			lineWidth:2,
-			strokeStyle:'#cacaca',
-			dashstyle:" 0 1"
-			},
-			connector:[ "Bezier", { curviness: 50 }]
-		});
+	if($("body").hasClass("has-video")){
 		if ($(window).width()>=1250) {
 			// Relier le menu avec le lien video
 			var jsPlumbVisu = jsPlumb.getInstance();
