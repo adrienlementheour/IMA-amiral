@@ -396,10 +396,12 @@ $(document).ready(function(){
 	initVideo();
 	svgFallback();
 	if($("body").hasClass("accueil")){
+		hoverBlocInnovation();
+	}
+	if($("body").hasClass("has-video")){
 		btnVideoClick();
 		btnRetourVideoClick();
 		btnPlusVideos();
-		hoverBlocInnovation();
 	}
 });
 
