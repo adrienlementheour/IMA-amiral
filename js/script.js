@@ -25,10 +25,14 @@ function animer(){
 	requestAnimFrame(function(){
 		jsPlumb.setSuspendDrawing(false);
 		if((TweenMax.isTweening($("#wrapper-content")))||(TweenMax.isTweening($("#container-menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper ul")))||(TweenMax.isTweening($("#menu-wrapper ul li")))||(TweenMax.isTweening($("#menu-wrapper ul li a .txt-circle")))||(TweenMax.isTweening($("#circle-dashed-container")))){
-			jsPlumb.repaint($(".bloc-1"));
-			jsPlumb.repaint($("#bloc-actus"));
-			jsPlumb.repaint($("#menu-wrapper"));
-			jsPlumb.repaint($(".bloc-btn-video"), { left:$(".bloc-btn-video").offset().left, top:($(".bloc-btn-video").offset().top)});
+			if($("body").hasClass("has-bloc-small")){
+				jsPlumb.repaint($(".bloc-small").first());
+				jsPlumb.repaint($("#bloc-actus"));
+			}
+			if($("body").hasClass("has-video")){
+				jsPlumb.repaint($("#menu-wrapper"));
+				jsPlumb.repaint($(".bloc-btn-video"), { left:$(".bloc-btn-video").offset().left, top:($(".bloc-btn-video").offset().top)});
+			}
 		}
 		animer();
 	});
@@ -371,6 +375,7 @@ function initVideo(){
 	
 }
 
+////////////////////// Fonction pour remplacer les svg par des img ////////////////////////
 function svgFallback(){
 	if (!Modernizr.svg) {
 		$("object").each(function(index) {
@@ -380,6 +385,14 @@ function svgFallback(){
 			$(this).remove();
 		});
 	}
+}
+
+////////////////////// Fonction pour deployer / retracter le contenu au clic du bouton "Lire la suite" ////////////////////////
+function clicLireLaSuite(){
+	$("#zone-actus a.btn-bloc").click(function(){
+
+		return false;
+	});
 }
 
 $(document).ready(function(){
@@ -395,6 +408,7 @@ $(document).ready(function(){
 	liensSitemapMobile();
 	initVideo();
 	svgFallback();
+	clicLireLaSuite();
 	if($("body").hasClass("accueil")){
 		hoverBlocInnovation();
 	}
@@ -415,23 +429,25 @@ $(document).scroll(function() {
 $( window ).resize(function() {
 	jsPlumb.setSuspendDrawing(false, true);
 	initSitemapMobile();
-	if ($(window).width()>=1250) {
-		jsPlumb.detachAllConnections($(".bloc-btn-video"));
-		// Relier le menu avec le lien video
-		jsPlumb.connect({
-			source: $("#menu-wrapper"),
-			target: $(".bloc-btn-video"),
-			anchors: [[1.2, 0.5, 1, 0], [0, 0.5, -1, 0]],
-			endpoint:"Blank",
-			paintStyle:{
-			lineWidth:2,
-			strokeStyle:'#cacaca',
-			dashstyle:" 0 1"
-			},
-			connector:[ "Flowchart", {stub:400, cornerRadius: 40, gap: 40}]
-		});
-	}else {
-		jsPlumb.detachAllConnections($(".bloc-btn-video"));
+	if($("body").hasClass("has-video")){
+		if ($(window).width()>=1250) {
+			jsPlumb.detachAllConnections($(".bloc-btn-video"));
+			// Relier le menu avec le lien video
+			jsPlumb.connect({
+				source: $("#menu-wrapper"),
+				target: $(".bloc-btn-video"),
+				anchors: [[1.2, 0.5, 1, 0], [0, 0.5, -1, 0]],
+				endpoint:"Blank",
+				paintStyle:{
+				lineWidth:2,
+				strokeStyle:'#cacaca',
+				dashstyle:" 0 1"
+				},
+				connector:[ "Flowchart", {stub:400, cornerRadius: 40, gap: 40}]
+			});
+		}else {
+			jsPlumb.detachAllConnections($(".bloc-btn-video"));
+		}
 	}
 	if($(window).width()>1024){
 		if (!$("html").hasClass("lt-ie9")) {
@@ -450,44 +466,42 @@ $( window ).resize(function() {
 var anchors = [ [[1, 0.6, 0.5, 0.8], [0.1, 0.8, 0, 0.5]],      [[1, 0.3, 0, -0.8], [0, 0.9, 0.2, -0.7]],      [[0.51, 1, 0, 1], [0.7, 0, 0, 1]],     [[0, 0.2, 0, 0.5], [0.5, 0, 0, -1.5]],     [[1, 0.6, 0, 1], [0, 0.9, 0, 1]]];
 
 jsPlumb.ready(function() {
-	
-	var nbBlocSmall = $(".bloc-small").length;
-	$(".bloc-small").each(function(index){
-		if (index<(nbBlocSmall-1)) {
-			var instance= jsPlumb.getInstance();
-			instance.setContainer($("#zone-blocs-accueil"));
-			//instance.connect({
-			instance.connect({
-				source: $(".bloc-"+(index+1)),
-				target: $(".bloc-"+(index+2)),
-	
-				anchors: anchors[index],
-				endpoint:"Blank",
-				paintStyle:{
-				lineWidth:2,
-				strokeStyle:'#cacaca',
-				dashstyle:" 0 1"
-				},
-				connector:[ "Bezier", { curviness: 50 }]
-			});
-		}
-	});
-	// Relier le bloc actu avec le premier bloc small (RSE)
-	var jsPlumbFirstBloc = jsPlumb.getInstance();
-	jsPlumb.setContainer($("#wrapper-content"));
-	jsPlumb.connect({
-		source: $("#bloc-actus"),
-		target: $(".bloc-1"),
-		anchors: [[0.2, 1, -1, 0], [0.4, 0, 0, 0]],
-		endpoint:"Blank",
-		paintStyle:{
-		lineWidth:2,
-		strokeStyle:'#cacaca',
-		dashstyle:" 0 1"
-		},
-		connector:[ "Bezier", { curviness: 50 }]
-	});
-	
+	if($("body").hasClass("has-bloc-small")){
+		var nbBlocSmall = $(".bloc-small").length;
+		$(".bloc-small").each(function(index){
+			if (index<(nbBlocSmall-1)) {
+				var instance= jsPlumb.getInstance();
+				instance.setContainer($("#zone-blocs-accueil"));
+				instance.connect({
+					source: $(this),
+					target: $(this).nextAll(".bloc-small").eq(0),
+					anchors: anchors[index],
+					endpoint:"Blank",
+					paintStyle:{
+					lineWidth:2,
+					strokeStyle:'#cacaca',
+					dashstyle:" 0 1"
+					},
+					connector:[ "Bezier", { curviness: 50 }]
+				});
+			}
+		});
+		// Relier le bloc actu avec le premier bloc small (RSE)
+		var jsPlumbFirstBloc = jsPlumb.getInstance();
+		jsPlumb.setContainer($("#wrapper-content"));
+		jsPlumb.connect({
+			source: $("#bloc-actus"),
+			target: $(".bloc-small").first(),
+			anchors: [[0.2, 1, -1, 0], [0.4, 0, 0, 0]],
+			endpoint:"Blank",
+			paintStyle:{
+			lineWidth:2,
+			strokeStyle:'#cacaca',
+			dashstyle:" 0 1"
+			},
+			connector:[ "Bezier", { curviness: 50 }]
+		});
+	}
 	if($("body").hasClass("has-video")){
 		if ($(window).width()>=1250) {
 			// Relier le menu avec le lien video
