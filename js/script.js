@@ -390,8 +390,17 @@ function svgFallback(){
 ////////////////////// Fonction pour deployer / retracter le contenu au clic du bouton "Lire la suite" ////////////////////////
 function clicLireLaSuite(){
 	$("#zone-actus a.btn-bloc").click(function(){
+		if(!$(this).hasClass("btn-actu")){
+			$(".suite-bloc").slideToggle(300);
+			return false;
+		}
+	});
+}
 
-		return false;
+////////////////////// Fonction pour remplacer les nth-child par des classes (ie8 fixing) ////////////////////////
+function ordreBlocSmall(){
+	$(".bloc-small").each(function(index){
+		$(this).addClass("pos-"+(index+1));
 	});
 }
 
@@ -399,6 +408,9 @@ $(document).ready(function(){
 	animer();
 	if ($(window).width()>1024){
 		initMenu();
+	}
+	if ($("html").hasClass("lt-ie9")){
+		ordreBlocSmall();
 	}
 	hoverMenu();
 	categBlocCopies();
@@ -526,6 +538,5 @@ jsPlumb.ready(function() {
 });
 
 function repeindre(){
-	//jsPlumb.repaint($(".has-js-plumb"));
 	window.setTimeout(function() { repeindre() }, 10)
 }
