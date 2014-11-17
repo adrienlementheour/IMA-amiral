@@ -391,7 +391,16 @@ function svgFallback(){
 function clicLireLaSuite(){
 	$("#zone-actus a.btn-bloc").click(function(){
 		if(!$(this).hasClass("btn-actu")){
-			$(".suite-bloc").slideToggle(300);
+			$(".suite-bloc").slideToggle(300, function(){
+				var heightBlocPenche = $(this).closest(".bloc-penche").height();
+				if(heightBlocPenche>300){
+					TweenMax.to($(this).closest(".bloc-penche"), 0.2, {rotation: 0});
+				}else if (heightBlocPenche>200){
+					TweenMax.to($(this).closest(".bloc-penche"), 0.2, {rotation: -3, x:0, y:0, z:0});
+				}else{
+					TweenMax.to($(this).closest(".bloc-penche"), 0.2, {rotation: -4, x:0, y:0, z:0});
+				}
+			});
 			return false;
 		}
 	});
@@ -401,6 +410,13 @@ function clicLireLaSuite(){
 function ordreBlocSmall(){
 	$(".bloc-small").each(function(index){
 		$(this).addClass("pos-"+(index+1));
+	});
+}
+
+function btnInterlocuteur(){
+	$(".btn-interlocuteur").click(function(){
+		
+		return false;
 	});
 }
 
@@ -421,6 +437,7 @@ $(document).ready(function(){
 	initVideo();
 	svgFallback();
 	clicLireLaSuite();
+	btnInterlocuteur();
 	if($("body").hasClass("accueil")){
 		hoverBlocInnovation();
 	}
