@@ -350,6 +350,37 @@ function closeModal(){
 	TweenMax.to($("#sitemap-modal"), 0.4, {y: 50, ease:Cubic.easeInOut});
 }
 
+////////////////////// Fonction pour gérer l'apparition de l'interlocuteur ////////////////////////
+function lienInterlocuteur(){
+	TweenMax.set($("#interlocuteur-modal"), {y: 50});
+	$("a.btn-interlocuteur").click(function(){
+		openInterlocuteurModal();
+		return false;	
+	});
+	
+	$("#overlay-interlocuteur").click(function(){
+		closeInterlocuteurModal();
+		return false;	
+	});
+	
+	$("#lien-close-interlocuteur-modal").click(function(){
+		closeInterlocuteurModal();
+		return false;	
+	});	
+}
+
+function openInterlocuteurModal(){
+	TweenMax.to($("#overlay-interlocuteur"), 0.4, {display: "block", opacity: 1, ease:Cubic.easeInOut});
+	TweenMax.to($("#interlocuteur-modal"), 0.4, {y: 0, ease:Cubic.easeInOut});
+	TweenMax.to($("#wrapper-interlocuteur-modal"), 0.4, {display: "block", opacity: 1, ease:Cubic.easeInOut});
+}
+
+function closeInterlocuteurModal(){
+	TweenMax.to($("#overlay-interlocuteur"), 0.4, {display: "none", opacity: 0, ease:Cubic.easeInOut});
+	TweenMax.to($("#wrapper-interlocuteur-modal"), 0.4, {display: "none", opacity: 0, ease:Cubic.easeInOut});
+	TweenMax.to($("#interlocuteur-modal"), 0.4, {y: 50, ease:Cubic.easeInOut});
+}
+
 ////////////////////// Fonction pour déplier / replier les titres du menu / sitemap ////////////////////////
 function liensSitemapMobile(){
 	$("a.circle-sitemap").click(function(){
@@ -432,6 +463,7 @@ $(document).ready(function(){
 	categBlocCopies();
 	blocPenche();
 	lienSitemap();
+	lienInterlocuteur();
 	initSitemapMobile();
 	liensSitemapMobile();
 	initVideo();

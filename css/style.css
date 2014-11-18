@@ -3560,6 +3560,330 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   cursor: pointer;
 }
 /* @end */
+/* @group Overlay interlocuteur */
+#overlay-interlocuteur {
+  display: none;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  width: 100%;
+  height: 120%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: #000;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+/* @end */
+/* @group Interlocuteur modal */
+#wrapper-interlocuteur-modal {
+  display: none;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+#wrapper-relative-interlocuteur-modal {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+#wrapper-relative-interlocuteur-modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */
+}
+#interlocuteur-modal {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 600px;
+  height: auto;
+  text-align: left;
+  z-index: 2;
+}
+#interlocuteur-modal .container-fond-modal {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  transform: translateZ(0px);
+  z-index: 2;
+}
+#interlocuteur-modal .container-fond-modal .fond-modal {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-border-radius: 20px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 20px;
+  -moz-background-clip: padding;
+  border-radius: 20px;
+  background-clip: padding-box;
+  background-color: #ffffff;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  -moz-transition: -moz-transform 0.4s ease-in-out;
+  -o-transition: -o-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
+  -webkit-transform: perspective(500px) rotateX(0deg) rotateY(-2deg) rotate(0deg) skewX(2deg) scale(1);
+  -moz-transform: perspective(500px) rotateX(0deg) rotateY(-2deg) rotate(0deg) skewX(2deg) scale(1);
+  -o-transform: perspective(500px) rotateX(0deg) rotateY(-2deg) rotate(0deg) skewX(2deg) scale(1);
+  -ms-transform: perspective(500px) rotateX(0deg) rotateY(-2deg) rotate(0deg) skewX(2deg) scale(1);
+  transform: perspective(500px) rotateX(0deg) rotateY(-2deg) rotate(0deg) skewX(2deg) scale(1);
+  overflow: hidden;
+}
+#interlocuteur-modal .container-fond-modal .fond-modal .cercle-sitemap {
+  display: block;
+  width: 753px;
+  height: 753px;
+  position: absolute;
+  top: -30px;
+  right: -412px;
+  background-color: #fbf9f7;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  border: 1px dashed #c4c4c4;
+}
+#interlocuteur-modal .titre-modal {
+  display: block;
+  position: absolute;
+  padding: 20px 30px 5px 20px;
+  z-index: 4;
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+  top: -30px;
+  left: 40px;
+}
+#interlocuteur-modal .titre-modal .container-fond-titre-modal {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  transform: translateZ(0px);
+}
+#interlocuteur-modal .titre-modal .container-fond-titre-modal .fond-titre-modal {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  outline: 1px solid transparent;
+  -webkit-transition: padding-right 0.2s ease-in-out;
+  -moz-transition: padding-right 0.2s ease-in-out;
+  -o-transition: padding-right 0.2s ease-in-out;
+  transition: padding-right 0.2s ease-in-out;
+  background-color: #c1c602;
+  -webkit-transform: perspective(300px) rotateX(10deg) rotateY(10deg) rotate(0deg) skewY(-3deg) scale(1);
+  -moz-transform: perspective(300px) rotateX(10deg) rotateY(10deg) rotate(0deg) skewY(-3deg) scale(1);
+  -o-transform: perspective(300px) rotateX(10deg) rotateY(10deg) rotate(0deg) skewY(-3deg) scale(1);
+  -ms-transform: perspective(300px) rotateX(10deg) rotateY(10deg) rotate(0deg) skewY(-3deg) scale(1);
+  transform: perspective(300px) rotateX(10deg) rotateY(10deg) rotate(0deg) skewY(-3deg) scale(1);
+}
+#interlocuteur-modal .titre-modal .txt-titre-modal {
+  font-family: 'dearJoe6', sans-serif;
+  font-weight: normal;
+  font-size: 1.875em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  line-height: 1.4em;
+  color: #ffffff;
+  position: relative;
+}
+#interlocuteur-modal .titre-modal .txt-titre-modal .titre-modal-large {
+  display: block;
+}
+#interlocuteur-modal .titre-modal .txt-titre-modal .titre-modal-small {
+  display: none;
+}
+#interlocuteur-modal .close-modal {
+  display: block;
+  position: absolute;
+  padding: 15px;
+  z-index: 4;
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+  top: -25px;
+  right: -20px;
+}
+#interlocuteur-modal .close-modal .container-fond-close-modal {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  transform: translateZ(0px);
+}
+#interlocuteur-modal .close-modal .container-fond-close-modal .fond-close-modal {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  outline: 1px solid transparent;
+  -webkit-transition: padding-right 0.2s ease-in-out;
+  -moz-transition: padding-right 0.2s ease-in-out;
+  -o-transition: padding-right 0.2s ease-in-out;
+  transition: padding-right 0.2s ease-in-out;
+  background-color: #c1c602;
+  -webkit-transform: perspective(300px) rotateX(-8deg) rotateY(0deg) rotate(0deg) skewX(3deg) scale(1);
+  -moz-transform: perspective(300px) rotateX(-8deg) rotateY(0deg) rotate(0deg) skewX(3deg) scale(1);
+  -o-transform: perspective(300px) rotateX(-8deg) rotateY(0deg) rotate(0deg) skewX(3deg) scale(1);
+  -ms-transform: perspective(300px) rotateX(-8deg) rotateY(0deg) rotate(0deg) skewX(3deg) scale(1);
+  transform: perspective(300px) rotateX(-8deg) rotateY(0deg) rotate(0deg) skewX(3deg) scale(1);
+}
+#interlocuteur-modal .close-modal a#lien-close-interlocuteur-modal {
+  line-height: 1em;
+  color: #ffffff;
+  position: relative;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  width: 23px;
+  height: 23px;
+  line-height: 23px;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out;
+  -o-transition: -o-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out,-moz-transform 0.2s ease-in-out,-o-transform 0.2s ease-in-out,transform 0.2s ease-in-out;
+}
+#interlocuteur-modal .close-modal a#lien-close-interlocuteur-modal:hover .icon-close {
+  -webkit-transform: rotate(90deg) scale(1.1);
+  -moz-transform: rotate(90deg) scale(1.1);
+  -o-transform: rotate(90deg) scale(1.1);
+  -ms-transform: rotate(90deg) scale(1.1);
+  transform: rotate(90deg) scale(1.1);
+}
+#interlocuteur-modal .close-modal a#lien-close-interlocuteur-modal .icon-close {
+  display: block;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out;
+  -o-transition: -o-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out,-moz-transform 0.2s ease-in-out,-o-transform 0.2s ease-in-out,transform 0.2s ease-in-out;
+  font-size: 23px;
+}
+#interlocuteur-modal #content-interlocuteur {
+  display: block;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  /*display: inline-block;
+			vertical-align: top;
+			width: 66%;
+			height: auto;
+			padding: 90px 0 0 60px;
+			margin: 0;
+			list-style: none;
+			.box-sizing(border-box);*/
+}
+#interlocuteur-modal #content-interlocuteur .bloc-droite-content-interlocuteur {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 30px 30px 30px 185px;
+  /*<h3>Jean-Philippe Cornet</h3>
+							<blockquote>« Une devise courte »</blockquote>
+							<ul class="contact-interlocuteur">
+								<li>02 51 86 62 81</li>
+								<li><a href="mailto:jp.cornet@imatechnologies.fr">jp.cornet@imatechnologies.fr</a></li>
+								<li>
+									<ul class="social-interlocuteur">
+										
+									</ul>
+								</li>
+							</ul>*/
+}
+#interlocuteur-modal #content-interlocuteur .bloc-droite-content-interlocuteur h3 {
+  margin: 0 0 8px 0;
+  padding: 0;
+  font-family: 'open_sansbold', sans-serif;
+  font-weight: normal;
+  font-size: 1.25em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #0f589f;
+}
+#interlocuteur-modal #content-interlocuteur .bloc-droite-content-interlocuteur blockquote {
+  margin: 0;
+  padding: 0;
+  color: #c1c602;
+  font-family: 'dearJoe6', sans-serif;
+  font-weight: normal;
+  font-size: 1.25em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+#interlocuteur-modal #content-interlocuteur .bloc-droite-content-interlocuteur blockquote:before {
+  content: "«";
+  margin-right: 5px;
+}
+#interlocuteur-modal #content-interlocuteur .bloc-droite-content-interlocuteur blockquote:after {
+  content: "»";
+  margin-left: 5px;
+}
+#interlocuteur-modal #content-interlocuteur .bloc-droite-content-interlocuteur ul.contact-interlocuteur {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+/* @end */
 /* @group Site map modal */
 #wrapper-sitemap-modal {
   display: none;
@@ -3569,7 +3893,7 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 12;
+  z-index: 13;
   width: 100%;
   height: 100%;
   text-align: center;
