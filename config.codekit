@@ -1024,6 +1024,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/layoutImg\/interlocuteurs\/viadeo-interlocuteur.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1013,
+		"inputAbbreviatedPath": "\/layoutImg\/interlocuteurs\/viadeo-interlocuteur.png",
+		"outputAbbreviatedPath": "\/layoutImg\/interlocuteurs\/viadeo-interlocuteur.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/interlocuteurs\/viadeo-interlocuteur@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1907,
+		"inputAbbreviatedPath": "\/layoutImg\/interlocuteurs\/viadeo-interlocuteur@2x.png",
+		"outputAbbreviatedPath": "\/layoutImg\/interlocuteurs\/viadeo-interlocuteur@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/layoutImg\/juridique\/logo-alex.png": {
 		"fileType": 32768,
 		"ignore": 0,
