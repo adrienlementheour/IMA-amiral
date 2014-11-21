@@ -93,11 +93,11 @@ function ouvertureMenu(){
 	tlCircleDashed.to($("#menu-wrapper #circle-dashed-container"), 0.2, {scale: 1, delay: 0.3, ease:Cubic.easeInOut});
 	
 	function cerclesAnim(){
-		tlCircles.to($("#menu-wrapper ul li.circle-vehicules"), 0.3, {top: "94px", left: "300px", ease:Cubic.easeInOut});
-		tlCircles.to($("#menu-wrapper ul li.circle-formation"), 0.3, {top: "235px", left: "310px", delay:0.05, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#menu-wrapper ul li.circle-offre-conseil"), 0.3, {top: "321px", left: "166px", delay:0.1, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#menu-wrapper ul li.circle-service-client"), 0.3, {top: "235px", left: "20px", delay:0.2, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#menu-wrapper ul li.circle-juridique"), 0.3, {top: "94px", left: "32px", delay:0.25, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li").eq(0), 0.3, {top: "94px", left: "300px", ease:Cubic.easeInOut});
+		tlCircles.to($("#menu-wrapper ul li").eq(1), 0.3, {top: "235px", left: "310px", delay:0.05, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li").eq(2), 0.3, {top: "321px", left: "166px", delay:0.1, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li").eq(3), 0.3, {top: "235px", left: "20px", delay:0.2, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li").eq(4), 0.3, {top: "94px", left: "32px", delay:0.25, ease:Cubic.easeInOut},0);
 	}
 }
 
@@ -132,11 +132,11 @@ function fermetureMenu(){
 	tlCircleDashed.to($("#menu-wrapper #circle-dashed-container"), 0.3, {scale: 1, delay: 0.7, ease:Cubic.easeInOut});
 	
 	function cerclesAnimRetour(){
-		tlCircles.to($("#menu-wrapper ul li.circle-vehicules"), 0.4, {top: "221px", left: "312px", ease:Cubic.easeInOut});
-		tlCircles.to($("#menu-wrapper ul li.circle-formation"), 0.4, {top: "281px", left: "277px", delay:0.05, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#menu-wrapper ul li.circle-offre-conseil"), 0.4, {top: "312px", left: "205px", delay:0.1, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#menu-wrapper ul li.circle-service-client"), 0.4, {top: "281px", left: "130px", delay:0.2, ease:Cubic.easeInOut},0);
-		tlCircles.to($("#menu-wrapper ul li.circle-juridique"), 0.4, {top: "221px", left: "98px", delay:0.25, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li").eq(0), 0.4, {top: "221px", left: "312px", ease:Cubic.easeInOut});
+		tlCircles.to($("#menu-wrapper ul li").eq(1), 0.4, {top: "281px", left: "277px", delay:0.05, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li").eq(2), 0.4, {top: "312px", left: "205px", delay:0.1, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li").eq(3), 0.4, {top: "281px", left: "130px", delay:0.2, ease:Cubic.easeInOut},0);
+		tlCircles.to($("#menu-wrapper ul li").eq(4), 0.4, {top: "221px", left: "98px", delay:0.25, ease:Cubic.easeInOut},0);
 		tlCircles.to($("#label-menu"), 0.15, {opacity: 1, display: "block", ease:Cubic.easeInOut});
 	}
 }
