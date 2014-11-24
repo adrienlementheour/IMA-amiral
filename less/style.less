@@ -662,6 +662,13 @@ a{
 			position: relative;
 			.transition(transform 0.4s ease-in-out);
 		}
+		.txt-reduire-btn-bloc{
+			display: none;
+			.dearJoe(1.3em);
+			color: @blanc;
+			position: relative;
+			.transition(transform 0.4s ease-in-out);
+		}
 		.btn-icon-plus{
 			display: block;
 			position: absolute;
@@ -711,6 +718,14 @@ a{
 				}
 			}
 			color: @bleuIMA;
+		}
+		&.open{
+			.txt-btn-bloc{
+				display: none;
+			}
+			.txt-reduire-btn-bloc{
+				display: inline-block;
+			}
 		}
 		&:hover{
 			.fond-btn-bloc{

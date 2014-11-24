@@ -422,6 +422,12 @@ function svgFallback(){
 function clicLireLaSuite(){
 	$("#zone-actus a.btn-bloc").click(function(){
 		if(!$(this).hasClass("btn-actu")){
+			if(!$(this).hasClass("open")){
+				$(this).addClass("open");
+				TweenMax.to($(this).closest(".bloc-penche"), 0.3, {rotation: 0});
+			}else{
+				$(this).removeClass("open");
+			}
 			$(".suite-bloc").slideToggle(300, function(){
 				var heightBlocPenche = $(this).closest(".bloc-penche").height();
 				if(heightBlocPenche>300){

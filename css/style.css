@@ -607,6 +607,22 @@ a.btn-bloc .txt-btn-bloc {
   -o-transition: -o-transform 0.4s ease-in-out;
   transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
 }
+a.btn-bloc .txt-reduire-btn-bloc {
+  display: none;
+  font-family: 'dearJoe6', sans-serif;
+  font-weight: normal;
+  font-size: 1.3em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  -moz-transition: -moz-transform 0.4s ease-in-out;
+  -o-transition: -o-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
+}
 a.btn-bloc .btn-icon-plus {
   display: block;
   position: absolute;
@@ -649,6 +665,12 @@ a.btn-bloc .btn-icon-plus {
 }
 .juridique a.btn-bloc .container-fond-btn-bloc .fond-btn-bloc {
   background-color: #0f589f;
+}
+a.btn-bloc.open .txt-btn-bloc {
+  display: none;
+}
+a.btn-bloc.open .txt-reduire-btn-bloc {
+  display: inline-block;
 }
 a.btn-bloc:hover .fond-btn-bloc {
   padding-left: 10px;
