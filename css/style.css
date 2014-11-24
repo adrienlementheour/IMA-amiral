@@ -2460,8 +2460,18 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   top: 0;
   left: 0;
   z-index: 1;
+  /* @group Calamep */
+  /* @end */
   /* @group videojs */
   /* @end */
+}
+#bloc-fond-visu .calameo-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  width: calc(100% - 54px);
 }
 #bloc-fond-visu .vjs-default-skin:hover .vjs-big-play-button {
   -webkit-transform: scale(1.08);
@@ -5021,6 +5031,15 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   }
   #bloc-menu-responsive {
     padding: 32px 0 0 27px;
+  }
+  ul.breadcrumb li h1 {
+    font-size: 1.2em;
+  }
+  a.btn-interlocuteur {
+    padding: 10px 20px 8px 20px;
+  }
+  a.btn-interlocuteur .container-photo-btn-interlocuteur {
+    display: none;
   }
   .bloc-btn-video {
     width: 48px;

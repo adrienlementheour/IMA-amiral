@@ -247,7 +247,9 @@ function btnPlusVideos(){
 ////////////////////// Fonction pour stopper les videos ////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 function stopVideos(){
-	$(".video-js")[0].player.pause();
+	if($(".video-js").length){
+		$(".video-js")[0].player.pause();
+	}
 }
 
 ////////////////////// Fonction pour gérer la taille des raccords ribbons ////////////////////////
