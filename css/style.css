@@ -5194,62 +5194,72 @@ a.bloc-small.bloc-7:hover .raccord-categ {
     text-align: left;
     line-height: 1em;
   }
-  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-juridique {
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-juridique,
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#menu-item-88 {
     background: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     color: #801a7a;
   }
-  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-juridique:hover {
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-juridique:hover,
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#menu-item-88:hover {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
   }
-  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-vehicules {
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-vehicules,
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#menu-item-89 {
     background: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     color: #8eb4c7;
   }
-  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-vehicules:hover {
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-vehicules:hover,
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#menu-item-89:hover {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
   }
-  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-formation {
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-formation,
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#menu-item-90 {
     background: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     color: #ab0464;
   }
-  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-formation:hover {
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-formation:hover,
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#menu-item-90:hover {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
   }
-  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-service-client {
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-service-client,
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#menu-item-91 {
     background: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     color: #c1c602;
   }
-  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-service-client:hover {
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-service-client:hover,
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#menu-item-91:hover {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
   }
-  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-conseil {
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-conseil,
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#menu-item-92 {
     background: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     color: #dd850c;
   }
-  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-conseil:hover {
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#sitemap-conseil:hover,
+  #sitemap-modal #content-sitemap ul#menu-sitemap li a.circle-sitemap#menu-item-92:hover {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
