@@ -405,7 +405,9 @@ function initSitemapMobile(){
 }
 
 function initVideo(){
-	
+	if($("#id-video-js").length){
+		var player = videojs("id-video-js", {"techOrder": ["youtube"], "ytcontrols": false});
+	}
 }
 
 ////////////////////// Fonction pour remplacer les svg par des img ////////////////////////
@@ -459,6 +461,29 @@ function btnInterlocuteur(){
 	});
 }
 
+////////////////////// Fonction pour changer de video / calameo / image ////////////////////////
+function autresVideos(){
+	$("ul#autres-videos li a").click(function(){
+		$("ul#autres-videos li.active").removeClass("active");
+		$(this).parent().addClass("active");
+		if($(this).parent().hasClass("has-video")){
+			var dataUrlVideo = $(this).parent().data("url-video");
+			var dataPosterName = $(this).parent().data("poster-name");
+			$("#wrapper-embed").replaceWith("<div id='wrapper-embed'><video id='id-video-js' class='video-js vjs-default-skin' controls preload='auto' width='100%' height='100%' poster='img/videos/posters/"+dataPosterName+"' src='"+dataUrlVideo+"'></video></div>");
+			var player = videojs('id-video-js');
+			player.dispose();
+			player = videojs("id-video-js", {"techOrder": ["youtube"], "ytcontrols": false});
+		}else if($(this).parent().hasClass("has-calameo")){
+			var dataIdCalameo = $(this).parent().data("id-calameo");
+			$("#wrapper-embed").replaceWith("<div id='wrapper-embed'><iframe class='calameo-iframe' src='//v.calameo.com/?bkcode="+dataIdCalameo+"&view=book' width='300' height='194' frameborder='0' scrolling='no' allowtransparency allowfullscreen style='margin:0 auto;'></iframe></div>");
+		}else if ($(this).parent().hasClass("has-image")){
+			var dataImageName = $(this).parent().data("image-name");
+			$("#wrapper-embed").replaceWith("<div id='wrapper-embed'><div class='wrapper-img'><img src='img/images/"+dataImageName+"'></div></div>");
+		};
+		return false;
+	});
+}
+
 $(document).ready(function(){
 	animer();
 	if ($(window).width()>1024){
@@ -478,6 +503,7 @@ $(document).ready(function(){
 	svgFallback();
 	clicLireLaSuite();
 	btnInterlocuteur();
+	autresVideos();
 	if($("body").hasClass("accueil")){
 		hoverBlocInnovation();
 	}
