@@ -182,17 +182,21 @@ function completeFondCouleur(){
 	TweenMax.set($("#bloc-visu"), {display: "none"});
 	TweenMax.set($("#container-bloc-visu-content"), {display: "none"});
 	
-	var tlBlocAutresVides = new TimelineMax();
+	var tlBlocAutresVides = new TimelineMax({onComplete: addClassBlocAutresVideos});
 	tlBlocAutresVides.to($("#bloc-autres-videos"), 0.4, {marginRight: "0", ease:Cubic.easeInOut});
 	tlBlocAutresVides.to($("#bloc-autres-videos"), 0.4, {marginRight: "-196px", delay: 1.2, ease:Cubic.easeInOut});
 	
 	tlBlocAutresVides.to($("#bloc-retour-video"), 0.2, {marginLeft: "0px", ease:Cubic.easeInOut});
+}
+function addClassBlocAutresVideos(){
+	$("#bloc-autres-videos").addClass("canTween");
 }
 
 // Clic sur le retour imatech
 function btnRetourVideoClick(){
 	$("a#retour-video").click(function(){
 		$("body").removeClass("video-ouverte");
+		$("#bloc-autres-videos").removeClass("canTween");
 		stopVideos();
 		TweenMax.set($("#wrapper-content"), {display: "block"});
 		TweenMax.set($("#bloc-visu"), {display: "block"});
@@ -219,25 +223,31 @@ function completeFondCouleurRetour(){
 function btnPlusVideos(){
 	$("a#plus-autres-videos").hover(function(){
 		// au mouse enter
-		if((!TweenMax.isTweening($("#bloc-autres-videos"))) && (!isMobile.any) && (!$("#bloc-autres-videos").hasClass("open"))){
+		if(($("#bloc-autres-videos").hasClass("canTween")) && (!isMobile.any) && (!$("#bloc-autres-videos").hasClass("open"))){
 			TweenMax.to($("#bloc-autres-videos"), 0.2, {x: "-20px", ease:Cubic.easeInOut});
+			TweenMax.to($("a#plus-autres-videos .icon-plus"), 0.2, {scale: "1.1", ease:Cubic.easeInOut});
 		}
-		TweenMax.to($("a#plus-autres-videos .icon-plus"), 0.2, {scale: "1.1", ease:Cubic.easeInOut});
 	}, function(){
 		// au mouse leave
 		TweenMax.to($("#bloc-autres-videos"), 0.2, {x: "0px", ease:Cubic.easeInOut});
 		TweenMax.to($("a#plus-autres-videos .icon-plus"), 0.2, {scale: "1", ease:Cubic.easeInOut});
 	});
 	$("a#plus-autres-videos").click(function(){
-		if(!$("#bloc-autres-videos").hasClass("open")){
-			TweenMax.set($("#bloc-autres-videos"), {x: "0"});
-			TweenMax.to($("#bloc-autres-videos"), 0.2, {marginRight: "0px", ease:Cubic.easeInOut});
-			TweenMax.to($("a#plus-autres-videos .icon-plus"), 0.2, {rotation: 45, ease:Cubic.easeInOut});
+		if((!$("#bloc-autres-videos").hasClass("open"))){
+			if(($("#bloc-autres-videos").hasClass("canTween"))){
+				TweenMax.set($("#bloc-autres-videos"), {x: "0"});
+				TweenMax.to($("#bloc-autres-videos"), 0.2, {marginRight: "0px", ease:Cubic.easeInOut});
+				TweenMax.to($("a#plus-autres-videos .icon-plus"), 0.2, {rotation: 45, ease:Cubic.easeInOut});
+				$("#bloc-autres-videos").toggleClass("open");
+			}
 		}else{
-			TweenMax.to($("#bloc-autres-videos"), 0.2, {marginRight: "-196px", ease:Cubic.easeInOut});
-			TweenMax.to($("a#plus-autres-videos .icon-plus"), 0.2, {rotation: 0, ease:Cubic.easeInOut});
+			if(($("#bloc-autres-videos").hasClass("canTween"))){
+				TweenMax.to($("#bloc-autres-videos"), 0.2, {marginRight: "-196px", ease:Cubic.easeInOut});
+				TweenMax.to($("a#plus-autres-videos .icon-plus"), 0.2, {rotation: 0, ease:Cubic.easeInOut});
+				$("#bloc-autres-videos").toggleClass("open");
+			}
 		}
-		$("#bloc-autres-videos").toggleClass("open");
+		
 		
 		return false;
 	});

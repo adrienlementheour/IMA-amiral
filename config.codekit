@@ -1149,6 +1149,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/layoutImg\/visuels\/visuel-activite-juridique.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 602089,
+		"inputAbbreviatedPath": "\/layoutImg\/visuels\/visuel-activite-juridique.png",
+		"outputAbbreviatedPath": "\/layoutImg\/visuels\/visuel-activite-juridique.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/less\/lesshat.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
