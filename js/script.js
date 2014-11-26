@@ -7,9 +7,36 @@ tlCircles = new TimelineMax();
 var tlWrapperBlocs;
 tlWrapperBlocs = new TimelineMax();
 
+
+
 //////////////////////////////////////////////////
 //////////////// REQUESTANIMFRAME ////////////////
 //////////////////////////////////////////////////
+
+(function () {
+  var lastTime = 0;
+  var vendors = ['ms', 'moz', 'webkit', 'o'];
+  for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+    window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+    window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
+  }
+  if(!window.requestAnimationFrame)
+    window.requestAnimationFrame = function (callback, element) {
+      var currTime = new Date().getTime();
+      var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+      var id = window.setTimeout(function () {
+        callback(currTime + timeToCall);
+      },
+      timeToCall);
+      lastTime = currTime + timeToCall;
+      return id;
+  };
+  if(!window.cancelAnimationFrame)
+    window.cancelAnimationFrame = function (id) {
+      clearTimeout(id);
+  };
+}());
+
 window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame       || 
           window.webkitRequestAnimationFrame || 
@@ -21,17 +48,36 @@ window.requestAnimFrame = (function(){
           };
 })();
 
+
 function animer(){
 	requestAnimFrame(function(){
+		$("#div-test").css("top", $("body").scrollTop()+20);
+
 		jsPlumb.setSuspendDrawing(false);
+		if($("body").hasClass("has-bloc-small")){
+			jsPlumb.repaint($(".bloc-small").first());
+			jsPlumb.repaint($("#bloc-actus"));
+		}
+		if($("body").hasClass("has-video")){
+			if ($(window).width()>=1250) {
+				if(!$("body").hasClass("accueil")){
+					if (!$("html").hasClass("isSafari")) {
+						// si ce n'est pas safari
+						jsPlumb.repaint($(".bloc-btn-video"), { left:Math.round($(".bloc-btn-video").offset().left), top:Math.round($(".bloc-btn-video").offset().top)});
+					}
+				}
+			}
+		}
 		if((TweenMax.isTweening($("#wrapper-content")))||(TweenMax.isTweening($("#container-menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper ul")))||(TweenMax.isTweening($("#menu-wrapper ul li")))||(TweenMax.isTweening($("#menu-wrapper ul li a .txt-circle")))||(TweenMax.isTweening($("#circle-dashed-container")))){
-			if($("body").hasClass("has-bloc-small")){
+			/*if($("body").hasClass("has-bloc-small")){
 				jsPlumb.repaint($(".bloc-small").first());
 				jsPlumb.repaint($("#bloc-actus"));
-			}
-			if($("body").hasClass("has-video")){
-				jsPlumb.repaint($("#menu-wrapper"));
-				jsPlumb.repaint($(".bloc-btn-video"), { left:$(".bloc-btn-video").offset().left, top:($(".bloc-btn-video").offset().top)});
+			}*/
+			if(($("body").hasClass("has-video"))&&($("body").hasClass("accueil"))){
+				if (!$("html").hasClass("isSafari")) {
+					jsPlumb.repaint($("#menu-wrapper"));
+					jsPlumb.repaint($(".bloc-btn-video"), { left:$(".bloc-btn-video").offset().left, top:($(".bloc-btn-video").offset().top)});
+				}
 			}
 		}
 		animer();
@@ -494,6 +540,13 @@ function autresVideos(){
 	});
 }
 
+////////////////////// Fonction pour ajouter une classe isSafari si on est sur le navigateur Safari ////////////////////////
+function isSafari(){
+	if(navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1){
+		$("html").addClass("isSafari");
+	}
+}
+
 $(document).ready(function(){
 	animer();
 	if ($(window).width()>1024){
@@ -502,6 +555,7 @@ $(document).ready(function(){
 	if ($("html").hasClass("lt-ie9")){
 		ordreBlocSmall();
 	}
+	isSafari();
 	hoverMenu();
 	categBlocCopies();
 	blocPenche();
@@ -527,31 +581,59 @@ $(document).ready(function(){
 $(document).scroll(function() {
 	if($("body").hasClass("has-video")){
 		//bloc-btn-video
-		jsPlumb.repaint($(".bloc-btn-video"), { left:$(".bloc-btn-video").offset().left, top:($(".bloc-btn-video").offset().top)});
+		if ($(window).width()>=1250) {
+			jsPlumb.repaint($(".bloc-btn-video"), { left:$(".bloc-btn-video").offset().left, top:($(".bloc-btn-video").offset().top)});
+			if(!$("body").hasClass("accueil")){
+				jsPlumb.repaint($("#bloc-actus"));
+			}
+		}
 	}
 });
 
 $( window ).resize(function() {
 	jsPlumb.setSuspendDrawing(false, true);
 	initSitemapMobile();
-	if($("body").hasClass("has-video")){
-		if ($(window).width()>=1250) {
-			jsPlumb.detachAllConnections($(".bloc-btn-video"));
-			// Relier le menu avec le lien video
-			jsPlumb.connect({
-				source: $("#menu-wrapper"),
-				target: $(".bloc-btn-video"),
-				anchors: [[1.2, 0.5, 1, 0], [0, 0.5, -1, 0]],
-				endpoint:"Blank",
-				paintStyle:{
-				lineWidth:2,
-				strokeStyle:'#cacaca',
-				dashstyle:" 0 1"
-				},
-				connector:[ "Flowchart", {stub:400, cornerRadius: 40, gap: 40}]
-			});
-		}else {
-			jsPlumb.detachAllConnections($(".bloc-btn-video"));
+	if (!$("html").hasClass("isSafari")) {
+		if($("body").hasClass("has-video")){
+			if ($(window).width()>=1250) {
+				jsPlumb.detachAllConnections($(".bloc-btn-video"));
+				if($("body").hasClass("accueil")){
+					// Relier le menu avec le lien video
+					var jsPlumbVisu = jsPlumb.getInstance();
+					jsPlumb.setContainer($("#wrapper-content"));
+					jsPlumb.connect({
+						source: $("#menu-wrapper"),
+						target: $(".bloc-btn-video"),
+						anchors: [[0.97, 0.5, 1, 0], [0, 0.5, -1, 0]],
+						endpoint:"Blank",
+						paintStyle:{
+						lineWidth:2,
+						strokeStyle:'#cacaca',
+						dashstyle:" 0 1"
+						},
+						connector:[ "Flowchart", {stub:400, cornerRadius: 40, gap: 40}]
+					});
+				}else{
+					// Relier le menu avec le lien video
+					var jsPlumbVisu = jsPlumb.getInstance();
+					jsPlumb.setContainer($("#wrapper-content"));
+					jsPlumb.connect({
+						source: $("#bloc-actus"),
+						target: $(".bloc-btn-video"),
+						//[x, y, dx, dy]
+						anchors: [[0.97, 0.35, 1, 0], [0, 0.5, -0.5, 0]],
+						endpoint:"Blank",
+						paintStyle:{
+						lineWidth:2,
+						strokeStyle:'#cacaca',
+						dashstyle:" 0 1"
+						},
+						connector:[ "Bezier", { curviness: 200 }]
+					});
+				}
+			}else {
+				jsPlumb.detachAllConnections($(".bloc-btn-video"));
+			}
 		}
 	}
 	if($(window).width()>1024){
@@ -571,6 +653,7 @@ $( window ).resize(function() {
 var anchors = [ [[1, 0.6, 0.5, 0.8], [0.1, 0.8, 0, 0.5]],      [[1, 0.3, 0, -0.8], [0, 0.9, 0.2, -0.7]],      [[0.51, 1, 0, 1], [0.7, 0, 0, 1]],     [[0, 0.2, 0, 0.5], [0.5, 0, 0, -1.5]],     [[1, 0.6, 0, 1], [0, 0.9, 0, 1]]];
 
 jsPlumb.ready(function() {
+	isSafari();
 	if($("body").hasClass("has-bloc-small")){
 		var nbBlocSmall = $(".bloc-small").length;
 		$(".bloc-small").each(function(index){
@@ -607,29 +690,45 @@ jsPlumb.ready(function() {
 			connector:[ "Bezier", { curviness: 50 }]
 		});
 	}
-	if($("body").hasClass("has-video")){
-		if ($(window).width()>=1250) {
-			// Relier le menu avec le lien video
-			var jsPlumbVisu = jsPlumb.getInstance();
-			jsPlumb.setContainer($("#wrapper-content"));
-			jsPlumb.connect({
-				source: $("#menu-wrapper"),
-				target: $(".bloc-btn-video"),
-				anchors: [[0.97, 0.5, 1, 0], [0, 0.5, -1, 0]],
-				endpoint:"Blank",
-				paintStyle:{
-				lineWidth:2,
-				strokeStyle:'#cacaca',
-				dashstyle:" 0 1"
-				},
-				connector:[ "Flowchart", {stub:400, cornerRadius: 40, gap: 40}]
-			});
+	if (!$("html").hasClass("isSafari")) {
+	//if (!(navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)){
+		if($("body").hasClass("has-video")){
+			if ($(window).width()>=1250) {
+				if($("body").hasClass("accueil")){
+					// Relier le menu avec le lien video
+					var jsPlumbVisu = jsPlumb.getInstance();
+					jsPlumb.setContainer($("#wrapper-content"));
+					jsPlumb.connect({
+						source: $("#menu-wrapper"),
+						target: $(".bloc-btn-video"),
+						anchors: [[0.97, 0.5, 1, 0], [0, 0.5, -1, 0]],
+						endpoint:"Blank",
+						paintStyle:{
+						lineWidth:2,
+						strokeStyle:'#cacaca',
+						dashstyle:" 0 1"
+						},
+						connector:[ "Flowchart", {stub:400, cornerRadius: 40, gap: 40}]
+					});
+				}else{
+					// Relier le menu avec le lien video
+					var jsPlumbVisu = jsPlumb.getInstance();
+					jsPlumb.setContainer($("#wrapper-content"));
+					jsPlumb.connect({
+						source: $("#bloc-actus"),
+						target: $(".bloc-btn-video"),
+						//[x, y, dx, dy]
+						anchors: [[0.97, 0.35, 1, 0], [0, 0.5, -0.5, 0]],
+						endpoint:"Blank",
+						paintStyle:{
+						lineWidth:2,
+						strokeStyle:'#cacaca',
+						dashstyle:" 0 1"
+						},
+						connector:[ "Bezier", { curviness: 200 }]
+					});
+				}
+			}
 		}
 	}
-	
-	repeindre();
 });
-
-function repeindre(){
-	window.setTimeout(function() { repeindre() }, 10)
-}

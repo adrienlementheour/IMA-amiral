@@ -395,6 +395,9 @@ body{
 	display: block;
 	position: relative;
 	z-index: 2;
+	>svg:last-of-type{
+		//display: none!important;
+	}
 }
 
 .container{
@@ -426,6 +429,9 @@ body{
 		-webkit-font-smoothing: antialiased;
 	}
 	.bloc-content{
+		.transform(translateZ(0));
+		.transform-style(preserve-3d);
+		.backface-visibility(hidden);
 		padding: 40px 40px 40px 40px;
 		&.small-padding-top{
 			padding: 25px 40px 40px 40px;
@@ -2189,17 +2195,20 @@ a.bloc-small{
 	.transform-style(preserve-3d);
 	.translateZ(0);
 	top: 0;
+	.isSafari &{
+		position: fixed;
+	}
 }
 
 .bloc-btn-video{
 	.size(116px);
 	display: block;
-	position: relative;
 	position: absolute;
 	top: 50%;
 	margin-top: -58px;
 	left: 50%;
 	margin-left: -58px;
+	.transform(translateZ(0));
 	#circle-dashed-video-svg{
 		display: block;
 		position: absolute;
