@@ -525,7 +525,7 @@ function autresVideos(){
 		if($(this).parent().hasClass("has-video")){
 			var dataUrlVideo = $(this).parent().data("url-video");
 			var dataPosterName = $(this).parent().data("poster-name");
-			$("#wrapper-embed").replaceWith("<div id='wrapper-embed'><video id='id-video-js' class='video-js vjs-default-skin' controls preload='auto' width='100%' height='100%' poster='img/videos/posters/"+dataPosterName+"' src='"+dataUrlVideo+"'></video></div>");
+			$("#wrapper-embed").replaceWith("<div id='wrapper-embed'><video id='id-video-js' class='video-js vjs-default-skin' controls preload='auto' width='100%' height='100%' poster='"+dataPosterName+"' src='"+dataUrlVideo+"'></video></div>");
 			var player = videojs('id-video-js');
 			player.dispose();
 			player = videojs("id-video-js", {"techOrder": ["youtube"], "ytcontrols": false});
@@ -534,7 +534,7 @@ function autresVideos(){
 			$("#wrapper-embed").replaceWith("<div id='wrapper-embed'><iframe class='calameo-iframe' src='//v.calameo.com/?bkcode="+dataIdCalameo+"&view=book' width='300' height='194' frameborder='0' scrolling='no' allowtransparency allowfullscreen style='margin:0 auto;'></iframe></div>");
 		}else if ($(this).parent().hasClass("has-image")){
 			var dataImageName = $(this).parent().data("image-name");
-			$("#wrapper-embed").replaceWith("<div id='wrapper-embed'><div class='wrapper-img'><img src='img/images/"+dataImageName+"'></div></div>");
+			$("#wrapper-embed").replaceWith("<div id='wrapper-embed'><div class='wrapper-img'><img src='"+dataImageName+"'></div></div>");
 		};
 		return false;
 	});
