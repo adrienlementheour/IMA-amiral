@@ -7,6 +7,8 @@ tlCircles = new TimelineMax();
 var tlWrapperBlocs;
 tlWrapperBlocs = new TimelineMax();
 
+var player = 0;
+
 
 
 //////////////////////////////////////////////////
@@ -459,7 +461,7 @@ function initSitemapMobile(){
 
 function initVideo(){
 	if($("#id-video-js").length){
-		var player = videojs("id-video-js", {"techOrder": ["youtube"], "ytcontrols": false});
+		player = videojs("id-video-js", {"techOrder": ["youtube"], "ytcontrols": false});
 	}
 }
 
@@ -523,9 +525,10 @@ function autresVideos(){
 			var dataUrlVideo = $(this).parent().data("url-video");
 			var dataPosterName = $(this).parent().data("poster-name");
 			$("#wrapper-embed").replaceWith("<div id='wrapper-embed'><video id='id-video-js' class='video-js vjs-default-skin' controls preload='auto' width='100%' height='100%' poster='"+dataPosterName+"' src='"+dataUrlVideo+"'></video></div>");
-			var player = videojs('id-video-js');
-			player.dispose();
-			player = videojs("id-video-js", {"techOrder": ["youtube"], "ytcontrols": false});
+			if(player != 0){
+				player.dispose();
+			}
+			initVideo();
 		}else if($(this).parent().hasClass("has-calameo")){
 			var dataIdCalameo = $(this).parent().data("id-calameo");
 			$("#wrapper-embed").replaceWith("<div id='wrapper-embed'><iframe class='calameo-iframe' src='//v.calameo.com/?bkcode="+dataIdCalameo+"&view=book' width='300' height='194' frameborder='0' scrolling='no' allowtransparency allowfullscreen style='margin:0 auto;'></iframe></div>");
