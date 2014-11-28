@@ -359,7 +359,7 @@ function blocPenche(){
 ////////////////////// Fonction pour animer les svg du bloc Innovation ////////////////////////
 function hoverBlocInnovation(){
 	if (!$("html").hasClass("lt-ie9")) {
-		$(".bloc-small.bloc-3").hover(function(){
+		$("#container-pop").parent('.bloc-small').hover(function(){
 			// au mouse enter
 			TweenMax.fromTo($("#container-pop"), 0.5, {scale: "0"}, {scale: "1", ease:Cubic.easeInOut});
 			TweenMax.fromTo($("#container-pop2"), 0.4, {scale: "0"}, {scale: "1", ease:Cubic.easeInOut, delay: 0.1});
