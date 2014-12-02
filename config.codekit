@@ -971,39 +971,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/layoutImg\/footer\/bandeau-couleurs.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1189,
-		"inputAbbreviatedPath": "\/layoutImg\/footer\/bandeau-couleurs.png",
-		"outputAbbreviatedPath": "\/layoutImg\/footer\/bandeau-couleurs.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/layoutImg\/footer\/logo-viadeo.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2979,
-		"inputAbbreviatedPath": "\/layoutImg\/footer\/logo-viadeo.png",
-		"outputAbbreviatedPath": "\/layoutImg\/footer\/logo-viadeo.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/layoutImg\/footer\/logo-viadeo@2x.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3097,
-		"inputAbbreviatedPath": "\/layoutImg\/footer\/logo-viadeo@2x.png",
-		"outputAbbreviatedPath": "\/layoutImg\/footer\/logo-viadeo@2x.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/layoutImg\/interlocuteurs\/interlocuteur-1.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
