@@ -1494,6 +1494,7 @@ h2 {
 .content-actu img {
   float: left;
   padding: 0 20px 10px 0;
+  max-width: 140px;
 }
 /* @end */
 /* @group Blocs */
