@@ -344,6 +344,12 @@ a {
   box-shadow: inset 0 -1px 0 #801a7a;
   position: relative;
 }
+a.btn-bleu {
+  color: #0f589f;
+  -webkit-box-shadow: inset 0 -1px 0 #0f589f;
+  -moz-box-shadow: inset 0 -1px 0 #0f589f;
+  box-shadow: inset 0 -1px 0 #0f589f;
+}
 a.btn-plus {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -1438,6 +1444,208 @@ ul.breadcrumb li a {
 }
 ul.breadcrumb li h1 {
   display: inline;
+}
+/* @end */
+/* @group Formulaire */
+form {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+form fieldset {
+  margin: 0 0 10px 0;
+}
+form fieldset.form-gauche,
+form fieldset.form-droite {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+form fieldset.form-gauche {
+  padding: 0 25px 0 0;
+}
+form fieldset.form-droite {
+  padding: 0 0 0 25px;
+}
+form label {
+  font-family: 'open_sansregular', sans-serif;
+  font-weight: normal;
+  font-size: 0.813em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #323232;
+  margin: 0 0 5px 0;
+  display: block;
+}
+form label strong {
+  font-family: 'open_sansbold', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+form label span {
+  font-family: 'dearJoe6', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #801a7a;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] {
+  display: block;
+  width: 100%;
+  border: 1px solid #DCDCDC;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+  font-family: 'open_sansregular', sans-serif;
+  font-weight: normal;
+  font-size: 0.813em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #547a9f;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="tel"]:focus {
+  outline: none;
+  border-color: #547a9f;
+}
+form textarea {
+  display: block;
+  width: 100%;
+  height: 150px;
+  border: 1px solid #DCDCDC;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+  font-family: 'open_sansregular', sans-serif;
+  font-weight: normal;
+  font-size: 0.813em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #547a9f;
+  resize: none;
+  line-height: 1.1em;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+form textarea:focus {
+  outline: none;
+  border-color: #547a9f;
+}
+form button.btn-form {
+  display: inline-block;
+  position: relative;
+  line-height: 1em;
+  padding: 10px 30px 10px 30px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+}
+form button.btn-form .container-fond-btn-form {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+}
+form button.btn-form .container-fond-btn-form .fond-btn-form {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #801a7a;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  -webkit-transform: perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg);
+  -moz-transform: perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg);
+  -o-transform: perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg);
+  -ms-transform: perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg);
+  transform: perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg);
+  outline: 1px solid transparent;
+  -webkit-transition: padding-left 0.1s ease-in-out;
+  -moz-transition: padding-left 0.1s ease-in-out;
+  -o-transition: padding-left 0.1s ease-in-out;
+  transition: padding-left 0.1s ease-in-out;
+}
+form button.btn-form .txt-btn-form {
+  display: inline-block;
+  color: #ffffff;
+  font-family: 'open_sanssemibold', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  -moz-transition: -moz-transform 0.4s ease-in-out;
+  -o-transition: -o-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
+  -webkit-transform: translateZ(1px);
+  -moz-transform: translateZ(1px);
+  -o-transform: translateZ(1px);
+  -ms-transform: translateZ(1px);
+  transform: translateZ(1px);
+}
+form button.btn-form .txt-btn-form .icon-arrow-right {
+  font-size: 14px;
+}
+form button.btn-form:hover .fond-btn-form {
+  padding-left: 10px;
+}
+form button.btn-form:hover .txt-btn-form {
+  -webkit-transform: translateX(-10px);
+  -moz-transform: translateX(-10px);
+  -o-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+}
+form button.btn-form:active,
+form button.btn-form:focus {
+  outline: none;
 }
 /* @end */
 /* @group Actualités */
@@ -5012,6 +5220,13 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   .vjs-youtube .vjs-poster {
     background-color: #f3f3f3;
     background-size: 100% auto!important;
+  }
+  /* @end */
+  /* @group Formulaire */
+  form fieldset.form-gauche,
+  form fieldset.form-droite {
+    width: 100%;
+    padding: 0;
   }
   /* @end */
   /* @group Sitemap modal */

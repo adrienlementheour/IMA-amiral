@@ -496,6 +496,10 @@ a{
 	text-decoration: none;
 	.box-shadow(inset 0 -1px 0 @violetIMA);
 	position: relative;
+	&.btn-bleu{
+		color: @bleuIMA;
+		.box-shadow(inset 0 -1px 0 @bleuIMA);
+	}
 	&.btn-plus{
 		.box-shadow(none);
 		padding: 0 17px 0 0;
@@ -1320,6 +1324,130 @@ ul.breadcrumb{
 		}
 		h1{
 			display: inline;
+		}
+	}
+}
+
+/* @end */
+
+/* @group Formulaire */
+
+form{
+	display: block;
+	width: 100%;
+	height: auto;
+	fieldset{
+		margin: 0 0 10px 0;
+		&.form-gauche, &.form-droite{
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+			.box-sizing(border-box);
+		}
+		&.form-gauche{
+			padding: 0 25px 0 0;
+		}
+		&.form-droite{
+			padding: 0 0 0 25px;
+		}
+	}
+	label{
+		display: block;
+		.opensans(0.813em);
+		color: #323232;
+		margin: 0 0 5px 0;
+		display: block;
+		strong{
+			.opensans-bold(1em);
+		}
+		span{
+			.dearJoe(1em);
+			color: @violetIMA;
+		}
+	}
+	input[type="text"], input[type="email"], input[type="tel"]{
+		display: block;
+		width: 100%;
+		border: 1px solid #DCDCDC;
+		.border-radius(4px);
+		.opensans(0.813em);
+		color: #547a9f;
+		padding: 5px;
+		.box-sizing(border-box);
+		&:focus{
+			outline: none;
+			border-color: #547a9f;
+		}
+	}
+	textarea{
+		display: block;
+		width: 100%;
+		height: 150px;
+		border: 1px solid #DCDCDC;
+		.border-radius(4px);
+		.opensans(0.813em);
+		color: #547a9f;
+		resize: none;
+		line-height: 1.1em;
+		padding: 5px;
+		.box-sizing(border-box);
+		&:focus{
+			outline: none;
+			border-color: #547a9f;
+		}
+	}
+	button.btn-form{
+		display: inline-block;
+		position: relative;
+		line-height: 1em;
+		padding: 10px 30px 10px 30px;
+		.box-shadow(none);
+		.appearance(none);
+		background: none;
+		border: none;
+		.container-fond-btn-form{
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			.transform(translateY(0));
+			.fond-btn-form{
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				right: 0;
+				background-color: @violetIMA;
+				.border-radius(3px);
+				.transform(perspective(300px) rotateY(-10deg) rotate(0deg) skewX(0deg));
+				outline: 1px solid transparent;
+				.transition(padding-left 0.1s ease-in-out);
+			}
+		}
+		.txt-btn-form{
+			display: inline-block;
+			color: @blanc;
+			.opensans-semibold(1em);
+			position: relative;
+			.transition(transform 0.4s ease-in-out);
+			.transform(translateZ(1px));
+			.icon-arrow-right{
+				font-size: 14px;
+			}
+		}
+		&:hover{
+			.fond-btn-form{
+				padding-left: 10px;
+			}
+			.txt-btn-form{
+				.transform(translateX(-10px));
+			}
+		}
+		&:active, &:focus{
+			outline: none;
 		}
 	}
 }
@@ -4078,6 +4206,19 @@ a.bloc-small{
 			}
 		}
 	
+	/* @end */
+
+	/* @group Formulaire */
+	
+	form{
+		fieldset{
+			&.form-gauche, &.form-droite{
+				width: 100%;
+				padding: 0;
+			}
+		}
+	} 
+
 	/* @end */
 	
 	/* @group Sitemap modal */
