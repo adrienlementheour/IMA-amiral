@@ -989,6 +989,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/layoutImg\/contact\/map.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 329023,
+		"inputAbbreviatedPath": "\/layoutImg\/contact\/map.jpg",
+		"outputAbbreviatedPath": "\/layoutImg\/contact\/map.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/layoutImg\/fdPartage.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1051,6 +1062,28 @@
 		"initialSize": 3097,
 		"inputAbbreviatedPath": "\/layoutImg\/footer\/logo-viadeo@2x.png",
 		"outputAbbreviatedPath": "\/layoutImg\/footer\/logo-viadeo@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/formulaire\/fleche-rouge.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 499,
+		"inputAbbreviatedPath": "\/layoutImg\/formulaire\/fleche-rouge.png",
+		"outputAbbreviatedPath": "\/layoutImg\/formulaire\/fleche-rouge.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/formulaire\/fleche-verte.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 540,
+		"inputAbbreviatedPath": "\/layoutImg\/formulaire\/fleche-verte.png",
+		"outputAbbreviatedPath": "\/layoutImg\/formulaire\/fleche-verte.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

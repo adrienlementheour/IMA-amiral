@@ -96,6 +96,31 @@
 	</head>
 
 	<body class="inte contact">
+		<div id="container-bg-map">
+			<div id="bg-map"></div>
+			<div id="pin-map"></div>
+			<section id="content-right">
+				<div id="bloc-adresse">
+					<span class="categ-bloc-adresse">
+						<span class="container-fond-categ-bloc-adresse">
+							<span class="fond-categ-bloc-adresse"></span>
+						</span>
+						<span class="txt-categ-bloc-adresse">IMA&nbsp;TECHNOLOGIES</span>
+					</span>
+					<span class="container-fond-bloc-deform-adresse">
+						<span class="fond-bloc-deform-adresse"></span>
+					</span>
+					<span class="txt-bloc-deform-adresse">1, Impasse Claude<br /> Nougaro BP 40327<br /> 44803 St Herblain cedex<br /><br />Téléphone :<br /> <strong>02 51 86 62 00</strong><br /><br /> <a class="btn-bleu" href="mailto:enchante@imatech.fr">enchante@imatech.fr</a></span>
+					<a href="#" class="detail-bloc-adresse">
+						<span class="container-fond-detail-bloc-adresse">
+							<span class="fond-detail-bloc-adresse"></span>
+						</span>
+						<span class="txt-detail-bloc-adresse">Voir l'itinéraire</span>
+					</a>
+					<span class="btn-icon-plus"><span class="icon-plus"></span></span>
+				</div>
+			</section>
+		</div>
 		<section id="wrapper-content">
 			<div class="container clearfix">
 				<section id="content">
@@ -181,6 +206,7 @@
 						</div>
 					</div>
 				</section>
+				
 			</div>
 		</section>
 		<div id="bloc-fond-visu">

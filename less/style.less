@@ -1332,6 +1332,206 @@ ul.breadcrumb{
 
 /* @end */
 
+/* @group Content right */
+
+
+#content-right{
+	display: block;
+	width: 43%;
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 100%;
+	.backface-visibility(hidden);
+	.transform-style(preserve-3d);
+	.transform(translateZ(0));
+	z-index: 2;
+}
+
+#bloc-adresse{
+	display: block;
+	width: auto;
+	height: auto;
+	.box-sizing(border-box);
+	padding: 40px 25px 45px 25px;
+	z-index: 3;
+	position: absolute;
+	.box-shadow(none);
+	.transition(all 0.1s ease-in-out);
+	.backface-visibility(hidden);
+	line-height: 1.1em;
+	top: 50%;
+	margin-top: -113px;
+	left: 50%;
+	margin-left: -110px;
+	a.detail-bloc-adresse{
+		display: block;
+		position: absolute;
+		padding: 10px 20px 8px 20px;
+		z-index: 4;
+		bottom: -20px;
+		right: -20px;
+		.box-shadow(none);
+		.transition(all 0.1s ease-in-out);
+		.transform(perspective(300px) rotateY(0deg) rotate(-2deg) skewX(0deg));
+		&:hover{
+			.fond-detail-bloc-adresse{
+				padding-left: 5px;
+			}
+		}
+		.container-fond-detail-bloc-adresse{
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			bottom: 0;
+			right: 0;
+			.transform(translateZ(1px));
+			.fond-detail-bloc-adresse{
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				bottom: 0;
+				right: 0;
+				.border-radius(3px);
+				outline: 1px solid transparent;
+				.transition(padding-left 0.1s ease-in-out);
+				.backface-visibility(hidden);
+				background-color: @vertIMA;
+				.transform(perspective(300px) rotateY(5deg) rotate(0deg) skewX(3deg));
+			}
+		}
+		.txt-detail-bloc-adresse{
+			.dearJoe(1.2em);
+			color: @blanc;
+			position: relative;
+			.transition(transform 0.4s ease-in-out);
+			display: inline-block;
+			.transform(translateZ(1px));
+		}
+	}
+	.categ-bloc-adresse{
+		display: block;
+		position: absolute;
+		padding: 10px 20px;
+		z-index: 4;
+		top: -20px;
+		left: -20px;
+		.transform(perspective(300px) rotateY(0deg) rotate(-4deg) skewX(0deg));
+		.container-fond-categ-bloc-adresse{
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			.transform(translateZ(0px));
+			.fond-categ-bloc-adresse{
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				.border-radius(3px);
+				outline: 1px solid transparent;
+				.transition(padding-right 0.2s ease-in-out);
+				background-color: @roseIMA;
+				.transform(perspective(300px) rotateY(-5deg) rotate(0deg) skewX(3deg));
+			}
+		}
+		.txt-categ-bloc-adresse{
+			.opensans-semibold(0.9em);
+			color: @blanc;
+			position: relative;
+		}
+	}
+	.container-fond-bloc-deform-adresse{
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		.transform(translateZ(0px));
+		z-index: 2;
+		.transform(perspective(300px) rotateY(0deg) rotate(-3deg) skewX(0deg));
+		.fond-bloc-deform-adresse{
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			.border-radius(6px);
+			background-color: @blanc;
+			.transition(transform 0.4s ease-in-out);
+			.box-shadow(0 0 32px rgba(0, 0, 0, 0.27));
+		}
+	}
+	.txt-bloc-deform-adresse{
+		.opensans(0.938em);
+		position: relative;
+		color: #373737;
+		z-index: 3;
+		.transition(transform 0.15s ease-in-out);
+		display: inline-block;
+		text-align: center;
+		.transform(perspective(300px) rotateY(0deg) rotate(-2deg) skewX(0deg));
+		strong{
+			.opensans-bold(1.200em);
+		}
+	}
+	.btn-icon-plus{
+		position: absolute;
+		.transition(transform 0.2s ease-in-out);
+		display: block;
+		width: 16px;
+		height: 16px;
+		line-height: 16px;
+	}
+}
+
+/* @end */
+
+/* @group Map */
+
+#container-bg-map{
+	display: block;
+	position: absolute;
+	width: auto;
+	height: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	overflow: hidden;
+	#bg-map{
+		display: block;
+		width: 2745px;
+		height: 1455px;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -1372px;
+		background: url("../layoutImg/contact/map.jpg") no-repeat center center;
+	}
+	#pin-map{
+		display: block;
+		width: 22px;
+		height: 40px;
+		background: url("../layoutImg/contact/pin.png") no-repeat center center;
+		position: absolute;
+		top: 233px;
+		left: 50%;
+		margin-left: 240px;
+	}
+}
+
+/* @end */
+
 /* @group Formulaire */
 
 form{
