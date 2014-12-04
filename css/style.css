@@ -2054,8 +2054,6 @@ a.bloc-small .txt-bloc-deform {
   -moz-transition: -moz-transform 0.15s ease-in-out;
   -o-transition: -o-transform 0.15s ease-in-out;
   transition: -webkit-transform 0.15s ease-in-out,-moz-transform 0.15s ease-in-out,-o-transform 0.15s ease-in-out,transform 0.15s ease-in-out;
-  max-width: 170px;
-  display: inline-block;
 }
 a.bloc-small .btn-icon-plus {
   position: absolute;
