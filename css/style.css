@@ -5395,13 +5395,10 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   #bloc-menu-responsive {
     padding: 32px 0 0 27px;
   }
-  ul.breadcrumb li {
+  ul.breadcrumb li:before {
     display: none;
   }
-  ul.breadcrumb li.active {
-    display: inline-block;
-  }
-  ul.breadcrumb li.active:before {
+  ul.breadcrumb li a {
     display: none;
   }
   ul.breadcrumb li h1 {
