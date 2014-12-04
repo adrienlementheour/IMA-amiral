@@ -1455,6 +1455,14 @@ form {
 form fieldset {
   margin: 0 0 10px 0;
 }
+form fieldset.error input[type="text"],
+form fieldset.error input[type="email"],
+form fieldset.error input[type="tel"] {
+  border: 2px solid #e2001a;
+}
+form fieldset.error textarea {
+  border: 2px solid #e2001a;
+}
 form fieldset.form-gauche,
 form fieldset.form-droite {
   display: inline-block;
@@ -1637,15 +1645,93 @@ form button.btn-form:hover .fond-btn-form {
   padding-left: 10px;
 }
 form button.btn-form:hover .txt-btn-form {
-  -webkit-transform: translateX(-10px);
-  -moz-transform: translateX(-10px);
-  -o-transform: translateX(-10px);
-  -ms-transform: translateX(-10px);
-  transform: translateX(-10px);
+  -webkit-transform: translateX(-10px) translateZ(1px);
+  -moz-transform: translateX(-10px) translateZ(1px);
+  -o-transform: translateX(-10px) translateZ(1px);
+  -ms-transform: translateX(-10px) translateZ(1px);
+  transform: translateX(-10px) translateZ(1px);
 }
 form button.btn-form:active,
 form button.btn-form:focus {
   outline: none;
+}
+form button.btn-form:disabled .container-fond-btn-form .fond-btn-form {
+  background-color: #c2bec2;
+}
+form button.btn-form:disabled:hover .fond-btn-form {
+  padding-left: 0px;
+}
+form button.btn-form:disabled:hover .txt-btn-form {
+  -webkit-transform: translateX(0px) translateZ(1px);
+  -moz-transform: translateX(0px) translateZ(1px);
+  -o-transform: translateX(0px) translateZ(1px);
+  -ms-transform: translateX(0px) translateZ(1px);
+  transform: translateX(0px) translateZ(1px);
+}
+.bloc-message {
+  display: block;
+  width: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  left: 214px;
+  padding: 10px 20px;
+  -webkit-border-radius: 10px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 10px;
+  -moz-background-clip: padding;
+  border-radius: 10px;
+  background-clip: padding-box;
+}
+.bloc-message:before {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+  left: -30px;
+}
+.bloc-message p {
+  margin: 0;
+  padding: 0;
+  font-family: 'open_sanssemibold', sans-serif;
+  font-weight: normal;
+  font-size: 0.875em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.bloc-message p span {
+  font-family: 'dearJoe6', sans-serif;
+  font-weight: normal;
+  font-size: 1.286em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.bloc-message.recu {
+  border: 2px solid #5a8a33;
+}
+.bloc-message.recu:before {
+  background: url("../layoutImg/formulaire/fleche-verte.png") no-repeat center center;
+}
+.bloc-message.recu p span {
+  color: #5a8a33;
+}
+.bloc-message.erreur {
+  border: 2px solid #e2001a;
+}
+.bloc-message.erreur:before {
+  background: url("../layoutImg/formulaire/fleche-rouge.png") no-repeat center center;
+}
+.bloc-message.erreur p span {
+  color: #e2001a;
 }
 /* @end */
 /* @group Actualités */
@@ -5227,6 +5313,23 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   form fieldset.form-droite {
     width: 100%;
     padding: 0;
+  }
+  .bloc-message {
+    position: relative;
+    bottom: inherit;
+    right: inherit;
+    left: inherit;
+    margin: 35px 0 0 0;
+  }
+  .bloc-message:before {
+    top: -23px;
+    margin-top: 0;
+    left: 60px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   /* @end */
   /* @group Sitemap modal */

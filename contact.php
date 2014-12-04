@@ -138,7 +138,7 @@
 							</div>
 							<div class="fond-bloc"></div>
 							<div class="bloc-content" id="bloc-actus">
-								<p><strong>Et si... Nous parlions de vous ?</strong><br /> Vous pouvez nous contacter par email à <a class="btn-bleu" href="mailto:enchante@imatech.fr">enchante@imatech.fr</a> ou par téléphone au <strong>02 51 86 62 00</strong></p>
+								<p><strong>Et si... Nous parlions de vous ?</strong><br /> Vous pouvez nous contacter par email à <a class="btn-bleu" href="mailto:enchante@imatech.fr">enchante@imatech.fr</a> ou par téléphone au&nbsp;<strong>02&nbsp;51&nbsp;86&nbsp;62&nbsp;00</strong></p>
 								<p>Si vous préférez, remplissez le formulaire ci-dessous : </p>
 								<form method="POST" action="?open=1">
 									<fieldset class="form-gauche <?php if($erreurNom != '') echo 'error'; ?>">
@@ -154,16 +154,28 @@
 										<label for="tel">Téléphone <span>(facultatif)</span></label>
 										<input type="tel" name="tel" id="tel" value="<?php echo $tel; ?>">
 									</fieldset>
-									<fieldset>
+									<fieldset class="<?php if($erreurMessage != '') echo 'error'; ?>">
 										<label for="message"><strong>Message</strong></label>
-										<textarea id="message"></textarea>
+										<textarea name="message" id="message"><?php echo $message; ?></textarea>
 									</fieldset><br/><br/>
-									<button class="btn-form">
+									<button class="btn-form" name="submitted" <?php if($message_status == 'Demande envoyée'){ echo 'disabled';}?>>
 										<span class="container-fond-btn-form">
 											<span class="fond-btn-form"></span>
 										</span>
 										<span class="txt-btn-form"><span class="icon-arrow-right"></span> Envoyer</span>
 									</button>
+									<?php if($message_status == 'Demande envoyée'){ ?>
+									<div class="bloc-message recu">
+										<p><span>Message reçu !</span><br />
+										Votre message nous est parvenu. Nous allons vous répondre dans les plus brefs délais.</p>
+									</div>
+									<?php } ?>
+									<?php if($message_status == 'Erreur'){ ?>
+									<div class="bloc-message erreur">
+										<p><span>Petit souci !</span><br />
+										Certains champs semblent comporter des erreurs. Merci de vérifier vos coordonnées.</p>
+									</div>
+									<?php } ?>
 								</form>
 							</div>
 						</div>

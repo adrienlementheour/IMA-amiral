@@ -21,6 +21,8 @@
 @bleucielIMA-dark: darken(@bleucielIMA, 10%);
 @orangeIMA: #dd850c;
 @orangeIMA-dark: darken(@orangeIMA, 10%);
+@vertForm: #5a8a33;
+@rougeForm: #e2001a;
 
 /* @end */
 
@@ -1338,6 +1340,14 @@ form{
 	height: auto;
 	fieldset{
 		margin: 0 0 10px 0;
+		&.error{
+			input[type="text"], input[type="email"], input[type="tel"]{
+				border: 2px solid @rougeForm;
+			}
+			textarea{
+				border: 2px solid @rougeForm;
+			}
+		}
 		&.form-gauche, &.form-droite{
 			display: inline-block;
 			vertical-align: top;
@@ -1443,11 +1453,78 @@ form{
 				padding-left: 10px;
 			}
 			.txt-btn-form{
-				.transform(translateX(-10px));
+				.transform(translateX(-10px) translateZ(1px));
 			}
 		}
 		&:active, &:focus{
 			outline: none;
+		}
+		&:disabled{
+			.container-fond-btn-form{
+				.fond-btn-form{
+					background-color: #c2bec2;
+				}
+			}
+			&:hover{
+				.fond-btn-form{
+					padding-left: 0px;
+				}
+				.txt-btn-form{
+					.transform(translateX(0px) translateZ(1px));
+				}
+			}
+		}
+	}
+}
+
+.bloc-message{
+	display: block;
+	width: auto;
+	.box-sizing(border-box);
+	position: absolute;
+	bottom: 20px;
+	right: 40px;
+	left: 214px;
+	padding: 10px 20px;
+	.border-radius(10px);
+	&:before{
+		content: "";
+		display: block;
+		width: 21px;
+		height: 10px;
+		position: absolute;
+		top: 50%;
+		margin-top: -5px;
+		left: -30px;
+	}
+	p{
+		margin: 0;
+		padding: 0;
+		.opensans-semibold(0.875em);
+		span{
+			.dearJoe(1.286em);
+		}
+	}
+	&.recu{
+		border: 2px solid @vertForm;
+		&:before{
+			background: url("../layoutImg/formulaire/fleche-verte.png") no-repeat center center;
+		}
+		p{
+			span{
+				color: @vertForm;
+			}
+		}
+	}
+	&.erreur{
+		border: 2px solid @rougeForm;
+		&:before{
+			background: url("../layoutImg/formulaire/fleche-rouge.png") no-repeat center center;
+		}
+		p{
+			span{
+				color: @rougeForm;
+			}
 		}
 	}
 }
@@ -4217,7 +4294,21 @@ a.bloc-small{
 				padding: 0;
 			}
 		}
-	} 
+	}
+
+	.bloc-message{
+		position: relative;
+		bottom: inherit;
+		right: inherit;
+		left: inherit;
+		margin: 35px 0 0 0;
+		&:before{
+			top: -23px;
+			margin-top: 0;
+			left: 60px;
+			.transform(rotate(90deg));
+		}
+	}
 
 	/* @end */
 	
