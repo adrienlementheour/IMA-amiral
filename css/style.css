@@ -256,6 +256,9 @@ body {
 .bloc-full .bloc-content.small-padding-top {
   padding: 25px 40px 40px 40px;
 }
+.bloc-full .bloc-content.bloc-single {
+  padding-top: 55px;
+}
 .fond-bloc {
   display: block;
   width: 100%;
@@ -2102,13 +2105,41 @@ h2 {
   margin-top: 3px;
   line-height: 1.1em;
 }
-.content-actu {
+.content-actu,
+.content-single {
   min-height: 70px;
 }
-.content-actu img {
+.content-actu img,
+.content-single img {
   float: left;
   padding: 0 20px 10px 0;
   max-width: 140px;
+}
+.content-actu ul,
+.content-single ul {
+  padding: 20px 0 20px 40px;
+}
+.content-actu ul li,
+.content-single ul li {
+  font-family: 'open_sansitalic', sans-serif;
+  font-weight: normal;
+  font-size: 0.95em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0 0 5px;
+}
+.content-single a {
+  font-family: 'open_sansbold_italic', sans-serif;
+  font-weight: normal;
+  font-size: 1.1em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #ab0464;
+}
+.content-single a img {
+  padding: 0 5px 0 0;
 }
 /* @end */
 /* @group Blocs */
