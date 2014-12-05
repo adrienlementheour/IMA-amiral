@@ -391,6 +391,9 @@ body{
 	background-color: @grisIMA;
 	.opensans(1em);
 	position: relative;
+	&.contact{
+		height: auto;
+	}
 }
 
 #wrapper-content{
@@ -1341,7 +1344,7 @@ ul.breadcrumb{
 #content-right{
 	display: block;
 	width: 43%;
-	position: fixed;
+	position: absolute;
 	right: 0;
 	top: 0;
 	height: 100%;
@@ -1379,7 +1382,13 @@ ul.breadcrumb{
 		.transform(perspective(300px) rotateY(0deg) rotate(-2deg) skewX(0deg));
 		&:hover{
 			.fond-detail-bloc-adresse{
-				padding-left: 5px;
+				padding-left: 10px;
+			}
+			.txt-detail-bloc-adresse{
+				.transform(translateX(-10px) translateZ(1px));
+			}
+			.btn-icon-plus{
+				.transform(rotate(90deg) scale(1.2));
 			}
 		}
 		.container-fond-detail-bloc-adresse{
@@ -1412,6 +1421,18 @@ ul.breadcrumb{
 			.transition(transform 0.4s ease-in-out);
 			display: inline-block;
 			.transform(translateZ(1px));
+			.transition(transform 0.4s ease-in-out);
+		}
+		.btn-icon-plus{
+			position: absolute;
+			.transition(transform 0.2s ease-in-out);
+			display: block;
+			width: 16px;
+			height: 16px;
+			line-height: 16px;
+			color: @vertIMA;
+			bottom: -23px;
+			right: 10px;
 		}
 	}
 	.categ-bloc-adresse{
@@ -1486,14 +1507,6 @@ ul.breadcrumb{
 			.opensans-bold(1.200em);
 		}
 	}
-	.btn-icon-plus{
-		position: absolute;
-		.transition(transform 0.2s ease-in-out);
-		display: block;
-		width: 16px;
-		height: 16px;
-		line-height: 16px;
-	}
 }
 
 /* @end */
@@ -1511,6 +1524,7 @@ ul.breadcrumb{
 	right: 0;
 	z-index: 2;
 	overflow: hidden;
+	min-height: 100%;
 	#bg-map{
 		display: block;
 		width: 2745px;
@@ -4340,6 +4354,9 @@ a.bloc-small{
 		width: 100%;
 		.box-sizing(border-box);
 		padding: 0 150px 0 0;
+		.contact &{
+			padding: 0 200px 0 0;
+		}
 	}
 	.bloc-full{
 		width: 100%;
@@ -4350,6 +4367,12 @@ a.bloc-small{
 		top: 0;
 		right: 0;
 		width: 150px;
+	}
+	#content-right{
+		width: 28%;
+	}
+	#bloc-adresse{
+		top: 55%;
 	}
 	.bloc-btn-video {
 		width: 80px;
@@ -4583,11 +4606,34 @@ a.bloc-small{
 	}
 
 	/* @end */
+
+	#content-right {
+		width: 210px;
+		position: relative;
+		height: 400px;
+		right: inherit;
+		top: inherit;
+		margin: 0 auto 0 auto;
+	}
+
+	#bloc-adresse{
+		position: relative;
+		top: inherit;
+		left: inherit;
+		margin: 0;
+		width: 210px;
+	}
+	#container-bg-map #pin-map{
+		display: none;
+	}
 }
 
 @media (max-width: 767px) {
 	#content{
 		padding: 0;
+		.contact &{
+			padding: 0;
+		}
 	}
 	
 	#visu-content{

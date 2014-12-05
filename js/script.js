@@ -593,6 +593,30 @@ $(document).scroll(function() {
 $( window ).resize(function() {
 	jsPlumb.setSuspendDrawing(false, true);
 	initSitemapMobile();
+	if($("body").hasClass("contact")){
+		if ($(window).width()>=979) {
+			// Relier le contact avec le pin
+			jsPlumb.detachAllConnections($("#bloc-adresse"));
+			jsPlumb.detachAllConnections($("#pin-map"));
+			jsPlumb.setContainer($("#container-bg-map"));
+			jsPlumb.connect({
+				source: $("#bloc-adresse"),
+				target: $("#pin-map"),
+				//[x, y, dx, dy]
+				anchors: [[0.5, 0, 0, 0], [1, 0.5, 1, 0]],
+				endpoint:"Blank",
+				paintStyle:{
+				lineWidth:2,
+				strokeStyle:'#cacaca',
+				dashstyle:" 0 1"
+				},
+				connector:[ "Bezier", { curviness: 200 }]
+			});
+		}else{
+			jsPlumb.detachAllConnections($("#bloc-adresse"));
+			jsPlumb.detachAllConnections($("#pin-map"));
+		}
+	}
 	if (!$("html").hasClass("isSafari")) {
 		if($("body").hasClass("has-video")){
 			if ($(window).width()>=1250) {
@@ -732,20 +756,22 @@ jsPlumb.ready(function() {
 		}
 	}
 	if($("body").hasClass("contact")){
-		// Relier le contact avec le pin
-		jsPlumb.setContainer($("#container-bg-map"));
-		jsPlumb.connect({
-			source: $("#bloc-adresse"),
-			target: $("#pin-map"),
-			//[x, y, dx, dy]
-			anchors: [[0.5, 0, 0, 0], [1, 0.5, 1, 0]],
-			endpoint:"Blank",
-			paintStyle:{
-			lineWidth:2,
-			strokeStyle:'#cacaca',
-			dashstyle:" 0 1"
-			},
-			connector:[ "Bezier", { curviness: 200 }]
-		});
+		if ($(window).width()>=979) {
+			// Relier le contact avec le pin
+			jsPlumb.setContainer($("#container-bg-map"));
+			jsPlumb.connect({
+				source: $("#bloc-adresse"),
+				target: $("#pin-map"),
+				//[x, y, dx, dy]
+				anchors: [[0.5, 0, 0, 0], [1, 0.5, 1, 0]],
+				endpoint:"Blank",
+				paintStyle:{
+				lineWidth:2,
+				strokeStyle:'#cacaca',
+				dashstyle:" 0 1"
+				},
+				connector:[ "Bezier", { curviness: 200 }]
+			});
+		}
 	}
 });

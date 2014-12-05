@@ -199,6 +199,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   position: relative;
 }
+body.contact {
+  height: auto;
+}
 #wrapper-content {
   display: block;
   position: relative;
@@ -1453,7 +1456,7 @@ ul.breadcrumb li h1 {
 #content-right {
   display: block;
   width: 43%;
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   height: 100%;
@@ -1523,7 +1526,21 @@ ul.breadcrumb li h1 {
   transform: perspective(300px) rotateY(0deg) rotate(-2deg) skewX(0deg);
 }
 #bloc-adresse a.detail-bloc-adresse:hover .fond-detail-bloc-adresse {
-  padding-left: 5px;
+  padding-left: 10px;
+}
+#bloc-adresse a.detail-bloc-adresse:hover .txt-detail-bloc-adresse {
+  -webkit-transform: translateX(-10px) translateZ(1px);
+  -moz-transform: translateX(-10px) translateZ(1px);
+  -o-transform: translateX(-10px) translateZ(1px);
+  -ms-transform: translateX(-10px) translateZ(1px);
+  transform: translateX(-10px) translateZ(1px);
+}
+#bloc-adresse a.detail-bloc-adresse:hover .btn-icon-plus {
+  -webkit-transform: rotate(90deg) scale(1.2);
+  -moz-transform: rotate(90deg) scale(1.2);
+  -o-transform: rotate(90deg) scale(1.2);
+  -ms-transform: rotate(90deg) scale(1.2);
+  transform: rotate(90deg) scale(1.2);
 }
 #bloc-adresse a.detail-bloc-adresse .container-fond-detail-bloc-adresse {
   display: block;
@@ -1578,16 +1595,30 @@ ul.breadcrumb li h1 {
   text-rendering: optimizeLegibility;
   color: #ffffff;
   position: relative;
-  -webkit-transition: -webkit-transform 0.4s ease-in-out;
-  -moz-transition: -moz-transform 0.4s ease-in-out;
-  -o-transition: -o-transform 0.4s ease-in-out;
-  transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
   display: inline-block;
   -webkit-transform: translateZ(1px);
   -moz-transform: translateZ(1px);
   -o-transform: translateZ(1px);
   -ms-transform: translateZ(1px);
   transform: translateZ(1px);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  -moz-transition: -moz-transform 0.4s ease-in-out;
+  -o-transition: -o-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
+}
+#bloc-adresse a.detail-bloc-adresse .btn-icon-plus {
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out;
+  -o-transition: -o-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out,-moz-transform 0.2s ease-in-out,-o-transform 0.2s ease-in-out,transform 0.2s ease-in-out;
+  display: block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  color: #c1c602;
+  bottom: -23px;
+  right: 10px;
 }
 #bloc-adresse .categ-bloc-adresse {
   display: block;
@@ -1721,17 +1752,6 @@ ul.breadcrumb li h1 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-#bloc-adresse .btn-icon-plus {
-  position: absolute;
-  -webkit-transition: -webkit-transform 0.2s ease-in-out;
-  -moz-transition: -moz-transform 0.2s ease-in-out;
-  -o-transition: -o-transform 0.2s ease-in-out;
-  transition: -webkit-transform 0.2s ease-in-out,-moz-transform 0.2s ease-in-out,-o-transform 0.2s ease-in-out,transform 0.2s ease-in-out;
-  display: block;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-}
 /* @end */
 /* @group Map */
 #container-bg-map {
@@ -1745,6 +1765,7 @@ ul.breadcrumb li h1 {
   right: 0;
   z-index: 2;
   overflow: hidden;
+  min-height: 100%;
 }
 #container-bg-map #bg-map {
   display: block;
@@ -5515,6 +5536,9 @@ a.bloc-small.bloc-7:hover .raccord-categ {
     box-sizing: border-box;
     padding: 0 150px 0 0;
   }
+  .contact #content {
+    padding: 0 200px 0 0;
+  }
   .bloc-full {
     width: 100%;
     max-width: 620px;
@@ -5524,6 +5548,12 @@ a.bloc-small.bloc-7:hover .raccord-categ {
     top: 0;
     right: 0;
     width: 150px;
+  }
+  #content-right {
+    width: 28%;
+  }
+  #bloc-adresse {
+    top: 55%;
   }
   .bloc-btn-video {
     width: 80px;
@@ -5727,9 +5757,30 @@ a.bloc-small.bloc-7:hover .raccord-categ {
     box-sizing: border-box;
   }
   /* @end */
+  #content-right {
+    width: 210px;
+    position: relative;
+    height: 400px;
+    right: inherit;
+    top: inherit;
+    margin: 0 auto 0 auto;
+  }
+  #bloc-adresse {
+    position: relative;
+    top: inherit;
+    left: inherit;
+    margin: 0;
+    width: 210px;
+  }
+  #container-bg-map #pin-map {
+    display: none;
+  }
 }
 @media (max-width: 767px) {
   #content {
+    padding: 0;
+  }
+  .contact #content {
     padding: 0;
   }
   #visu-content {
