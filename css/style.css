@@ -2162,6 +2162,9 @@ h2 {
 .content-single a img {
   padding: 0 5px 0 0;
 }
+#nav {
+  display: none;
+}
 /* @end */
 /* @group Blocs */
 .zone-blocs {
