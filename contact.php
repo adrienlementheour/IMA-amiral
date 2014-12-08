@@ -476,6 +476,7 @@
 		<!-- jQuery -->
 		<script src="js/libs/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/libs/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/libs/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
 		<!-- jsPlumb -->
 		<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jsPlumb/1.4.1/jquery.jsPlumb-1.4.1-all-min.js"></script> -->
 		<!-- support lib for bezier stuff -->

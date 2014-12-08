@@ -444,6 +444,29 @@ body{
 		&.bloc-single{
 			padding-top: 55px; 
 		}
+		ul, ol{
+			li{
+				.opensans(0.813em);
+			}
+		}
+		blockquote{
+			.opensans(0.813em);
+			position: relative;
+			&:before{
+				content: "\«";
+				.opensans(1.4em);
+				position: absolute;
+				top: -8px;
+				left: -15px;
+			}
+			&:after{
+				content: "\»";
+				.opensans(1.4em);
+				position: absolute;
+				bottom: -8px;
+				right: -15px;
+			}
+		}
 	}
 }
 
@@ -755,6 +778,9 @@ a{
 			.btn-icon-plus{
 				.transform(rotate(90deg) scale(1.2));
 			}
+		}
+		&:focus{
+			outline: none;
 		}
 	}
 }
@@ -2000,6 +2026,9 @@ a.bloc-small{
 		.btn-icon-plus{
 			.transform(rotate(90deg) scale(1.2));
 		}
+	}
+	&:focus{
+		outline: none;
 	}
 	/* @group nth-of-type ie8 fix */
 	&.pos-1{

@@ -71,11 +71,17 @@ function animer(){
 				}
 			}
 		}
+		
 		if((TweenMax.isTweening($("#wrapper-content")))||(TweenMax.isTweening($("#container-menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper")))||(TweenMax.isTweening($("#menu-wrapper ul")))||(TweenMax.isTweening($("#menu-wrapper ul li")))||(TweenMax.isTweening($("#menu-wrapper ul li a .txt-circle")))||(TweenMax.isTweening($("#circle-dashed-container")))){
 			if(($("body").hasClass("has-video"))&&($("body").hasClass("accueil"))){
 				if (!$("html").hasClass("isSafari")) {
 					jsPlumb.repaint($("#menu-wrapper"));
 					jsPlumb.repaint($(".bloc-btn-video"), { left:$(".bloc-btn-video").offset().left, top:($(".bloc-btn-video").offset().top)});
+				}
+			}
+			if($("body").hasClass("contact")){
+				if ($(window).width()>=979) {
+					jsPlumb.repaint($("#bloc-adresse"), { left:Math.round($("#bloc-adresse").offset().left), top:Math.round($("#bloc-adresse").offset().top)});
 				}
 			}
 		}
@@ -88,17 +94,14 @@ function animer(){
 ////////////////////////////////////////////////////////////////////////////////
 function menuOuvertDefault(){
 	if($(window).width()>1024){
-		ouvertureMenu();
-		setTimeout(function(){
-			fermetureMenu();
-		},2000);
+		if($.cookie('cookieMenu') == null) {
+			$.cookie('cookieMenu', 'open');
+			ouvertureMenu();
+			setTimeout(function(){
+				fermetureMenu();
+			},2000);
+		}
 	}
-}
-
-function initMenu(){
-	TweenMax.from($("#menu-wrapper ul"), 0.3, {scale: 0.8, rotation: -30, delay: 0.5, ease:Cubic.easeInOut});
-	TweenMax.from($("#menu-wrapper #circle-dashed-container"), 0.3, {scale: 0.8, rotation: -30, delay: 0.5, ease:Cubic.easeInOut});
-	TweenMax.from($("#zone-actus"), 0.3, {marginTop: "-30px", delay: 0.5, ease:Cubic.easeInOut, onComplete: menuOuvertDefault});
 }
 
 function ouvertureMenu(){
@@ -550,7 +553,9 @@ function isSafari(){
 $(document).ready(function(){
 	animer();
 	if ($(window).width()>1024){
-		initMenu();
+		setTimeout(function() {
+		      menuOuvertDefault();
+		}, 1000);
 	}
 	if ($("html").hasClass("lt-ie9")){
 		ordreBlocSmall();
@@ -591,8 +596,11 @@ $(document).scroll(function() {
 });
 
 $( window ).resize(function() {
-	jsPlumb.setSuspendDrawing(false, true);
+	//jsPlumb.setSuspendDrawing(false, true);
 	initSitemapMobile();
+	if($("body").hasClass("has-bloc-small")){
+		jsPlumb.repaint($(".bloc-small"));
+	}
 	if($("body").hasClass("contact")){
 		if ($(window).width()>=979) {
 			// Relier le contact avec le pin
@@ -683,8 +691,8 @@ jsPlumb.ready(function() {
 		$(".bloc-small").each(function(index){
 			if (index<(nbBlocSmall-1)) {
 				var instance= jsPlumb.getInstance();
-				instance.setContainer($("#zone-blocs-accueil"));
-				instance.connect({
+				jsPlumb.setContainer($("#content"));
+				jsPlumb.connect({
 					source: $(this),
 					target: $(this).nextAll(".bloc-small").eq(0),
 					anchors: anchors[index],

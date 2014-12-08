@@ -262,6 +262,48 @@ body.contact {
 .bloc-full .bloc-content.bloc-single {
   padding-top: 55px;
 }
+.bloc-full .bloc-content ul li,
+.bloc-full .bloc-content ol li {
+  font-family: 'open_sansregular', sans-serif;
+  font-weight: normal;
+  font-size: 0.813em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.bloc-full .bloc-content blockquote {
+  font-family: 'open_sansregular', sans-serif;
+  font-weight: normal;
+  font-size: 0.813em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+.bloc-full .bloc-content blockquote:before {
+  content: "\«";
+  font-family: 'open_sansregular', sans-serif;
+  font-weight: normal;
+  font-size: 1.4em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: -8px;
+  left: -15px;
+}
+.bloc-full .bloc-content blockquote:after {
+  content: "\»";
+  font-family: 'open_sansregular', sans-serif;
+  font-weight: normal;
+  font-size: 1.4em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  bottom: -8px;
+  right: -15px;
+}
 .fond-bloc {
   display: block;
   width: 100%;
@@ -715,6 +757,9 @@ a.btn-bloc:hover .btn-icon-plus {
   -o-transform: rotate(90deg) scale(1.2);
   -ms-transform: rotate(90deg) scale(1.2);
   transform: rotate(90deg) scale(1.2);
+}
+a.btn-bloc:focus {
+  outline: none;
 }
 .btn-icon-plus {
   -webkit-box-shadow: none;
@@ -2458,6 +2503,9 @@ a.bloc-small:hover .btn-icon-plus {
   -o-transform: rotate(90deg) scale(1.2);
   -ms-transform: rotate(90deg) scale(1.2);
   transform: rotate(90deg) scale(1.2);
+}
+a.bloc-small:focus {
+  outline: none;
 }
 a.bloc-small.pos-1 {
   top: 0;
