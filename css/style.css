@@ -304,6 +304,9 @@ body.contact {
   bottom: -8px;
   right: -15px;
 }
+.bloc-full.article {
+  margin-top: 60px;
+}
 .fond-bloc {
   display: block;
   width: 100%;
