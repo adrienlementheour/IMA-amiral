@@ -28,7 +28,7 @@
 		<script src="js/libs/isMobile.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
-	<body class="blog">
+	<body class="actus">
 		<section id="wrapper-content">
 			<div class="container clearfix">
 				<section id="content">
@@ -58,11 +58,14 @@
 						</nav>
 					</header>
 					<div class="wrapper-blocs">
-						<div class="bloc-full bloc-penche" id="zone-actus">
+						<div class="bloc-full bloc-categories-articles">
 							<div class="ribbon">
 								<div class="fond-ribbon"></div>
 								<div class="ribbon-content">
-									<h1>Actualités</h1>
+									<ul class="breadcrumb">
+										<li><a href="#">IMATECH</a></li>
+										<li class="active"><h1>Actualités</h1></li>
+									</ul>
 								</div>
 							</div>
 							<div class="ribbon-copie">
@@ -71,38 +74,54 @@
 							</div>
 							<div class="fond-bloc"></div>
 							<div class="bloc-content small-padding-top">
-								<p>230 actualités classées par catégories</p>
+								<div class="nb-actualites"><strong>230 actualités</strong> classées par catégories</div>
+								<a href="#" id="btn-categories-articles">
+									<span class="container-fond-categories-articles">
+										<span class="fond-categories-articles"></span>
+									</span>
+									<span class="txt-btn-categories-articles">Choisissez une catégorie <span class="icon-arrow-right"></span></span>
+								</a>
+								<ul id="categories-articles">
+									<div class="container-fond-categories-articles">
+										<div class="fond-categories-articles"></div>
+									</div>
+									<li class="active"><a href="#">— Toutes les catégories</a></li>
+									<li><a href="#">Newsletter</a></li>
+									<li><a href="#">Succès</a></li>
+									<li><a href="#">Evénements</a></li>
+									<li><a href="#">Communiqués de presse</a></li>
+								</ul>
 							</div>
 						</div>
-					</div>
-					<div class="bloc-full bloc-penche article">
-						<div class="fond-bloc"></div>
-						<div class="bloc-content small-padding-top" id="bloc-actus">
-							<div class="date-categ-actu">Le <span class="date-actu">24 juin 2014</span> dans <span class="categ-actu succes">Succès</span></div>
-							<h2><a href="#">IMA Technologies reçoit le Trophée 1001 vies 2014 dans la catégorie Management</a></h2>
-							<div class="content-actu"><img src="img/trophee-des-1001-vies.png" alt="" /><p><strong>Jeudi 26 juin, IMATECH, expert de la relation client, s’est vu remettre le Trophée des 1001 Vies dans la catégorie «management» grâce à son approche managériale intitulée "Le Chemin de la Confiance".</strong><br /> Un trophée pour valoriser l’engagement des entreprises dans la vie de leurs collaborateurs... <a class="btn-plus" href="#"><span class="txt-btn">Lire la suite</span><span class="container-icon-plus"><span class="icon-plus"></span></span></a></p></div>
-							<a href="#" class="btn-bloc btn-actu">
-								<span class="container-fond-btn-bloc">
-									<span class="fond-btn-bloc"></span>
-								</span>
-								<span class="txt-btn-bloc">Lire la suite</span>
-								<span class="btn-icon-plus"><span class="icon-plus"></span></span>
-							</a>
+						<div class="bloc-full bloc-penche article">
+							<div class="fond-bloc"></div>
+							<div class="bloc-content small-padding-top" id="bloc-actus">
+								<div class="date-categ-actu">Le <span class="date-actu">24 juin 2014</span> dans <span class="categ-actu succes">Succès</span></div>
+								<h2><a href="#">IMA Technologies reçoit le Trophée 1001 vies 2014 dans la catégorie Management</a></h2>
+								<div class="content-actu"><img src="img/trophee-des-1001-vies.png" alt="" /><p><strong>Jeudi 26 juin, IMATECH, expert de la relation client, s’est vu remettre le Trophée des 1001 Vies dans la catégorie «management» grâce à son approche managériale intitulée "Le Chemin de la Confiance".</strong><br /> Un trophée pour valoriser l’engagement des entreprises dans la vie de leurs collaborateurs... <a class="btn-plus" href="#"><span class="txt-btn">Lire la suite</span><span class="container-icon-plus"><span class="icon-plus"></span></span></a></p></div>
+								<a href="#" class="btn-bloc btn-actu">
+									<span class="container-fond-btn-bloc">
+										<span class="fond-btn-bloc"></span>
+									</span>
+									<span class="txt-btn-bloc">Lire la suite</span>
+									<span class="btn-icon-plus"><span class="icon-plus"></span></span>
+								</a>
+							</div>
 						</div>
-					</div>
-					<div class="bloc-full bloc-penche article">
-						<div class="fond-bloc"></div>
-						<div class="bloc-content small-padding-top" id="bloc-actus">
-							<div class="date-categ-actu">Le <span class="date-actu">22 avril 2014</span> dans <span class="categ-actu succes">Succès</span></div>
-							<h2><a href="#">IMA Technologies reçoit l'Argus d'Or de l'Assurance 2014 pour @lex</a></h2>
-							<div class="content-actu"><img src="img/trophee-des-1001-vies.png" alt="" /><p>Pour la 10ème édition des Argus de l'Assurance, IMA Technologies a remporté ce trophée dans la catégorie Innovation Assurances Dommages à destination du grand public. <a class="btn-plus" href="#"><span class="txt-btn">Lire la suite</span><span class="container-icon-plus"><span class="icon-plus"></span></span></a></p></div>
-							<a href="#" class="btn-bloc btn-actu">
-								<span class="container-fond-btn-bloc">
-									<span class="fond-btn-bloc"></span>
-								</span>
-								<span class="txt-btn-bloc">Lire la suite</span>
-								<span class="btn-icon-plus"><span class="icon-plus"></span></span>
-							</a>
+						<div class="bloc-full bloc-penche article">
+							<div class="fond-bloc"></div>
+							<div class="bloc-content small-padding-top" id="bloc-actus">
+								<div class="date-categ-actu">Le <span class="date-actu">22 avril 2014</span> dans <span class="categ-actu succes">Succès</span></div>
+								<h2><a href="#">IMA Technologies reçoit l'Argus d'Or de l'Assurance 2014 pour @lex</a></h2>
+								<div class="content-actu"><img src="img/trophee-des-1001-vies.png" alt="" /><p>Pour la 10ème édition des Argus de l'Assurance, IMA Technologies a remporté ce trophée dans la catégorie Innovation Assurances Dommages à destination du grand public. <a class="btn-plus" href="#"><span class="txt-btn">Lire la suite</span><span class="container-icon-plus"><span class="icon-plus"></span></span></a></p></div>
+								<a href="#" class="btn-bloc btn-actu">
+									<span class="container-fond-btn-bloc">
+										<span class="fond-btn-bloc"></span>
+									</span>
+									<span class="txt-btn-bloc">Lire la suite</span>
+									<span class="btn-icon-plus"><span class="icon-plus"></span></span>
+								</a>
+							</div>
 						</div>
 					</div>
 				</section>
