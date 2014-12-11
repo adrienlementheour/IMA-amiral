@@ -423,6 +423,25 @@ body.contact {
   -o-transition: margin-top 0.1s ease-in-out;
   transition: margin-top 0.1s ease-in-out;
 }
+.container-fond-bloc {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  transform: translateZ(0px);
+}
 .fond-bloc {
   display: block;
   width: 100%;
@@ -812,11 +831,11 @@ a.btn-postuler {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg) translateZ(20px);
+  -moz-transform: rotate(0deg) translateZ(20px);
+  -o-transform: rotate(0deg) translateZ(20px);
+  -ms-transform: rotate(0deg) translateZ(20px);
+  transform: rotate(0deg) translateZ(20px);
   position: absolute;
   top: 135px;
   right: -23px;
@@ -2265,11 +2284,11 @@ ul.breadcrumb li h1 {
   top: -20px;
   left: 50%;
   margin-left: -144px;
-  -webkit-transform: perspective(300px) rotateY(0deg) rotate(-4deg) skewX(0deg);
-  -moz-transform: perspective(300px) rotateY(0deg) rotate(-4deg) skewX(0deg);
-  -o-transform: perspective(300px) rotateY(0deg) rotate(-4deg) skewX(0deg);
-  -ms-transform: perspective(300px) rotateY(0deg) rotate(-4deg) skewX(0deg);
-  transform: perspective(300px) rotateY(0deg) rotate(-4deg) skewX(0deg);
+  -webkit-transform: perspective(300px) rotateY(0deg) rotate(-4deg) skewX(0deg) translateZ(20px);
+  -moz-transform: perspective(300px) rotateY(0deg) rotate(-4deg) skewX(0deg) translateZ(20px);
+  -o-transform: perspective(300px) rotateY(0deg) rotate(-4deg) skewX(0deg) translateZ(20px);
+  -ms-transform: perspective(300px) rotateY(0deg) rotate(-4deg) skewX(0deg) translateZ(20px);
+  transform: perspective(300px) rotateY(0deg) rotate(-4deg) skewX(0deg) translateZ(20px);
 }
 #bloc-interlocuteur .categ-bloc-interlocuteur .container-fond-categ-bloc-interlocuteur {
   display: block;
@@ -2366,6 +2385,11 @@ ul.breadcrumb li h1 {
   text-rendering: optimizeLegibility;
   color: #ffffff;
   position: relative;
+  -webkit-transform: translateZ(20px);
+  -moz-transform: translateZ(20px);
+  -o-transform: translateZ(20px);
+  -ms-transform: translateZ(20px);
+  transform: translateZ(20px);
 }
 #bloc-interlocuteur .container-fond-bloc-deform-interlocuteur {
   display: block;
@@ -2374,17 +2398,12 @@ ul.breadcrumb li h1 {
   height: 100%;
   top: 0;
   left: 0;
-  -webkit-transform: translateZ(0px);
-  -moz-transform: translateZ(0px);
-  -o-transform: translateZ(0px);
-  -ms-transform: translateZ(0px);
-  transform: translateZ(0px);
   z-index: 2;
-  -webkit-transform: perspective(300px) rotateX(-4deg) rotateY(3deg) rotate(-3deg) skewX(0deg);
-  -moz-transform: perspective(300px) rotateX(-4deg) rotateY(3deg) rotate(-3deg) skewX(0deg);
-  -o-transform: perspective(300px) rotateX(-4deg) rotateY(3deg) rotate(-3deg) skewX(0deg);
-  -ms-transform: perspective(300px) rotateX(-4deg) rotateY(3deg) rotate(-3deg) skewX(0deg);
-  transform: perspective(300px) rotateX(-4deg) rotateY(3deg) rotate(-3deg) skewX(0deg);
+  -webkit-transform: perspective(300px) rotateX(-4deg) rotateY(3deg) rotate(-3deg) skewX(0deg) translateZ(0px);
+  -moz-transform: perspective(300px) rotateX(-4deg) rotateY(3deg) rotate(-3deg) skewX(0deg) translateZ(0px);
+  -o-transform: perspective(300px) rotateX(-4deg) rotateY(3deg) rotate(-3deg) skewX(0deg) translateZ(0px);
+  -ms-transform: perspective(300px) rotateX(-4deg) rotateY(3deg) rotate(-3deg) skewX(0deg) translateZ(0px);
+  transform: perspective(300px) rotateX(-4deg) rotateY(3deg) rotate(-3deg) skewX(0deg) translateZ(0px);
 }
 #bloc-interlocuteur .container-fond-bloc-deform-interlocuteur .fond-bloc-deform-interlocuteur {
   display: block;
@@ -2418,11 +2437,11 @@ ul.breadcrumb li h1 {
   transition: -webkit-transform 0.15s ease-in-out,-moz-transform 0.15s ease-in-out,-o-transform 0.15s ease-in-out,transform 0.15s ease-in-out;
   display: inline-block;
   text-align: left;
-  -webkit-transform: perspective(300px) rotateY(0deg) rotate(-2deg) skewX(0deg);
-  -moz-transform: perspective(300px) rotateY(0deg) rotate(-2deg) skewX(0deg);
-  -o-transform: perspective(300px) rotateY(0deg) rotate(-2deg) skewX(0deg);
-  -ms-transform: perspective(300px) rotateY(0deg) rotate(-2deg) skewX(0deg);
-  transform: perspective(300px) rotateY(0deg) rotate(-2deg) skewX(0deg);
+  -webkit-transform: perspective(300px) rotateY(0deg) rotate(-2deg) skewX(0deg) translateZ(20px);
+  -moz-transform: perspective(300px) rotateY(0deg) rotate(-2deg) skewX(0deg) translateZ(20px);
+  -o-transform: perspective(300px) rotateY(0deg) rotate(-2deg) skewX(0deg) translateZ(20px);
+  -ms-transform: perspective(300px) rotateY(0deg) rotate(-2deg) skewX(0deg) translateZ(20px);
+  transform: perspective(300px) rotateY(0deg) rotate(-2deg) skewX(0deg) translateZ(20px);
 }
 #bloc-interlocuteur .txt-bloc-deform-interlocuteur strong {
   font-family: 'open_sansbold', sans-serif;
@@ -3108,11 +3127,11 @@ ul.details-annonce .container-fond-details-annonce {
   bottom: 0;
   right: -10px;
   left: -18px;
-  -webkit-transform: translateZ(1px);
-  -moz-transform: translateZ(1px);
-  -o-transform: translateZ(1px);
-  -ms-transform: translateZ(1px);
-  transform: translateZ(1px);
+  -webkit-transform: translateZ(10px);
+  -moz-transform: translateZ(10px);
+  -o-transform: translateZ(10px);
+  -ms-transform: translateZ(10px);
+  transform: translateZ(10px);
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
@@ -3156,11 +3175,11 @@ ul.details-annonce li {
   margin: 5px 20px 5px 0;
   padding: 0;
   position: relative;
-  -webkit-transform: translateZ(10px);
-  -moz-transform: translateZ(10px);
-  -o-transform: translateZ(10px);
-  -ms-transform: translateZ(10px);
-  transform: translateZ(10px);
+  -webkit-transform: translateZ(20px);
+  -moz-transform: translateZ(20px);
+  -o-transform: translateZ(20px);
+  -ms-transform: translateZ(20px);
+  transform: translateZ(20px);
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;
