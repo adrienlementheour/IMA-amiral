@@ -53,6 +53,7 @@ window.requestAnimFrame = (function(){
 
 function animer(){
 	requestAnimFrame(function(){
+		var scrollTop = $(window).scrollTop();
 		$("#div-test").css("top", $("body").scrollTop()+20);
 
 		jsPlumb.setSuspendDrawing(false);
@@ -86,6 +87,14 @@ function animer(){
 			}
 			if($("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category") || ($("body").hasClass("rh"))){
 				jsPlumb.repaint($(".wrapper-blocs .bloc-full"));
+			}
+		}
+
+		if($("body").hasClass("rh-detail")){
+			if((scrollTop>$("#bloc-actus").offset().top) && (scrollTop<($("#bloc-actus").offset().top+$("#bloc-actus").height()-50))){
+				TweenMax.set($("a.btn-postuler"), {position: "fixed", "right": "inherit", "left": ($("#bloc-actus").offset().left+$("#bloc-actus").width()-25)+"px"});
+			}else{
+				TweenMax.set($("a.btn-postuler"), {position: "absolute", "right": "-23px", "left": "inherit"});
 			}
 		}
 		animer();
