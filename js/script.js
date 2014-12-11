@@ -84,7 +84,7 @@ function animer(){
 					jsPlumb.repaint($("#bloc-adresse"), { left:Math.round($("#bloc-adresse").offset().left), top:Math.round($("#bloc-adresse").offset().top)});
 				}
 			}
-			if($("body").hasClass("actus")){
+			if($("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category")){
 				jsPlumb.repaint($(".wrapper-blocs .bloc-full"));
 			}
 		}
@@ -348,7 +348,7 @@ function categBlocCopies(){
 
 ////////////////////// Fonction pour pencher les bloc content en fonction de leur hauteur ////////////////////////
 function blocPenche(){
-	if (!$("html").hasClass("lt-ie9") && !$("body").hasClass("actus")) {
+	if (!$("html").hasClass("lt-ie9") && !$("body").hasClass("actus") && !$("body").hasClass("blog") || $("body").hasClass("category")) {
 		$(".bloc-penche").each(function(index){
 			var heightBlocPenche = $(this).height();
 			if(heightBlocPenche>300){
@@ -563,7 +563,7 @@ function btnCategoriesArticles(){
 				TweenMax.to($("a#btn-categories-articles .txt-btn-categories-articles .icon-arrow-right"), 0.15, {rotation: 0, ease:Cubic.easeInOut});
 			}else{
 				$("#categories-articles").slideToggle({duration: 300, step: function(){
-					if($("body").hasClass("actus")){
+					if( $("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category")){
 						jsPlumb.repaint($(".wrapper-blocs .bloc-full"));
 					}
 				}});
@@ -575,7 +575,7 @@ function btnCategoriesArticles(){
 				TweenMax.set($("#categories-articles"), {display:"none"});
 			}else{
 				$("#categories-articles").slideToggle({duration: 300, step: function(){
-					if($("body").hasClass("actus")){
+					if( $("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category") ){
 						jsPlumb.repaint($(".wrapper-blocs .bloc-full"));
 					}
 				}});
@@ -631,7 +631,7 @@ $(document).scroll(function() {
 			}
 		}
 	}
-	if($("body").hasClass("actus")){
+	if($("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category")){
 		/*TweenMax.set($(".bloc-full.article"),  {css:{marginTop: "80px"}});
 		jsPlumb.repaint($(".wrapper-blocs .bloc-full"));
 		clearTimeout( $.data( this, "scrollCheck" ) );
@@ -651,7 +651,7 @@ $( window ).resize(function() {
 	if($("body").hasClass("has-bloc-small")){
 		jsPlumb.repaint($(".bloc-small"));
 	}
-	if($("body").hasClass("actus")){
+	if($("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category")){
 		jsPlumb.repaint($(".wrapper-blocs .bloc-full"));
 	}
 	if($("body").hasClass("contact")){
@@ -834,7 +834,7 @@ jsPlumb.ready(function() {
 			});
 		}
 	}
-	if($("body").hasClass("actus")){
+	if( $("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category")){
 		var nbBlocActu = $(".wrapper-blocs .bloc-full").length;
 		$(".wrapper-blocs .bloc-full").each(function(index){
 			if (index<(nbBlocActu-1)) {
