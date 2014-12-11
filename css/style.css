@@ -231,7 +231,12 @@ body.contact {
   z-index: 1;
 }
 .actus .bloc-full .fond-bloc,
+<<<<<<< HEAD
 .rh .bloc-full .fond-bloc {
+=======
+.blog .bloc-full .fond-bloc,
+.category .bloc-full .fond-bloc {
+>>>>>>> FETCH_HEAD
   -webkit-transform: perspective(300px) rotateY(2deg) rotateX(0deg) rotate(0deg) skewX(0deg);
   -moz-transform: perspective(300px) rotateY(2deg) rotateX(0deg) rotate(0deg) skewX(0deg);
   -o-transform: perspective(300px) rotateY(2deg) rotateX(0deg) rotate(0deg) skewX(0deg);
@@ -239,7 +244,12 @@ body.contact {
   transform: perspective(300px) rotateY(2deg) rotateX(0deg) rotate(0deg) skewX(0deg);
 }
 .actus .bloc-full:nth-child(1) .fond-bloc,
+<<<<<<< HEAD
 .rh .bloc-full:nth-child(1) .fond-bloc {
+=======
+.blog .bloc-full:nth-child(1) .fond-bloc,
+.category .bloc-full:nth-child(1) .fond-bloc {
+>>>>>>> FETCH_HEAD
   -webkit-transform: perspective(300px) rotateY(-1deg) rotateX(0deg) rotate(0deg) skewX(0deg);
   -moz-transform: perspective(300px) rotateY(-1deg) rotateX(0deg) rotate(0deg) skewX(0deg);
   -o-transform: perspective(300px) rotateY(-1deg) rotateX(0deg) rotate(0deg) skewX(0deg);
@@ -247,7 +257,12 @@ body.contact {
   transform: perspective(300px) rotateY(-1deg) rotateX(0deg) rotate(0deg) skewX(0deg);
 }
 .actus .bloc-full:nth-child(2) .fond-bloc,
+<<<<<<< HEAD
 .rh .bloc-full:nth-child(2) .fond-bloc {
+=======
+.blog .bloc-full:nth-child(2) .fond-bloc,
+.category .bloc-full:nth-child(2) .fond-bloc {
+>>>>>>> FETCH_HEAD
   -webkit-transform: perspective(300px) rotateY(2deg) rotateX(0deg) rotate(0deg) skewX(0deg);
   -moz-transform: perspective(300px) rotateY(2deg) rotateX(0deg) rotate(0deg) skewX(0deg);
   -o-transform: perspective(300px) rotateY(2deg) rotateX(0deg) rotate(0deg) skewX(0deg);
@@ -255,7 +270,12 @@ body.contact {
   transform: perspective(300px) rotateY(2deg) rotateX(0deg) rotate(0deg) skewX(0deg);
 }
 .actus .bloc-full:nth-child(3) .fond-bloc,
+<<<<<<< HEAD
 .rh .bloc-full:nth-child(3) .fond-bloc {
+=======
+.blog .bloc-full:nth-child(3) .fond-bloc,
+.category .bloc-full:nth-child(3) .fond-bloc {
+>>>>>>> FETCH_HEAD
   -webkit-transform: perspective(300px) rotateY(-2deg) rotateX(0deg) rotate(0deg) skewY(1deg);
   -moz-transform: perspective(300px) rotateY(-2deg) rotateX(0deg) rotate(0deg) skewY(1deg);
   -o-transform: perspective(300px) rotateY(-2deg) rotateX(0deg) rotate(0deg) skewY(1deg);
@@ -263,7 +283,12 @@ body.contact {
   transform: perspective(300px) rotateY(-2deg) rotateX(0deg) rotate(0deg) skewY(1deg);
 }
 .actus .bloc-full:nth-child(4) .fond-bloc,
+<<<<<<< HEAD
 .rh .bloc-full:nth-child(4) .fond-bloc {
+=======
+.blog .bloc-full:nth-child(4) .fond-bloc,
+.category .bloc-full:nth-child(4) .fond-bloc {
+>>>>>>> FETCH_HEAD
   -webkit-transform: perspective(300px) rotateY(1deg) rotateX(1deg) rotate(0deg) skewY(1deg);
   -moz-transform: perspective(300px) rotateY(1deg) rotateX(1deg) rotate(0deg) skewY(1deg);
   -o-transform: perspective(300px) rotateY(1deg) rotateX(1deg) rotate(0deg) skewY(1deg);
@@ -271,7 +296,12 @@ body.contact {
   transform: perspective(300px) rotateY(1deg) rotateX(1deg) rotate(0deg) skewY(1deg);
 }
 .actus .bloc-full:nth-child(5) .fond-bloc,
+<<<<<<< HEAD
 .rh .bloc-full:nth-child(5) .fond-bloc {
+=======
+.blog .bloc-full:nth-child(5) .fond-bloc,
+.category .bloc-full:nth-child(5) .fond-bloc {
+>>>>>>> FETCH_HEAD
   -webkit-transform: perspective(300px) rotateY(2deg) rotateX(0deg) rotate(0deg) skewX(1deg);
   -moz-transform: perspective(300px) rotateY(2deg) rotateX(0deg) rotate(0deg) skewX(1deg);
   -o-transform: perspective(300px) rotateY(2deg) rotateX(0deg) rotate(0deg) skewX(1deg);
@@ -279,7 +309,12 @@ body.contact {
   transform: perspective(300px) rotateY(2deg) rotateX(0deg) rotate(0deg) skewX(1deg);
 }
 .actus .bloc-full:nth-child(6) .fond-bloc,
+<<<<<<< HEAD
 .rh .bloc-full:nth-child(6) .fond-bloc {
+=======
+.blog .bloc-full:nth-child(6) .fond-bloc,
+.category .bloc-full:nth-child(6) .fond-bloc {
+>>>>>>> FETCH_HEAD
   -webkit-transform: perspective(300px) rotateY(0deg) rotateX(-2deg) rotate(0deg) skewY(0deg);
   -moz-transform: perspective(300px) rotateY(0deg) rotateX(-2deg) rotate(0deg) skewY(0deg);
   -o-transform: perspective(300px) rotateY(0deg) rotateX(-2deg) rotate(0deg) skewY(0deg);
@@ -287,7 +322,12 @@ body.contact {
   transform: perspective(300px) rotateY(0deg) rotateX(-2deg) rotate(0deg) skewY(0deg);
 }
 .actus .bloc-full:nth-child(7) .fond-bloc,
+<<<<<<< HEAD
 .rh .bloc-full:nth-child(7) .fond-bloc {
+=======
+.blog .bloc-full:nth-child(7) .fond-bloc,
+.category .bloc-full:nth-child(7) .fond-bloc {
+>>>>>>> FETCH_HEAD
   -webkit-transform: perspective(300px) rotateY(-2deg) rotateX(0deg) rotate(0deg) skewY(-1deg);
   -moz-transform: perspective(300px) rotateY(-2deg) rotateX(0deg) rotate(0deg) skewY(-1deg);
   -o-transform: perspective(300px) rotateY(-2deg) rotateX(0deg) rotate(0deg) skewY(-1deg);
@@ -295,7 +335,12 @@ body.contact {
   transform: perspective(300px) rotateY(-2deg) rotateX(0deg) rotate(0deg) skewY(-1deg);
 }
 .actus .bloc-full:nth-child(8) .fond-bloc,
+<<<<<<< HEAD
 .rh .bloc-full:nth-child(8) .fond-bloc {
+=======
+.blog .bloc-full:nth-child(8) .fond-bloc,
+.category .bloc-full:nth-child(8) .fond-bloc {
+>>>>>>> FETCH_HEAD
   -webkit-transform: perspective(300px) rotateY(1deg) rotateX(1deg) rotate(0deg) skewY(1deg);
   -moz-transform: perspective(300px) rotateY(1deg) rotateX(1deg) rotate(0deg) skewY(1deg);
   -o-transform: perspective(300px) rotateY(1deg) rotateX(1deg) rotate(0deg) skewY(1deg);
@@ -303,7 +348,12 @@ body.contact {
   transform: perspective(300px) rotateY(1deg) rotateX(1deg) rotate(0deg) skewY(1deg);
 }
 .actus .bloc-full:nth-child(9) .fond-bloc,
+<<<<<<< HEAD
 .rh .bloc-full:nth-child(9) .fond-bloc {
+=======
+.blog .bloc-full:nth-child(9) .fond-bloc,
+.category .bloc-full:nth-child(9) .fond-bloc {
+>>>>>>> FETCH_HEAD
   -webkit-transform: perspective(300px) rotateY(0deg) rotateX(2deg) rotate(0deg) skewY(1deg);
   -moz-transform: perspective(300px) rotateY(0deg) rotateX(2deg) rotate(0deg) skewY(1deg);
   -o-transform: perspective(300px) rotateY(0deg) rotateX(2deg) rotate(0deg) skewY(1deg);
@@ -311,7 +361,12 @@ body.contact {
   transform: perspective(300px) rotateY(0deg) rotateX(2deg) rotate(0deg) skewY(1deg);
 }
 .actus .bloc-full:nth-child(10) .fond-bloc,
+<<<<<<< HEAD
 .rh .bloc-full:nth-child(10) .fond-bloc {
+=======
+.blog .bloc-full:nth-child(10) .fond-bloc,
+.category .bloc-full:nth-child(10) .fond-bloc {
+>>>>>>> FETCH_HEAD
   -webkit-transform: perspective(300px) rotateY(0deg) rotateX(-2deg) rotate(0deg) skewY(0deg);
   -moz-transform: perspective(300px) rotateY(0deg) rotateX(-2deg) rotate(0deg) skewY(0deg);
   -o-transform: perspective(300px) rotateY(0deg) rotateX(-2deg) rotate(0deg) skewY(0deg);
