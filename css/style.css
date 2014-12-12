@@ -2659,6 +2659,9 @@ form {
   width: 100%;
   height: auto;
 }
+.rh form {
+  margin: 0 0 20px 0;
+}
 form fieldset {
   margin: 0 0 10px 0;
 }
@@ -2670,6 +2673,9 @@ form fieldset.error input[type="tel"] {
 form fieldset.error textarea {
   border: 2px solid #e2001a;
 }
+form fieldset.error .zone-fichier {
+  border: 2px solid #e2001a;
+}
 form fieldset.form-gauche,
 form fieldset.form-droite {
   display: inline-block;
@@ -2679,11 +2685,43 @@ form fieldset.form-droite {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+form fieldset.form-inline {
+  display: inline-block;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+form fieldset.form-inline.form-inline-gauche {
+  margin: 0 20px 10px 0;
+}
 form fieldset.form-gauche {
   padding: 0 25px 0 0;
 }
 form fieldset.form-droite {
   padding: 0 0 0 25px;
+}
+form .zone-fichier {
+  display: inline-block;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #DCDCDC;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+  padding: 8px;
+  font-family: 'open_sansregular', sans-serif;
+  font-weight: normal;
+  font-size: 0.875em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #696969;
 }
 form label {
   font-family: 'open_sansregular', sans-serif;
@@ -2744,6 +2782,26 @@ form input[type="tel"]:focus {
   outline: none;
   border-color: #547a9f;
 }
+form input[type="text"].taille1,
+form input[type="email"].taille1,
+form input[type="tel"].taille1 {
+  width: 100px;
+}
+form input[type="text"].taille2,
+form input[type="email"].taille2,
+form input[type="tel"].taille2 {
+  width: 130px;
+}
+form input[type="text"].taille3,
+form input[type="email"].taille3,
+form input[type="tel"].taille3 {
+  width: 230px;
+}
+form input[type="text"].taille4,
+form input[type="email"].taille4,
+form input[type="tel"].taille4 {
+  width: 350px;
+}
 form textarea {
   display: block;
   width: 100%;
@@ -2786,6 +2844,9 @@ form button.btn-form {
   appearance: none;
   background: none;
   border: none;
+}
+.rh form button.btn-form {
+  margin: 10px 0 0 0;
 }
 form button.btn-form .container-fond-btn-form {
   display: block;
@@ -2893,6 +2954,9 @@ form button.btn-form:disabled:hover .txt-btn-form {
   border-radius: 10px;
   background-clip: padding-box;
 }
+.rh .bloc-message {
+  bottom: 38px;
+}
 .bloc-message:before {
   content: "";
   display: block;
@@ -2930,6 +2994,26 @@ form button.btn-form:disabled:hover .txt-btn-form {
 }
 .bloc-message.recu p span {
   color: #5a8a33;
+}
+.rh .bloc-message.recu {
+  position: relative;
+  width: 100%;
+  height: auto;
+  right: inherit;
+  left: inherit;
+  bottom: inherit;
+  top: inherit;
+  padding: 20px;
+  margin: 150px 0;
+  font-family: 'open_sansregular', sans-serif;
+  font-weight: normal;
+  font-size: 1.143em;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.rh .bloc-message.recu:before {
+  display: none;
 }
 .bloc-message.erreur {
   border: 2px solid #e2001a;
@@ -6828,9 +6912,24 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   /* @end */
   /* @group Formulaire */
   form fieldset.form-gauche,
-  form fieldset.form-droite {
+  form fieldset.form-droite,
+  form fieldset.form-inline {
     width: 100%;
     padding: 0;
+  }
+  form input[type="text"].taille1,
+  form input[type="email"].taille1,
+  form input[type="tel"].taille1,
+  form input[type="text"].taille2,
+  form input[type="email"].taille2,
+  form input[type="tel"].taille2,
+  form input[type="text"].taille3,
+  form input[type="email"].taille3,
+  form input[type="tel"].taille3,
+  form input[type="text"].taille4,
+  form input[type="email"].taille4,
+  form input[type="tel"].taille4 {
+    width: 100%;
   }
   .bloc-message {
     position: relative;
@@ -6838,6 +6937,9 @@ a.bloc-small.bloc-7:hover .raccord-categ {
     right: inherit;
     left: inherit;
     margin: 35px 0 0 0;
+  }
+  .rh .bloc-message {
+    bottom: inherit;
   }
   .bloc-message:before {
     top: -23px;

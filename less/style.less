@@ -2142,6 +2142,9 @@ form{
 	display: block;
 	width: 100%;
 	height: auto;
+	.rh &{
+		margin: 0 0 20px 0;
+	}
 	fieldset{
 		margin: 0 0 10px 0;
 		&.error{
@@ -2151,6 +2154,9 @@ form{
 			textarea{
 				border: 2px solid @rougeForm;
 			}
+			.zone-fichier{
+				border: 2px solid @rougeForm;
+			}
 		}
 		&.form-gauche, &.form-droite{
 			display: inline-block;
@@ -2158,12 +2164,30 @@ form{
 			width: 50%;
 			.box-sizing(border-box);
 		}
+		&.form-inline{
+			display: inline-block;
+			vertical-align: top;
+			.box-sizing(border-box);
+			&.form-inline-gauche{
+				margin: 0 20px 10px 0;
+			}
+		}
 		&.form-gauche{
 			padding: 0 25px 0 0;
 		}
 		&.form-droite{
 			padding: 0 0 0 25px;
 		}
+	}
+	.zone-fichier{
+		display: inline-block;
+		vertical-align: top;
+		.box-sizing(border-box);
+		border: 1px solid #DCDCDC;
+		.border-radius(4px);
+		padding: 8px;
+		.opensans(0.875em);
+		color: #696969;
 	}
 	label{
 		display: block;
@@ -2192,6 +2216,18 @@ form{
 			outline: none;
 			border-color: #547a9f;
 		}
+		&.taille1{
+			width: 100px;
+		}
+		&.taille2{
+			width: 130px;
+		}
+		&.taille3{
+			width: 230px;
+		}
+		&.taille4{
+			width: 350px;
+		}
 	}
 	textarea{
 		display: block;
@@ -2219,6 +2255,9 @@ form{
 		.appearance(none);
 		background: none;
 		border: none;
+		.rh &{
+			margin: 10px 0 0 0;
+		}
 		.container-fond-btn-form{
 			display: block;
 			width: 100%;
@@ -2291,6 +2330,9 @@ form{
 	left: 214px;
 	padding: 10px 20px;
 	.border-radius(10px);
+	.rh &{
+		bottom: 38px;
+	}
 	&:before{
 		content: "";
 		display: block;
@@ -2318,6 +2360,21 @@ form{
 			span{
 				color: @vertForm;
 			}
+		}
+		.rh &{
+			position: relative;
+			width: 100%;
+			height: auto;
+			right: inherit;
+			left: inherit;
+			bottom: inherit;
+			top: inherit;
+			padding: 20px;
+			margin: 150px 0;
+			&:before{
+				display: none;
+			}
+			.opensans(1.143em);
 		}
 	}
 	&.erreur{
@@ -5302,9 +5359,14 @@ a.bloc-small{
 	
 	form{
 		fieldset{
-			&.form-gauche, &.form-droite{
+			&.form-gauche, &.form-droite, &.form-inline{
 				width: 100%;
 				padding: 0;
+			}
+		}
+		input[type="text"], input[type="email"], input[type="tel"]{
+			&.taille1, &.taille2, &.taille3, &.taille4{
+				width: 100%;
 			}
 		}
 	}
@@ -5315,6 +5377,9 @@ a.bloc-small{
 		right: inherit;
 		left: inherit;
 		margin: 35px 0 0 0;
+		.rh &{
+			bottom: inherit;
+		}
 		&:before{
 			top: -23px;
 			margin-top: 0;
