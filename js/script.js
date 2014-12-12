@@ -601,6 +601,34 @@ function btnCategoriesArticles(){
 	});
 }
 
+////////////////////// Fonction pour ajouter les lignes pointillées dans les pages de liste ////////////////////////
+function refreshLink(){
+	if( $("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category") || ($("body").hasClass("rh"))){
+		var nbBlocActu = $(".wrapper-blocs .bloc-full").length;
+		$(".wrapper-blocs .bloc-full").each(function(index){
+			if (index<(nbBlocActu-1)) {
+				jsPlumb.setContainer($("#wrapper-content"));
+				jsPlumb.connect({
+					source: $(this),
+					target: $(this).nextAll(".wrapper-blocs .bloc-full").eq(0),
+					anchors: [[0.5, 0.9, 0, 0], [0.5, 0.1, 0, 0]],
+					endpoint:"Blank",
+					paintStyle:{
+					lineWidth:2,
+					strokeStyle:'#cacaca',
+					dashstyle:" 0 1"
+					},
+					connector:[ "Bezier", { curviness: 50 }]
+				});
+			}
+		});
+	}
+}
+
+function loader(){
+	TweenMax.to($('#infscr-loading').find('img'), 3, { rotation:360, repeat:-1, ease:Quad.easeInOut } );
+}
+
 $(document).ready(function(){
 	animer();
 	if ($(window).width()>1024){
@@ -656,6 +684,9 @@ $(document).scroll(function() {
 		setTimeout(function() {
 		      jsPlumb.repaint($(".wrapper-blocs .bloc-full"));
 		}, 500);*/
+	}
+	if( $("body").hasClass("blog") || $("body").hasClass("category")){
+		loader();	
 	}
 });
 
@@ -848,24 +879,6 @@ jsPlumb.ready(function() {
 			});
 		}
 	}
-	if( $("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category") || ($("body").hasClass("rh"))){
-		var nbBlocActu = $(".wrapper-blocs .bloc-full").length;
-		$(".wrapper-blocs .bloc-full").each(function(index){
-			if (index<(nbBlocActu-1)) {
-				jsPlumb.setContainer($("#wrapper-content"));
-				jsPlumb.connect({
-					source: $(this),
-					target: $(this).nextAll(".wrapper-blocs .bloc-full").eq(0),
-					anchors: [[0.5, 0.9, 0, 0], [0.5, 0.1, 0, 0]],
-					endpoint:"Blank",
-					paintStyle:{
-					lineWidth:2,
-					strokeStyle:'#cacaca',
-					dashstyle:" 0 1"
-					},
-					connector:[ "Bezier", { curviness: 50 }]
-				});
-			}
-		});
-	}
+
+	refreshLink();
 });
