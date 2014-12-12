@@ -58,7 +58,7 @@ function animer(){
 
 		jsPlumb.setSuspendDrawing(false);
 		if($("body").hasClass("has-bloc-small")){
-			jsPlumb.repaint($(".bloc-small").first());
+			jsPlumb.repaint($(".bloc-small"));
 			jsPlumb.repaint($("#bloc-actus"));
 		}
 
@@ -220,6 +220,7 @@ function hoverMenu(){
 // Clic sur le bouton video
 function btnVideoClick(){
 	$("a.btn-video").click(function(){
+		$(window).scrollTop(0);
 		$("body").addClass("video-ouverte");
 		// décaler le wrapper content
 		TweenMax.set($("footer"), {display: "none"});
