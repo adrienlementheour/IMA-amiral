@@ -526,10 +526,7 @@ function ordreBlocSmall(){
 }
 
 function btnInterlocuteur(){
-	$(".btn-interlocuteur").click(function(){
-		
-		return false;
-	});
+	$(".btn-interlocuteur").click(function(){ return false; });
 }
 
 ////////////////////// Fonction pour changer de video / calameo / image ////////////////////////
@@ -622,7 +619,8 @@ function refreshLink(){
 }
 
 function loader(){
-	TweenMax.to($('#infscr-loading').find('img'), 3, { rotation:360, repeat:-1, ease:Quad.easeInOut } );
+	TweenMax.to($('#infscr-loading').find('img'), 0.5, { rotation:360, repeat:-1, ease:Quad.easeInOut } );
+	setTimeout(loader, 500);
 }
 
 $(document).ready(function(){
@@ -657,6 +655,10 @@ $(document).ready(function(){
 		btnRetourVideoClick();
 		btnPlusVideos();
 	}
+
+	if( $("body").hasClass("blog") || $("body").hasClass("category")){
+		loader();	
+	}
 });
 
 $(document).scroll(function() {
@@ -680,9 +682,6 @@ $(document).scroll(function() {
 		setTimeout(function() {
 		      jsPlumb.repaint($(".wrapper-blocs .bloc-full"));
 		}, 500);*/
-	}
-	if( $("body").hasClass("blog") || $("body").hasClass("category")){
-		loader();	
 	}
 });
 
