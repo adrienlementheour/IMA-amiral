@@ -58,7 +58,10 @@ function animer(){
 
 		jsPlumb.setSuspendDrawing(false);
 		if($("body").hasClass("has-bloc-small")){
-			jsPlumb.repaint($(".bloc-small"));
+			//jsPlumb.repaint($(".bloc-small"));
+			$(".bloc-small").each(function(index){
+				jsPlumb.repaint($(this), { left:Math.round($(this).offset().left), top:Math.round($(this).offset().top)});
+			});
 			jsPlumb.repaint($("#bloc-actus"));
 		}
 
@@ -532,6 +535,7 @@ function btnInterlocuteur(){
 ////////////////////// Fonction pour changer de video / calameo / image ////////////////////////
 function autresVideos(){
 	$("ul#autres-videos li a").click(function(){
+		$(window).scrollTop(0);
 		$("ul#autres-videos li.active").removeClass("active");
 		$(this).parent().addClass("active");
 		if($(this).parent().hasClass("has-video")){
@@ -775,7 +779,7 @@ $( window ).resize(function() {
 //[x, y, dx, dy]
 //x and yare coordinates in the interval [0,1] specifying the position of the anchor
 //dx and dy,which specify the orientation of the curve incident to the anchor
-var anchors = [ [[1, 0.6, 0.5, 0.8], [0.1, 0.8, 0, 0.5]],      [[1, 0.3, 0, -0.8], [0, 0.9, 0.2, -0.7]],      [[0.51, 1, 0, 1], [0.7, 0, 0, 1]],     [[0, 0.2, 0, 0.5], [0.5, 0, 0, -1.5]],     [[1, 0.6, 0, 1], [0, 0.9, 0, 1]]];
+var anchors = [ [[1, 0.6, 0.5, 0.8], [0.1, 0.8, 0, 0.5]],      [[1, 0.3, 0, -0.8], [0, 0.7, 0.2, -0.7]],      [[0.51, 1, 0, 1], [0.7, 0, 0, 1]],     [[0, 0.2, 0, 0.5], [0.5, 0, 0, -1.5]],     [[1, 0.6, 0, 1], [0, 0.9, 0, 1]]];
 
 jsPlumb.ready(function() {
 	isSafari();
