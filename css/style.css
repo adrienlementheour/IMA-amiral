@@ -3049,6 +3049,7 @@ form button.btn-form:disabled:hover .txt-btn-form {
 /* @group Actualités / RH */
 .wrapper-blocs {
   display: block;
+  position: relative;
   margin-top: -90px;
 }
 .lt-ie9 .wrapper-blocs {

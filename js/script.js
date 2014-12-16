@@ -61,7 +61,7 @@ function animer(){
 			/*$(".bloc-small").each(function(index){
 				jsPlumb.repaint($(this), { left:Math.round($(this).offset().left), top:Math.round($(this).offset().top)});
 			});*/
-			jsPlumb.repaint($("#bloc-actus"));
+			//jsPlumb.repaint($("#bloc-actus"));
 		}
 
 		if($("body").hasClass("has-video")){
@@ -664,6 +664,8 @@ $(document).ready(function(){
 	var anchors = [ [[1, 0.6, 0.5, 0.8], [0.1, 0.8, 0, 0.5]],      [[1, 0.3, 0, -0.8], [0, 0.7, 0.2, -0.7]],      [[0.51, 1, 0, 1], [0.7, 0, 0, 1]],     [[0, 0.2, 0, 0.5], [0.5, 0, 0, -1.5]],     [[1, 0.6, 0, 1], [0, 0.9, 0, 1]]];
 	var jsPlumbBlocSmall = jsPlumb.getInstance();
 	jsPlumbBlocSmall.setContainer($("#zone-blocs-accueil"));
+	var jsPlumbFirstBloc = jsPlumb.getInstance();
+	jsPlumbFirstBloc.setContainer($(".wrapper-blocs"));
 	jsPlumb.ready(function() {
 		isSafari();
 		if($("body").hasClass("has-bloc-small")){
@@ -686,12 +688,11 @@ $(document).ready(function(){
 				}
 			});
 			// Relier le bloc actu avec le premier bloc small (RSE)
-			var jsPlumbFirstBloc = jsPlumb.getInstance();
-			jsPlumb.setContainer($("#wrapper-content"));
-			jsPlumb.connect({
+			
+			jsPlumbFirstBloc.connect({
 				source: $("#bloc-actus"),
 				target: $(".bloc-small").first(),
-				anchors: [[0.2, 1, -1, 0], [0.4, 0, 0, 0]],
+				anchors: [[0.2, 1, -1, 0], [0.4, 0.1, 0, 0]],
 				endpoint:"Blank",
 				paintStyle:{
 				lineWidth:2,
@@ -769,6 +770,7 @@ $(document).ready(function(){
 		initSitemapMobile();
 		if($("body").hasClass("has-bloc-small")){
 			jsPlumbBlocSmall.repaint($(".bloc-small"));
+			jsPlumbFirstBloc.repaint($("#bloc-actus"));
 		}
 		if($("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category") || ($("body").hasClass("rh"))){
 			jsPlumb.repaint($(".wrapper-blocs .bloc-full"));
