@@ -658,7 +658,6 @@ $(document).ready(function(){
 		btnRetourVideoClick();
 		btnPlusVideos();
 	}
-<<<<<<< HEAD
 	//[x, y, dx, dy]
 	//x and yare coordinates in the interval [0,1] specifying the position of the anchor
 	//dx and dy,which specify the orientation of the curve incident to the anchor
@@ -689,53 +688,6 @@ $(document).ready(function(){
 			// Relier le bloc actu avec le premier bloc small (RSE)
 			var jsPlumbFirstBloc = jsPlumb.getInstance();
 			jsPlumb.setContainer($("#wrapper-content"));
-=======
-
-	if( $("body").hasClass("blog") || $("body").hasClass("category")){
-		loader();	
-	}
-});
-
-$(document).scroll(function() {
-	if($("body").hasClass("has-video")){
-		//bloc-btn-video
-		if ($(window).width()>=1250) {
-			jsPlumb.repaint($(".bloc-btn-video"), { left:$(".bloc-btn-video").offset().left, top:($(".bloc-btn-video").offset().top)});
-			if(!$("body").hasClass("accueil")){
-				jsPlumb.repaint($("#bloc-actus"));
-			}
-		}
-	}
-	if($("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category")){
-		/*TweenMax.set($(".bloc-full.article"),  {css:{marginTop: "80px"}});
-		jsPlumb.repaint($(".wrapper-blocs .bloc-full"));
-		clearTimeout( $.data( this, "scrollCheck" ) );
-		$.data( this, "scrollCheck", setTimeout(function() {
-			TweenMax.set($(".bloc-full.article"), {css:{marginTop: "60px"}});
-			jsPlumb.repaint($(".wrapper-blocs .bloc-full"));
-		}, 250) );
-		setTimeout(function() {
-		      jsPlumb.repaint($(".wrapper-blocs .bloc-full"));
-		}, 500);*/
-	}
-});
-
-$( window ).resize(function() {
-	//jsPlumb.setSuspendDrawing(false, true);
-	initSitemapMobile();
-	if($("body").hasClass("has-bloc-small")){
-		jsPlumb.repaint($(".bloc-small"));
-	}
-	if($("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category") || ($("body").hasClass("rh"))){
-		jsPlumb.repaint($(".wrapper-blocs .bloc-full"));
-	}
-	if($("body").hasClass("contact")){
-		if ($(window).width()>=979) {
-			// Relier le contact avec le pin
-			jsPlumb.detachAllConnections($("#bloc-adresse"));
-			jsPlumb.detachAllConnections($("#pin-map"));
-			jsPlumb.setContainer($("#container-bg-map"));
->>>>>>> FETCH_HEAD
 			jsPlumb.connect({
 				source: $("#bloc-actus"),
 				target: $(".bloc-small").first(),
