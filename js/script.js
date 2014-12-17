@@ -495,31 +495,6 @@ function svgFallback(){
 	}
 }
 
-////////////////////// Fonction pour deployer / retracter le contenu au clic du bouton "Lire la suite" ////////////////////////
-function clicLireLaSuite(){
-	$("#zone-actus a.btn-bloc").click(function(){
-		if(!$(this).hasClass("btn-actu")){
-			if(!$(this).hasClass("open")){
-				$(this).addClass("open");
-				TweenMax.to($(this).closest(".bloc-penche"), 0.3, {rotation: 0});
-			}else{
-				$(this).removeClass("open");
-			}
-			$(".suite-bloc").slideToggle(300, function(){
-				var heightBlocPenche = $(this).closest(".bloc-penche").height();
-				if(heightBlocPenche>300){
-					TweenMax.to($(this).closest(".bloc-penche"), 0.2, {rotation: 0});
-				}else if (heightBlocPenche>200){
-					TweenMax.to($(this).closest(".bloc-penche"), 0.2, {rotation: -3, x:0, y:0, z:0});
-				}else{
-					TweenMax.to($(this).closest(".bloc-penche"), 0.2, {rotation: -4, x:0, y:0, z:0});
-				}
-			});
-			return false;
-		}
-	});
-}
-
 ////////////////////// Fonction pour remplacer les nth-child par des classes (ie8 fixing) ////////////////////////
 function ordreBlocSmall(){
 	$(".bloc-small").each(function(index){
@@ -627,6 +602,16 @@ function loader(){
 }
 
 $(document).ready(function(){
+	//[x, y, dx, dy]
+	//x and yare coordinates in the interval [0,1] specifying the position of the anchor
+	//dx and dy,which specify the orientation of the curve incident to the anchor
+	var anchors = [ [[1, 0.6, 0.5, 0.8], [0.1, 0.8, 0, 0.5]],      [[1, 0.4, 0, 1], [0.1, 0.7, 0.2, 0]],      [[0.51, 1, 0, 1], [0.7, 0, 0, 1]],     [[0, 0.2, 0, 0.5], [0.5, 0, 0, -1.5]],     [[1, 0.6, 0, 1], [0, 0.9, 0, 1]]];
+	var jsPlumbBlocSmall = jsPlumb.getInstance();
+	jsPlumbBlocSmall.setContainer($("#zone-blocs-accueil"));
+	var jsPlumbFirstBloc = jsPlumb.getInstance();
+	jsPlumbFirstBloc.setContainer($(".wrapper-blocs"));
+
+
 	animer();
 	if ($(window).width()>1024){
 		setTimeout(function() {
@@ -658,14 +643,7 @@ $(document).ready(function(){
 		btnRetourVideoClick();
 		btnPlusVideos();
 	}
-	//[x, y, dx, dy]
-	//x and yare coordinates in the interval [0,1] specifying the position of the anchor
-	//dx and dy,which specify the orientation of the curve incident to the anchor
-	var anchors = [ [[1, 0.6, 0.5, 0.8], [0.1, 0.8, 0, 0.5]],      [[1, 0.4, 0, 1], [0.1, 0.7, 0.2, 0]],      [[0.51, 1, 0, 1], [0.7, 0, 0, 1]],     [[0, 0.2, 0, 0.5], [0.5, 0, 0, -1.5]],     [[1, 0.6, 0, 1], [0, 0.9, 0, 1]]];
-	var jsPlumbBlocSmall = jsPlumb.getInstance();
-	jsPlumbBlocSmall.setContainer($("#zone-blocs-accueil"));
-	var jsPlumbFirstBloc = jsPlumb.getInstance();
-	jsPlumbFirstBloc.setContainer($(".wrapper-blocs"));
+	
 	jsPlumb.ready(function() {
 		isSafari();
 		if($("body").hasClass("has-bloc-small")){
@@ -879,4 +857,36 @@ $(document).ready(function(){
 			loader();	
 		}
 	});
+
+	////////////////////// Fonction pour deployer / retracter le contenu au clic du bouton "Lire la suite" ////////////////////////
+	function clicLireLaSuite(){
+		$("#zone-actus a.btn-bloc").click(function(){
+			if(!$(this).hasClass("btn-actu")){
+				if(!$(this).hasClass("open")){
+					$(this).addClass("open");
+					TweenMax.to($(this).closest(".bloc-penche"), 0.3, {rotation: 0});
+				}else{
+					$(this).removeClass("open");
+				}
+				$(".suite-bloc").slideToggle({
+					duration: 300, 
+					step: function(){
+						jsPlumbFirstBloc.repaint($("#bloc-actus"));
+						jsPlumbFirstBloc.repaint($(".bloc-small").first());
+					},
+					complete: function(){
+						var heightBlocPenche = $(this).closest(".bloc-penche").height();
+						if(heightBlocPenche>300){
+							TweenMax.to($(this).closest(".bloc-penche"), 0.2, {rotation: 0});
+						}else if (heightBlocPenche>200){
+							TweenMax.to($(this).closest(".bloc-penche"), 0.2, {rotation: -3, x:0, y:0, z:0});
+						}else{
+							TweenMax.to($(this).closest(".bloc-penche"), 0.2, {rotation: -4, x:0, y:0, z:0});
+						}
+					}
+				});
+				return false;
+			}
+		});
+	}
 });
