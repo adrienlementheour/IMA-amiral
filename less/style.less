@@ -1072,8 +1072,8 @@ header{
 		.dearJoe(1.4em);
 		color: @bleuIMA;
 		position: absolute;
-		top: 260px;
-		left: 60px;
+		top: 265px;
+		left: 70px;
 		z-index: 1;
 		.opacity(0);
 		display: none;
@@ -4172,7 +4172,7 @@ a.bloc-small{
 	left: 0;
 	z-index: 2;
 	padding: 27px 0 0 27px;
-	margin: 0 0 0 -154px;
+	margin: 0 0 0 0;
 	a#menu-responsive{
 		.box-shadow(none);
 		.svg-hamburger{
@@ -4180,12 +4180,14 @@ a.bloc-small{
 			vertical-align: top;
 			padding: 1px 0 0 0;
 			margin: 0 8px 0 0;
+			width: 23px;
+			height: 20px;
 			#hamburger{
 				fill: @bleuIMA;
 			}
 		}
 		.svg-logo-ima{
-			display: inline-block;
+			display: none;
 			vertical-align: top;
 			width: 97px;
 			height: 15px;
@@ -5206,6 +5208,14 @@ form#search-sitemap{
 	.container{
 		width: 90%;
 	}
+	#bloc-menu-responsive{
+		padding: 27px 0 0 0;
+	}
+	header{
+		#label-menu{
+			left: 30px;
+		}
+	}
 }
 
 @media (max-width: 1150px) {
@@ -5220,6 +5230,11 @@ form#search-sitemap{
 	.bloc-full{
 		width: 100%;
 		max-width: 620px;
+	}
+	header{
+		#label-menu{
+			left: 110px;
+		}
 	}
 	#visu-content{
 		position: fixed;
@@ -5299,6 +5314,15 @@ form#search-sitemap{
 	}
 	#bloc-menu-responsive{
 		margin-left: 0;
+		a#menu-responsive{
+			.svg-hamburger{
+				width: 18px;
+				height: 14px;
+			}
+			.svg-logo-ima{
+				display: inline-block;
+			}
+		}
 	}
 	.wrapper-blocs{
 		margin-top: 0;

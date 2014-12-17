@@ -1128,8 +1128,8 @@ header #label-menu {
   text-rendering: optimizeLegibility;
   color: #0f589f;
   position: absolute;
-  top: 260px;
-  left: 60px;
+  top: 265px;
+  left: 70px;
   z-index: 1;
   -webkit-opacity: 0;
   -moz-opacity: 0;
@@ -5531,7 +5531,7 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   left: 0;
   z-index: 2;
   padding: 27px 0 0 27px;
-  margin: 0 0 0 -154px;
+  margin: 0 0 0 0;
 }
 #bloc-menu-responsive a#menu-responsive {
   -webkit-box-shadow: none;
@@ -5543,12 +5543,14 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   vertical-align: top;
   padding: 1px 0 0 0;
   margin: 0 8px 0 0;
+  width: 23px;
+  height: 20px;
 }
 #bloc-menu-responsive a#menu-responsive .svg-hamburger #hamburger {
   fill: #0f589f;
 }
 #bloc-menu-responsive a#menu-responsive .svg-logo-ima {
-  display: inline-block;
+  display: none;
   vertical-align: top;
   width: 97px;
   height: 15px;
@@ -6820,6 +6822,12 @@ form#search-sitemap button.btn-form {
   .container {
     width: 90%;
   }
+  #bloc-menu-responsive {
+    padding: 27px 0 0 0;
+  }
+  header #label-menu {
+    left: 30px;
+  }
 }
 @media (max-width: 1150px) {
   #content {
@@ -6835,6 +6843,9 @@ form#search-sitemap button.btn-form {
   .bloc-full {
     width: 100%;
     max-width: 620px;
+  }
+  header #label-menu {
+    left: 110px;
   }
   #visu-content {
     position: fixed;
@@ -6905,6 +6916,13 @@ form#search-sitemap button.btn-form {
   }
   #bloc-menu-responsive {
     margin-left: 0;
+  }
+  #bloc-menu-responsive a#menu-responsive .svg-hamburger {
+    width: 18px;
+    height: 14px;
+  }
+  #bloc-menu-responsive a#menu-responsive .svg-logo-ima {
+    display: inline-block;
   }
   .wrapper-blocs {
     margin-top: 0;
