@@ -2444,6 +2444,9 @@ h2{
 }
 .content-actu, .content-single{
 	min-height: 70px;
+	ul.liste-recherche &{
+		min-height: inherit;
+	}
 	.backface-visibility(hidden);
 	img{
 		float: left;
@@ -2530,6 +2533,7 @@ ul.liste-recherche{
 	margin: 0;
 	padding: 0;
 	li{
+		margin-bottom: 13px;
 		p{
 			margin: 0.5em 0;
 			&:first-of-type{
@@ -5950,6 +5954,9 @@ form#search-sitemap{
 	}
 	.content-actu{
 		display: none;
+		ul.liste-recherche &{
+			display: block;
+		}
 	}
 
 	.bloc-full{

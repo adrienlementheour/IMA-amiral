@@ -3132,6 +3132,10 @@ h2 {
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+ul.liste-recherche .content-actu,
+ul.liste-recherche .content-single {
+  min-height: inherit;
+}
 .content-actu img,
 .content-single img {
   float: left;
@@ -3258,6 +3262,9 @@ ul.liste-recherche {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+ul.liste-recherche li {
+  margin-bottom: 13px;
 }
 ul.liste-recherche li p {
   margin: 0.5em 0;
@@ -7574,6 +7581,9 @@ form#search-sitemap button.btn-form {
   }
   .content-actu {
     display: none;
+  }
+  ul.liste-recherche .content-actu {
+    display: block;
   }
   .bloc-full .bloc-content.small-padding-top {
     padding: 25px 40px 25px 40px;
