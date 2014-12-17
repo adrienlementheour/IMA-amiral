@@ -661,7 +661,7 @@ $(document).ready(function(){
 	//[x, y, dx, dy]
 	//x and yare coordinates in the interval [0,1] specifying the position of the anchor
 	//dx and dy,which specify the orientation of the curve incident to the anchor
-	var anchors = [ [[1, 0.6, 0.5, 0.8], [0.1, 0.8, 0, 0.5]],      [[1, 0.3, 0, -0.8], [0, 0.7, 0.2, -0.7]],      [[0.51, 1, 0, 1], [0.7, 0, 0, 1]],     [[0, 0.2, 0, 0.5], [0.5, 0, 0, -1.5]],     [[1, 0.6, 0, 1], [0, 0.9, 0, 1]]];
+	var anchors = [ [[1, 0.6, 0.5, 0.8], [0.1, 0.8, 0, 0.5]],      [[1, 0.3, 0, -0.8], [0, 0.7, 0.2, -0.7]],      [[0.51, 1, 0, 1], [0.7, 0.1, 0, 1]],     [[0, 0.2, 0, 0.5], [0.5, 0, 0, -1.5]],     [[1, 0.6, 0, 1], [0, 0.9, 0, 1]]];
 	var jsPlumbBlocSmall = jsPlumb.getInstance();
 	jsPlumbBlocSmall.setContainer($("#zone-blocs-accueil"));
 	var jsPlumbFirstBloc = jsPlumb.getInstance();
