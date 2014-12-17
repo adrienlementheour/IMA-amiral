@@ -226,6 +226,9 @@ textarea {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-moins:before {
+	content: "\e609";
+}
 .icon-mail:before {
 	content: "\e607";
 }
@@ -716,6 +719,12 @@ a{
 			font-size: 12px;
 		}
 	}
+	&.btn-icon-moins{
+		.box-shadow(none);
+		.icon-moins{
+			font-size: 12px;
+		}
+	}
 	&.btn-icon-close{
 		.box-shadow(none);
 	}
@@ -802,6 +811,17 @@ a{
 			line-height: 16px;
 			color: @vertIMA;
 		}
+		.btn-icon-moins{
+			display: none;
+			position: absolute;
+			bottom: -27px;
+			right: 5px;
+			.transition(transform 0.2s ease-in-out);
+			width: 16px;
+			height: 16px;
+			line-height: 16px;
+			color: @vertIMA;
+		}
 		&:hover{
 			.fond-btn-interlocuteur{
 				padding-left: 10px;
@@ -815,6 +835,9 @@ a{
 				}
 			}
 			.btn-icon-plus{
+				.transform(rotate(90deg) scale(1.2));
+			}
+			.btn-icon-moins{
 				.transform(rotate(90deg) scale(1.2));
 			}
 		}
@@ -981,6 +1004,16 @@ a{
 			height: 16px;
 			line-height: 16px;
 		}
+		.btn-icon-moins{
+			display: none;
+			position: absolute;
+			bottom: -27px;
+			right: 5px;
+			.transition(transform 0.2s ease-in-out);
+			width: 16px;
+			height: 16px;
+			line-height: 16px;
+		}
 		.vehicules &{
 			.container-fond-btn-bloc{
 				.fond-btn-bloc{
@@ -1039,6 +1072,9 @@ a{
 			.btn-icon-plus{
 				.transform(rotate(90deg) scale(1.2));
 			}
+			.btn-icon-moins{
+				.transform(rotate(90deg) scale(1.2));
+			}
 		}
 		&:focus{
 			outline: none;
@@ -1047,6 +1083,13 @@ a{
 }
 
 .btn-icon-plus{
+	.box-shadow(none);
+	.icon-plus{
+		font-size: 16px;
+	}
+}
+
+.btn-icon-moins{
 	.box-shadow(none);
 	.icon-plus{
 		font-size: 16px;
@@ -1682,6 +1725,9 @@ ul.breadcrumb{
 			.btn-icon-plus{
 				.transform(rotate(90deg) scale(1.2));
 			}
+			.btn-icon-moins{
+				.transform(rotate(90deg) scale(1.2));
+			}
 		}
 		.container-fond-detail-bloc-adresse{
 			display: block;
@@ -1716,6 +1762,17 @@ ul.breadcrumb{
 			.transition(transform 0.4s ease-in-out);
 		}
 		.btn-icon-plus{
+			position: absolute;
+			.transition(transform 0.2s ease-in-out);
+			display: block;
+			width: 16px;
+			height: 16px;
+			line-height: 16px;
+			color: @vertIMA;
+			bottom: -23px;
+			right: 10px;
+		}
+		.btn-icon-moins{
 			position: absolute;
 			.transition(transform 0.2s ease-in-out);
 			display: block;
@@ -1841,6 +1898,9 @@ ul.breadcrumb{
 			.btn-icon-plus{
 				.transform(rotate(90deg) scale(1.2));
 			}
+			.btn-icon-moins{
+				.transform(rotate(90deg) scale(1.2));
+			}
 		}
 		.container-fond-detail-bloc-interlocuteur{
 			display: block;
@@ -1875,6 +1935,17 @@ ul.breadcrumb{
 			.transition(transform 0.4s ease-in-out);
 		}
 		.btn-icon-plus{
+			position: absolute;
+			.transition(transform 0.2s ease-in-out);
+			display: block;
+			width: 16px;
+			height: 16px;
+			line-height: 16px;
+			color: @roseIMA;
+			bottom: -23px;
+			right: 10px;
+		}
+		.btn-icon-moins{
 			position: absolute;
 			.transition(transform 0.2s ease-in-out);
 			display: block;
@@ -2822,6 +2893,14 @@ a.bloc-small{
 		height: 16px;
 		line-height: 16px;
 	}
+	.btn-icon-moins{
+		position: absolute;
+		.transition(transform 0.2s ease-in-out);
+		display: block;
+		width: 16px;
+		height: 16px;
+		line-height: 16px;
+	}
 	
 	&:hover{
 		.categ-bloc{
@@ -2838,6 +2917,9 @@ a.bloc-small{
 			}
 		}
 		.btn-icon-plus{
+			.transform(rotate(90deg) scale(1.2));
+		}
+		.btn-icon-moins{
 			.transform(rotate(90deg) scale(1.2));
 		}
 	}
@@ -2932,6 +3014,11 @@ a.bloc-small{
 			bottom: -45px;
 			right: 20px;
 		}
+		.btn-icon-moins{
+			color: @vertIMA;
+			bottom: -45px;
+			right: 20px;
+		}
 		.smiley-bloc{
 			display: block;
 			width: 46px;
@@ -2983,6 +3070,11 @@ a.bloc-small{
 			.transform(rotate(-6deg));
 		}
 		.btn-icon-plus{
+			color: @violetIMA;
+			bottom: -30px;
+			right: -5px;
+		}
+		.btn-icon-moins{
 			color: @violetIMA;
 			bottom: -30px;
 			right: -5px;
@@ -3040,6 +3132,11 @@ a.bloc-small{
 			bottom: -55px;
 			right: 10px;
 		}
+		.btn-icon-moins{
+			color: @orangeIMA;
+			bottom: -55px;
+			right: 10px;
+		}
 		&:hover{
 			.fond-bloc-deform{
 				.transform(perspective(250px) rotateY(5deg) rotate(6deg) skewX(0deg) scale(1.05));
@@ -3083,6 +3180,11 @@ a.bloc-small{
 			.transform(rotate(-1deg));
 		}
 		.btn-icon-plus{
+			color: @roseIMA;
+			bottom: -43px;
+			right: 25px;
+		}
+		.btn-icon-moins{
 			color: @roseIMA;
 			bottom: -43px;
 			right: 25px;
@@ -3136,6 +3238,11 @@ a.bloc-small{
 			.transform(rotate(5deg));
 		}
 		.btn-icon-plus{
+			color: @bleuIMA;
+			bottom: -45px;
+			right: 15px;
+		}
+		.btn-icon-moins{
 			color: @bleuIMA;
 			bottom: -45px;
 			right: 15px;
@@ -3196,6 +3303,11 @@ a.bloc-small{
 			bottom: -45px;
 			right: 15px;
 		}
+		.btn-icon-moins{
+			color: @roseIMA;
+			bottom: -45px;
+			right: 15px;
+		}
 		&:hover{
 			.fond-bloc-deform{
 				.transform(perspective(300px) rotateX(-12deg) rotateY(-8deg) rotate(0deg) scale(1.05));
@@ -3247,6 +3359,11 @@ a.bloc-small{
 			.transform(rotate(5deg));
 		}
 		.btn-icon-plus{
+			color: @bleucielIMA;
+			bottom: -45px;
+			right: 15px;
+		}
+		.btn-icon-moins{
 			color: @bleucielIMA;
 			bottom: -45px;
 			right: 15px;
@@ -3655,6 +3772,30 @@ a.bloc-small{
 		height: auto;
 		a.btn-icon-plus{
 			display: block;
+			width: 55px;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			&:focus{
+				outline: none;
+			}
+			.icon-plus{
+				font-size: 30px;
+				top: 50%;
+				margin-top: -15px;
+				left: 12px;
+				display: block;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				position: absolute;
+			}
+		}
+		a.btn-icon-moins{
+			display: none;
 			width: 55px;
 			height: 100%;
 			margin: 0;

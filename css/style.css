@@ -145,6 +145,9 @@ textarea {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-moins:before {
+  content: "\e609";
+}
 .icon-mail:before {
   content: "\e607";
 }
@@ -597,6 +600,14 @@ a.btn-icon-plus {
 a.btn-icon-plus .icon-plus {
   font-size: 12px;
 }
+a.btn-icon-moins {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+a.btn-icon-moins .icon-moins {
+  font-size: 12px;
+}
 a.btn-icon-close {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -741,6 +752,20 @@ a.btn-interlocuteur .btn-icon-plus {
   line-height: 16px;
   color: #c1c602;
 }
+a.btn-interlocuteur .btn-icon-moins {
+  display: none;
+  position: absolute;
+  bottom: -27px;
+  right: 5px;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out;
+  -o-transition: -o-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out,-moz-transform 0.2s ease-in-out,-o-transform 0.2s ease-in-out,transform 0.2s ease-in-out;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  color: #c1c602;
+}
 a.btn-interlocuteur:hover .fond-btn-interlocuteur {
   padding-left: 10px;
 }
@@ -759,6 +784,13 @@ a.btn-interlocuteur:hover .container-photo-btn-interlocuteur .fond-photo-btn-int
   transform: translateX(-10px);
 }
 a.btn-interlocuteur:hover .btn-icon-plus {
+  -webkit-transform: rotate(90deg) scale(1.2);
+  -moz-transform: rotate(90deg) scale(1.2);
+  -o-transform: rotate(90deg) scale(1.2);
+  -ms-transform: rotate(90deg) scale(1.2);
+  transform: rotate(90deg) scale(1.2);
+}
+a.btn-interlocuteur:hover .btn-icon-moins {
   -webkit-transform: rotate(90deg) scale(1.2);
   -moz-transform: rotate(90deg) scale(1.2);
   -o-transform: rotate(90deg) scale(1.2);
@@ -1040,6 +1072,19 @@ a.btn-bloc .btn-icon-plus {
   height: 16px;
   line-height: 16px;
 }
+a.btn-bloc .btn-icon-moins {
+  display: none;
+  position: absolute;
+  bottom: -27px;
+  right: 5px;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out;
+  -o-transition: -o-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out,-moz-transform 0.2s ease-in-out,-o-transform 0.2s ease-in-out,transform 0.2s ease-in-out;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+}
 .vehicules a.btn-bloc {
   color: #ab0464;
 }
@@ -1093,6 +1138,13 @@ a.btn-bloc:hover .btn-icon-plus {
   -ms-transform: rotate(90deg) scale(1.2);
   transform: rotate(90deg) scale(1.2);
 }
+a.btn-bloc:hover .btn-icon-moins {
+  -webkit-transform: rotate(90deg) scale(1.2);
+  -moz-transform: rotate(90deg) scale(1.2);
+  -o-transform: rotate(90deg) scale(1.2);
+  -ms-transform: rotate(90deg) scale(1.2);
+  transform: rotate(90deg) scale(1.2);
+}
 a.btn-bloc:focus {
   outline: none;
 }
@@ -1102,6 +1154,14 @@ a.btn-bloc:focus {
   box-shadow: none;
 }
 .btn-icon-plus .icon-plus {
+  font-size: 16px;
+}
+.btn-icon-moins {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.btn-icon-moins .icon-plus {
   font-size: 16px;
 }
 #container-raph {
@@ -1933,6 +1993,13 @@ ul.breadcrumb li h1 {
   -ms-transform: rotate(90deg) scale(1.2);
   transform: rotate(90deg) scale(1.2);
 }
+#bloc-adresse a.detail-bloc-adresse:hover .btn-icon-moins {
+  -webkit-transform: rotate(90deg) scale(1.2);
+  -moz-transform: rotate(90deg) scale(1.2);
+  -o-transform: rotate(90deg) scale(1.2);
+  -ms-transform: rotate(90deg) scale(1.2);
+  transform: rotate(90deg) scale(1.2);
+}
 #bloc-adresse a.detail-bloc-adresse .container-fond-detail-bloc-adresse {
   display: block;
   position: absolute;
@@ -1998,6 +2065,20 @@ ul.breadcrumb li h1 {
   transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
 }
 #bloc-adresse a.detail-bloc-adresse .btn-icon-plus {
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out;
+  -o-transition: -o-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out,-moz-transform 0.2s ease-in-out,-o-transform 0.2s ease-in-out,transform 0.2s ease-in-out;
+  display: block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  color: #c1c602;
+  bottom: -23px;
+  right: 10px;
+}
+#bloc-adresse a.detail-bloc-adresse .btn-icon-moins {
   position: absolute;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   -moz-transition: -moz-transform 0.2s ease-in-out;
@@ -2221,6 +2302,13 @@ ul.breadcrumb li h1 {
   -ms-transform: rotate(90deg) scale(1.2);
   transform: rotate(90deg) scale(1.2);
 }
+#bloc-interlocuteur a.detail-bloc-interlocuteur:hover .btn-icon-moins {
+  -webkit-transform: rotate(90deg) scale(1.2);
+  -moz-transform: rotate(90deg) scale(1.2);
+  -o-transform: rotate(90deg) scale(1.2);
+  -ms-transform: rotate(90deg) scale(1.2);
+  transform: rotate(90deg) scale(1.2);
+}
 #bloc-interlocuteur a.detail-bloc-interlocuteur .container-fond-detail-bloc-interlocuteur {
   display: block;
   position: absolute;
@@ -2286,6 +2374,20 @@ ul.breadcrumb li h1 {
   transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
 }
 #bloc-interlocuteur a.detail-bloc-interlocuteur .btn-icon-plus {
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out;
+  -o-transition: -o-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out,-moz-transform 0.2s ease-in-out,-o-transform 0.2s ease-in-out,transform 0.2s ease-in-out;
+  display: block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  color: #ab0464;
+  bottom: -23px;
+  right: 10px;
+}
+#bloc-interlocuteur a.detail-bloc-interlocuteur .btn-icon-moins {
   position: absolute;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   -moz-transition: -moz-transform 0.2s ease-in-out;
@@ -3715,6 +3817,17 @@ a.bloc-small .btn-icon-plus {
   height: 16px;
   line-height: 16px;
 }
+a.bloc-small .btn-icon-moins {
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -moz-transition: -moz-transform 0.2s ease-in-out;
+  -o-transition: -o-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out,-moz-transform 0.2s ease-in-out,-o-transform 0.2s ease-in-out,transform 0.2s ease-in-out;
+  display: block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+}
 a.bloc-small:hover .categ-bloc .fond-categ-bloc {
   padding-right: 15px;
 }
@@ -3729,6 +3842,13 @@ a.bloc-small:hover .detail-bloc .txt-detail-bloc {
   transform: translateX(-10px);
 }
 a.bloc-small:hover .btn-icon-plus {
+  -webkit-transform: rotate(90deg) scale(1.2);
+  -moz-transform: rotate(90deg) scale(1.2);
+  -o-transform: rotate(90deg) scale(1.2);
+  -ms-transform: rotate(90deg) scale(1.2);
+  transform: rotate(90deg) scale(1.2);
+}
+a.bloc-small:hover .btn-icon-moins {
   -webkit-transform: rotate(90deg) scale(1.2);
   -moz-transform: rotate(90deg) scale(1.2);
   -o-transform: rotate(90deg) scale(1.2);
@@ -3859,6 +3979,11 @@ a.bloc-small.bloc-1 .btn-icon-plus {
   bottom: -45px;
   right: 20px;
 }
+a.bloc-small.bloc-1 .btn-icon-moins {
+  color: #c1c602;
+  bottom: -45px;
+  right: 20px;
+}
 a.bloc-small.bloc-1 .smiley-bloc {
   display: block;
   width: 46px;
@@ -3941,6 +4066,11 @@ a.bloc-small.bloc-2 .txt-bloc-deform {
   transform: rotate(-6deg);
 }
 a.bloc-small.bloc-2 .btn-icon-plus {
+  color: #801a7a;
+  bottom: -30px;
+  right: -5px;
+}
+a.bloc-small.bloc-2 .btn-icon-moins {
   color: #801a7a;
   bottom: -30px;
   right: -5px;
@@ -4033,6 +4163,11 @@ a.bloc-small.bloc-3 .btn-icon-plus {
   bottom: -55px;
   right: 10px;
 }
+a.bloc-small.bloc-3 .btn-icon-moins {
+  color: #dd850c;
+  bottom: -55px;
+  right: 10px;
+}
 a.bloc-small.bloc-3:hover .fond-bloc-deform {
   -webkit-transform: perspective(250px) rotateY(5deg) rotate(6deg) skewX(0deg) scale(1.05);
   -moz-transform: perspective(250px) rotateY(5deg) rotate(6deg) skewX(0deg) scale(1.05);
@@ -4107,6 +4242,11 @@ a.bloc-small.bloc-4 .txt-bloc-deform {
   transform: rotate(-1deg);
 }
 a.bloc-small.bloc-4 .btn-icon-plus {
+  color: #ab0464;
+  bottom: -43px;
+  right: 25px;
+}
+a.bloc-small.bloc-4 .btn-icon-moins {
   color: #ab0464;
   bottom: -43px;
   right: 25px;
@@ -4192,6 +4332,11 @@ a.bloc-small.bloc-5 .txt-bloc-deform {
   transform: rotate(5deg);
 }
 a.bloc-small.bloc-5 .btn-icon-plus {
+  color: #0f589f;
+  bottom: -45px;
+  right: 15px;
+}
+a.bloc-small.bloc-5 .btn-icon-moins {
   color: #0f589f;
   bottom: -45px;
   right: 15px;
@@ -4291,6 +4436,11 @@ a.bloc-small.bloc-6 .btn-icon-plus {
   bottom: -45px;
   right: 15px;
 }
+a.bloc-small.bloc-6 .btn-icon-moins {
+  color: #ab0464;
+  bottom: -45px;
+  right: 15px;
+}
 a.bloc-small.bloc-6:hover .fond-bloc-deform {
   -webkit-transform: perspective(300px) rotateX(-12deg) rotateY(-8deg) rotate(0deg) scale(1.05);
   -moz-transform: perspective(300px) rotateX(-12deg) rotateY(-8deg) rotate(0deg) scale(1.05);
@@ -4375,6 +4525,11 @@ a.bloc-small.bloc-7 .txt-bloc-deform {
   transform: rotate(5deg);
 }
 a.bloc-small.bloc-7 .btn-icon-plus {
+  color: #8eb4c7;
+  bottom: -45px;
+  right: 15px;
+}
+a.bloc-small.bloc-7 .btn-icon-moins {
   color: #8eb4c7;
   bottom: -45px;
   right: 15px;
@@ -4914,6 +5069,30 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   outline: none;
 }
 #bloc-autres-videos #container-btn-plus a.btn-icon-plus .icon-plus {
+  font-size: 30px;
+  top: 50%;
+  margin-top: -15px;
+  left: 12px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+}
+#bloc-autres-videos #container-btn-plus a.btn-icon-moins {
+  display: none;
+  width: 55px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#bloc-autres-videos #container-btn-plus a.btn-icon-moins:focus {
+  outline: none;
+}
+#bloc-autres-videos #container-btn-plus a.btn-icon-moins .icon-plus {
   font-size: 30px;
   top: 50%;
   margin-top: -15px;
