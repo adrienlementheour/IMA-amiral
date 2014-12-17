@@ -489,6 +489,17 @@
 								<li><a href="#">Presse</a></li>
 							</ul>
 						</div>
+						<form role="search" method="get" class="searchform" id="search-sitemap" action="http://stereosuper.fr/valid/IMA/site/wordpress/">
+							<fieldset>
+								<input class="input-search-sitemap" type="search" name="s" value="" placeholder="Vos mots clés">
+								<button class="btn-form" name="submitted" <?php if($message_status == 'Demande envoyée'){ echo 'disabled';}?>>
+									<span class="container-fond-btn-form">
+										<span class="fond-btn-form"></span>
+									</span>
+									<span class="txt-btn-form"><span class="icon-arrow-right"></span> Rechercher</span>
+								</button>
+							</fieldset>
+						</form>
 					</div>
 					<div class="titre-modal">
 						<div class="container-fond-titre-modal">

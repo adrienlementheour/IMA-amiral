@@ -87,7 +87,7 @@ function animer(){
 					jsPlumb.repaint($("#bloc-adresse"), { left:Math.round($("#bloc-adresse").offset().left), top:Math.round($("#bloc-adresse").offset().top)});
 				}
 			}
-			if($("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category") || ($("body").hasClass("rh"))){
+			if($("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category") || ($("body").hasClass("rh")) || ($("body").hasClass("recherche"))){
 				jsPlumb.repaint($(".wrapper-blocs .bloc-full"));
 			}
 		}
@@ -360,7 +360,7 @@ function categBlocCopies(){
 
 ////////////////////// Fonction pour pencher les bloc content en fonction de leur hauteur ////////////////////////
 function blocPenche(){
-	if (!$("html").hasClass("lt-ie9") && !$("body").hasClass("actus") && !$("body").hasClass("blog") && !$("body").hasClass("category") && !$("body").hasClass("rh")) {
+	if (!$("html").hasClass("lt-ie9") && !$("body").hasClass("actus") && !$("body").hasClass("blog") && !$("body").hasClass("category") && !$("body").hasClass("rh") && !$("body").hasClass("recherche")) {
 		$(".bloc-penche").each(function(index){
 			var heightBlocPenche = $(this).height();
 			if(heightBlocPenche>300){
@@ -599,7 +599,7 @@ function btnCategoriesArticles(){
 
 ////////////////////// Fonction pour ajouter les lignes pointillées dans les pages de liste ////////////////////////
 function refreshLink(){
-	if( $("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category") || $("body").hasClass("rh")){
+	if( $("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category") || $("body").hasClass("rh") || $("body").hasClass("recherche")){
 		var nbBlocActu = $(".wrapper-blocs .bloc-full").length;
 		$(".wrapper-blocs .bloc-full").each(function(index){
 			if (index<(nbBlocActu-1)) {
@@ -772,7 +772,7 @@ $(document).ready(function(){
 			jsPlumbBlocSmall.repaint($(".bloc-small"));
 			jsPlumbFirstBloc.repaint($("#bloc-actus"));
 		}
-		if($("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category") || ($("body").hasClass("rh"))){
+		if($("body").hasClass("actus") || $("body").hasClass("blog") || $("body").hasClass("category") || ($("body").hasClass("rh")) || ($("body").hasClass("recherche"))){
 			jsPlumb.repaint($(".wrapper-blocs .bloc-full"));
 		}
 		if($("body").hasClass("contact")){
