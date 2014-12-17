@@ -3491,11 +3491,11 @@ a.bloc-small .detail-bloc-copie .container-fond-detail-bloc {
   height: 100%;
   bottom: 0;
   right: 0;
-  -webkit-transform: translateZ(1px);
-  -moz-transform: translateZ(1px);
-  -o-transform: translateZ(1px);
-  -ms-transform: translateZ(1px);
-  transform: translateZ(1px);
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  transform: translateZ(0px);
 }
 a.bloc-small .detail-bloc .container-fond-detail-bloc .fond-detail-bloc,
 a.bloc-small .detail-bloc-copie .container-fond-detail-bloc .fond-detail-bloc {
