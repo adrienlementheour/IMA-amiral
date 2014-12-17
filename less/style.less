@@ -473,6 +473,7 @@ body{
 	display: block;
 	position: relative;
 	z-index: 2;
+	margin-bottom: 10px;
 	>svg:last-of-type{
 		//display: none!important;
 	}
@@ -721,9 +722,12 @@ a{
 		bottom: -13px;
 		right: 200px;
 		line-height: 1em;
-		padding: 10px 20px 8px 60px;
+		padding: 10px 20px 8px 20px;
 		.box-shadow(none);
 		.transform(rotate(-2deg));
+		&.has-photo{
+			padding: 10px 20px 8px 60px;
+		}
 		.container-fond-btn-interlocuteur{
 			display: block;
 			width: 100%;
@@ -3112,7 +3116,8 @@ a.bloc-small{
 			.transform(rotate(0deg));
 			.fond-categ-bloc{
 				background-color: @orangeIMA;
-				.transform(perspective(200px) rotateY(-20deg) rotateX(-10deg) rotate(5deg) skewX(0deg));
+				//.transform(perspective(200px) rotateY(-20deg) rotateX(-10deg) rotate(5deg) skewX(0deg));
+				.transform(perspective(200px) rotateY(-5deg) rotateX(-10deg) rotate(2deg) skewX(0deg));
 			}
 		}
 		.raccord-categ{
@@ -5917,6 +5922,9 @@ form#search-sitemap{
 		width: 120px;
 		bottom: -25px;
 		line-height: 1.2em;
+		&.has-photo{
+			padding: 10px 20px 8px 20px;
+		}
 		.container-photo-btn-interlocuteur{
 			display: none;
 		}

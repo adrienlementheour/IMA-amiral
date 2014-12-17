@@ -208,6 +208,7 @@ body.contact {
   display: block;
   position: relative;
   z-index: 2;
+  margin-bottom: 10px;
 }
 .container {
   display: block;
@@ -604,7 +605,7 @@ a.btn-interlocuteur {
   bottom: -13px;
   right: 200px;
   line-height: 1em;
-  padding: 10px 20px 8px 60px;
+  padding: 10px 20px 8px 20px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -613,6 +614,9 @@ a.btn-interlocuteur {
   -o-transform: rotate(-2deg);
   -ms-transform: rotate(-2deg);
   transform: rotate(-2deg);
+}
+a.btn-interlocuteur.has-photo {
+  padding: 10px 20px 8px 60px;
 }
 a.btn-interlocuteur .container-fond-btn-interlocuteur {
   display: block;
@@ -4154,11 +4158,11 @@ a.bloc-small.bloc-5 .categ-bloc-copie {
 a.bloc-small.bloc-5 .categ-bloc .fond-categ-bloc,
 a.bloc-small.bloc-5 .categ-bloc-copie .fond-categ-bloc {
   background-color: #dd850c;
-  -webkit-transform: perspective(200px) rotateY(-20deg) rotateX(-10deg) rotate(5deg) skewX(0deg);
-  -moz-transform: perspective(200px) rotateY(-20deg) rotateX(-10deg) rotate(5deg) skewX(0deg);
-  -o-transform: perspective(200px) rotateY(-20deg) rotateX(-10deg) rotate(5deg) skewX(0deg);
-  -ms-transform: perspective(200px) rotateY(-20deg) rotateX(-10deg) rotate(5deg) skewX(0deg);
-  transform: perspective(200px) rotateY(-20deg) rotateX(-10deg) rotate(5deg) skewX(0deg);
+  -webkit-transform: perspective(200px) rotateY(-5deg) rotateX(-10deg) rotate(2deg) skewX(0deg);
+  -moz-transform: perspective(200px) rotateY(-5deg) rotateX(-10deg) rotate(2deg) skewX(0deg);
+  -o-transform: perspective(200px) rotateY(-5deg) rotateX(-10deg) rotate(2deg) skewX(0deg);
+  -ms-transform: perspective(200px) rotateY(-5deg) rotateX(-10deg) rotate(2deg) skewX(0deg);
+  transform: perspective(200px) rotateY(-5deg) rotateX(-10deg) rotate(2deg) skewX(0deg);
 }
 a.bloc-small.bloc-5 .raccord-categ {
   background-color: #ad6809;
@@ -7546,6 +7550,9 @@ form#search-sitemap button.btn-form {
     width: 120px;
     bottom: -25px;
     line-height: 1.2em;
+  }
+  a.btn-interlocuteur.has-photo {
+    padding: 10px 20px 8px 20px;
   }
   a.btn-interlocuteur .container-photo-btn-interlocuteur {
     display: none;

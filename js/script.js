@@ -871,8 +871,10 @@ $(document).ready(function(){
 				$(".suite-bloc").slideToggle({
 					duration: 300, 
 					step: function(){
-						jsPlumbFirstBloc.repaint($("#bloc-actus"));
-						jsPlumbFirstBloc.repaint($(".bloc-small").first());
+						if($("body").hasClass("has-bloc-small")){
+							jsPlumbFirstBloc.repaint($("#bloc-actus"));
+							jsPlumbFirstBloc.repaint($(".bloc-small").first());
+						}
 					},
 					complete: function(){
 						var heightBlocPenche = $(this).closest(".bloc-penche").height();
