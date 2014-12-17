@@ -208,6 +208,9 @@ body.contact {
   display: block;
   position: relative;
   z-index: 2;
+  margin-bottom: 60px;
+}
+.has-bloc-small #wrapper-content {
   margin-bottom: 10px;
 }
 .container {
