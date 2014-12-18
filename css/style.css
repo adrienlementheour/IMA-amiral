@@ -1139,11 +1139,11 @@ a.btn-bloc:hover .btn-icon-plus {
   transform: rotate(90deg) scale(1.2);
 }
 a.btn-bloc:hover .btn-icon-moins {
-  -webkit-transform: rotate(90deg) scale(1.2);
-  -moz-transform: rotate(90deg) scale(1.2);
-  -o-transform: rotate(90deg) scale(1.2);
-  -ms-transform: rotate(90deg) scale(1.2);
-  transform: rotate(90deg) scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 a.btn-bloc:focus {
   outline: none;
@@ -1994,11 +1994,11 @@ ul.breadcrumb li h1 {
   transform: rotate(90deg) scale(1.2);
 }
 #bloc-adresse a.detail-bloc-adresse:hover .btn-icon-moins {
-  -webkit-transform: rotate(90deg) scale(1.2);
-  -moz-transform: rotate(90deg) scale(1.2);
-  -o-transform: rotate(90deg) scale(1.2);
-  -ms-transform: rotate(90deg) scale(1.2);
-  transform: rotate(90deg) scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 #bloc-adresse a.detail-bloc-adresse .container-fond-detail-bloc-adresse {
   display: block;
@@ -2303,11 +2303,11 @@ ul.breadcrumb li h1 {
   transform: rotate(90deg) scale(1.2);
 }
 #bloc-interlocuteur a.detail-bloc-interlocuteur:hover .btn-icon-moins {
-  -webkit-transform: rotate(90deg) scale(1.2);
-  -moz-transform: rotate(90deg) scale(1.2);
-  -o-transform: rotate(90deg) scale(1.2);
-  -ms-transform: rotate(90deg) scale(1.2);
-  transform: rotate(90deg) scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 #bloc-interlocuteur a.detail-bloc-interlocuteur .container-fond-detail-bloc-interlocuteur {
   display: block;
@@ -3849,11 +3849,11 @@ a.bloc-small:hover .btn-icon-plus {
   transform: rotate(90deg) scale(1.2);
 }
 a.bloc-small:hover .btn-icon-moins {
-  -webkit-transform: rotate(90deg) scale(1.2);
-  -moz-transform: rotate(90deg) scale(1.2);
-  -o-transform: rotate(90deg) scale(1.2);
-  -ms-transform: rotate(90deg) scale(1.2);
-  transform: rotate(90deg) scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 a.bloc-small:focus {
   outline: none;

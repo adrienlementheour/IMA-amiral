@@ -865,8 +865,12 @@ $(document).ready(function(){
 				if(!$(this).hasClass("open")){
 					$(this).addClass("open");
 					TweenMax.to($(this).closest(".bloc-penche"), 0.3, {rotation: 0});
+					TweenMax.set($(".btn-icon-plus", this), {display: "none"});
+					TweenMax.set($(".btn-icon-moins", this), {display: "block"});
 				}else{
 					$(this).removeClass("open");
+					TweenMax.set($(".btn-icon-plus", this), {display: "block"});
+					TweenMax.set($(".btn-icon-moins", this), {display: "none"});
 				}
 				$(".suite-bloc").slideToggle({
 					duration: 300, 

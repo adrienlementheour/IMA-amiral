@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "18027",
+"creatorBuild": "18270",
 "files": {
 	"\/activite-juridique.html": {
 		"fileType": 8192,
@@ -157,6 +157,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/css\/style.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/style.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/favicon-160x160.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -288,6 +297,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/js\/libs\/dd_belatedpng.js": {
 		"fileType": 64,
@@ -995,7 +1013,7 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 329023,
+		"initialSize": 653044,
 		"inputAbbreviatedPath": "\/layoutImg\/contact\/map.jpg",
 		"outputAbbreviatedPath": "\/layoutImg\/contact\/map.jpg",
 		"outputPathIsOutsideProject": 0,
@@ -1050,7 +1068,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1189,
+		"initialSize": 223,
 		"inputAbbreviatedPath": "\/layoutImg\/footer\/bandeau-couleurs.png",
 		"outputAbbreviatedPath": "\/layoutImg\/footer\/bandeau-couleurs.png",
 		"outputPathIsOutsideProject": 0,
@@ -1061,7 +1079,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2979,
+		"initialSize": 309,
 		"inputAbbreviatedPath": "\/layoutImg\/footer\/logo-viadeo.png",
 		"outputAbbreviatedPath": "\/layoutImg\/footer\/logo-viadeo.png",
 		"outputPathIsOutsideProject": 0,
@@ -1072,7 +1090,7 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 3097,
+		"initialSize": 353,
 		"inputAbbreviatedPath": "\/layoutImg\/footer\/logo-viadeo@2x.png",
 		"outputAbbreviatedPath": "\/layoutImg\/footer\/logo-viadeo@2x.png",
 		"outputPathIsOutsideProject": 0,
@@ -1361,6 +1379,26 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/less\/style.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/less\/style.less",
+		"outputAbbreviatedPath": "\/css\/style.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/mentions-legales.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1494,7 +1532,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "elisabeth",
+"lastSavedByUser": "Adrien Le Menthéour",
 "manualImportLinks": {
 	},
 "projectAttributes": {
@@ -1638,7 +1676,7 @@
 	"coffeeMinifyOutput": 1,
 	"coffeeOutputStyle": 0,
 	"coffeeSyntaxCheckerStyle": 1,
-	"externalServerAddress": "http:\/\/localhost:8888",
+	"externalServerAddress": "http:\/\/localhost",
 	"externalServerPreviewPathAddition": "",
 	"genericWebpageFileExtensionsString": "html, htm, shtml, shtm, xhtml, php, jsp, asp, aspx, erb, ctp",
 	"hamlAutoOutputPathEnabled": 1,
@@ -1894,6 +1932,10 @@
 			"flagValue": -1
 			},
 		"shelljs": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"singleGroups": {
 			"active": 0,
 			"flagValue": -1
 			},
