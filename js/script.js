@@ -222,19 +222,23 @@ function hoverMenu(){
 // Clic sur le bouton video
 function btnVideoClick(){
 	$("a.btn-video").click(function(){
-		$(window).scrollTop(0);
-		$("body").addClass("video-ouverte");
-		// décaler le wrapper content
-		TweenMax.set($("footer"), {display: "none"});
-		TweenMax.to($("#wrapper-content"), 0.5, {"x":"-100%", ease:Cubic.easeInOut, onComplete: completeWrapperContent});
-		TweenMax.to($("#bloc-menu-responsive"), 0.5, {"x":"-100%", ease:Cubic.easeInOut});
-		// centrer la div fond visu
-		tlBlocVisuContent = new TimelineMax();
-		tlBlocVisuContent.to($("#bloc-fond-visu .bloc-visu-content"), 0.5, {right:"50%", marginRight: "-21.5%", ease:Cubic.easeInOut});
-		tlBlocVisuContent.to($("#bloc-fond-visu .bloc-visu-content"), 0.2, {opacity: 0, ease:Cubic.easeInOut});
-		tlBlocVisuContent.to($("#fond-couleur-bloc-visu"), 0.2, {opacity: 0, display: "none", ease:Cubic.easeInOut, onComplete: completeFondCouleur});
+		ouvrirBlocVideo();
 		return false;
 	});
+}
+
+function ouvrirBlocVideo(){
+	$(window).scrollTop(0);
+	$("body").addClass("video-ouverte");
+	// décaler le wrapper content
+	TweenMax.set($("footer"), {display: "none"});
+	TweenMax.to($("#wrapper-content"), 0.5, {"x":"-100%", ease:Cubic.easeInOut, onComplete: completeWrapperContent});
+	TweenMax.to($("#bloc-menu-responsive"), 0.5, {"x":"-100%", ease:Cubic.easeInOut});
+	// centrer la div fond visu
+	tlBlocVisuContent = new TimelineMax();
+	tlBlocVisuContent.to($("#bloc-fond-visu .bloc-visu-content"), 0.5, {right:"50%", marginRight: "-21.5%", ease:Cubic.easeInOut});
+	tlBlocVisuContent.to($("#bloc-fond-visu .bloc-visu-content"), 0.2, {opacity: 0, ease:Cubic.easeInOut});
+	tlBlocVisuContent.to($("#fond-couleur-bloc-visu"), 0.2, {opacity: 0, display: "none", ease:Cubic.easeInOut, onComplete: completeFondCouleur});
 }
 
 function completeWrapperContent(){
@@ -258,6 +262,7 @@ function addClassBlocAutresVideos(){
 // Clic sur le retour imatech
 function btnRetourVideoClick(){
 	$("a#retour-video").click(function(){
+		window.location.hash='';
 		$("body").removeClass("video-ouverte");
 		$("#bloc-autres-videos").removeClass("canTween");
 		stopVideos();
@@ -601,6 +606,109 @@ function loader(){
 	setTimeout(loader, 500);
 }
 
+////////////////////// Fonction pour scanner l'url et lancer le media si besoin ////////////////////////
+function scanUrl(){
+	var urlPathname = window.location.pathname;
+	
+	var urlHashs = window.location.hash.split("#");
+	//tester si il y a bien au moins deux hashtags
+	if(urlHashs.length >= 3){
+		//tester le type de media
+		switch(urlHashs[1]) {
+		    case "video":
+		    	//tester l'existance du media
+		        if ($("ul#autres-videos li.has-video[data-url-video='"+urlHashs[2]+"'][data-poster-name='"+urlHashs[3]+"']").length){
+		        	$("ul#autres-videos li.active").removeClass("active");
+		        	$("ul#autres-videos li.has-video[data-url-video='"+urlHashs[2]+"'][data-poster-name='"+urlHashs[3]+"']").parent().addClass("active");
+		        	$("#wrapper-embed").replaceWith("<div id='wrapper-embed'><video id='id-video-js' class='video-js vjs-default-skin' controls preload='auto' width='100%' height='100%' poster='"+urlHashs[3]+"' src='"+urlHashs[2]+"'></video></div>");
+		        	if(player != 0){
+		        		player.dispose();
+		        	}
+		        	initVideo();
+		        	ouvrirBlocVideo();
+		        }
+		        break;
+		    case "calameo":
+		        if ($("ul#autres-videos li.has-calameo[data-id-calameo='"+urlHashs[2]+"']").length){
+		        	$("#wrapper-embed").replaceWith("<div id='wrapper-embed'><iframe class='calameo-iframe' src='//v.calameo.com/?bkcode="+urlHashs[2]+"&view=book' width='300' height='194' frameborder='0' scrolling='no' allowtransparency allowfullscreen style='margin:0 auto;'></iframe></div>");
+		        	ouvrirBlocVideo();
+		        }
+		        break;
+		    case "image":
+		        if ($("ul#autres-videos li.has-image[data-image-name='"+urlHashs[2]+"']").length){
+		        	$("#wrapper-embed").replaceWith("<div id='wrapper-embed'><div class='wrapper-img'><img src='"+urlHashs[2]+"'></div></div>");
+		        	ouvrirBlocVideo();
+		        }
+		        break;
+		    default:
+		        ;
+		}
+		
+	}
+}
+
+////////////////////// Fonction pour vérifier si le lien mène vers un media externe ////////////////////////
+
+function checkMedia(){
+	var test = "http://stereosuper.fr/valid/IMA/site/wordpress/rse/";
+	var tableUrl = document.location.pathname.split("/");
+	if(tableUrl[tableUrl.length-1] === ""){
+		var pageName = tableUrl[tableUrl.length-2];
+	}else{
+		var pageName = tableUrl[tableUrl.length-1];
+	}
+	$("a").each(function(index){
+		if($(this).attr("href").split("#").length >= 3){
+			var tableHref = $(this).attr("href").substr(0,$(this).attr("href").indexOf('#')).split("/");
+			if(tableHref[tableHref.length-1] === ""){
+				var hrefPageName = tableHref[tableHref.length-2];
+			}else{
+				var hrefPageName = tableHref[tableHref.length-1];
+			}
+			if(hrefPageName === pageName){
+				$(this).click(function(){
+					var urlHashs = $(this).attr("href").split("#");
+					//tester si il y a bien au moins deux hashtags
+					if(urlHashs.length >= 3){
+						//tester le type de media
+						switch(urlHashs[1]) {
+						    case "video":
+						    	//tester l'existance du media
+						        if ($("ul#autres-videos li.has-video[data-url-video='"+urlHashs[2]+"'][data-poster-name='"+urlHashs[3]+"']").length){
+						        	$("ul#autres-videos li.active").removeClass("active");
+						        	$("ul#autres-videos li.has-video[data-url-video='"+urlHashs[2]+"'][data-poster-name='"+urlHashs[3]+"']").parent().addClass("active");
+						        	$("#wrapper-embed").replaceWith("<div id='wrapper-embed'><video id='id-video-js' class='video-js vjs-default-skin' controls preload='auto' width='100%' height='100%' poster='"+urlHashs[3]+"' src='"+urlHashs[2]+"'></video></div>");
+						        	if(player != 0){
+						        		player.dispose();
+						        	}
+						        	initVideo();
+						        	ouvrirBlocVideo();
+						        }
+						        break;
+						    case "calameo":
+						        if ($("ul#autres-videos li.has-calameo[data-id-calameo='"+urlHashs[2]+"']").length){
+						        	$("#wrapper-embed").replaceWith("<div id='wrapper-embed'><iframe class='calameo-iframe' src='//v.calameo.com/?bkcode="+urlHashs[2]+"&view=book' width='300' height='194' frameborder='0' scrolling='no' allowtransparency allowfullscreen style='margin:0 auto;'></iframe></div>");
+						        	ouvrirBlocVideo();
+						        }
+						        break;
+						    case "image":
+						        if ($("ul#autres-videos li.has-image[data-image-name='"+urlHashs[2]+"']").length){
+						        	$("#wrapper-embed").replaceWith("<div id='wrapper-embed'><div class='wrapper-img'><img src='"+urlHashs[2]+"'></div></div>");
+						        	ouvrirBlocVideo();
+						        }
+						        break;
+						    default:
+						        ;
+						}
+						
+					}
+					return false;
+				});
+			}
+		}
+	});
+}
+
 $(document).ready(function(){
 	//[x, y, dx, dy]
 	//x and yare coordinates in the interval [0,1] specifying the position of the anchor
@@ -610,8 +718,8 @@ $(document).ready(function(){
 	jsPlumbBlocSmall.setContainer($("#zone-blocs-accueil"));
 	var jsPlumbFirstBloc = jsPlumb.getInstance();
 	jsPlumbFirstBloc.setContainer($(".wrapper-blocs"));
-
-
+	checkMedia();
+	scanUrl();
 	animer();
 	if ($(window).width()>1024){
 		setTimeout(function() {
