@@ -1195,10 +1195,10 @@ header #label-menu {
   top: 265px;
   left: 70px;
   z-index: 1;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  opacity: 0;
-  display: none;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  display: block;
 }
 header #label-menu:after {
   content: "";
