@@ -726,6 +726,23 @@ function checkMedia(){
 	});
 }
 
+
+////////////////////// Fonction pour empêcher d'effectuer une recherche vide dans le wordpress ////////////////////////
+
+function preventEmptySearch(){
+    $('#search-sitemap').on('submit', function(ev){
+        var input = $('.input-search-sitemap'),
+        	query = input.val(),
+            queryLength = query.length;
+
+        if ( 0 === queryLength ) {
+            input.focus();
+            ev.preventDefault();
+            return;
+        }
+    });
+}
+
 $(document).ready(function(){
 	//[x, y, dx, dy]
 	//x and yare coordinates in the interval [0,1] specifying the position of the anchor
@@ -760,6 +777,7 @@ $(document).ready(function(){
 	btnInterlocuteur();
 	autresVideos();
 	btnCategoriesArticles();
+	preventEmptySearch();
 	if($("body").hasClass("accueil")){
 		hoverBlocInnovation();
 	}
