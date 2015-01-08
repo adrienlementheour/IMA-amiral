@@ -204,6 +204,9 @@ body {
 body.contact {
   height: auto;
 }
+body.page-template-atterrissage {
+  background: none;
+}
 #wrapper-content {
   display: block;
   position: relative;
