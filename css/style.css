@@ -200,13 +200,28 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+  /*&.page-template-atterrissage{
+		background: none;
+	}*/
 }
 body.contact {
   height: auto;
 }
-body.page-template-atterrissage {
-  background: none;
-}
+/* Page Atterrissage */
+/*.page-template-atterrissage{
+	header, #bloc-menu-responsive{
+		opacity: 0;
+		.no-js &{
+			opacity: 1;
+		}
+	}
+	.wrapper-blocs{
+		margin-left: -2000px;
+		.no-js &{
+			margin-left: 0;
+		}
+	}
+}*/
 #wrapper-content {
   display: block;
   position: relative;

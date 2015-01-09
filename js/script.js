@@ -108,7 +108,7 @@ function animer(){
 ////////////////////////////////////////////////////////////////////////////////
 function menuOuvertDefault(){
 	if($(window).width()>1024){
-		if($.cookie('cookieMenu') == null) {
+		if($.cookie('cookieMenu') == null /*|| $('body').hasClass('page-template-atterrissage')*/) {
 			$.cookie('cookieMenu', 'open');
 			ouvertureMenu();
 			setTimeout(function(){
@@ -743,7 +743,31 @@ function preventEmptySearch(){
     });
 }
 
-$(document).ready(function(){
+
+/*function makeAllLinksExternal(){
+	var links = $('a');
+	var url;
+
+	links.click(function(){
+		if($(this).attr('id') === 'lien-close-modal' || $(this).attr('id') === 'lien-close-interlocuteur-modal'){
+			window.parent.postMessage('close', '*');
+		}else{
+			if(!$(this).hasClass('btn-bloc')){
+				url = $(this).attr('href');
+				window.parent.postMessage(url, '*');
+			}
+		}
+		return false;
+	});
+}*/
+
+
+
+$(function(){
+	/*if($("body").hasClass("page-template-atterrissage")){
+		makeAllLinksExternal();
+	}*/
+	
 	//[x, y, dx, dy]
 	//x and yare coordinates in the interval [0,1] specifying the position of the anchor
 	//dx and dy,which specify the orientation of the curve incident to the anchor
