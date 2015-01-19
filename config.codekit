@@ -2,6 +2,24 @@
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
 "creatorBuild": "18270",
 "files": {
+	"\/activite-juridique.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/activite-juridique.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/actualites.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/actualites.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/apple-touch-icon-114x114.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -112,6 +130,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/contact.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/contact.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/css\/libs\/ie6.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -185,6 +212,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/images\/ima_technologies_plateau.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 47296,
+		"inputAbbreviatedPath": "\/img\/images\/ima_technologies_plateau.jpg",
+		"outputAbbreviatedPath": "\/img\/images\/ima_technologies_plateau.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/trophee-des-1001-vies.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -239,6 +277,26 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/img\/videos\/posters\/poster-video-2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 270810,
+		"inputAbbreviatedPath": "\/img\/videos\/posters\/poster-video-2.jpg",
+		"outputAbbreviatedPath": "\/img\/videos\/posters\/poster-video-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/js\/libs\/dd_belatedpng.js": {
 		"fileType": 64,
@@ -537,6 +595,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/libs\/jquery.cookie.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/libs\/jquery.cookie.js",
+		"outputAbbreviatedPath": "\/js\/libs\/min\/jquery.cookie-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/libs\/jsPlumb\/anchors.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -702,12 +771,34 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/libs\/jsPlumb\/jsPlumb.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/libs\/jsPlumb\/jsPlumb.js",
+		"outputAbbreviatedPath": "\/js\/libs\/jsPlumb\/min\/jsPlumb-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/libs\/jsPlumb\/katavorio-0.3.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/libs\/jsPlumb\/katavorio-0.3.js",
 		"outputAbbreviatedPath": "\/js\/libs\/jsPlumb\/min\/katavorio-0.3-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/libs\/jsPlumb\/min\/jsPlumb-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/libs\/jsPlumb\/min\/jsPlumb-min.js",
+		"outputAbbreviatedPath": "\/js\/libs\/jsPlumb\/min\/min\/jsPlumb-min-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -854,12 +945,34 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/js\/min\/script-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/min\/script-min.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/script-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/script-ck.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/script-ck.js",
 		"outputAbbreviatedPath": "\/js\/min\/script-ck-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/script.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/script.js",
+		"outputAbbreviatedPath": "\/js\/min\/script-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -887,6 +1000,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/layoutImg\/contact\/map.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 653044,
+		"inputAbbreviatedPath": "\/layoutImg\/contact\/map.jpg",
+		"outputAbbreviatedPath": "\/layoutImg\/contact\/map.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/contact\/pin.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1212,
+		"inputAbbreviatedPath": "\/layoutImg\/contact\/pin.png",
+		"outputAbbreviatedPath": "\/layoutImg\/contact\/pin.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/fdPartage.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3717,
+		"inputAbbreviatedPath": "\/layoutImg\/fdPartage.png",
+		"outputAbbreviatedPath": "\/layoutImg\/fdPartage.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/layoutImg\/fleche-droite.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -905,6 +1051,138 @@
 		"initialSize": 3697,
 		"inputAbbreviatedPath": "\/layoutImg\/fleche-droite@2x.png",
 		"outputAbbreviatedPath": "\/layoutImg\/fleche-droite@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/footer\/bandeau-couleurs.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 223,
+		"inputAbbreviatedPath": "\/layoutImg\/footer\/bandeau-couleurs.png",
+		"outputAbbreviatedPath": "\/layoutImg\/footer\/bandeau-couleurs.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/footer\/logo-viadeo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 309,
+		"inputAbbreviatedPath": "\/layoutImg\/footer\/logo-viadeo.png",
+		"outputAbbreviatedPath": "\/layoutImg\/footer\/logo-viadeo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/footer\/logo-viadeo@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 353,
+		"inputAbbreviatedPath": "\/layoutImg\/footer\/logo-viadeo@2x.png",
+		"outputAbbreviatedPath": "\/layoutImg\/footer\/logo-viadeo@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/formulaire\/fleche-rouge.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 499,
+		"inputAbbreviatedPath": "\/layoutImg\/formulaire\/fleche-rouge.png",
+		"outputAbbreviatedPath": "\/layoutImg\/formulaire\/fleche-rouge.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/formulaire\/fleche-verte.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 540,
+		"inputAbbreviatedPath": "\/layoutImg\/formulaire\/fleche-verte.png",
+		"outputAbbreviatedPath": "\/layoutImg\/formulaire\/fleche-verte.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/interlocuteurs\/interlocuteur-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3219,
+		"inputAbbreviatedPath": "\/layoutImg\/interlocuteurs\/interlocuteur-1.jpg",
+		"outputAbbreviatedPath": "\/layoutImg\/interlocuteurs\/interlocuteur-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/interlocuteurs\/interlocuteur-2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11632,
+		"inputAbbreviatedPath": "\/layoutImg\/interlocuteurs\/interlocuteur-2.png",
+		"outputAbbreviatedPath": "\/layoutImg\/interlocuteurs\/interlocuteur-2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/interlocuteurs\/viadeo-interlocuteur.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1013,
+		"inputAbbreviatedPath": "\/layoutImg\/interlocuteurs\/viadeo-interlocuteur.png",
+		"outputAbbreviatedPath": "\/layoutImg\/interlocuteurs\/viadeo-interlocuteur.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/interlocuteurs\/viadeo-interlocuteur@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1907,
+		"inputAbbreviatedPath": "\/layoutImg\/interlocuteurs\/viadeo-interlocuteur@2x.png",
+		"outputAbbreviatedPath": "\/layoutImg\/interlocuteurs\/viadeo-interlocuteur@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/juridique\/logo-alex.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2223,
+		"inputAbbreviatedPath": "\/layoutImg\/juridique\/logo-alex.png",
+		"outputAbbreviatedPath": "\/layoutImg\/juridique\/logo-alex.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/lien.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1411,
+		"inputAbbreviatedPath": "\/layoutImg\/lien.png",
+		"outputAbbreviatedPath": "\/layoutImg\/lien.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/loader.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 650,
+		"inputAbbreviatedPath": "\/layoutImg\/loader.png",
+		"outputAbbreviatedPath": "\/layoutImg\/loader.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -953,6 +1231,83 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/layoutImg\/svg-fallback\/facebook.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1109,
+		"inputAbbreviatedPath": "\/layoutImg\/svg-fallback\/facebook.png",
+		"outputAbbreviatedPath": "\/layoutImg\/svg-fallback\/facebook.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/svg-fallback\/plop-1.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 536,
+		"inputAbbreviatedPath": "\/layoutImg\/svg-fallback\/plop-1.png",
+		"outputAbbreviatedPath": "\/layoutImg\/svg-fallback\/plop-1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/svg-fallback\/plop-2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 590,
+		"inputAbbreviatedPath": "\/layoutImg\/svg-fallback\/plop-2.png",
+		"outputAbbreviatedPath": "\/layoutImg\/svg-fallback\/plop-2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/svg-fallback\/plop-3.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 401,
+		"inputAbbreviatedPath": "\/layoutImg\/svg-fallback\/plop-3.png",
+		"outputAbbreviatedPath": "\/layoutImg\/svg-fallback\/plop-3.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/svg-fallback\/plop.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1184,
+		"inputAbbreviatedPath": "\/layoutImg\/svg-fallback\/plop.png",
+		"outputAbbreviatedPath": "\/layoutImg\/svg-fallback\/plop.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/svg-fallback\/smiley.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2325,
+		"inputAbbreviatedPath": "\/layoutImg\/svg-fallback\/smiley.png",
+		"outputAbbreviatedPath": "\/layoutImg\/svg-fallback\/smiley.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/svg-fallback\/twitter.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1383,
+		"inputAbbreviatedPath": "\/layoutImg\/svg-fallback\/twitter.png",
+		"outputAbbreviatedPath": "\/layoutImg\/svg-fallback\/twitter.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/layoutImg\/visuels\/visuel-1.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -960,6 +1315,17 @@
 		"initialSize": 677279,
 		"inputAbbreviatedPath": "\/layoutImg\/visuels\/visuel-1.png",
 		"outputAbbreviatedPath": "\/layoutImg\/visuels\/visuel-1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/visuels\/visuel-activite-juridique.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 602089,
+		"inputAbbreviatedPath": "\/layoutImg\/visuels\/visuel-activite-juridique.png",
+		"outputAbbreviatedPath": "\/layoutImg\/visuels\/visuel-activite-juridique.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -984,7 +1350,7 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/less\/style.less": {
+	"\/less\/saved_style.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
 		"disableJavascript": 0,
@@ -992,8 +1358,8 @@
 		"ieCompatibility": 1,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/less\/style.less",
-		"outputAbbreviatedPath": "\/css\/style.css",
+		"inputAbbreviatedPath": "\/less\/saved_style.less",
+		"outputAbbreviatedPath": "\/css\/saved_style.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -1079,11 +1445,65 @@
 		"outputAbbreviatedPath": "\/README.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/resultats-recherche-vide.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/resultats-recherche-vide.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/resultats-recherche.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/resultats-recherche.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/rh-detail.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/rh-detail.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/rh-form.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/rh-form.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/rh-liste.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/rh-liste.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/wordpress\/wp-config.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/wordpress\/wp-config.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		}
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Boris Forconi",
+"lastSavedByUser": "Adrien Le Menthéour",
 "manualImportLinks": {
 	},
 "projectAttributes": {

@@ -266,10 +266,10 @@ function completeFondCouleur(){
 	TweenMax.set($("#container-bloc-visu-content"), {display: "none"});
 	
 	var tlBlocAutresVides = new TimelineMax({onComplete: addClassBlocAutresVideos});
-	tlBlocAutresVides.to($("#bloc-autres-videos"), 0.4, {marginRight: "0", ease:Cubic.easeInOut});
+	tlBlocAutresVides.to($("#bloc-autres-videos"), 0.4, {display: "block", marginRight: "0", ease:Cubic.easeInOut});
 	tlBlocAutresVides.to($("#bloc-autres-videos"), 0.4, {marginRight: "-196px", delay: 1.2, ease:Cubic.easeInOut});
 	
-	tlBlocAutresVides.to($("#bloc-retour-video"), 0.2, {marginLeft: "0px", ease:Cubic.easeInOut});
+	tlBlocAutresVides.to($("#bloc-retour-video"), 0.2, {marginLeft: "-20px", ease:Cubic.easeInOut});
 }
 function addClassBlocAutresVideos(){
 	$("#bloc-autres-videos").addClass("canTween");
@@ -289,7 +289,7 @@ function btnRetourVideoClick(){
 		TweenMax.to($("#bloc-menu-responsive"), 0.2, {x:"0%", delay:1, ease:Cubic.easeInOut, onComplete: blocMenuResponsiveRetour});
 		
 		TweenMax.to($("#bloc-retour-video"), 0.2, {marginLeft:"-200px", ease:Cubic.easeInOut});
-		TweenMax.to($("#bloc-autres-videos"), 0.2, {marginRight: "-250px", x: "0px", ease:Cubic.easeInOut});
+		TweenMax.to($("#bloc-autres-videos"), 0.2, {marginRight: "-250px", x: "0px", display: "none", ease:Cubic.easeInOut});
 		tlBlocVisuContentRetour = new TimelineMax();
 		tlBlocVisuContentRetour.to($("#fond-couleur-bloc-visu"), 0.2, {opacity: 1, display: "block", ease:Cubic.easeInOut});
 		tlBlocVisuContentRetour.to($("#bloc-fond-visu .bloc-visu-content"), 0.2, {opacity: 1, ease:Cubic.easeInOut, onComplete: completeFondCouleurRetour});
@@ -315,6 +315,17 @@ function btnPlusVideos(){
 		// au mouse leave
 		TweenMax.to($("#bloc-autres-videos"), 0.2, {x: "0px", ease:Cubic.easeInOut});
 		TweenMax.to($("a#plus-autres-videos .icon-plus"), 0.2, {scale: "1", ease:Cubic.easeInOut});
+	});
+	$("a#retour-video").hover(function(){
+		// au mouse enter
+		if(!isMobile.any){
+			TweenMax.to($("#bloc-retour-video"), 0.2, {x: "20px", ease:Cubic.easeInOut});
+			TweenMax.to($("a#retour-video .icon-retour"), 0.2, {scale: "1.1", ease:Cubic.easeInOut});
+		}
+	}, function(){
+		// au mouse leave
+		TweenMax.to($("#bloc-retour-video"), 0.2, {x: "0px", ease:Cubic.easeInOut});
+		TweenMax.to($("a#retour-video .icon-retour"), 0.2, {scale: "1", ease:Cubic.easeInOut});
 	});
 	$("a#plus-autres-videos").click(function(){
 		if((!$("#bloc-autres-videos").hasClass("open"))){
@@ -776,6 +787,8 @@ $(function(){
 	jsPlumbBlocSmall.setContainer($("#zone-blocs-accueil"));
 	var jsPlumbFirstBloc = jsPlumb.getInstance();
 	jsPlumbFirstBloc.setContainer($(".wrapper-blocs"));
+	var jsPlumbIframe = jsPlumb.getInstance();
+	jsPlumbIframe.setContainer($("body"));
 	checkMedia();
 	scanUrl();
 	animer();
@@ -993,7 +1006,21 @@ $(function(){
 				});
 			}
 		}
-
+		if ($('#etiquette').length){
+			jsPlumbIframe.connect({
+				source: $("#zone-actus"),
+				target: $("#etiquette"),
+				//[x, y, dx, dy]
+				anchors: [[0.5, 0, 0, 0], [1, 0.5, 1, 0]],
+				endpoint:"Blank",
+				paintStyle:{
+				lineWidth:2,
+				strokeStyle:'#cacaca',
+				dashstyle:" 0 1"
+				},
+				connector:[ "Bezier", { curviness: 200 }]
+			});
+		}
 		refreshLink();
 	});
 	
