@@ -496,6 +496,7 @@ body{
 	width: 1250px;
 	position: relative;
 	margin: 0 auto;
+	z-index: 2;
 }
 
 #content{
@@ -703,6 +704,16 @@ a{
 	&.btn-bleu{
 		color: @bleuIMA;
 		.box-shadow(inset 0 -1px 0 @bleuIMA);
+	}
+	&.svg{
+		&:after {
+		  content: ""; 
+		  position: absolute; 
+		  top: 0; 
+		  right: 0; 
+		  bottom: 0; 
+		  left: 0;
+		}
 	}
 	&.btn-plus{
 		.box-shadow(none);
@@ -1127,7 +1138,7 @@ a{
 
 /* @group Header */
 
-header{
+#header{
 	display: block;
 	width: 100%;
 	height: auto;
@@ -1393,7 +1404,7 @@ header{
 
 /* @group Footer */
 
-footer{
+#footer{
 	display: block;
 	width: 100%;
 	height: auto;
@@ -2172,6 +2183,7 @@ ul#categories-articles{
 		.transform(translateZ(1px));
 		width: 100%;
 		height: auto;
+		z-index: 3;
 		&.active{
 			a{
 
@@ -3561,6 +3573,11 @@ a.bloc-small{
 	.container{
 		height: 100%;
 	}
+	.video-js{
+	  height:100% !important;
+	  width:100% !important;
+
+	}
 	#wrapper-embed{
 		display: block;
 		position: absolute;
@@ -4371,6 +4388,12 @@ a.bloc-small{
 
 /* @group Bloc menu responsive */
 
+#svg-hamburger{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 8px 0 0;
+}
+
 #bloc-menu-responsive{
 	display: block;
 	width: auto;
@@ -4383,23 +4406,15 @@ a.bloc-small{
 	margin: 0 0 0 0;
 	a#menu-responsive{
 		.box-shadow(none);
-		.svg-hamburger{
-			display: inline-block;
-			vertical-align: top;
-			padding: 1px 0 0 0;
-			margin: 0 8px 0 0;
-			width: 23px;
-			height: 20px;
-			#hamburger{
-				fill: @bleuIMA;
-			}
-		}
-		.svg-logo-ima{
+		#svg-logo-ima{
 			display: none;
 			vertical-align: top;
 			width: 97px;
 			height: 15px;
 			fill: @bleuIMA;
+		}
+		.lt-ie9 &{
+			background: url('../layoutImg/hamburger-ie8.png') no-repeat center center;
 		}
 	}
 }
@@ -5413,6 +5428,10 @@ form#search-sitemap{
 .clearfix:after {
     content: " "; /* 1 */
     display: table; /* 2 */
+    .lt-ie9 &{
+    	display: block;
+    	content: normal;
+    }
 }
 .clearfix:after {
     clear: both;
@@ -5433,7 +5452,7 @@ form#search-sitemap{
 	#bloc-menu-responsive{
 		padding: 27px 0 0 0;
 	}
-	header{
+	#header{
 		#label-menu{
 			left: 30px;
 		}
@@ -5453,7 +5472,7 @@ form#search-sitemap{
 		width: 100%;
 		max-width: 620px;
 	}
-	header{
+	#header{
 		#label-menu{
 			left: 110px;
 		}
@@ -5609,20 +5628,20 @@ form#search-sitemap{
 }
 
 @media (max-width: 1024px) {
-	header{
+	#header{
 		display: none;
 	}
 	#content{
 		margin-top: 130px;
 	}
+	#svg-hamburger{
+		width: 18px;
+		height: 14px;
+	}
 	#bloc-menu-responsive{
 		margin-left: 0;
 		a#menu-responsive{
-			.svg-hamburger{
-				width: 18px;
-				height: 14px;
-			}
-			.svg-logo-ima{
+			#svg-logo-ima{
 				display: inline-block;
 			}
 		}
@@ -5879,7 +5898,7 @@ form#search-sitemap{
 		}
 	}
 	
-	footer{
+	#footer{
 		position: relative;
 		bottom: inherit;
 		left: inherit;
@@ -6182,7 +6201,7 @@ form#search-sitemap{
 /* @group Responsive vertical */
 
 @media (max-height: 800px) {
-	header {
+	#header {
 		margin: 0 0 30px 0;
 	}
 	.ribbon, .ribbon-copie {
