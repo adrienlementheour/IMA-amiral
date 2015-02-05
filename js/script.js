@@ -838,6 +838,9 @@ $(function(){
 		btnRetourVideoClick();
 		btnPlusVideos();
 	}
+	if( $("body").hasClass("blog") || $("body").hasClass("category")){
+		loader();	
+	}
 	$( window ).resize(function() {
 		//jsPlumb.setSuspendDrawing(false, true);
 		initSitemapMobile();
@@ -1057,9 +1060,6 @@ $(function(){
 					}
 				}
 			}
-		}
-		if( $("body").hasClass("blog") || $("body").hasClass("category")){
-			loader();	
 		}
 	});
 
