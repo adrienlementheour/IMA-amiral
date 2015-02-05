@@ -772,7 +772,6 @@ function preventEmptySearch(){
 /*function makeAllLinksExternal(){
 	var links = $('a');
 	var url;
-
 	links.click(function(){
 		if($(this).attr('id') === 'lien-close-modal' || $(this).attr('id') === 'lien-close-interlocuteur-modal'){
 			window.parent.postMessage('close', '*');
@@ -810,7 +809,7 @@ $(function(){
 	animer();
 	if ($(window).width()>1024){
 		setTimeout(function() {
-		      menuOuvertDefault();
+		      menuOuvertDefault();
 		}, 1000);
 	}
 	if ($("html").hasClass("lt-ie9")){
