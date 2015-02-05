@@ -3272,8 +3272,8 @@ ul.liste-recherche .content-actu,
 ul.liste-recherche .content-single {
   min-height: inherit;
 }
-.content-actu img,
-.content-single img {
+.content-actu .wp-post-image,
+.content-single .wp-post-image {
   float: left;
   padding: 0 20px 10px 0;
   max-width: 140px;
