@@ -3296,6 +3296,12 @@ ul.liste-recherche .content-single {
   -moz-osx-font-smoothing: grayscale;
   padding: 0 0 5px;
 }
+.content-actu iframe,
+.content-single iframe,
+.content-actu embed,
+.content-single embed {
+  max-width: 100%;
+}
 .content-single a {
   font-family: 'open_sansbold_italic', sans-serif;
   font-weight: normal;
