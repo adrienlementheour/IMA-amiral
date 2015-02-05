@@ -445,6 +445,9 @@ body.contact {
   max-width: 100%!important;
   height: auto;
 }
+.bloc-full .bloc-content .wp-post-image {
+  max-width: 140px!important;
+}
 .bloc-full.article {
   margin-top: 60px;
   -webkit-transition: margin-top 0.1s ease-in-out;
@@ -3262,6 +3265,7 @@ h2 {
 .content-actu,
 .content-single {
   min-height: 70px;
+  overflow: hidden;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -o-backface-visibility: hidden;

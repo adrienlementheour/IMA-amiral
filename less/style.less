@@ -616,6 +616,9 @@ body{
 			max-width: 100%!important;
 			height: auto;
 		}
+		.wp-post-image{
+			max-width: 140px!important;
+		}
 	}
 	&.article{
 		margin-top: 60px;
@@ -2554,10 +2557,11 @@ h2{
 }
 .content-actu, .content-single{
 	min-height: 70px;
+	overflow: hidden;
+	.backface-visibility(hidden);
 	ul.liste-recherche &{
 		min-height: inherit;
 	}
-	.backface-visibility(hidden);
 	.wp-post-image{
 		float: left;
 		padding: 0 20px 10px 0;
