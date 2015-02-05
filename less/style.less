@@ -624,6 +624,23 @@ body{
 		margin-top: 60px;
 		.transition(margin-top 0.1s ease-in-out);
 	}
+	.blog &, .category &{
+		&:after{
+			content: '';
+			position: absolute;
+			height: 142px;
+			width: 4px;
+			bottom: -142px;
+			left: 50%;
+			margin-left: -2px;
+			background: url(../layoutImg/afterActu.png) no-repeat;
+		}
+		&:last-of-type{
+			&:after{
+				display: none;
+			}
+		}
+	}
 }
 
 .container-fond-bloc{
