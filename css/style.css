@@ -455,6 +455,9 @@ body.contact {
   -o-transition: margin-top 0.1s ease-in-out;
   transition: margin-top 0.1s ease-in-out;
 }
+.rh .bloc-full:after,
+.recherche .bloc-full:after,
+.search .bloc-full:after,
 .blog .bloc-full:after,
 .category .bloc-full:after {
   content: '';
@@ -466,6 +469,9 @@ body.contact {
   margin-left: -2px;
   background: url(../layoutImg/afterActu.png) no-repeat;
 }
+.rh .bloc-full:last-of-type:after,
+.recherche .bloc-full:last-of-type:after,
+.search .bloc-full:last-of-type:after,
 .blog .bloc-full:last-of-type:after,
 .category .bloc-full:last-of-type:after {
   display: none;
