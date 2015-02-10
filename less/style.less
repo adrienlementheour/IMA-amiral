@@ -3495,6 +3495,11 @@ a.bloc-small{
 		height: 100%;
 		width: 100%;
 		width: calc(~"100% - 54px");
+		z-index: 1;
+		.lt-ie10 &{
+			width: calc(~"100% - 348px");
+			left: 86px;
+		}
 	}
 
 	/* @end */
@@ -3609,6 +3614,13 @@ a.bloc-small{
 		bottom: 0;
 		left: 0;
 		right: 0;
+		z-index: 1;
+		.lt-ie10 &{
+			display: none;
+		}
+		.lt-ie10.video-ouverte &{
+			display: block;
+		}
 		.embed-container {
 			padding-bottom: 56.25%;
 			height: 0;

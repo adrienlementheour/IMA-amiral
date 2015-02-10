@@ -4655,6 +4655,11 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   height: 100%;
   width: 100%;
   width: calc(100% - 54px);
+  z-index: 1;
+}
+.lt-ie10 #bloc-fond-visu .calameo-iframe {
+  width: calc(100% - 348px);
+  left: 86px;
 }
 #bloc-fond-visu .vjs-default-skin:hover .vjs-big-play-button {
   -webkit-transform: scale(1.08);
@@ -4791,6 +4796,13 @@ a.bloc-small.bloc-7:hover .raccord-categ {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 1;
+}
+.lt-ie10 #bloc-fond-visu #wrapper-embed {
+  display: none;
+}
+.lt-ie10.video-ouverte #bloc-fond-visu #wrapper-embed {
+  display: block;
 }
 #bloc-fond-visu #wrapper-embed .embed-container {
   padding-bottom: 56.25%;

@@ -239,7 +239,11 @@ function btnVideoClick(){
 function ouvrirBlocVideo(){
 	$(window).scrollTop(0);
 	$("body").addClass("video-ouverte");
+	$("html").addClass("video-ouverte");
 	// décaler le wrapper content
+	if($("html").hasClass("lt-ie10")){
+		TweenMax.set($("#wrapper-embed"), {display: "block"});
+	}
 	TweenMax.set($("footer"), {display: "none"});
 	TweenMax.set($(".bloc-btn-video"), {display: "none"});
 	TweenMax.to($("#wrapper-content"), 0.5, {"x":"-100%", ease:Cubic.easeInOut, onComplete: completeWrapperContent});
@@ -292,6 +296,7 @@ function btnRetourVideoClick(){
 		window.location.hash='';
 		stopVideos();
 		$("body").removeClass("video-ouverte");
+		$("html").removeClass("video-ouverte");
 		$("#bloc-autres-videos").removeClass("canTween");
 		TweenMax.set($(".bloc-btn-video"), {display: "block"});
 		TweenMax.set($("#wrapper-content"), {display: "block"});
@@ -310,6 +315,9 @@ function btnRetourVideoClick(){
 }
 function blocMenuResponsiveRetour(){
 	TweenMax.set($("footer"), {display: "block"});
+	if($("html").hasClass("lt-ie10")){
+		TweenMax.set($("#wrapper-embed"), {display: "none"});
+	}
 }
 function completeFondCouleurRetour(){
 	TweenMax.to($("#bloc-fond-visu .bloc-visu-content"), 0.5, {right:"0", marginRight: "0%", ease:Cubic.easeInOut});
@@ -558,6 +566,9 @@ function btnInterlocuteur(){
 ////////////////////// Fonction pour changer de video / calameo / image ////////////////////////
 function autresVideos(){
 	$("ul#autres-videos li a").click(function(){
+		if($("html").hasClass("lt-ie10")){
+			TweenMax.set($("#wrapper-embed"), {display: "block"});
+		}
 		$(window).scrollTop(0);
 		$("ul#autres-videos li.active").removeClass("active");
 		$(this).parent().addClass("active");
@@ -663,6 +674,9 @@ function scanUrl(){
 	//tester si il y a bien au moins deux hashtags
 	if(urlHashs.length >= 3){
 		//tester le type de media
+		if($("html").hasClass("lt-ie10")){
+			TweenMax.set($("#wrapper-embed"), {display: "block"});
+		}
 		switch(urlHashs[1]) {
 		    case "video":
 		    	//tester l'existance du media
@@ -705,6 +719,7 @@ function scanUrl(){
 		window.location.hash='';
 		stopVideos();
 		$("body").removeClass("video-ouverte");
+		$("html").removeClass("video-ouverte");
 		$("#bloc-autres-videos").removeClass("canTween");
 		TweenMax.set($(".bloc-btn-video"), {display: "block"});
 		TweenMax.set($("#wrapper-content"), {display: "block"});
