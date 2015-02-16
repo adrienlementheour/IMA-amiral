@@ -101,12 +101,12 @@ function animer(){
 				TweenMax.set($("a.btn-postuler"), {position: "absolute", "right": "-23px", "left": "inherit"});
 			}
 		}
-		if (!$("html").hasClass("lt-ie9")){
+		/*if (!$("html").hasClass("lt-ie9")){
 			if ($('#etiquette').length){
 				jsPlumb.repaint($("#zone-actus"), { left:Math.round($("#zone-actus").offset().left), top:Math.round($("#zone-actus").offset().top)});
 				jsPlumb.repaint($("#etiquette"), { left:Math.round($("#etiquette").offset().left), top:Math.round($("#etiquette").offset().top)});
 			}
-		}
+		}*/
 		refreshLink();
 		animer();
 	});
@@ -1086,7 +1086,7 @@ $(function(){
 						});
 					}
 				}
-				if ($('#etiquette').length){
+				/*if ($('#etiquette').length){
 					jsPlumb.setContainer($("body"));
 					jsPlumb.connect({
 						source: $("#zone-actus"),
@@ -1101,7 +1101,7 @@ $(function(){
 						},
 						connector:[ "Bezier", { curviness: 200 }]
 					});
-				}
+				}*/
 			}
 			refreshLink();
 		});
