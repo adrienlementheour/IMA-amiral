@@ -226,6 +226,9 @@ textarea {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-download:before {
+	content: "\e60c";
+}
 .icon-external:before {
 	content: "\e60b";
 }
@@ -5285,6 +5288,149 @@ form#search-sitemap{
 							.box-shadow(inset 0 -1px 0 @violetIMA);
 						}
 					}
+				}
+			}
+		}
+	}
+}
+
+/* @end */
+
+/* @group Logos */
+
+ul.slider-logos{
+	display: block;
+	width: 100%;
+	height: auto;
+	list-style-type: none;
+	margin: 25px 0 50px 0;
+	padding: 0;
+	li{
+		display: inline-block;
+		vertical-align: top;
+		width: 33.333333333%;
+		margin: 0;
+		padding: 0 10px;
+		.box-sizing(border-box);
+		a{
+			display: block;
+			width: 100%;
+			height: 150px;
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+			border: 1px dashed #d0d0d0;
+			.box-shadow(none);
+			.border-radius(6px);
+			.box-sizing(border-box);
+			text-align: center;
+			position: relative;
+			.title-slider-logos{
+				display: inline-block;
+				vertical-align: top;
+				.opensans-bold(1em);
+				color: #acacac;
+				text-align: center;
+				width: 100%;
+				.transform(translateY(-50%));
+				.box-sizing(border-box);
+				padding: 0 20px;
+				position: relative;
+				line-height: 1.1em;
+				.fond-title-slider-logos{
+					display: block;
+					width: auto;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 20px;
+					right: 20px;
+					background-color: @blanc;
+				}
+				.content-title-slider-logos{
+					position: relative;
+				}
+			}
+			.container-img-slider-logos{
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				line-height: 148px;
+				top: 0;
+				left: 0;
+				text-align: center;
+				img{
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+			.telecharger-logo-bloc{
+				display: block;
+				position: absolute;
+				padding: 5px 10px 4px 10px;
+				z-index: 4;
+				bottom: -12px;
+				left: 18px;
+				.container-fond-telecharger-logo-bloc{
+					display: block;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					bottom: 0;
+					right: 0;
+					.transform(translateZ(0px));
+					.fond-telecharger-logo-bloc{
+						display: block;
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						bottom: 0;
+						right: 0;
+						.border-radius(3px);
+						outline: 1px solid transparent;
+						.transition(padding-left 0.1s ease-in-out);
+						.backface-visibility(hidden);
+						background-color: @roseIMA;
+					}
+				}
+				.txt-telecharger-logo-bloc{
+					.opensans-semibold-italic(1.231em);
+					color: @blanc;
+					position: relative;
+					.transition(transform 0.4s ease-in-out);
+					display: inline-block;
+					.transform(translateZ(1px));
+				}
+			}
+			.icon-download{
+				display: block;
+				.size(26px);
+				.border-radius(50%);
+				background-color: @roseIMA;
+				color: @blanc;
+				line-height: 26px;
+				text-align: center;
+				font-size: 14px;
+				position: absolute;
+				bottom: -30px;
+				right: 0;
+				.transition(transform 0.2s ease-in-out);
+				&:before{
+					padding-left: 2px;
+				}
+			}
+			&:hover{
+				.telecharger-logo-bloc{
+					.fond-telecharger-logo-bloc{
+						padding-left: 10px;
+					}
+					.txt-telecharger-logo-bloc{
+						.transform(translateX(-10px));
+					}
+				}
+				.icon-download{
+					.transform(scale(1.1));
 				}
 			}
 		}
