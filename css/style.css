@@ -7047,6 +7047,8 @@ ul.slider-logos li a .container-img-slider-logos {
 ul.slider-logos li a .container-img-slider-logos img {
   display: inline-block;
   vertical-align: middle;
+  max-height: 90px;
+  width: auto;
 }
 ul.slider-logos li a .telecharger-logo-bloc {
   display: block;
