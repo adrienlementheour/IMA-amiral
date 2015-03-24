@@ -7142,22 +7142,28 @@ ul.slider-logos li a .icon-download {
 ul.slider-logos li a .icon-download:before {
   padding-left: 2px;
 }
-ul.slider-logos li a:hover .telecharger-logo-bloc .fond-telecharger-logo-bloc {
+ul.slider-logos li a:hover .telecharger-logo-bloc .fond-telecharger-logo-bloc,
+ul.slider-logos li a.survol .telecharger-logo-bloc .fond-telecharger-logo-bloc {
   padding-left: 10px;
 }
-ul.slider-logos li a:hover .telecharger-logo-bloc .txt-telecharger-logo-bloc {
+ul.slider-logos li a:hover .telecharger-logo-bloc .txt-telecharger-logo-bloc,
+ul.slider-logos li a.survol .telecharger-logo-bloc .txt-telecharger-logo-bloc {
   -webkit-transform: translateX(-10px);
   -moz-transform: translateX(-10px);
   -o-transform: translateX(-10px);
   -ms-transform: translateX(-10px);
   transform: translateX(-10px);
 }
-ul.slider-logos li a:hover .icon-download {
+ul.slider-logos li a:hover .icon-download,
+ul.slider-logos li a.survol .icon-download {
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+}
+#global-zeroclipboard-html-bridge {
+  padding-bottom: 12px;
 }
 /* @end */
 /* @group SVG */

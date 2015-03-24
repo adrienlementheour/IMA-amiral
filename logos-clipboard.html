@@ -301,7 +301,7 @@
 			    // Apply clipboard click event
 			    copy_sel.clipboard({
 			        path: "<?php echo get_template_directory_uri(); ?>/flashes/jquery.clipboard.swf",
-
+			        copy_sel.setHandCursor(true);
 			        copy: function() {
 			            var this_sel = $(this);
 			            $(".telecharger-logo-bloc .txt-telecharger-logo-bloc", this_sel).text("Lien copié");
