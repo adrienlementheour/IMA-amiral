@@ -1086,22 +1086,28 @@ $(function(){
 						});
 					}
 				}
-				/*if ($('#etiquette').length){
-					jsPlumb.setContainer($("body"));
-					jsPlumb.connect({
-						source: $("#zone-actus"),
-						target: $("#etiquette"),
-						//[x, y, dx, dy]
-						anchors: [[0.95, 0.4, 0, 0], [0.28, 0.06, 0, 0]],
-						endpoint:"Blank",
-						paintStyle:{
-						lineWidth:2,
-						strokeStyle:'#cacaca',
-						dashstyle:" 0 1"
-						},
-						connector:[ "Bezier", { curviness: 200 }]
-					});
-				}*/
+				if($("body").hasClass("clipboard")){
+					var copy_sel = $('ul.slider-logos li a');
+
+				    // Disables other default handlers on click (avoid issues)
+				    copy_sel.on('click', function(e) {
+				        e.preventDefault();
+				    });
+
+				    // Apply clipboard click event
+				    copy_sel.clipboard({
+				        path: 'flashes/jquery.clipboard.swf',
+
+				        copy: function() {
+				            var this_sel = $(this);
+				            $(".telecharger-logo-bloc .txt-telecharger-logo-bloc", this_sel).text("Lien copié");
+				            setTimeout(function() {
+				            	$(".telecharger-logo-bloc .txt-telecharger-logo-bloc", this_sel).text("Copier le lien");
+				            }, 500);
+				            return $(this).attr('href');
+				        }
+				    });
+				}
 			}
 			refreshLink();
 		});
