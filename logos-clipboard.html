@@ -288,5 +288,30 @@
 		<script src="js/libs/jquery.clipboard.js" type="text/javascript" charset="utf-8"></script>
 		
 		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			if($("body").hasClass("clipboard")){
+				var copy_sel = $('ul.slider-logos li a');
+
+			    // Disables other default handlers on click (avoid issues)
+			    copy_sel.on('click', function(e) {
+			        e.preventDefault();
+			    });
+
+			    // Apply clipboard click event
+			    copy_sel.clipboard({
+			        path: "<?php echo get_template_directory_uri(); ?>/flashes/jquery.clipboard.swf",
+
+			        copy: function() {
+			            var this_sel = $(this);
+			            $(".telecharger-logo-bloc .txt-telecharger-logo-bloc", this_sel).text("Lien copié");
+			            setTimeout(function() {
+			            	$(".telecharger-logo-bloc .txt-telecharger-logo-bloc", this_sel).text("Copier le lien");
+			            }, 500);
+			            return $(this).attr('href');
+			        }
+			    });
+			}
+		</script>
 	</body>
 </html>

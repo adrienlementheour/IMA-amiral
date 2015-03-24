@@ -1086,28 +1086,6 @@ $(function(){
 						});
 					}
 				}
-				if($("body").hasClass("clipboard")){
-					var copy_sel = $('ul.slider-logos li a');
-
-				    // Disables other default handlers on click (avoid issues)
-				    copy_sel.on('click', function(e) {
-				        e.preventDefault();
-				    });
-
-				    // Apply clipboard click event
-				    copy_sel.clipboard({
-				        path: 'flashes/jquery.clipboard.swf',
-
-				        copy: function() {
-				            var this_sel = $(this);
-				            $(".telecharger-logo-bloc .txt-telecharger-logo-bloc", this_sel).text("Lien copié");
-				            setTimeout(function() {
-				            	$(".telecharger-logo-bloc .txt-telecharger-logo-bloc", this_sel).text("Copier le lien");
-				            }, 500);
-				            return $(this).attr('href');
-				        }
-				    });
-				}
 			}
 			refreshLink();
 		});
