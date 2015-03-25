@@ -85,23 +85,23 @@
 								<h3>logos groupe</h3>
 								<ul class="slider-logos">
 									<li>
-										<a href="#">
+										<div class="bloc-slider-logos">
 											<span class="title-slider-logos"><span class="fond-title-slider-logos"></span><span class="content-title-slider-logos">IMATECH</span></span>
 											<span class="container-img-slider-logos"><img src="img/logos/logo-imatech.png"></span>
-											<span class="telecharger-logo-bloc"> <span class="container-fond-telecharger-logo-bloc"> <span class="fond-telecharger-logo-bloc"></span> </span> <span class="txt-telecharger-logo-bloc">Copier le lien</span></span>
-										</a>
+											<a href="#" class="telecharger-logo-bloc"> <span class="container-fond-telecharger-logo-bloc"> <span class="fond-telecharger-logo-bloc"></span> </span> <span class="txt-telecharger-logo-bloc">Copier le lien</span></a>
+										</div>
 									</li><li>
-										<a href="#">
-											<span class="title-slider-logos"><span class="fond-title-slider-logos"></span><span class="content-title-slider-logos">La relation client comme on l'aime</span></span>
-											<span class="container-img-slider-logos"><img src="img/logos/logo-imatech.png"></span>
-											<span class="telecharger-logo-bloc"> <span class="container-fond-telecharger-logo-bloc"> <span class="fond-telecharger-logo-bloc"></span> </span> <span class="txt-telecharger-logo-bloc">Copier le lien</span></span>
-										</a>
-									</li><li>
-										<a href="#">
+										<div class="bloc-slider-logos">
 											<span class="title-slider-logos"><span class="fond-title-slider-logos"></span><span class="content-title-slider-logos">IMATECH</span></span>
 											<span class="container-img-slider-logos"><img src="img/logos/logo-imatech.png"></span>
-											<span class="telecharger-logo-bloc"> <span class="container-fond-telecharger-logo-bloc"> <span class="fond-telecharger-logo-bloc"></span> </span> <span class="txt-telecharger-logo-bloc">Copier le lien</span></span>
-										</a>
+											<a href="#" class="telecharger-logo-bloc"> <span class="container-fond-telecharger-logo-bloc"> <span class="fond-telecharger-logo-bloc"></span> </span> <span class="txt-telecharger-logo-bloc">Copier le lien</span></a>
+										</div>
+									</li><li>
+										<div class="bloc-slider-logos">
+											<span class="title-slider-logos"><span class="fond-title-slider-logos"></span><span class="content-title-slider-logos">IMATECH</span></span>
+											<span class="container-img-slider-logos"><img src="img/logos/logo-imatech.png"></span>
+											<a href="#" class="telecharger-logo-bloc"> <span class="container-fond-telecharger-logo-bloc"> <span class="fond-telecharger-logo-bloc"></span> </span> <span class="txt-telecharger-logo-bloc">Copier le lien</span></a>
+										</div>
 									</li>
 								</ul>
 								<h3>logos métiers « véhicules »</h3>
@@ -297,6 +297,7 @@
 
 			    // Disables other default handlers on click (avoid issues)
 			    copy_sel.on('click', function(e) {
+			    	alert("aze");
 			        e.preventDefault();
 			    });
 
@@ -305,9 +306,9 @@
 			        path: "<?php echo get_template_directory_uri(); ?>/flashes/jquery.clipboard.swf",
 			        copy: function() {
 			            var this_sel = $(this);
-			            $(".telecharger-logo-bloc .txt-telecharger-logo-bloc", this_sel).text("Lien copié");
+			            $(".txt-telecharger-logo-bloc", this_sel).text("Lien copié");
 			            setTimeout(function() {
-			            	$(".telecharger-logo-bloc .txt-telecharger-logo-bloc", this_sel).text("Copier le lien");
+			            	$(".txt-telecharger-logo-bloc", this_sel).text("Copier le lien");
 			            }, 500);
 			            return $(this).attr('href');
 			        }
