@@ -2799,7 +2799,7 @@ a.bloc-small{
 	}
 	&.pos-2, &:nth-of-type(2){
 		top: 10px;
-		left: 260px;
+		left: 240px;
 	}
 	&.pos-3, &:nth-of-type(3){
 		top: 0;
@@ -4116,6 +4116,7 @@ a.bloc-small{
 	margin: 0;
 	a#menu-responsive{
 		.box-shadow(none);
+		display: none;
 		#svg-logo-ima{
 			display: none;
 			vertical-align: top;
@@ -5069,87 +5070,147 @@ ul.slider-logos{
 
 /* @group SVG */
 
-#container-smiley{
-	width: 45px;
-	height: 45px;
-	position: absolute;
-	bottom: -28px;
-	right: 115px;
-	z-index: 2;
-	.transform(rotate(5deg));
-	.transition(transform 0.1s ease-in-out);
+#pop{
+	.branche{
+		fill: @bleuIMA;
+	}
 }
-
-#smiley{
-	.elem-smiley{
-		fill: @vertIMA;
+#pop2{
+	.branche{
+		fill: @vertIMA-dark;
+	}
+}
+#pop3{
+	.branche{
+		fill: @bleuIMA-dark;
 	}
 }
 
 #container-pop{
-	width: 45px;
-	height: 45px;
+	width: 35px;
+	height: 35px;
 	position: absolute;
-	top: -60px;
-	right: 40px;
+	bottom: -8px;
+	left: -25px;
 	z-index: 2;
 }
-
-#pop, #pop2, #pop3{
-	.branche{
-		fill: @orangeIMA;
-	}
-}
-
 #container-pop2{
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	top: 32px;
+	left: -21px;
+	z-index: 2;
+}
+#container-pop3{
 	width: 15px;
 	height: 15px;
 	position: absolute;
-	top: -65px;
-	right: 20px;
+	bottom: 4px;
+	left: 28px;
 	z-index: 2;
 }
 
-#container-pop3{
-	width: 25px;
-	height: 25px;
-	position: absolute;
-	top: -45px;
-	right: -5px;
-	z-index: 2;
-}
-
-#container-pop4{
-	width: 11px;
-	height: 11px;
-	position: absolute;
-	top: -15px;
-	right: 30px;
-	z-index: 2;
-}
-
-#container-twitter{
-	width: 46px;
-	height: 37px;
-	position: absolute;
-	top: 10px;
-	left: -65px;
-	z-index: 2;
-}
-
-#twitter, #facebook{
+#twitter{
 	.elem-twitter{
 		fill: @bleuIMA;
 	}
 }
-
+#facebook{
+	.elem-facebook{
+		fill: @bleuIMA;
+	}
+}
+#container-twitter{
+	width: 46px;
+	height: 37px;
+	position: absolute;
+	top: -35px;
+	right: 10px;
+	z-index: 2;
+}
 #container-facebook{
 	width: 15px;
 	height: 30px;
 	position: absolute;
-	bottom: -8px;
-	left: 10px;
+	top: -13px;
+	right: -20px;
 	z-index: 2;
+}
+
+#smiley-big{
+	.elem-smiley{
+		fill: @roseIMA;
+	}
+}
+#smiley{
+	.elem-smiley{
+		fill: @bleuIMA-dark;
+	}
+}
+#container-smiley-big{
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	top: -22px;
+	right: -19px;
+	z-index: 2;
+	transform-origin: 50% 50%;
+	.transform(rotate(15deg));
+	.transition(transform 0.1s ease-in-out);
+}
+#container-smiley{
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: -40px;
+	right: 29px;
+	z-index: 2;
+	transform-origin: 50% 50%;
+	.transform(rotate(-8deg));
+	.transition(transform 0.1s ease-in-out);
+}
+
+#container-verre{
+	width: 16px;
+	height: 25px;
+	position: absolute;
+	top: -20px;
+	right: -25px;
+	z-index: 2;
+	transform-origin: 50% 50%;
+	.transform(rotate(-3deg));
+}
+#container-tasse{
+	width: 30px;
+	height: 34px;
+	position: absolute;
+	top: 24px;
+	right: -45px;
+	z-index: 2;
+	transform-origin: 50% 50%;
+	.transform(rotate(9deg));
+}
+
+#container-mail{
+	width: 30px;
+	height: 25px;
+	position: absolute;
+	top: -34px;
+	right: 47px;
+	z-index: 2;
+	transform-origin: 50% 50%;
+	.transform(rotate(-15deg));
+}
+#container-tel{
+	width: 9px;
+	height: 21px;
+	position: absolute;
+	top: -23px;
+	right: -5px;
+	z-index: 2;
+	transform-origin: 50% 50%;
+	.transform(rotate(-25deg));
 }
 
 #etiquette{
@@ -5382,6 +5443,7 @@ ul.slider-logos{
 	#bloc-menu-responsive{
 		margin-left: 0;
 		a#menu-responsive{
+			display: block;
 			#svg-logo-ima{
 				display: inline-block;
 			}
