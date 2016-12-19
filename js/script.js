@@ -14,7 +14,7 @@ $(function(){
 	var wrapperContent = $("#wrapper-content"), etiquette = $('#etiquette'), blocBtnVideo = $(".bloc-btn-video");
 	var blocAdress = $("#bloc-adresse"), menuWrapper = $("#menu-wrapper"), blocActus = $("#bloc-actus");
 	var circleDashed = menuWrapper.find("#circle-dashed-container"), menuWrapperUl = menuWrapper.find("ul"), menuWrapperLi = menuWrapperUl.find('li');
-	var blocAutresVideos = $("#bloc-autres-videos"), blocBackVideo = $("#bloc-retour-video");
+	var blocAutresVideos = $("#bloc-autres-videos"), blocBackVideo = $("#bloc-retour-video"), tlBlocVisuContentRetour;
 	var wrapperEmbed = $("#wrapper-embed"), wrapperBlocs = $(".wrapper-blocs");
 
 
@@ -151,7 +151,7 @@ $(function(){
 			tlWrapperBlocs.to(wrapperBlocs, 0.2, {marginTop:"20px", ease:Cubic.easeInOut, delay: 0.2});
 		}
 
-		tlMenuWrapper.set(menuWrapperLi, {width:"98px", height:"98px", ease:Cubic.easeInOut});
+		tlMenuWrapper.set(menuWrapperLi, {width:"116px", height:"116px", ease:Cubic.easeInOut});
 		//tlMenuWrapper.set($("#menu-wrapper ul li a"), {borderWidth:"10px", ease:Cubic.easeInOut});
 		tlMenuWrapper.set($("#menu-wrapper ul li a .txt-circle"), {display:"inline-block", ease:Cubic.easeInOut, onComplete: cerclesAnim});
 		tlCircleDashed.set(circleDashed, {width:"312px", height:"312px", marginTop: "-156px", marginLeft: "-156px", ease:Cubic.easeInOut});
@@ -159,11 +159,10 @@ $(function(){
 		tlCircleDashed.to(circleDashed, 0.2, {scale: 1, delay: 0.3, ease:Cubic.easeInOut});
 
 		function cerclesAnim(){
-			tlCircles.to(menuWrapperLi.eq(0), 0.3, {top: "94px", left: "300px", ease:Cubic.easeInOut});
-			tlCircles.to(menuWrapperLi.eq(1), 0.3, {top: "235px", left: "310px", delay:0.05, ease:Cubic.easeInOut},0);
-			tlCircles.to(menuWrapperLi.eq(2), 0.3, {top: "321px", left: "166px", delay:0.1, ease:Cubic.easeInOut},0);
-			tlCircles.to(menuWrapperLi.eq(3), 0.3, {top: "235px", left: "20px", delay:0.2, ease:Cubic.easeInOut},0);
-			tlCircles.to(menuWrapperLi.eq(4), 0.3, {top: "94px", left: "32px", delay:0.25, ease:Cubic.easeInOut},0);
+			tlCircles.to(menuWrapperLi.eq(0), 0.3, {top: "130px", left: "310px", ease:Cubic.easeInOut});
+			tlCircles.to(menuWrapperLi.eq(1), 0.3, {top: "280px", left: "258px", delay:0.05, ease:Cubic.easeInOut},0);
+			tlCircles.to(menuWrapperLi.eq(2), 0.3, {top: "280px", left: "60px", delay:0.1, ease:Cubic.easeInOut},0);
+			tlCircles.to(menuWrapperLi.eq(3), 0.3, {top: "130px", left: "4px", delay:0.2, ease:Cubic.easeInOut},0);
 		}
 	}
 
@@ -179,7 +178,7 @@ $(function(){
 		tlCircles = new TimelineMax();
 		tlWrapperBlocs = new TimelineMax();
 		tlMenuWrapper.set(menuWrapperUl, {scale:1 , ease:Cubic.easeInOut});
-		tlMenuWrapper.to(menuWrapperLi, 0.3, {left: "40%", top: "40%", ease:Cubic.easeInOut});
+		tlMenuWrapper.to(menuWrapperLi, 0.3, {left: "38%", top: "38%", ease:Cubic.easeInOut});
 
 		tlCircleDashed.to(circleDashed, 0.3, {scale: 0.3, ease:Cubic.easeInOut});
 
@@ -198,11 +197,10 @@ $(function(){
 		tlCircleDashed.to(circleDashed, 0.3, {scale: 1, delay: 0.7, ease:Cubic.easeInOut});
 
 		function cerclesAnimRetour(){
-			tlCircles.to(menuWrapperLi.eq(0), 0.4, {top: "221px", left: "312px", ease:Cubic.easeInOut});
-			tlCircles.to(menuWrapperLi.eq(1), 0.4, {top: "281px", left: "277px", delay:0.05, ease:Cubic.easeInOut},0);
-			tlCircles.to(menuWrapperLi.eq(2), 0.4, {top: "312px", left: "205px", delay:0.1, ease:Cubic.easeInOut},0);
-			tlCircles.to(menuWrapperLi.eq(3), 0.4, {top: "281px", left: "130px", delay:0.2, ease:Cubic.easeInOut},0);
-			tlCircles.to(menuWrapperLi.eq(4), 0.4, {top: "221px", left: "98px", delay:0.25, ease:Cubic.easeInOut},0);
+			tlCircles.to(menuWrapperLi.eq(0), 0.4, {top: "240px", left: "306px", ease:Cubic.easeInOut});
+			tlCircles.to(menuWrapperLi.eq(1), 0.4, {top: "298px", left: "255px", delay:0.05, ease:Cubic.easeInOut},0);
+			tlCircles.to(menuWrapperLi.eq(2), 0.4, {top: "298px", left: "153px", delay:0.1, ease:Cubic.easeInOut},0);
+			tlCircles.to(menuWrapperLi.eq(3), 0.4, {top: "240px", left: "103px", delay:0.2, ease:Cubic.easeInOut},0);
 			tlCircles.to($("#label-menu"), 0.15, {opacity: 1, display: "block", ease:Cubic.easeInOut});
 		}
 	}
@@ -359,7 +357,7 @@ $(function(){
 	function categBlocCopies(){
 		if (!htmlTag.hasClass("lt-ie9")) {
 			setTimeout(function() {
-				var blocParent, widthCategBloc, heightCategBloc, widthRibbon, heightRibbon;
+				var blocParent, widthCategBloc, heightCategBloc, widthRibbon, heightRibbon, widthDetailBloc, heightDetailBloc;
 				$(".categ-bloc-copie").each(function(index){
 					blocParent = $(this).parent();
 					widthCategBloc = $(".categ-bloc .txt-categ-bloc", blocParent).width();
