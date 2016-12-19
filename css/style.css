@@ -458,6 +458,36 @@ body.contact {
   -moz-box-shadow: 3px 4px 21px rgba(0,0,0,.03);
   box-shadow: 3px 4px 21px rgba(0,0,0,.03);
 }
+.external-page-link .fond-bloc {
+  overflow: hidden;
+}
+.external-page-link .fond-bloc:before {
+  content: '';
+  display: block;
+  width: auto;
+  height: 200px;
+  background-color: #801a7a;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.external-page-link .bloc-content a img {
+  max-width: 95%!important;
+  margin-top: 20px;
+}
+.external-page-link a.btn-bloc {
+  bottom: 33px;
+  padding: 14px 10px 10px 18px;
+}
+.external-page-link a.btn-bloc .container-fond-btn-bloc .fond-btn-bloc {
+  background-color: #ffffff;
+  border: 3px solid #801a7a;
+  border-radius: 6px;
+}
+.external-page-link a.btn-bloc .know-more {
+  color: #801a7a;
+}
 .bloc-content {
   position: relative;
   -webkit-box-sizing: border-box;
@@ -979,6 +1009,13 @@ a.btn-bloc[href="#"] .txt-reduire-btn-bloc:after {
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+a.btn-bloc[target="_blank"] .know-more:after {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
 a.btn-bloc .container-fond-btn-bloc {
   display: block;
   width: 100%;
@@ -1054,11 +1091,11 @@ a.btn-bloc .know-more:after {
   line-height: 1;
   margin-left: 10px;
   transform-origin: 50% 50%;
-  -webkit-transform: rotate(-135deg);
-  -moz-transform: rotate(-135deg);
-  -o-transform: rotate(-135deg);
-  -ms-transform: rotate(-135deg);
-  transform: rotate(-135deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 a.btn-bloc .txt-reduire-btn-bloc {
   display: none;
@@ -7655,6 +7692,9 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   #container-twitter {
     left: -42px;
     width: 35px;
+  }
+  .external-page-link .fond-bloc:before {
+    height: 150px;
   }
 }
 @media (max-width: 480px) {
