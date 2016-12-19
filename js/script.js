@@ -246,8 +246,19 @@ $(function(){
 
 	// Clic sur le bouton video
 	function btnVideoClick(){
-		$("a.btn-video").click(function(e){
+		$("a.btn-video").hover(function(){
+			if($('#visu-content .shadow').length){
+				TweenMax.to($('#visu-content .shadow'), 0.4, {opacity: 1, ease:Cubic.easeInOut});
+			}
+		}, function(){
+			if($('#visu-content .shadow').length){
+				TweenMax.to($('#visu-content .shadow'), 0.4, {opacity: 0, ease:Cubic.easeInOut});
+			}
+		}).click(function(e){
 			e.preventDefault();
+			if($('#visu-content .shadow').length){
+				TweenMax.set($('#visu-content .shadow'), {opacity: 0});
+			}
 			ouvrirBlocVideo();
 		});
 	}
