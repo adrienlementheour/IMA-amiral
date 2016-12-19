@@ -1029,6 +1029,37 @@ a.btn-bloc .txt-btn-bloc {
   -o-transition: -o-transform 0.4s ease-in-out;
   transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
 }
+a.btn-bloc .know-more {
+  display: inline-block;
+  font-family: 'dearJoe6', sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  color: #ffffff;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  -moz-transition: -moz-transform 0.4s ease-in-out;
+  -o-transition: -o-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out,-moz-transform 0.4s ease-in-out,-o-transform 0.4s ease-in-out,transform 0.4s ease-in-out;
+}
+a.btn-bloc .know-more:after {
+  display: inline-block;
+  content: "\e900";
+  font-family: 'IMA-amiral';
+  font-size: 0.8em;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  margin-left: 10px;
+  transform-origin: 50% 50%;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
 a.btn-bloc .txt-reduire-btn-bloc {
   display: none;
   font-family: 'dearJoe6', sans-serif;
@@ -1095,6 +1126,13 @@ a.btn-bloc:hover .fond-btn-bloc {
   padding-left: 10px;
 }
 a.btn-bloc:hover .txt-btn-bloc {
+  -webkit-transform: translateX(-10px);
+  -moz-transform: translateX(-10px);
+  -o-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  transform: translateX(-10px);
+}
+a.btn-bloc:hover .know-more {
   -webkit-transform: translateX(-10px);
   -moz-transform: translateX(-10px);
   -o-transform: translateX(-10px);
@@ -7629,6 +7667,9 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
     width: 70px;
     bottom: -25px;
     line-height: 1.2em;
+  }
+  a.btn-bloc .know-more {
+    font-size: 1em;
   }
   a.btn-interlocuteur {
     padding: 10px 20px 8px;

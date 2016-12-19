@@ -976,6 +976,21 @@ a{
 			position: relative;
 			.transition(transform 0.4s ease-in-out);
 		}
+		.know-more{
+			display: inline-block;
+			.dearJoe(1.3em);
+			color: @blanc;
+			position: relative;
+			.transition(transform 0.4s ease-in-out);
+			&:after{
+				display: inline-block;
+				content: "\e900";
+				.IMA-amiral(0.8em);
+				margin-left: 10px;
+				transform-origin: 50% 50%;
+				.transform(rotate(-135deg));
+			}
+		}
 		.txt-reduire-btn-bloc{
 			display: none;
 			.dearJoe(1.3em);
@@ -1046,6 +1061,9 @@ a{
 				padding-left: 10px;
 			}
 			.txt-btn-bloc{
+				.transform(translateX(-10px));
+			}
+			.know-more{
 				.transform(translateX(-10px));
 			}
 			.btn-icon-plus{
@@ -6026,6 +6044,9 @@ ul.slider-logos{
 		width: 70px;
 		bottom: -25px;
 		line-height: 1.2em;
+		.know-more{
+			font-size: 1em;
+		}
 	}
 	a.btn-interlocuteur{
 		padding: 10px 20px 8px;
