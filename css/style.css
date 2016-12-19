@@ -3430,6 +3430,38 @@ a.bloc-small .raccord-detail {
   -o-transition: 0.1s ease-in-out;
   transition: 0.1s ease-in-out;
 }
+a.bloc-small.bloc-recrutement.bloc-1,
+a.bloc-small.bloc-recrutement.bloc-2,
+a.bloc-small.bloc-recrutement.bloc-3,
+a.bloc-small.bloc-recrutement.bloc-4,
+a.bloc-small.bloc-recrutement.bloc-5 {
+  padding: 20px;
+}
+a.bloc-small.bloc-recrutement .container-fond-bloc-deform .fond-bloc-deform {
+  background: #0f589f;
+}
+a.bloc-small.bloc-recrutement .txt-bloc-deform {
+  font-family: 'open_sansbold', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  color: #ffffff;
+}
+a.bloc-small.bloc-contact.bloc-1,
+a.bloc-small.bloc-contact.bloc-2,
+a.bloc-small.bloc-contact.bloc-3,
+a.bloc-small.bloc-contact.bloc-4,
+a.bloc-small.bloc-contact.bloc-5 {
+  padding: 20px;
+}
+a.bloc-small.bloc-contact .container-fond-bloc-deform .fond-bloc-deform {
+  background: #dd850c;
+}
+a.bloc-small.bloc-contact .txt-bloc-deform {
+  font-family: 'open_sansbold', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  color: #ffffff;
+}
 a.bloc-small .container-fond-bloc-deform {
   position: absolute;
   width: 100%;

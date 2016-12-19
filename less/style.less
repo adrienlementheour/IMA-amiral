@@ -2700,6 +2700,34 @@ a.bloc-small{
 	.raccord-detail{
 		.transition(0.1s ease-in-out);
 	}
+	&.bloc-recrutement{
+		&.bloc-1, &.bloc-2, &.bloc-3, &.bloc-4, &.bloc-5{
+			padding: 20px;
+		}
+		.container-fond-bloc-deform{
+			.fond-bloc-deform{
+				background: @bleuIMA;
+			}
+		}
+		.txt-bloc-deform{
+			.opensans-bold(1em);
+			color: @blanc;
+		}
+	}
+	&.bloc-contact{
+		&.bloc-1, &.bloc-2, &.bloc-3, &.bloc-4, &.bloc-5{
+			padding: 20px;
+		}
+		.container-fond-bloc-deform{
+			.fond-bloc-deform{
+				background: @orangeIMA;
+			}
+		}
+		.txt-bloc-deform{
+			.opensans-bold(1em);
+			color: @blanc;
+		}
+	}
 	.container-fond-bloc-deform{
 		position: absolute;
 		width: 100%;
