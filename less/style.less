@@ -197,6 +197,9 @@ textarea {
 	line-height: 1;
 }
 
+.icon-arrow-link:before {
+  content: "\e900";
+}
 .icon-download:before {
 	content: "\e60c";
 }
@@ -924,6 +927,26 @@ a{
 		padding: 10px 8px 8px 10px;
 		.box-shadow(none);
 		.transform(rotate(-4deg));
+		&[href="#"]{
+			.txt-btn-bloc{
+				&:after{
+					display: inline-block;
+					content: "\e900";
+					.IMA-amiral(0.8em);
+					margin-left: 10px;
+				}
+			}
+			.txt-reduire-btn-bloc{
+				&:after{
+					display: inline-block;
+					content: "\e900";
+					.IMA-amiral(0.8em);
+					margin-left: 10px;
+					transform-origin: 50% 50%;
+					.transform(rotate(180deg));
+				}
+			}
+		}
 		.container-fond-btn-bloc{
 			display: block;
 			width: 100%;
@@ -2808,10 +2831,20 @@ a.bloc-small{
 	&.pos-4, &:nth-of-type(4){
 		top: 200px;
 		left: 400px;
+		.juridique &{
+			left: 515px;
+		}
 	}
 	&.pos-5, &:nth-of-type(5){
 		top: 220px;
 		left: 120px;
+		.juridique &{
+			left: 275px;
+		}
+	}
+	&.pos-5, &:nth-of-type(6){
+		top: 220px;
+		left: 0;
 	}
 	/* @end */
 	&.bloc-1{
@@ -5411,12 +5444,26 @@ ul.slider-logos{
 		}
 		&.pos-4, &:nth-of-type(4){
 			left: 25%;
+			.juridique &{
+				left: 25%;
+			}
 		}
 		&.pos-5, &:nth-of-type(5){
 			top: 390px;
 			bottom: inherit;
 			left: 25%;
 			margin-left: -100px;
+			right: inherit;
+			.juridique &{
+				top: 390px;
+				left: 75%;
+				margin-left: 0;
+			}
+		}
+		&.pos-6, &:nth-of-type(6){
+			top: 390px;
+			bottom: inherit;
+			left: 25%;
 			right: inherit;
 		}
 	}
@@ -5939,7 +5986,21 @@ ul.slider-logos{
 		right: inherit!important;
 		bottom: inherit!important;
 		left: inherit!important;
-		margin: 80px auto!important;
+		margin: 40px auto!important;
+		.juridique &{
+			text-align: left;
+			position: relative;
+			float: none;
+			clear: both;
+			top: 0!important;
+			left: 0!important;
+			display: inline-block;
+			top: inherit!important;
+			right: inherit!important;
+			bottom: inherit!important;
+			left: inherit!important;
+			margin: 80px auto!important;
+		}
 	}
 	#container-twitter{
 		left: -42px;
@@ -5948,7 +6009,12 @@ ul.slider-logos{
 }
 
 @media (max-width: 480px) {
-	a.btn-bloc {
+	a.btn-bloc{
+		.juridique &{
+			width: 70px;
+			bottom: -25px;
+			line-height: 1.2em;
+		}
 		width: 70px;
 		bottom: -25px;
 		line-height: 1.2em;
