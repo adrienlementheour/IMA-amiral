@@ -235,7 +235,7 @@ $(function(){
 		TweenMax.set($("footer"), {display: "none"});
 		TweenMax.set(blocBtnVideo, {display: "none"});
 		TweenMax.to(wrapperContent, 0.5, {"x":"-100%", ease:Cubic.easeInOut});
-		// TweenMax.to($("#bloc-menu-responsive"), 0.5, {"x":"-100%", ease:Cubic.easeInOut});
+		TweenMax.to($("#bloc-menu-responsive"), 0.5, {"x":"-100%", ease:Cubic.easeInOut});
 		// centrer la div fond visu
 		tlBlocVisuContent = new TimelineMax();
 		tlBlocVisuContent.to($("#bloc-fond-visu .bloc-visu-content"), 0.5, {right:"50%", marginRight: "-21.5%", ease:Cubic.easeInOut});
@@ -280,7 +280,7 @@ $(function(){
 			TweenMax.set($("#bloc-visu"), {display: "block"});
 			TweenMax.set($("#container-bloc-visu-content"), {display: "block"});
 
-			// TweenMax.to($("#bloc-menu-responsive"), 0.2, {x:"0%", delay:1, ease:Cubic.easeInOut, onComplete: blocMenuResponsiveRetour});
+			TweenMax.to($("#bloc-menu-responsive"), 0.2, {x:"0%", delay:1, ease:Cubic.easeInOut, onComplete: blocMenuResponsiveRetour});
 
 			TweenMax.to(blocBackVideo, 0.2, {marginLeft:"-200px", ease:Cubic.easeInOut});
 			TweenMax.to(blocAutresVideos, 0.2, {marginRight: "-250px", x: "0px", display: "none", ease:Cubic.easeInOut});
@@ -442,13 +442,13 @@ $(function(){
 			closeModal();
 		});
 		$("#lien-close-modal").on('click', function(e){
-			e.pereventDefault();
+			e.preventDefault();
 			closeModal();
 		});
-		// $("a#menu-responsive").on('click', function(e){
-		// 	e.preventDefault();
-		// 	openModal();
-		// });
+		$("a#menu-responsive").on('click', function(e){
+			e.preventDefault();
+			openModal();
+		});
 	}
 
 	////////////////////// Fonction pour gérer l'apparition de l'interlocuteur ////////////////////////
@@ -648,7 +648,7 @@ $(function(){
 			TweenMax.set($("#bloc-visu"), {display: "block"});
 			TweenMax.set($("#container-bloc-visu-content"), {display: "block"});
 
-			// TweenMax.to($("#bloc-menu-responsive"), 0.2, {x:"0%", delay:1, ease:Cubic.easeInOut, onComplete: blocMenuResponsiveRetour});
+			TweenMax.to($("#bloc-menu-responsive"), 0.2, {x:"0%", delay:1, ease:Cubic.easeInOut, onComplete: blocMenuResponsiveRetour});
 
 			TweenMax.to(blocBackVideo, 0.2, {marginLeft:"-200px", ease:Cubic.easeInOut});
 			TweenMax.to(blocAutresVideos, 0.2, {marginRight: "-250px", x: "0px", display: "none", ease:Cubic.easeInOut});
