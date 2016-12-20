@@ -3720,8 +3720,8 @@ a.bloc-small:nth-of-type(4) {
   top: 200px;
   left: 400px;
 }
-.juridique a.bloc-small.pos-4,
-.juridique a.bloc-small:nth-of-type(4) {
+.reflex a.bloc-small.pos-4,
+.reflex a.bloc-small:nth-of-type(4) {
   left: 515px;
 }
 a.bloc-small.pos-5,
@@ -3729,8 +3729,8 @@ a.bloc-small:nth-of-type(5) {
   top: 220px;
   left: 120px;
 }
-.juridique a.bloc-small.pos-5,
-.juridique a.bloc-small:nth-of-type(5) {
+.reflex a.bloc-small.pos-5,
+.reflex a.bloc-small:nth-of-type(5) {
   left: 275px;
 }
 a.bloc-small.pos-5,
@@ -7206,8 +7206,8 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
   a.bloc-small:nth-of-type(4) {
     left: 25%;
   }
-  .juridique a.bloc-small.pos-4,
-  .juridique a.bloc-small:nth-of-type(4) {
+  .reflex a.bloc-small.pos-4,
+  .reflex a.bloc-small:nth-of-type(4) {
     left: 25%;
   }
   a.bloc-small.pos-5,
@@ -7218,8 +7218,8 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
     margin-left: -100px;
     right: inherit;
   }
-  .juridique a.bloc-small.pos-5,
-  .juridique a.bloc-small:nth-of-type(5) {
+  .reflex a.bloc-small.pos-5,
+  .reflex a.bloc-small:nth-of-type(5) {
     top: 390px;
     left: 75%;
     margin-left: 0;
@@ -7772,7 +7772,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
     left: inherit!important;
     margin: 40px auto!important;
   }
-  .juridique a.bloc-small {
+  .reflex a.bloc-small {
     text-align: left;
     position: relative;
     float: none;
@@ -7800,7 +7800,7 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
     bottom: -25px;
     line-height: 1.2em;
   }
-  .juridique a.btn-bloc {
+  .reflex a.btn-bloc {
     width: 70px;
     bottom: -25px;
     line-height: 1.2em;
