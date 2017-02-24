@@ -151,7 +151,7 @@ $(function(){
 			tlWrapperBlocs.to(wrapperBlocs, 0.2, {marginTop:"20px", ease:Cubic.easeInOut, delay: 0.2});
 		}
 
-		tlMenuWrapper.set(menuWrapperLi, {width:"116px", height:"116px", ease:Cubic.easeInOut});
+		tlMenuWrapper.set(menuWrapperLi, {width:"120px", height:"120px", ease:Cubic.easeInOut});
 		//tlMenuWrapper.set($("#menu-wrapper ul li a"), {borderWidth:"10px", ease:Cubic.easeInOut});
 		tlMenuWrapper.set($("#menu-wrapper ul li a .txt-circle"), {display:"inline-block", ease:Cubic.easeInOut, onComplete: cerclesAnim});
 		tlCircleDashed.set(circleDashed, {width:"312px", height:"312px", marginTop: "-156px", marginLeft: "-156px", ease:Cubic.easeInOut});
@@ -751,7 +751,8 @@ $(function(){
 	//[x, y, dx, dy]
 	//x and yare coordinates in the interval [0,1] specifying the position of the anchor
 	//dx and dy,which specify the orientation of the curve incident to the anchor
-	var anchors = [ [[1, 0.6, 0.5, 0.8], [0.1, 0.8, 0, 0.5]],      [[1, 0.4, 0, 1], [0.1, 0.7, 0.2, 0]],      [[0.51, 1, 0, 1], [0.7, 0.1, 0, 0]],     [[0, 0.2, 0, 0.5], [0.5, 0, 0, -1.5]],     [[1, 0.6, 0, 1], [0, 0.9, 0, 1]]];
+	//,     [[0, 0.6, 0, 1], [1, 0.4, 0, 1]],     [[0, 0.8, 0, 1], [1, 0.2, 0, 1]],     [[0, 0.8, 0, 1], [0.5, 1, 0, 1]],     [[0.8, 0, 0, 1], [0, 0.6, 0, 1]]
+	var anchors = [ [[1, 0.6, 0.5, 0.8], [0.1, 0.8, 0, 0.5]],      [[1, 0.4, 0, 1], [0.1, 0.7, 0.2, 0]],      [[0.51, 1, 0, 1], [0.7, 0.1, 0, 0]],     [[0, 0.2, 0, 0.5], [0.5, 0, 0, -1.5]],     [[0.5, 0.9, -1, 1], [0.5, 0.2, 0, -1]]/**/,     [[1, 0.6, 0, 1], [1, 0.4, 0, 1]],     [[1, 0.8, 0, 1], [0, 0.2, 0, 1]],     [[0.6, 0.8, 0, 1], [0.5, 0, 0, 1]],     [[0.8, 0, 0, 1], [0, 0.6, 0, 1]]];
 	if (!htmlTag.hasClass("lt-ie9")){
 		var jsPlumbBlocSmall = jsPlumb.getInstance();
 		jsPlumbBlocSmall.setContainer($("#zone-blocs-accueil"));
