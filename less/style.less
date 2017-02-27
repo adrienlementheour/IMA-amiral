@@ -613,15 +613,24 @@ body{
 				max-width: 95%!important;
 				margin-top: 20px;
 			}
+			&.btn-interlocuteur{
+				img{
+					max-width: none!important;
+					margin-top: 0;
+				}
+			}
 		}
 	}
 	a.btn-bloc{
-		bottom: 33px;
-		padding: 14px 10px 10px 18px;
+		// bottom: 33px;
+		// bottom: -7px;
+		right: 20px;
+		padding: 12px 10px 10px 18px;
+		.transform(rotate(-2deg));
 		.container-fond-btn-bloc{
 			.fond-btn-bloc{
 				background-color: @blanc!important;
-				border: 3px solid @violetIMA;
+				border: 1px solid @violetIMA;
 				border-radius: 6px;
 			}
 		}
@@ -6211,12 +6220,22 @@ ul.slider-logos{
 			font-size: 1em;
 		}
 	}
+	.external-page-link{
+		a.btn-bloc{
+			bottom: -25px;
+			right: 10px;
+		}
+	}
 	a.btn-interlocuteur{
-		padding: 10px 20px 8px;
-		right: 110px;
-		width: 120px;
+		// padding: 10px 20px 8px;
+		padding: 10px 10px 8px;
+		// right: 110px;
+		right: 115px;
+		// width: 120px;
+		width: 150px;
 		bottom: -25px;
 		line-height: 1.2em;
+		font-size: 0.9em;
 		&.has-photo{
 			padding: 10px 20px 8px;
 		}
