@@ -237,7 +237,7 @@ $(function(){
 		TweenMax.to(wrapperContent, 0.5, {"x":"-100%", ease:Cubic.easeInOut});
 		TweenMax.to($("#bloc-menu-responsive"), 0.5, {"x":"-100%", ease:Cubic.easeInOut});
 		// centrer la div fond visu
-		tlBlocVisuContent = new TimelineMax();
+		var tlBlocVisuContent = new TimelineMax();
 		tlBlocVisuContent.to($("#bloc-fond-visu .bloc-visu-content"), 0.5, {right:"50%", marginRight: "-21.5%", ease:Cubic.easeInOut});
 		tlBlocVisuContent.to($("#bloc-fond-visu .bloc-visu-content"), 0.2, {opacity: 0, ease:Cubic.easeInOut});
 		tlBlocVisuContent.to($("#fond-couleur-bloc-visu"), 0.2, {opacity: 0, display: "none", ease:Cubic.easeInOut, onComplete: completeFondCouleur});
@@ -689,20 +689,21 @@ $(function(){
 					$(this).click(function(e){
 						e.preventDefault();
 						var urlHashs = $(this).attr("href").split("#");
+
 						//tester si il y a bien au moins deux hashtags
 						if(urlHashs.length >= 3){
 							//tester le type de media
 							switch(urlHashs[1]) {
 							    case "video":
 							    	//tester l'existance du media
-							        if ($("ul#autres-videos li.has-video[data-url-video='"+urlHashs[2]+"'][data-poster-name='"+urlHashs[3]+"']").length){
+							        if ($("ul#autres-videos li.has-video[data-url-video=\""+urlHashs[2]+"\"][data-poster-name=\""+urlHashs[3]+"\"]").length){
+							        	initVideo();
 							        	$("ul#autres-videos li.active").removeClass("active");
-							        	$("ul#autres-videos li.has-video[data-url-video='"+urlHashs[2]+"'][data-poster-name='"+urlHashs[3]+"']").parent().addClass("active");
+							        	$("ul#autres-videos li.has-video[data-url-video=\""+urlHashs[2]+"\"][data-poster-name=\""+urlHashs[3]+"\"]").addClass("active");
 							        	wrapperEmbed.replaceWith("<div id='wrapper-embed'><video id='id-video-js' class='video-js vjs-default-skin' controls preload='auto' width='100%' height='100%' poster='"+urlHashs[3]+"' src='"+urlHashs[2]+"'></video></div>");
 							        	if(player != 0){
 							        		player.dispose();
 							        	}
-							        	initVideo();
 							        	ouvrirBlocVideo();
 							        }
 							        break;
@@ -1006,7 +1007,7 @@ $(function(){
 	////////////////////// Fonction pour deployer / retracter le contenu au clic du bouton "Lire la suite" ////////////////////////
 	function clicLireLaSuite(){
 		$("#zone-actus a.btn-bloc").click(function(e){
-			if(!$(this).hasClass("btn-actu")){
+			if(!$(this).hasClass("btn-actu") && !$(this).hasClass("ext-link")){
 				e.preventDefault();
 
 				if(!$(this).hasClass("open")){
