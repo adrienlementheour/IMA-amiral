@@ -793,7 +793,7 @@ $(function(){
 	btnCategoriesArticles();
 	preventEmptySearch();
 	if(body.hasClass("accueil")){
-		hoverBlocInnovation();
+		//hoverBlocInnovation();
 	}
 	if(body.hasClass("has-video")){
 		btnVideoClick();
