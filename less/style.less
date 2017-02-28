@@ -4880,6 +4880,7 @@ form#search-sitemap{
 			}
 		}
 		a#lien-close-modal{
+			display: block;
 			line-height: 1em;
 			color: @blanc;
 			position: relative;
@@ -5946,14 +5947,19 @@ ul.slider-logos{
 		right: 35px;
         .titre-modal, .close-modal{
             .transform(rotate(0deg));
-            top: 0;
-            left: 0;
+            top: -2px;
+            // left: 0;
+            right: 0;
+            .container-fond-close-modal{
+            	display: none;
+            }
             .container-fond-titre-modal{
                 display: none;
             }
         }
 		.titre-modal{
-			padding: 13px 30px 8px 55px;
+			// padding: 13px 30px 8px 55px;
+			padding: 13px 30px 8px 15px;
 		}
 		.close-modal{
 			padding: 13px 15px 15px 15px;

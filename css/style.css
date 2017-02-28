@@ -6350,6 +6350,7 @@ form#search-sitemap button.btn-form {
   transform: perspective(300px) rotateX(-8deg) rotateY(0deg) rotate(0deg) skewX(3deg) scale(1);
 }
 #sitemap-modal .close-modal a#lien-close-modal {
+  display: block;
   line-height: 1em;
   color: #ffffff;
   position: relative;
@@ -7549,15 +7550,19 @@ ul.slider-logos li a.bloc-slider-logos.survol .icon-download {
     -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-    top: 0;
-    left: 0;
+    top: -2px;
+    right: 0;
+  }
+  #sitemap-modal .titre-modal .container-fond-close-modal,
+  #sitemap-modal .close-modal .container-fond-close-modal {
+    display: none;
   }
   #sitemap-modal .titre-modal .container-fond-titre-modal,
   #sitemap-modal .close-modal .container-fond-titre-modal {
     display: none;
   }
   #sitemap-modal .titre-modal {
-    padding: 13px 30px 8px 55px;
+    padding: 13px 30px 8px 15px;
   }
   #sitemap-modal .close-modal {
     padding: 13px 15px 15px 15px;
